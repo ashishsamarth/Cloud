@@ -3,3 +3,15 @@ IAM: Identity & Access Management
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 1.  IAM is a global service in AWS. This can be verified by going to IAM Dashboard and when you try to select a region, you will see the following text
     'IAM does not require a region selection'
+    It also indicates that all the users that are created in a particular AWS account are available in all regions.
+
+    a.  The root user is the most powerful user (it can do anything and everything in an AWS account), hence its recommended to create new users to 
+        perform specific tasks and limit their capabilites using policies and groups. Since we must follow the principle of least privilege.
+
+
+    Q1: When creating a USER, how many types of 'Access Types' can be provisioned?
+    A1: Their are two types of 'Access Types' that can be utilized
+
+        a.  Programmatic Access: This allows the user to use AWS API, CLI, SDK and Other development tools to be utilized via an access Key ID & secret access key
+        b.  AWS Management Console Access: This allows the user to use the (GUI) management console access.
+    
