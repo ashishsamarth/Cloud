@@ -50,3 +50,14 @@ IAM: Identity & Access Management
         a.  An IAM user will have the '@' keyword in the name:
             e.g.    samarth-developer@samarth-aws OR samarth-developer@account-id
         b.  A root user will not have the '@' keyword in the name
+    
+    Q8: Explain IAM Password Policy?
+    A8: In AWS: You can set up a password policy to have
+            a.  set a minimum password length
+            b.  Require specific character types
+                1.  including uppercase letters
+                2.  including lowercase letters
+                3.  including numbers
+                4.  including non-alphanumeric characters
+            c.  Allow all IAM users to change their own passwords
+            d.  Require users to change their passwords after some time (password expiration)
