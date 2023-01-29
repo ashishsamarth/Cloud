@@ -18,3 +18,8 @@ IAM: Identity & Access Management
     Q2. When creating a USER, is it necessary to Create a Group?
     A2: No, Its not necesary to create a Group while creating a USER. However, as a best practice its recommended to have even a single user to be mapped to group.
         Since over a period of time, the number of users may grow and it will be easier to manage permissions using groups and policies.
+    
+    Q3: What are tags in AWS?
+    A3: Tags are way to organize and categorize resources in AWS.
+        Foe e.g.: Their are mulitple EC2 instances in your account, and you want to identify them based on Team names and/or Project Names to quickly identify which 
+        EC2 instance is being used for what. Tagging also helps to identify the cost accumulated by the resources which is important for Billing & Thresholds.
