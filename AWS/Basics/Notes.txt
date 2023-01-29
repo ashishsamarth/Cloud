@@ -141,10 +141,115 @@ IAM: Identity & Access Management
         i.  Under the 'Access Keys' section, you will see the key with the tag and statu as 'Active'
         j.  If you wish to generate a new access keys, you can do that, but only one access key can be active at one time.
         k,  Their is an option to delete the keys, if you feel the need to do so.
+    
+    Q14: What are the minimum policies to have on the role or the user to be able to access AWS Cloud Shell?
+    A14: Their is only one permission which must be assigned to the role or the user to have them able to access AWS Cloud Shell
+         The policy name is - AWS CloudShellFullAccess
+         Once the policy is attached to the user or the role, the cloud shell will work for the user.
 
+    Q15: What are IAM roles for services?
+    A15: So far, we have dealt with a username accessed by a physical person to be able to perform certain checks or tasks. The next category is to have applications 
+    talk to each other (similar to one microservice talking to another). For this to happen, the service which is trying to perform an action on another service 
+    must have the permission to do. This is managed by IAM roles for the service. 
+    Following are few examples:
+        a.  EC2 Instance roles
+        b.  Lambda Function roles
+        c.  Roles for CloudFormation
+    
+    Q16: How to create an IAM role for a service?
+    A16: Login to the AWS management console with a User who has administrative access.
+        a.  Navigate to the IAM dashboard by simply searching IAM on the search bar
+        b.  From IAM dashboard, navigate to 'Roles' under 'Access Management'
+        c.  If this is the first time you are trying to create a role, you will see following roles pre-existing
+            1.  AWS ServiceRoleForSupport
+            2.  AWS ServiceRoleForTrustedAdvisor
+        d.  Click on 'Create Role'
+        e.  Next Page will have a header 'Select Trusted Entity' with the following options (radio buttons)
+            1.  AWS Service:    {Allows AWS Services like EC2, Lambda or others to perform actions in this account}
+            2.  AWS Account:    {Allows entities in other AWS accounts belonging to you or a 3rd party to perform actions in this account}
+            3.  Web Identity:   {Allows users federated by the external web identity provider to assumer this role to perform actions in this account}
+            4.  SAML 2.0 Federation:    {Allows users federated with SAML 2.0 from a corporate directory to perform actions in this account}
+            5.  Custom Trust Policy:    {Create a custom trust policy to enable others to perform actions in this account}
+        f.  For ease of understanding, lets create an 'AWS Service' role for an EC2 instance to read data in IAM
+        g.  On the 'Add Permissions' page for this new role, search and select 'IAMReadOnlyAccess'
+        h.  On the next page, provide a role name and click next
+        i.  Once the role is created, it will show up on the 'Roles' page
+
+    Q17: What are IAM security tools?
+    A17: Their are two security tools
+        a.  IAM Credentials Report
+            This is at the account-level
+            Its a report that lists all your account uders and the status of their various credentials
+        
+        b.  IAM Access Advisor
+            This is at the user-level
+            Access Advisor shows the service permissions granted to a user and when those services where last accessed
+            This information can be utilized to revise the policies and implement 'principle of least privilege'
+
+    Q18: How to generate a IAM Credentials Report?
+    A18: Login to the AWS management console with a User who has administrative access.
+        a.  Navigate to the IAM dashboard by simply searching IAM on the search bar
+        b.  On the IAM dashboard (Left vertical bar), look for 'Credentials Report' under 'Access Report'
+        c.  Click on 'Crendentials Report' and then 'Download credentials report'
+        d.  The crendentials report has the following columns (per user on the account includinr <root>)
+            1.  user
+            2.  arn
+            3.  user_creation_time
+            4.  password_enabled
+            5.  password_last_used
+            6.  password_last_changed
+            7.  password_next_rotation
+            8.  mfa_active
+            9.  access_key_1_active
+            10. access_key_1_last_rotated
+            11. access_key_1_last_used_date
+            12. access_key_1_last_used_region
+            13. access_key_1_last_used_service
+            14. access_key_2_active
+            15. access_key_2_last_rotated
+            16. access_key_2_last_used_date
+            17. access_key_2_last_used_region
+            18. access_key_2_last_used_service
+            19. cert_1_active
+            20. cert_1_last_rotated
+            21. cert_2_active
+            22. cert_2_last_rotated
+
+    Q19: How to navigate to Access-Advisor?
+    A18:  Login to the AWS management console with an IAM user
+        a.  Navigate to the IAM dashboard by simply searching IAM on the search bar
+        b.  On the IAM dashboard (Left vertical bar), look for 'Users'
+        c.  Click on users and then click on 'Access Advisor' on the page.
+        d.  Access-Advisor tells you  - 'Which particular service was accessed when based on what policy'
+        e.g.
+            Service         Policies Granting Permissions       Last Accessed
+            AmazonEC2       AmazonEC2FillAccess and 1 More      Today
+            AWS Cloudshell  AWSCloudShellFullAccess             Today
+
+
+    IAM Guidelines & Best Practices
+    a.  Dont Use the root account except for AWS account setup
+    b.  One physical user = one AWS user
+    c.  Assign users to groups and assign permissions to group
+    d.  Create a strong password policy
+    e.  Use and enforce the use of MFA
+    f.  Create and use Roles for giving permissions for AWS services
+    g.  Use Access Keys for Programmatic Access (CLI / SDK)
+    h.  Audit permission of your account with the IAM credentials report
+    i.  Never share IAM users and Access keys.
+
+
+    IAM Summary:
+    a.  USERS:      Mapped to a physical user, has a password for AWS console
+    b.  GROUPS:     Contains Users only
+    c.  POLICIES:   JSON document that outlines permissions for users or groups
+    d.  ROLES:      For EC2 instances or AWS services
+    e.  SECURITY:   MFA + Password Policy
+    f.  ACCESS KEYS: Access AWS using the CLI or SDK
+    g.  Audit:      IAM Credentials and IAM Access Advisor
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-AWS - CLI
+AWS - CLI & Cloud Shell
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
     
@@ -207,3 +312,85 @@ AWS - CLI
     For e.g.:- If we go ahead and remove the policy 'IAM FullAccess' from the group 'AWS-Developer', which IAM user 'Samarth-Developer' is a part of,
     And then execute the same command (aws iam list-users) from windows command prompt, their will be no output, same can be validated by going to the 
     Management console, under users page, you will see 'You need Permissions' message.
+
+    Q03: What is AWS CloudShell?
+    A03: AWS CloudShell is a browser-based shell that makes it easier to securely manage, explore, and interact with your AWS resources. 
+    CloudShell is pre-authenticated with your console credentials.
+
+    {So if you are logged in as 'samarth-developer', the same credentials will be used by default}
+    For an IAM user to be able to use the AWS CloudShell, the user must have the 'AWS CloudShellFullAccess' permission policy attached to the user 
+    id either by a group policy or a user policy.
+
+    Note: The username for cloudshell is:- cloudshell-user
+
+            [cloudshell-user@ip-10-0-124-229]$aws iam list-users
+
+            {
+                "Users": [
+                    {
+                        "Path": "/",
+                        "UserName": "Samarth-Admin",
+                        "UserId": "AIDA*************",
+                        "Arn": "arn:aws:iam::*************:user/Samarth-Admin",
+                        "CreateDate": "2023-01-29T15:31:41+00:00",
+                        "PasswordLastUsed": "2023-01-29T16:36:37+00:00"
+                    },
+                    {
+                        "Path": "/",
+                        "UserName": "Samarth-Developer",
+                        "UserId": "AIDA*************",",
+                        "Arn": "arn:aws:iam::*************:user/Samarth-Developer",
+                        "CreateDate": "2023-01-29T13:59:14+00:00",
+                        "PasswordLastUsed": "2023-01-29T16:35:12+00:00"
+                    }
+                ]
+            }
+            [cloudshell-user@ip-10-0-124-229]$
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Budget and Billing
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    Q01: Can an IAM user access the Billing and Cost Management Dashboard by default?
+    A01: No, the only user who can access Billing and Cost Management Dashboard by default is the root user.
+    The root user need to provide permisions to IAM user - so that they can also access Billing and Cost information
+
+    Following are the steps for the root user to allow access.
+    Note:   This approach only works for an IAM user with Administrator Access
+    a.  Login as the root user
+    b.  On the top right click on Login name and then click on 'Account'
+    c.  Once navigated to the new page, look for 'IAM User and Role Access to Billing Information'
+    d.  Click on 'Edit' and then 'Activate IAM Access'
+    e.  Refresh the page and now log in as the IAM user with Administrator Access
+    f.  Click on the top right on login name and then click on 'Billing Dashboard'
+    h.  Since the IAM access has been activated, this IAM user will now be able to see the AWS Billing Dashboard
+
+    To provide 'AWS Billing Dashboard' Access to a non-administrative IAM user, the steps are different
+    a.  Login as the root user
+    b.  Navigate to the IAM dashboard by simply searching IAM on the search bar
+    c.  Under 'Access Management' click on 'User Groups'
+    d.  Click the group, to which the non-administrative IAM user belongs to
+    e.  Click on 'Permissions'
+    f.  Search for 'Billing' permission policy and attach this policy to this group.
+    8.  Now th 'Non-administrative' IAM User should also have access to the AWS Billing dashboard.
+
+
+    Q02: How to create a Budget?
+    A02: Login to the management console as an Administrative / root user
+        a.  On the top right click on Login name and then click on 'Billing Dashboard'
+        b.  On the left vertical menu (side bar), click on 'Budgets' under 'Cost Management'
+        c.  On the 'Budgets' page, click on 'Create a Budget'
+        d.  Their are two budget set up types, 'Use a template (simplified)' and 'Customize (advanced)'
+        e.  Select 'Use a Template (simplified)'
+        f.  Their are multiple templates, namely (Radio Buttons)
+            1.  'Zero spend budget':    {Create a budget that notified you once your spending exceeds $0.01 which is above the AWS free tier limits}
+            2.  'Monthly Cost Budget':  {Create a monthly budget that notified you if you exceed, or are forecasted to exceed, the budget amount}
+            3.  'Daily Savings Plans Coverage budget':  {Create a converage budget for your savings plans that notifies you when you fall below the defined target}
+            4.  'Daily reservation utilization budget': {Ceate a utilization budget for your reservations that notifies you when you fall below the defined target}
+        g.  Click on 'Monthly Cost Budget'
+        h.  Provide the following values
+            1.  Budget Name
+            2.  Enter your budgeted amount ($)
+            3.  Email Recipients:   {To receive threshold alerts}
+        i.  Once the budget is created, 
+
