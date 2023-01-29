@@ -23,3 +23,8 @@ IAM: Identity & Access Management
     A3: Tags are way to organize and categorize resources in AWS.
         Foe e.g.: Their are mulitple EC2 instances in your account, and you want to identify them based on Team names and/or Project Names to quickly identify which 
         EC2 instance is being used for what. Tagging also helps to identify the cost accumulated by the resources which is important for Billing & Thresholds.
+    
+    Q4: Once the user is created, how many ways can the user get login credentials?
+    A4: Their are two ways a user can get hold of login credentials
+        a.  via the 'Download.csv'
+        b.  'Send Email' : Which has the Email Login Instructions.
