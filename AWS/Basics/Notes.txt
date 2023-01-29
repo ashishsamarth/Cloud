@@ -1,0 +1,5 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+IAM: Identity & Access Management
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.  IAM is a global service in AWS. This can be verified by going to IAM Dashboard and when you try to select a region, you will see the following text
+    'IAM does not require a region selection'
