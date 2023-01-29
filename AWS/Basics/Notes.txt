@@ -28,3 +28,11 @@ IAM: Identity & Access Management
     A4: Their are two ways a user can get hold of login credentials
         a.  via the 'Download.csv'
         b.  'Send Email' : Which has the Email Login Instructions.
+
+    Q5: How can you customize the url for specific user login, Once the user is created?
+    A5: Login to the AWS console --> Go to IAM Dashboard --> on the top right under 'AWS Account' --> Look for 'Account Alias'
+        a.  If you dont have an alias - It will enable the link to 'Create' an alias
+        b.  If you have an alias - It will allow to 'Edit' or 'Delete' an alias
+
+        Important Note: Since IAM is a Global Service, the alia that you create must be unique for entire IAM service across all regions.
+        You cannot create an alias if it already exists.
