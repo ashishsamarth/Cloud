@@ -9,28 +9,28 @@ IAM: Identity & Access Management
         perform specific tasks and limit their capabilites using policies and groups. Since we must follow the principle of least privilege.
 
 
-    Q1: When creating a USER, how many types of 'Access Types' can be provisioned?
-    A1: Their are two types of 'Access Types' that can be utilized
+    Q01: When creating a USER, how many types of 'Access Types' can be provisioned?
+    A01: Their are two types of 'Access Types' that can be utilized
 
         a.  Programmatic Access: This allows the user to use AWS API, CLI, SDK and Other development tools to be utilized via an access Key ID & secret access key
         b.  AWS Management Console Access: This allows the user to use the (GUI) management console access.
     
-    Q2. When creating a USER, is it necessary to Create a Group?
-    A2: No, Its not necesary to create a Group while creating a USER. However, as a best practice its recommended to have even a single user to be mapped to group.
+    Q02. When creating a USER, is it necessary to Create a Group?
+    A02: No, Its not necesary to create a Group while creating a USER. However, as a best practice its recommended to have even a single user to be mapped to group.
         Since over a period of time, the number of users may grow and it will be easier to manage permissions using groups and policies.
     
-    Q3: What are tags in AWS?
-    A3: Tags are way to organize and categorize resources in AWS.
+    Q03: What are tags in AWS?
+    A03: Tags are way to organize and categorize resources in AWS.
         Foe e.g.: Their are mulitple EC2 instances in your account, and you want to identify them based on Team names and/or Project Names to quickly identify which 
         EC2 instance is being used for what. Tagging also helps to identify the cost accumulated by the resources which is important for Billing & Thresholds.
     
-    Q4: Once the user is created, how many ways can the user get login credentials?
-    A4: Their are two ways a user can get hold of login credentials
+    Q04: Once the user is created, how many ways can the user get login credentials?
+    A04: Their are two ways a user can get hold of login credentials
         a.  via the 'Download.csv'
         b.  'Send Email' : Which has the Email Login Instructions.
 
-    Q5: How can you customize the url for specific user login, Once the user is created?
-    A5: Login to the AWS console --> Go to IAM Dashboard --> on the top right under 'AWS Account' --> Look for 'Account Alias'
+    Q05: How can you customize the url for specific user login, Once the user is created?
+    A05: Login to the AWS console --> Go to IAM Dashboard --> on the top right under 'AWS Account' --> Look for 'Account Alias'
         a.  If you dont have an alias - It will enable the link to 'Create' an alias
         b.  If you have an alias - It will allow to 'Edit' or 'Delete' an alias
 
@@ -39,20 +39,20 @@ IAM: Identity & Access Management
 
         e.g.:   https://samarth-aws.signin.aws.amazon.com/console
     
-    Q6: What is the advantage of having an alias based url for login?
-    A6: Following are the advantages
+    Q06: What is the advantage of having an alias based url for login?
+    A06: Following are the advantages
         a.  When you use an 'Alias' based url:
             1.  Your 'Account ID or Alias' is already populated for you
             2.  You can directly login as an IAM user, rather than selecting the radio button between 'root user' vs 'iam user'
     
-    Q7: How can you identify if a user is an IAM User vs a ROOT user, just by looking at the management console?
-    A7: Once logged in, if you look at the top right of the screen where it shows the user
+    Q07: How can you identify if a user is an IAM User vs a ROOT user, just by looking at the management console?
+    A07: Once logged in, if you look at the top right of the screen where it shows the user
         a.  An IAM user will have the '@' keyword in the name:
             e.g.    samarth-developer@samarth-aws OR samarth-developer@account-id
         b.  A root user will not have the '@' keyword in the name
     
-    Q8: Explain IAM Password Policy?
-    A8: In AWS: You can set up a password policy to have
+    Q08: Explain IAM Password Policy?
+    A08: In AWS: You can set up a password policy to have
             a.  set a minimum password length
             b.  Require specific character types
                 1.  including uppercase letters
@@ -61,3 +61,149 @@ IAM: Identity & Access Management
                 4.  including non-alphanumeric characters
             c.  Allow all IAM users to change their own passwords
             d.  Require users to change their passwords after some time (password expiration)
+            e.  Prevent password re-use
+    
+    Q09: What is the advantage of using an MFA?
+    A09: AWS recommends to protect the root and iam users by using MFA (multi-factor-authentication)
+        The main benefit of using an MFA is - Even if a password is stolen or hacked, the account will not be compromised.
+        Following are the supported devices for MFA in AWS:
+        a.  Virtual MFA devices {e.g. Google Authenticator (works on 1 device at a time) or Authy(works on multiple devices at the same time)}
+        b.  Universal 2nd Factor (U2F) security key (e.g.- Yubikey)
+        c.  Hardware Key fob MFA Device
+            a.  For non-government cloud: Its a key fob provided by Gemalto (Thales)
+            b.  For government cloud: Its a key fob provided by surepassid
+    
+    Q10: How to set up a password policy?
+    A10: Following are the steps
+        a.  Login to the AWS management console (as a user having administrator access)
+        b.  Navigate to IAM Dashboard
+        c.  Under Access Management, look for 'Account Settings'
+        d.  Click on 'Account Settings' and then click on 'Change Password Policy'
+        e.  The next screen will have 'Set Password Policy' as a header with the following options
+            1.  Enforce Mininum password length (It has a box to enter the number of characters)
+            2.  Require at least one uppercase letter from Latin Alphabet (A-Z)
+            3.  Require at least one lowercase letter from Latin Alphabet (a-z)
+            4.  Require at least one number
+            5.  Require at least on non-alphanumeri character (! @ # $ % ^ & * ( ) _ + - = [] {} | ')
+            6.  Enable password expiration
+            7.  Password expiration requires administrator reset
+            8.  Allow users to change their own password
+            9.  Prevent Password reuse
+        f.  All the above options are checkboxes, so you can select based on your organization's guidelines
+        g.  Click on 'Save Changes'
+
+
+    Q11: How to add MFA to the root user?
+    A11: Once logged in as the root user
+        a.  Click on the username on the top right
+        b.  Under the options, click on 'My Security Credentials'
+        c.  You will be navigated to a different page with the following options
+            1.  Password
+            2.  Multi-Factor authentication (MFA)
+            3.  Access keys (access key ID and secret access key)
+            4.  CloudFront key paris
+            5.  X.509 certificate
+            6.  Account Identifiers
+        d.  Select 'Multi-Factor authentication', that will provide you with following three options (radio buttons)
+            1.  Virtual MFA Device
+            2.  U2F security Key
+            3.  Other Hardware MFA Device
+        e.  Select 'Virtual MFA Device'
+            The following virtual devices are supported
+            Authy, Duo Mobile, LastPass Authenticator, Microsoft Authenticator, Google Authenticator
+
+    Q12: What are the minimum roles an IAM user must have to be able to generate their individual access keys?
+    A12: Following are the mininum roles
+        a.  IAM FullAccess  :   To be able to see the roles and perform actions on individual scope
+        b.  IAM UserSSHKeys :   To be able to generate their own individual access keys
+
+        Once the iam user has these roles, then 'Security Crendentials' tabe under 'Users' will show up without any errors
+        and the 'Create aceess key' option will be enabled.
+    
+    Q13: How to create an access key for an IAM user to be used with CLI or SDK?
+    A13: Once you have the required roles (IAM FullAccess and IAM UserSSHKeys),
+        a.  Click on the Top right of the aws management console on your username
+        b.  Click on 'Security Credentials', it will take you to 'My Security Credentials' page
+        c.  Scroll towards the bottom and look for 'Access Keys'
+        d.  click on 'Create Access Keys', it will display the following options (radio buttons)
+            1.  Command Line Interface (CLI):   {You plan to use this access key to enable the AWS CLI to access your account}
+            2.  Local code: {You plan to use this access key to enable application code in a local development environment to access your AWS account}
+            3.  Application running on an AWS compute service:  {You plan to use this access key to enable application code running on an AWS compute service like 
+                Amazon EC2, Amazon ECS, Amazon Lambda to access your account}
+            4.  Third Party service:    {You plan to use this access key to enable access for a third party application or service that monitors or manager your AWS}
+            5.  Application running outside AWS:    {You plan to use this access key to enable an application running on an on-premise host, or to use a local AWS 
+                client or third party aws plugin}
+            6.  Other:  {Youyuse case is not listed here.}    
+        e.  With selection of any option, AWS will provide a potential recommendation.
+        f.  Their is an optional step to create a tag to understand what this key will be used for.
+        g.  On the 'Retrieve access keys' page: You will see an option to download the access keys via a 'csv' file and also, save it from the GUI
+        h.  Click on 'Done' and you will be navigated back to the 'User page'
+        i.  Under the 'Access Keys' section, you will see the key with the tag and statu as 'Active'
+        j.  If you wish to generate a new access keys, you can do that, but only one access key can be active at one time.
+        k,  Their is an option to delete the keys, if you feel the need to do so.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+AWS - CLI
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    
+    
+    Q01: In how many ways, can the users access AWS?
+    A01: Their are 3 ways by which users can access AWS
+        a.  AWS Management Console (protected by password + MFA)
+        b.  AWS Command Line Interface (CLI): protected by access keys
+        c.  AWS Software Development Kit (SDK): for code: protected by access keys
+    
+    Note: 
+    Access keys are generated using the AWS console
+    Users manage their own access keys (access keys id ~= username; secret access key ~= password), so every IAM user can have their own keys
+
+    Q02: How to configure AWS CLI on windows?
+    A02: Following are the steps:
+        a.  Download the AWSCLI version for windows and install on your machine.
+        b.  To verify, if it was installed correctly, you can type 'aws --version' on the windows command prompt and the output should look like the following
+
+            C:\Users\samarth>aws --version
+            aws-cli/2.9.19 Python/3.9.11 Windows/10 exe/AMD64 prompt/off
+        c.  Now, its time to configure aws cli on the windows machine, you will neeed the following
+            a.  Your access key
+            b.  Your secret key
+            c.  Region (select the one closest (for training purposes))
+        d.  Execute 'aws configure' on the windows command prompt
+
+            C:\Users\samarth>aws configure
+                AWS Access Key ID [None]: MyAccessKey
+                AWS Secret Access Key [None]: MySecretKey
+                Default region name [None]: us-east-1
+                Default output format [None]:
+            C:\Users\samarth>
+        6.  Now the AWS CLI is configured, we run the following command to see, if it returns an output.
+
+            C:\Users\samarth>aws iam list-users
+
+            {
+                "Users": [
+                    {
+                        "Path": "/",
+                        "UserName": "Samarth-Admin",
+                        "UserId": "AIDA*************",
+                        "Arn": "arn:aws:iam::*************:user/Samarth-Admin",
+                        "CreateDate": "2023-01-29T15:31:41+00:00",
+                        "PasswordLastUsed": "2023-01-29T16:36:37+00:00"
+                    },
+                    {
+                        "Path": "/",
+                        "UserName": "Samarth-Developer",
+                        "UserId": "AIDA*************",",
+                        "Arn": "arn:aws:iam::*************:user/Samarth-Developer",
+                        "CreateDate": "2023-01-29T13:59:14+00:00",
+                        "PasswordLastUsed": "2023-01-29T16:35:12+00:00"
+                    }
+                ]
+            }
+            C:\Users\samarth>
+        
+    Important Note: AWS-CLI is just another method of accessing the data, the data shows will always be same across management console and CLI
+    For e.g.:- If we go ahead and remove the policy 'IAM FullAccess' from the group 'AWS-Developer', which IAM user 'Samarth-Developer' is a part of,
+    And then execute the same command (aws iam list-users) from windows command prompt, their will be no output, same can be validated by going to the 
+    Management console, under users page, you will see 'You need Permissions' message.
