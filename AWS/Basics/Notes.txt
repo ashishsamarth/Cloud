@@ -37,7 +37,7 @@ IAM: Identity & Access Management
         Important Note: Since IAM is a Global Service, the alia that you create must be unique for entire IAM service across all regions.
         You cannot create an alias if it already exists.
 
-        e.g.:   https://samarth-aws-cloud.signin.aws.amazon.com/console
+        e.g.:   https://samarth-aws.signin.aws.amazon.com/console
     
     Q6: What is the advantage of having an alias based url for login?
     A6: Following are the advantages
@@ -45,3 +45,8 @@ IAM: Identity & Access Management
             1.  Your 'Account ID or Alias' is already populated for you
             2.  You can directly login as an IAM user, rather than selecting the radio button between 'root user' vs 'iam user'
     
+    Q7: How can you identify if a user is an IAM User vs a ROOT user, just by looking at the management console?
+    A7: Once logged in, if you look at the top right of the screen where it shows the user
+        a.  An IAM user will have the '@' keyword in the name:
+            e.g.    samarth-developer@samarth-aws OR samarth-developer@account-id
+        b.  A root user will not have the '@' keyword in the name
