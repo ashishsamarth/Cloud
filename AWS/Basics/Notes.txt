@@ -15,3 +15,6 @@ IAM: Identity & Access Management
         a.  Programmatic Access: This allows the user to use AWS API, CLI, SDK and Other development tools to be utilized via an access Key ID & secret access key
         b.  AWS Management Console Access: This allows the user to use the (GUI) management console access.
     
+    Q2. When creating a USER, is it necessary to Create a Group?
+    A2: No, Its not necesary to create a Group while creating a USER. However, as a best practice its recommended to have even a single user to be mapped to group.
+        Since over a period of time, the number of users may grow and it will be easier to manage permissions using groups and policies.
