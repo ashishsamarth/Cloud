@@ -530,3 +530,11 @@ EC2 User Data
         d.  Then under 'Principal' click on 'System' and remove this user. Do the same for 'Administator' user.
         e.  Once the other users are removed, only the actual user will have access to the .ppk file.
         f.  This process is similar to chmod 400 filename in Mac or Linux.
+    
+    Q11: Do you need to upload your .ppk file to connect to your EC2 instance when using 'Instance Connect'?
+    A11: No, we do not need to upload our .ppk file to connect to our EC2 instance using 'Instance Connect'
+        AWS, creates a temporary .ppk file to connect to your EC2 instance, when the connection initiated via 'Instance Connect'
+    
+    Q12: What will happen, if you remove the 'inbound rule' for port 22 and try to connect to your EC2 instance, via 'Instance Connect'?
+    A12: We will not be able to connect to our EC2 instance, via any method utilized SSH (Instance Connect, Putty, Command Promprt, Powershell).
+        Since the port 22 is removed / not added to the inbound rules in the security group.
