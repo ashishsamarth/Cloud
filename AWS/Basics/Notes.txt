@@ -468,4 +468,12 @@ EC2 User Data
         c.  In-memory databases optimized for BI (business intelligence)
         d.  Applications performing real-time processing of big unstructured data
     Special Note: The memory optimized instances starts with 'R', 'X', 'z' and 'High Memory'. Here 'R' represents 'Ram'
-    
+
+    Q06: Explain the characteristics of EC2 Instance type: Storage Optimized
+    A06: Storage Optimized instances are great for 'storage intensive' tasks that require high, sequential read and write access to large data sets 
+    on local storage
+        a.  High frequency online transaction processing (OLTP) Systems
+        b.  Relational & No-SQL databases
+        c.  Cache for in-memory databases (for example, Redis)
+        d.  Data Warehousing applications
+        e.  Distributed file Systems
