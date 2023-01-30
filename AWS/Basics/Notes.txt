@@ -522,3 +522,11 @@ EC2 User Data
         e.  443 = HTTPS - Access secured websites
         f.  3389 = RDP (Remote Desktop Protocol) - Login to windows instance.
 
+    Q10: How to change the file permissions for .ppk file in windows?
+    A10: While the chmod command works in Linux or Mac, windows doesnot have any such command available. Here's how you change the permissions
+        a.  Right click on the file and go to properties and then security.
+        b.  Under security click on 'Advanced'
+        c.  Click on 'Disable Inheritence' and then click on 'Convert inherited permissions to explicit permissions on this object'
+        d.  Then under 'Principal' click on 'System' and remove this user. Do the same for 'Administator' user.
+        e.  Once the other users are removed, only the actual user will have access to the .ppk file.
+        f.  This process is similar to chmod 400 filename in Mac or Linux.
