@@ -458,4 +458,14 @@ EC2 User Data
         d.  High Performance computing (HPC)
         e.  Scientific modeling and Machine Learning
         f.  Dedicated gaming servers.
+    Special Note: The compute optimized instances starts with the alphabet 'C'
+    e.g.    : C6g, C6gn, C5, C5a, C5n, C4
+
+    Q05: Explain the characteristics of EC2 Instance type: Memory Optimized
+    A05: Memory Optimized instance types are great for
+        a.  High prformanc, relational or non-relational database
+        b.  Distributed web scale cache stores
+        c.  In-memory databases optimized for BI (business intelligence)
+        d.  Applications performing real-time processing of big unstructured data
+    Special Note: The memory optimized instances starts with 'R', 'X', 'z' and 'High Memory'. Here 'R' represents 'Ram'
     
