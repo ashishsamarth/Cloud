@@ -538,3 +538,42 @@ EC2 User Data
     Q12: What will happen, if you remove the 'inbound rule' for port 22 and try to connect to your EC2 instance, via 'Instance Connect'?
     A12: We will not be able to connect to our EC2 instance, via any method utilized SSH (Instance Connect, Putty, Command Promprt, Powershell).
         Since the port 22 is removed / not added to the inbound rules in the security group.
+    
+    Q13: Does the EC2 instance have 'AWS-CLI' pre-installed?
+    A13: Yes, the EC2 instance have AWS-CLI preinstalled, and this can be validated by connecting to the instance via Instance Connect and execute the following 
+        aws --version
+
+        [ec2-user@ip-100-1-1-0 /]$ aws --version
+        aws-cli/1.18.147 Python/2.7.18 Linux/5.10.162-141.675.amzn2.x86_64 botocore/1.18.6
+        [ec2-user@ip-100-1-1-0 /]$ 
+    
+    Q14: Can you run, AWS-CLI commands on EC2, when connected via Instance Connect?
+    A14: Yes, we can run AWS-CLI commands on EC2 instance, even when connected via Instance Connect.
+
+        [ec2-user@ip-100-1-1-0 /]$ aws iam list-users
+        Unable to locate credentials. You can configure credentials by running "aws configure".
+        [ec2-user@ip-100-1-1-0 /]$
+
+    Q15: Should you perform 'aws configure' on EC2 instance?
+    A15: In order to run AWS-CLI commands directly on the EC2 instance, rather than performing 'aws configure' on the instance, one should use, 
+        IAM roles. The reason to NOT configure your 'access-key' and 'secret-key' on the EC2 instance is, anybody who is connected to the EC2 
+        instance can read the values of your 'access-key' and 'secret-key' there by compromising your security and profile.
+
+    Q16: If 'aws configure' on an EC2 instance is a NO-NO, how do you handle this situation?
+    A16: The recommended solution for this is, to use IAM roles.
+        To use IAM roles for EC2 instance to run aws-cli commands, perform the following
+        a.  Go to your EC2 dashboard and click on the instance name
+        b.  On the bottom half section of the page, click on 'Security'
+        c.  Under the 'Security Details' section, you will 'IAM Role' but no permission policy attached to it.
+        d.  Now on the top half of the page, you will see 'Actions'
+        e.  Click on 'Actions' then, 'Security' then 'Modify IAM Role'
+        f.  This will let you
+            1.  Either create a new role for the task or action you are interested in.
+            2.  If you have existing role created, which would suffice for your task, select it from the drop down menu.
+                {For e.g. I created an IAM role to 'Read-IAM-Data' for 'EC2'}
+        g.  Click on 'Update IAM Role'
+        i.  Now, if you go back to the EC2 (via instance connect), you should be able to run the aws cli command (aws iam list-users) and see the output
+        
+
+
+
