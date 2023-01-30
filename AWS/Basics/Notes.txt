@@ -394,3 +394,26 @@ Budget and Billing
             3.  Email Recipients:   {To receive threshold alerts}
         i.  Once the budget is created, 
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+AWS-EC2
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+EC2 is the most popular offerting of AWS's offering
+EC2 = Elastic Compute Cloud is an IaaS (Infrastructure as a Service)
+
+It has the following capabilities
+    a.  Renting Virtual Machines (EC2 - Elastic Compute Cloud)
+    b.  Storing Data on Virtual Drives (EBS - Elastic Block Storage)
+    c.  Distributing Load Across Machines (ELB - Elastic Load Balancer)
+    d.  Scaling the services using an auto-scaling group (ASG - Auto Scaling Group)
+Knowling EC2 is the fundamental to understand how the cloud works
+
+EC2 Sizing & Cnfiguration options
+    a.  Operating Systems Supported: Linux, Windows or MAC OS
+    b.  How much compute power and cores: (CPU)
+    c.  How much random access memory (RAM)
+    d.  How much storage space
+        1.  Network Attached (EBS [Elastic Block Storage] & EFS [Elastic File System])
+        2.  Hardware (EC2 Instance Store)
+    e.  Network Card: Speed of the card, Public IP Address
+    f.  Firewall Rules: Security Group
+    g.  Bootstrap Script (Configure at first launch): EC2 User Data
