@@ -427,3 +427,4 @@ EC2 User Data
         b.  Installing Software
         c.  Downloading common files from internet
         d.  Any specific scripts that you may want to execute only when machine boots.
+    Special Note: Anything that you run as EC2 User data will be executed as a 'root' user.
