@@ -443,4 +443,10 @@ EC2 User Data
     A02: For example, the EC2 instance you are working with is m5.2xlarge, here's how to read it
         a.  m:  Instance Class
         b.  5:  Generation (AWS improves the generation over time)
-        c.  2xlarge:    Size with in the instance class
+        c.  2xlarge:    Size with in the instance class (more memory , more CPU)
+    
+    Q03: Explain the characteristics of EC2 Instance type: General Purpose
+    A03: General Purpose instance types are great for
+        a.  Diversity of workloads, such as web servers or code repositories
+        b.  These provide a balance between, Compute, Memory and Networking
+        
