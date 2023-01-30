@@ -417,3 +417,13 @@ EC2 Sizing & Cnfiguration options
     e.  Network Card: Speed of the card, Public IP Address
     f.  Firewall Rules: Security Group
     g.  Bootstrap Script (Configure at first launch): EC2 User Data
+
+EC2 User Data
+    a.  it is possible to bootstrap our instances using an EC2 User Data Script
+    b.  Bootstrapping means launching commands when the machine starts
+    c.  These scripts is executed ones when the instance boots.
+    d.  EC2 User Data is used to automate boot tasks such as:
+        a.  Installing Updates
+        b.  Installing Software
+        c.  Downloading common files from internet
+        d.  Any specific scripts that you may want to execute only when machine boots.
