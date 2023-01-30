@@ -428,3 +428,19 @@ EC2 User Data
         c.  Downloading common files from internet
         d.  Any specific scripts that you may want to execute only when machine boots.
     Special Note: Anything that you run as EC2 User data will be executed as a 'root' user.
+
+    Q01: What are the different types of EC2 Instance Types?
+    A01: Their are 7 different types of EC2 Instance types, namely:
+        a.  General Purpose (GP)
+        b.  Compute Optimized
+        c.  Memory Optimized
+        d.  Accelerated Computing
+        e.  Storage Optimized
+        f.  Instance Features
+        g.  Measuring Instance Performance
+    
+    Q02: How to read the naming convention of an EC2 instance?
+    A02: For example, the EC2 instance you are working with is m5.2xlarge, here's how to read it
+        a.  m:  Instance Class
+        b.  5:  Generation (AWS improves the generation over time)
+        c.  2xlarge:    Size with in the instance class
