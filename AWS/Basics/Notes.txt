@@ -449,4 +449,13 @@ EC2 User Data
     A03: General Purpose instance types are great for
         a.  Diversity of workloads, such as web servers or code repositories
         b.  These provide a balance between, Compute, Memory and Networking
-        
+    
+    Q04: Explain the characteristics of EC2 Instance type: Compute Optimized
+    A04: Compute Optimized instance types are great for
+        a.  Batch processing workloads
+        b.  Media Transcoding
+        c.  High Performance Web servers
+        d.  High Performance computing (HPC)
+        e.  Scientific modeling and Machine Learning
+        f.  Dedicated gaming servers.
+    
