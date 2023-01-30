@@ -438,6 +438,7 @@ EC2 User Data
         e.  Storage Optimized
         f.  Instance Features
         g.  Measuring Instance Performance
+    Special Note: Site to compare all instances : https://www.ec2instances.info
     
     Q02: How to read the naming convention of an EC2 instance?
     A02: For example, the EC2 instance you are working with is m5.2xlarge, here's how to read it
@@ -477,3 +478,14 @@ EC2 User Data
         c.  Cache for in-memory databases (for example, Redis)
         d.  Data Warehousing applications
         e.  Distributed file Systems
+
+    Q07: What is an AWS security group?
+    A07: Security groups are fundamental of network security in AWS. They control how traffic is allowed into OR out of EC2 Instances.
+        a.  Security Groups only contain allow rules
+        b.  Security Group rules can reference by IP Address or by security group
+        c.  Security groups are acting as a 'Firewall' on EC2 instanes. They regulate the following:
+            1.  Access to ports
+            2.  Authorized IP Ranges - IPv4 and IPv6
+            3.  Control of inbound network (from other/outside to the instance)
+            4.  Control of outbound network (from the instance to other/outside)
+            
