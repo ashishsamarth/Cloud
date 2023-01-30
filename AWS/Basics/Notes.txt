@@ -488,4 +488,16 @@ EC2 User Data
             2.  Authorized IP Ranges - IPv4 and IPv6
             3.  Control of inbound network (from other/outside to the instance)
             4.  Control of outbound network (from the instance to other/outside)
-            
+        
+        Characteristics of a Security Group
+        a.  A single security group can be attached to multiple instances. Also, one instance can have many security groups attached to it.
+        b.  A security group is locked to a region-and-VPC combination. A security group created in VPN01ABC in US-EAST-2 will not be available in a 
+            different Region-VPC combination
+        c.  A security group resides 'outside' the EC2 instance, if the traffic is blocked, and EC2 instance will not even see it.
+        d.  It's good to maintain one separate security group for SSH Access
+        e.  All inbound traffic is 'BLOCKED' by default
+        f.  All outbound traffic is 'AUTHORIZED' by default
+
+        Special Note:
+        a.  If your application is not accessible (TIME OUT), then its a 'security group'issue
+        b.  If your application gives a 'connection refused' error, then its an application error or its not launched.
