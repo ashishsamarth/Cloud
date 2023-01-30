@@ -512,3 +512,13 @@ EC2 User Data
             to connect to the first ES2 instance on the specific port (allowed by the inbound rule in security group A)
         e.  This internal communication between EC2 instances is simply possible because the Security Group A authorized the inbound traffic from 
             security group B and C
+    
+    Q09: What are the classic ports to know?
+    A09: Following are the classic port numbers
+        a.  22 = SSH (secure shell): Login to the Linux instance
+        b.  21 = FTP (File transfer protocol): Upload files into a file share
+        c.  22 = SFTP (Secure file transfer protocol): Upload files using SSH
+        d.  80 = HTTP - Access unsecured websites
+        e.  443 = HTTPS - Access secured websites
+        f.  3389 = RDP (Remote Desktop Protocol) - Login to windows instance.
+
