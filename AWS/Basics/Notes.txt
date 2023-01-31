@@ -1,6 +1,6 @@
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 IAM: Identity & Access Management
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 1.  IAM is a global service in AWS. This can be verified by going to IAM Dashboard and when you try to select a region, you will see the following text
     'IAM does not require a region selection'
     It also indicates that all the users that are created in a particular AWS account are available in all regions.
@@ -12,17 +12,20 @@ IAM: Identity & Access Management
     Q01: When creating a USER, how many types of 'Access Types' can be provisioned?
     A01: Their are two types of 'Access Types' that can be utilized
 
-        a.  Programmatic Access: This allows the user to use AWS API, CLI, SDK and Other development tools to be utilized via an access Key ID & secret access key
-        b.  AWS Management Console Access: This allows the user to use the (GUI) management console access.
+        a.  Programmatic Access: 
+            This allows the user to use AWS API, CLI, SDK & Other development tools to be utilized via an access Key ID & secret access key
+        b.  AWS Management Console Access: 
+            This allows the user to use the (GUI) management console access.
     
     Q02. When creating a USER, is it necessary to Create a Group?
-    A02: No, Its not necesary to create a Group while creating a USER. However, as a best practice its recommended to have even a single user to be mapped to group.
-        Since over a period of time, the number of users may grow and it will be easier to manage permissions using groups and policies.
+    A02: No, Its not necesary to create a Group while creating a USER. However, as a best practice its recommended to have even a single user to be 
+        mapped to group.Since over a period of time, the number of users may grow and it will be easier to manage permissions using groups and policies.
     
     Q03: What are tags in AWS?
     A03: Tags are way to organize and categorize resources in AWS.
-        Foe e.g.: Their are mulitple EC2 instances in your account, and you want to identify them based on Team names and/or Project Names to quickly identify which 
-        EC2 instance is being used for what. Tagging also helps to identify the cost accumulated by the resources which is important for Billing & Thresholds.
+        Foe e.g.: Their are mulitple EC2 instances in your account, and you want to identify them based on Team names and/or Project Names to quickly 
+        identify which EC2 instance is being used for what. Tagging also helps to identify the cost accumulated by the resources which is important for 
+        Billing & Thresholds.
     
     Q04: Once the user is created, how many ways can the user get login credentials?
     A04: Their are two ways a user can get hold of login credentials
@@ -92,7 +95,6 @@ IAM: Identity & Access Management
         f.  All the above options are checkboxes, so you can select based on your organization's guidelines
         g.  Click on 'Save Changes'
 
-
     Q11: How to add MFA to the root user?
     A11: Once logged in as the root user
         a.  Click on the username on the top right
@@ -128,11 +130,12 @@ IAM: Identity & Access Management
         d.  click on 'Create Access Keys', it will display the following options (radio buttons)
             1.  Command Line Interface (CLI):   {You plan to use this access key to enable the AWS CLI to access your account}
             2.  Local code: {You plan to use this access key to enable application code in a local development environment to access your AWS account}
-            3.  Application running on an AWS compute service:  {You plan to use this access key to enable application code running on an AWS compute service like 
-                Amazon EC2, Amazon ECS, Amazon Lambda to access your account}
-            4.  Third Party service:    {You plan to use this access key to enable access for a third party application or service that monitors or manager your AWS}
-            5.  Application running outside AWS:    {You plan to use this access key to enable an application running on an on-premise host, or to use a local AWS 
-                client or third party aws plugin}
+            3.  Application running on an AWS compute service:  {You plan to use this access key to enable application code running on an AWS compute 
+                service like Amazon EC2, Amazon ECS, Amazon Lambda to access your account}
+            4.  Third Party service:    {You plan to use this access key to enable access for a third party application or service that monitors or 
+                manages your AWS}
+            5.  Application running outside AWS:    {You plan to use this access key to enable an application running on an on-premise host, or to 
+                use a local AWS client or third party aws plugin}
             6.  Other:  {Youyuse case is not listed here.}    
         e.  With selection of any option, AWS will provide a potential recommendation.
         f.  Their is an optional step to create a tag to understand what this key will be used for.
@@ -148,9 +151,9 @@ IAM: Identity & Access Management
          Once the policy is attached to the user or the role, the cloud shell will work for the user.
 
     Q15: What are IAM roles for services?
-    A15: So far, we have dealt with a username accessed by a physical person to be able to perform certain checks or tasks. The next category is to have applications 
-    talk to each other (similar to one microservice talking to another). For this to happen, the service which is trying to perform an action on another service 
-    must have the permission to do. This is managed by IAM roles for the service. 
+    A15: So far, we have dealt with a username accessed by a physical person to be able to perform certain checks or tasks. The next category is to 
+    have applications talk to each other (similar to one microservice talking to another). For this to happen, the service which is trying to perform 
+    an action on another service must have the permission to do. This is managed by IAM roles for the service. 
     Following are few examples:
         a.  EC2 Instance roles
         b.  Lambda Function roles
@@ -248,9 +251,9 @@ IAM: Identity & Access Management
     f.  ACCESS KEYS: Access AWS using the CLI or SDK
     g.  Audit:      IAM Credentials and IAM Access Advisor
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 AWS - CLI & Cloud Shell
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
     
     
     Q01: In how many ways, can the users access AWS?
@@ -266,7 +269,7 @@ AWS - CLI & Cloud Shell
     Q02: How to configure AWS CLI on windows?
     A02: Following are the steps:
         a.  Download the AWSCLI version for windows and install on your machine.
-        b.  To verify, if it was installed correctly, you can type 'aws --version' on the windows command prompt and the output should look like the following
+        b.  To verify, if it was installed correctly, you can type 'aws --version' on the windows command prompt & the output should look like the following
 
             C:\Users\samarth>aws --version
             aws-cli/2.9.19 Python/3.9.11 Windows/10 exe/AMD64 prompt/off
@@ -347,9 +350,9 @@ AWS - CLI & Cloud Shell
             }
             [cloudshell-user@ip-10-0-124-229]$
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 Budget and Billing
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
     Q01: Can an IAM user access the Billing and Cost Management Dashboard by default?
     A01: No, the only user who can access Billing and Cost Management Dashboard by default is the root user.
@@ -385,8 +388,10 @@ Budget and Billing
         f.  Their are multiple templates, namely (Radio Buttons)
             1.  'Zero spend budget':    {Create a budget that notified you once your spending exceeds $0.01 which is above the AWS free tier limits}
             2.  'Monthly Cost Budget':  {Create a monthly budget that notified you if you exceed, or are forecasted to exceed, the budget amount}
-            3.  'Daily Savings Plans Coverage budget':  {Create a converage budget for your savings plans that notifies you when you fall below the defined target}
-            4.  'Daily reservation utilization budget': {Ceate a utilization budget for your reservations that notifies you when you fall below the defined target}
+            3.  'Daily Savings Plans Coverage budget':  {Create a converage budget for your savings plans that notifies you when you fall below the 
+                defined target}
+            4.  'Daily reservation utilization budget': {Ceate a utilization budget for your reservations that notifies you when you fall below the 
+                defined target}
         g.  Click on 'Monthly Cost Budget'
         h.  Provide the following values
             1.  Budget Name
@@ -394,9 +399,9 @@ Budget and Billing
             3.  Email Recipients:   {To receive threshold alerts}
         i.  Once the budget is created, 
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 AWS-EC2: Elastic Compute Cloud
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 EC2 is the most popular offerting of AWS's offering
 EC2 = Elastic Compute Cloud is an IaaS (Infrastructure as a Service)
 
@@ -540,7 +545,7 @@ EC2 User Data
         Since the port 22 is removed / not added to the inbound rules in the security group.
     
     Q13: Does the EC2 instance have 'AWS-CLI' pre-installed?
-    A13: Yes, the EC2 instance have AWS-CLI preinstalled, and this can be validated by connecting to the instance via Instance Connect and execute the following 
+    A13: Yes, the EC2 instance have AWS-CLI preinstalled, & this can be validated by connecting to the instance via Instance Connect & execute the following 
         aws --version
 
         [ec2-user@ip-100-1-1-0 /]$ aws --version
@@ -618,7 +623,8 @@ EC2 User Data
     Q20: Explain the characteristics of EC2 - SPOT Instances?
     A20: These instances can
         a.  Get you a discount of upto 90% when compared with On-Demand instances.
-        b.  You can lose them, at any point in time, if your max price is less than the current spot price. The current spot price keeps on changing. (bidding fashion)
+        b.  You can lose them, at any point in time, if your max price is less than the current spot price. The current spot price keeps on changing. 
+            (bidding fashion)
         c.  This is the MOST cost effective instance in AWS.
         
         These instances are recommended for, tasks which are resilient to failure
@@ -654,6 +660,6 @@ EC2 User Data
                 iii.Affinity between host and instance
                 iv. Add capacity using an allocation request.
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 AWS-EBS: Elastic Block Storage
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
