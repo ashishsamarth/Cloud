@@ -395,7 +395,7 @@ Budget and Billing
         i.  Once the budget is created, 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-AWS-EC2
+AWS-EC2: Elastic Compute Cloud
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 EC2 is the most popular offerting of AWS's offering
 EC2 = Elastic Compute Cloud is an IaaS (Infrastructure as a Service)
@@ -407,7 +407,7 @@ It has the following capabilities
     d.  Scaling the services using an auto-scaling group (ASG - Auto Scaling Group)
 Knowling EC2 is the fundamental to understand how the cloud works
 
-EC2 Sizing & Cnfiguration options
+EC2 Sizing & Configuration options
     a.  Operating Systems Supported: Linux, Windows or MAC OS
     b.  How much compute power and cores: (CPU)
     c.  How much random access memory (RAM)
@@ -573,7 +573,87 @@ EC2 User Data
                 {For e.g. I created an IAM role to 'Read-IAM-Data' for 'EC2'}
         g.  Click on 'Update IAM Role'
         i.  Now, if you go back to the EC2 (via instance connect), you should be able to run the aws cli command (aws iam list-users) and see the output
+    
+    Q17: Explain EC2 Instance Purchasing options?
+    A17: Following are the EC2 instances purchasing options.
+        a.  ON-DEMAND Instances : These are good for short workloads and have predictable pricing
+        b.  RESERVED Instance   : Should be for a minimum of one year
+            1.  Reserved Instances: These are good for longer workloads (for e.g. Database)
+            2.  Convertiable Reserved Instances: Long workloads with flexible instances
+            3.  Scheduled Reserved Instances: Example every Thursday between 3 and 6 PM
+        c.  SPOT Instances  : Short workloads, Cheap and can lose instances (Less reliable)
+        d.  Dedicated Hosts : Book an entire physical server, controlled / targetted instance placement.
+
+    Q18: Explain the characteristics of EC2 - On-demand Instances?
+    A18: EC2 On-Demand instance works on - 
+        a.  Pay for what you use.
+            1.  For Linux Machines:- These are charged for per second billing, after the first minute
+            2.  For Other Machines:- These are charged for per hour billing
+        b.  These instances have the HIGHEST cost, but have no upfront payment.
+        c.  Their is no long term commitment for these type of instances.
+
+        These are recommended for : SHORT-TERM and UN-INTERRUPTED workloads, where you cannot predict the behaviour of the application
+
+    Q19: Explain the characteristics of EC2 - Reserved Instances?
+    A19: EC2 - Reserved Instances, provide up to 75% discount when compared with On-Demand instances.
+        a.  The reservation period for these instances is between 1 and 3 years, bigger the duration, bigger will be the discount
+        b.  Purchasing options also have three options
+            1.  No Upfront cost, meaning monthly payments
+            2.  Partial upfront cost, will get you some discount.
+            3.  All upfront cost, will get you even bigger discount.
         
+        Their are 3 types of reserved instances
+        a.  Reserved Instances:
+            For these ones, you must reserve a specific instance type (t2.micro, c5.large etc) and you cannot change the instance after selection
+            These are recommended for steady state usage applications, for e.g. a Database
 
+        b.  Convertible Reserved Intances:
+            For these ones, you can change the selected instance type. For example c5.large to c5.2xlarge
+            These provide upto 54% discount
 
+        c.  Scheduled Reserved Instances: 
+            These are available for the time duration (Fraction of Day/ Week/ Month) you reserved them.
+            But the commitment should still be between 1-3 years.
+    
+    Q20: Explain the characteristics of EC2 - SPOT Instances?
+    A20: These instances can
+        a.  Get you a discount of upto 90% when compared with On-Demand instances.
+        b.  You can lose them, at any point in time, if your max price is less than the current spot price. The current spot price keeps on changing. (bidding fashion)
+        c.  This is the MOST cost effective instance in AWS.
+        
+        These instances are recommended for, tasks which are resilient to failure
+        a.  Batch Jobs
+        b.  Data Analysis
+        c.  Image processing
+        d.  Any distributed workloads
+        e.  Workloads with a flexible start and end time
 
+        These instances are NOT recommended for :- Critical Jobs or Databases.
+    
+    Q21: Explain the characteristics of EC2 - DEDICATED Instances?
+    A21: AWS EC2 Dedicated instances comprises of host, which is a physical server with the EC2 instance capacity fully dedicated to your use.
+        Dedicated hosts can help you adress the following
+        a.  COMPLIANCE Requirements
+        b.  Reduce cost by allowing you to use your existing server bound licenses.
+
+        These are allocated for a 3 year reservation and are more expensive.
+        These are useful for:
+            a. Softwares that have complicated licensing model (BYOL - Bring your own license)
+            b. Organizations with Strong compliance needs.
+    
+    Q22: Explain the Similarities and difference between Dedicated Hosts and Dedicated Instances?
+    A22: Here are the Details
+        a.  Similarities
+            1.  Both Dedicated Instance and Dedicated hosts, Enables the use of dedicated physical server
+            2.  Both Dedicated Instance and Dedicated hosts, have automatic instance placement
+        b.  Differences
+            1.  Dedicated Instance have Per-Instance-Billing, while Dedicated hosts have Per-Host-Billing
+            2.  Dedicated Hosts have:
+                i.  Visibility of Sockets, Cores and Hosts ID
+                ii. Targeted Instance placement
+                iii.Affinity between host and instance
+                iv. Add capacity using an allocation request.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+AWS-EBS: Elastic Block Storage
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
