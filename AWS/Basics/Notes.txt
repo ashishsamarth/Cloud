@@ -1134,3 +1134,11 @@ ELB : Elastic Load Balancer
     A09: The status 'Out-of-Service' will be shown on the EC2 dashboard for the ELB, when
         a.  The instance is newly created and the EC2 instances are still being registered with the ELB
         b.  The instance is unhealthy and the healthchecks have failed consecutively.
+    
+    Q10: What is an Application Load Balancer(v2)?
+    A10: Application load balancers operate at layer 7 (HTTP)
+        a.  Load Balancing to multiple HTTP applications across machines (called as Target Groups)
+        b.  Load Balancing to multiple applications on the same machine (e.g. Containers)
+        c.  Support for HTT/2 and WebSocket
+        d.  Supports redirects (from HTTP to HTTPS)
+        
