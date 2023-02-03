@@ -1083,7 +1083,7 @@ ELB : Elastic Load Balancer
             Port 80 over HTTP
             Port 443 over HTTPS
             So, the load balancer security will have these two rules (1 for port 80 another for port 443)
-                Type:       Custom TCP Protocol
+                Type:       HTTP
                 Protocol:   TCP
                 PortRange:  80
                 Source:     Custom: 0.0.0.0/0 (Anywhere)
