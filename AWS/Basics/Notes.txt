@@ -1021,7 +1021,15 @@ ELB : Elastic Load Balancer
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
     Q01: What is a load balancer?
     A01: Load balancer are servers that forward the internet traffic to multiple servers (EC2 instances) downstream.
-        a.  Load Balancers can scale but not instantaneosuly
+        a.  Load Balancers can scale but not instantaneosuly - contact AWS for a "Warm-Up"
+        b.  Troubleshooting an ELB:
+            1.  4xx errors are client induced errors
+            2.  5xx errors are application induced errors
+            3.  Load Balancer Errors 503 means 'at capacity' or no registered target
+            4.  If the LB can't connect to your application, check your security groups
+        c.  Monitoring an ELB:
+            1.  ELB Access logs will log all access requests (so you can debug per request)
+            2.  CloudWatch metrics will give you aggregate statistics (e.g; Connections Count)
     
 
     Q02: Why use a load balancer?
