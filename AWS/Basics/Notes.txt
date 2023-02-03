@@ -1140,5 +1140,6 @@ ELB : Elastic Load Balancer
         a.  Load Balancing to multiple HTTP applications across machines (called as Target Groups)
         b.  Load Balancing to multiple applications on the same machine (e.g. Containers)
         c.  Support for HTT/2 and WebSocket
-        d.  Supports redirects (from HTTP to HTTPS)
-        
+        d.  Supports redirects (from HTTP to HTTPS).
+        e.  Supports routing based on path in URL (example.com/users & example.com/posts)
+        f.  Supports routing based on hostname in URL (one.example.com & other.example.com)
