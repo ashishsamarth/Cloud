@@ -1199,6 +1199,13 @@ ELB : Elastic Load Balancer
                 iv. Timeout             :   5
                 v.  Interval            :   30
                 vi. Success Codes       :   200
+        g.  On the 'Register Targets'
+            Whatever number of instances that you select will be added to one target group.
+            For e.g.: If you have 3 instances and you selected only 2, then these 2 instances will be part for the first target group
+            The 3rd instance can be added to the ALB later on, as another target group.
+
+            This is one of the important upgraded features of ALB, and then you can route traffic to these target groups based on a 
+            variety or parameters in the routing rules.
                     
 
 
