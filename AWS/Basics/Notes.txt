@@ -1238,5 +1238,12 @@ ELB : Elastic Load Balancer
             1.  Select the instance you want to add to this new target group
             2.  Click on 'Include as pending below'
             3.  Under 'Targets': This new entry will show as 'Pending'
-        e.  Now we have a new target group created.
+        e.  Now we have a new target group created, it can now be added to the ALB.
+        f.  In the left side vertical menu, under 'Load Balancing', click on 'Load Balancers'
+        g.  Once the 'Load Balancer' page opens, select the ALB that you want to modify.
+        h.  Click 'Listeners' and then 'Add Listeners'
+        j.  Under 'Rules' click on 'view/edit' rules.
+        k.  On the 'Rules' page, click on '+' on the header.
+        l.  Add the 'Add Condition'd for IF and 'Add action' for THEN and click save.
+
 
