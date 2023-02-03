@@ -1014,4 +1014,10 @@ EFS
         b.  Are NOT locked at the Availability Zone (AZ) level and can be used across different AZs in a region
         c.  Only supports LINUX instances (POSIX File system)
         d.  EFS has a HIGHER price point than EBS
-        e.  You can leverage (EFS-IA: In-frequent Access) for Cost Savings  
+        e.  You can leverage (EFS-IA: In-frequent Access) for Cost Savings
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+ELB : Elastic Load Balancer
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Q01: What is a load balancer?
+    A01: Load balancer are servers that forward the internet traffic to multiple servers (EC2 instances) downstream
