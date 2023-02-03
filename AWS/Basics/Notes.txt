@@ -1159,3 +1159,48 @@ ELB : Elastic Load Balancer
             b.  ECS tasks (managed by ECS itself) - HTTP
             c.  Lambda Functions - HTTP Request is translated into a JSON format.
             d.  Multiple Target groups, and health checks are at the target level.
+
+    Q11: How to create a Application Load Balancer?
+    A11: Following are the steps:
+        a.  Login to the EC2 Dashboard
+        b.  In the left side vertical menu, under 'Load Balancing' click on 'Load Balancers' then click on 'Create Load Balancer'
+        c.  select 'Application Load Balancer' and click on create.
+        d.  On the 'Configure Load Balancer' - Basic configuration
+            1.  Provide a name for the application load balancer
+            2.  Scheme :    Internet-Facing
+            3.  IP Address Type: IPv4
+            4.  Listeners : A listener is a process that checks for connection requests, using the protocol and port that is configured
+                i.  Load Balancer Protocol: HTTP
+                ii. Load Balancer Port: 80
+            5.  For Availability Zone:
+                i.  Select the default VPC
+                ii. Select the AZs which you want to configure for the ALB.
+            6.  On the 'AWS global accelerator, do noting.
+        e.  On the 'Configure Security Settings'
+            Since we used HTTP port instead of HTTPS: AWS will show a security warning.
+            Now, you can either create a new security group that will accept traffic from 'Anywhere' to ALB-port 80 with HTTP protocol.
+            OR, if you already have one, you can use it. Make a note, which security group was configured.
+        f.  On the 'Configure Routing' page
+            1.  Target Group:   New Target Group
+            2.  Name        :   Provide a target group name
+            3.  Target Type :   We will select 'Instance' since we will map EC2 instance to this ALB
+                            :   Valid values are 'Instance', 'IP' , 'Lambda Function' (Radio Button Selection)
+            4.  Protocol    :   HTTP
+            5.  Port        :   80
+            6.  Protocol Ver:   HTTP1 {Send requests to targets using HTTP/1.1; supported when the request is HTTP/1.1 or 1.2}
+                                Valid values are: HTTP2 and gRPC
+            7.  healthchecks:
+                            protocol: HTTP
+                            path    : /
+            8.  Advanced Health Check settings
+                i.  Port                :   traffic port (Other valid value is override)
+                ii. Healthy Threshold   :   3
+                iii.Unhealthy Threshold :   2
+                iv. Timeout             :   5
+                v.  Interval            :   30
+                vi. Success Codes       :   200
+                    
+
+
+
+
