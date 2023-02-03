@@ -1034,7 +1034,7 @@ ELB : Elastic Load Balancer
         h.  Separate public facing traffic from private facing traffic.
     
     Q03: Why use an EC2 Load Balancer?
-    A03: An ELB (Elastic Load Balacer / EC2 Load Balancer) is a managed load balancer
+    A03: An ELB (Elastic Load Balacer / EC2 Load Balancer) is a MANAGED load balancer
         a.  AWS guarantees that it will be working
         b.  AWS takes care of upgrades, maintenance, high availability
         c.  AWS provides only a few configuration knobs to the user.
@@ -1042,3 +1042,21 @@ ELB : Elastic Load Balancer
     Special Notes:
         1.  Its costs less set up your own load balancer but its lot of effort to set it up
         2.  ELB is integrated with many AWS offerings / Services
+    
+    Q04: Why are Health Checks important?
+    A04: Health checks are crucial for load balancers,and enable them to know if the instances it forwards traffic to are healthy
+        (Basically checking, if the instances are available to reply to the requests)
+        The health check is done on a port (for e.g. 7066) or a route (/health)
+        If the response is not 200 (OK), then the instance is deemed 'Unhealthy' and the Load Balancer will stop sending traffic to this instance
+        This health check usually happens usually every 5 seconds, but is a configurable value.
+    
+    Q05: How many types of Load Balancers are their in AWS?
+    A05: AWS has 3 different types of MANAGED load balancers
+        a.  CLASSIC Load Balancer:  (v1- Old Generation - 2009)
+            This supports: HTTP, HTTPS, and TCP
+        b.  Application Load Balancer: (v2- New Generation - 2016)
+            This supports: HTTP, HTTPS, WebSocket
+        c.  Network Load Balancer:  (v2- New Generation - 2017)
+            This supports: TCP, TLS (secure TCP) & UDP
+        
+        Elastic Load Balancer can be set up as internal (private) ELB or external (public) ELB
