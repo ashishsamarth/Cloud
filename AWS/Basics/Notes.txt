@@ -1032,3 +1032,13 @@ ELB : Elastic Load Balancer
         f.  Enforce stickiness with cookies
         g.  High availability across AZs (Assuming your Loadbalancer is spread across different AZs)
         h.  Separate public facing traffic from private facing traffic.
+    
+    Q03: Why use an EC2 Load Balancer?
+    A03: An ELB (Elastic Load Balacer / EC2 Load Balancer) is a managed load balancer
+        a.  AWS guarantees that it will be working
+        b.  AWS takes care of upgrades, maintenance, high availability
+        c.  AWS provides only a few configuration knobs to the user.
+    
+    Special Notes:
+        1.  Its costs less set up your own load balancer but its lot of effort to set it up
+        2.  ELB is integrated with many AWS offerings / Services
