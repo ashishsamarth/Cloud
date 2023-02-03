@@ -1290,3 +1290,16 @@ ELB : Elastic Load Balancer
         f.  The EC2 instance may show as 'Unhealthy' depending on, if correct security groups are not mapped.
         g.  Make sure, correct security groups are added to the Instances.
 
+    Q15: What is Load Balancer Stickiness?
+    A15: Load Balancer stickiness is the mechanism that ensures the same client is always redirected to the same instances behind LB
+        This options works on both the CLB and ALB.
+        This mechanism is implemented with the help of 'cookie' which has an expiration date that you can control.
+        Enabling stickiness may bring imbalance to the load over the backend EC2 instances.
+
+        Special Note:
+            USE CASE: Make sure the user doesn't lose his/her session data.
+            1.  Stickiness for CLB: Can be enabled at the CLB level
+            2.  Stickiness for ALB: Can be enabled at the Target Group level.
+        
+        Once you enable the stickiness, you have to provide the duration for the stickiness after which stickiness will expire
+        The minimum value is 1 second while the maxixum value is 7 days.
