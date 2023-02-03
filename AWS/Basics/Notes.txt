@@ -1020,8 +1020,10 @@ EFS
 ELB : Elastic Load Balancer
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
     Q01: What is a load balancer?
-    A01: Load balancer are servers that forward the internet traffic to multiple servers (EC2 instances) downstream
+    A01: Load balancer are servers that forward the internet traffic to multiple servers (EC2 instances) downstream.
+        a.  Load Balancers can scale but not instantaneosuly
     
+
     Q02: Why use a load balancer?
     A02: Following are the reasons for using a load balancer
         a.  To spread the load across multiple downstream instances
@@ -1060,3 +1062,18 @@ ELB : Elastic Load Balancer
             This supports: TCP, TLS (secure TCP) & UDP
         
         Elastic Load Balancer can be set up as internal (private) ELB or external (public) ELB
+    
+    Q06: Explain Load Balancer Security Group?
+    A06: Following is the explaination
+
+                (HTTPS/ HTTPS from anywhere)        (HTTP restricted to/from ELB)
+        USERS   ----------------------------->  ELB ----------------------------->  EC2
+                <-----------------------------      <-----------------------------
+        
+        In this design:
+        a.  The Load balancer is exposed to the public internet and hence it can accept incoming traffic at
+            Port 80 over HTTP
+            Port 443 over HTTPS
+            So, the load balancer security will have these two rules
+        b.  The EC2 instance is only exposed to the load balancer and hence can accespt incoming traffic at
+            Port 80 over HTTP only from the LOAD BALANCER SECURITY GROUP
