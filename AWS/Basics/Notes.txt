@@ -1346,3 +1346,32 @@ ELB : Elastic Load Balancer
                     (HTTPS encrypted over www)          (HTTP over private VPC)
         USERS   ----------------------------->  ELB ----------------------------->  EC2
                 <-----------------------------      <-----------------------------
+        
+        a.  Load Balancer uses an X.509 certificate (SSL/TLS Server Certificate)
+        b.  You can manage certificates using ACM (AWS Certificate Manager)
+        c.  You can create / upload your own certificates as well.
+        d.  You must configure HTTPS listener for your ELB
+            1.  You must specificy a default certificate.
+            2.  You can add an optional list of certs to support multiple domains
+            3.  Clients can use SNI (Server Name Indication) to specify the hostname they want to reach
+            4.  Ability to specify a security policy to support older versions of SSL/TLS (legacy clients)
+
+
+    Q18. What is SNI (Server Name Indication)?
+    A18: SNI (Server Name Indication) solves the problem of loading multiple SSL certificates onto one web server (to server multiple websites)
+        Its a newer protocol and requires the client to indicate the hostname of the target server in the initial SSL handshake
+        The server will then find the correct certificate, or return the default one.
+
+        Special Note: SNI only works with ALB, NLB and CloudFront.
+        Does NOT work with CLB.
+
+        ELB with SSL Certificates:
+        a.  CLB:
+            1.  Supports only one SSL certificate
+            2.  Must use multiple CLBs for multiple hostname with multiple SSL certificates.
+        b.  ALB:
+            1.  Supports multiple listeners with multiple SSL certificates.
+            2.  Uses server name indication (SNI) to make it work
+        c.  NLB:
+            1.  Supports multiple listeners with multiple SSL certificates.
+            2.  Uses server name indication (SNI) to make it work
