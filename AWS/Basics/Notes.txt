@@ -1375,3 +1375,13 @@ ELB : Elastic Load Balancer
         c.  NLB:
             1.  Supports multiple listeners with multiple SSL certificates.
             2.  Uses server name indication (SNI) to make it work
+
+    Q19: What is Connection Draining in CLB or Deregistration Delay in ALB/NLB?
+    A19: 'Connection Draining in CLB' or 'Deregistration Delay in ALB/NLB' refers to the 'Time to complete "In-flight requests", 
+        while the instance is de-registering or unhealthy.
+
+        While this phenomena happens:
+        a.  ELB will stop sending new requests to the instances that is 'de-registering'
+        b.  The default configuration to handling existing requests while the instance is 'de-registering' is 300 seconds, but can be between 1s to 1HR
+        c.  This configuration can be disbaled as well.
+        d.  This number should be configured based on your application behaviour.
