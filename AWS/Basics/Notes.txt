@@ -1153,6 +1153,7 @@ ELB : Elastic Load Balancer
                 1. X-Forwarded-For: ClientIP
                 2. X-Forwaded-port: Port
                 3. X-Forwaded-Proto: Protocol
+            d.  Latency for ALBs is around 400ms
         
         ALBs can route traffic to: (IP Addresses - MUST BE PRIVATE IPS)
             a.  EC2 instances (can be managed by an Auto Scaling Group) - HTTP
@@ -1246,4 +1247,8 @@ ELB : Elastic Load Balancer
         k.  On the 'Rules' page, click on '+' on the header.
         l.  Add the 'Add Condition'd for IF and 'Add action' for THEN and click save.
 
-
+    Q13: What is NLB or Network Load Balancer?
+    A13: Network Load balancers operate at layer 4, and allow you to
+        a.  Forward TCP and UDP traffic to your instances.
+        b.  Handle millions of requests per seconds, so extremely high performance
+        c.  Very low latency ~ 100ms
