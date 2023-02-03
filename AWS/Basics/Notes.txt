@@ -1206,8 +1206,37 @@ ELB : Elastic Load Balancer
 
             This is one of the important upgraded features of ALB, and then you can route traffic to these target groups based on a 
             variety or parameters in the routing rules.
-                    
-
-
-
+        h.  Once the targets are registered, click on create and 'ALB' will be created.
+        i.  Now navigate to the 'Load Balancer' on the left vertical menu and look for your newly created ALB.
+        j.  Under ALB - 'Description' look for 'DNS Name': This is the url that be used to access the ALB from anywhere.
+    
+    Q12: How to add a new target group to an existing ALB?
+    A12: Following are the steps
+        a.  Login to the EC2 Dashboard
+        b.  In the left side vertical menu, under 'Load Balancing' click 'Target Groups'
+        c.  'Create target group'
+            Under Basic configuration:
+            1.  Target Group:   New Target Group
+            2.  Name        :   Provide a target group name
+            3.  Target Type :   We will select 'Instance' since we will map EC2 instance to this ALB
+                            :   Valid values are 'Instance', 'IP' , 'Lambda Function' (Radio Button Selection)
+            4.  Protocol    :   HTTP
+            5.  Port        :   80
+            6.  Protocol Ver:   HTTP1 {Send requests to targets using HTTP/1.1; supported when the request is HTTP/1.1 or 1.2}
+                                Valid values are: HTTP2 and gRPC
+            7.  healthchecks:
+                            protocol: HTTP
+                            path    : /
+            8.  Advanced Health Check settings
+                i.  Port                :   traffic port (Other valid value is override)
+                ii. Healthy Threshold   :   3
+                iii.Unhealthy Threshold :   2
+                iv. Timeout             :   5
+                v.  Interval            :   30
+                vi. Success Codes       :   200
+        d.  On the 'Register Targets' page
+            1.  Select the instance you want to add to this new target group
+            2.  Click on 'Include as pending below'
+            3.  Under 'Targets': This new entry will show as 'Pending'
+        e.  Now we have a new target group created.
 
