@@ -1323,4 +1323,10 @@ ELB : Elastic Load Balancer
             2.  If the CLB is creted by 'CLI/API', 'Cross Zone Load Balancing' is disabled by default.
             3.  No Additional Charges are incurred between inter AZ data {when Cross Zone Load Balancing is enabled}
         
-        b.  
+        b.  ALB:
+            1.  'Cross Zone Load Balacing' is always one and cannot be disabled.
+            2.  No Additional Charges are incurred between inter AZ data
+        
+        c.  NLB:
+            1.  'Cross Zone Load Balancing' is DISABLED be default, but can be 'Enabled'
+            2.  Additional charges are incurred for inter AZ data {when Cross Zone Load Balancing is enabled}
