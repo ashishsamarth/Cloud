@@ -1103,3 +1103,18 @@ ELB : Elastic Load Balancer
         TCP is a layer4, HTTP and HTTPS are layer7 protocols.
         a.  Health checks are TCP or HTTP based.
         b.  Classic LB provide you with a fixed hostname: e.g; : xxx.region.elb.amazonaws.com
+    
+    Q08: How to create a CLASSIC load Balancer?
+    A08: For creation of CLASSIC load balancer, we will need atleast 2 EC2 instance to be able to see if CLB is forwarding traffic correctly
+        a.  Login to the EC2 Dashboard
+        b.  Under 'Network & Security' click on 'Security' and create a new 'security-group' with inbound rule to allow http at port 80 from anywhere
+        c.  Create two new EC2 instances and select this newly created security as their security group.
+        d.  In the left side vertical menu, under 'Load Balancing' click on 'Load Balancers' then click on 'Create Load Balancer'
+        e.  select 'Classic Load Balancer' and click on create.
+        f.  on the 'Define Load Balancer': Provide a Name to the Load Balancer in the default VPC.
+            1. LoadBalancerProtocol:   HTTP
+            2. LoadBalancerPort    :   80
+            3. InstanceProtocol    :   HTTP
+            4. InstancePort        :   80
+        g.  Since this will be a public facing ELB, DO NOT select 'Create an internal Load Balancer'.
+        h.  On the 'Assign Security Group' select the security group that was create in step (b)
