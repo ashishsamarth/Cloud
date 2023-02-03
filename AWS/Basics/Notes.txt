@@ -1006,3 +1006,12 @@ EBS Volumes:
         c.  EBS backups use IO and you shouldn't run them while your application is handling a lot of traffic
     
     Root EBS volumes of instances gets terminated by default (Due to Delete on Termination Attribute), if the ECT instance is terminated
+
+
+EFS
+    Characteristics
+        a.  Can be attached to multiple instances at a time
+        b.  Are NOT locked at the Availability Zone (AZ) level and can be used across different AZs in a region
+        c.  Only supports LINUX instances (POSIX File system)
+        d.  EFS has a HIGHER price point than EBS
+        e.  You can leverage (EFS-IA: In-frequent Access) for Cost Savings  
