@@ -1021,3 +1021,14 @@ ELB : Elastic Load Balancer
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
     Q01: What is a load balancer?
     A01: Load balancer are servers that forward the internet traffic to multiple servers (EC2 instances) downstream
+    
+    Q02: Why use a load balancer?
+    A02: Following are the reasons for using a load balancer
+        a.  To spread the load across multiple downstream instances
+        b.  Expose a single point of access (DNS) to your application
+        c.  Seamlessly handle failures of downstream instances
+        d.  Do regular health checks to your instances
+        e.  Provide SSL termination (HTTPS) for your websites
+        f.  Enforce stickiness with cookies
+        g.  High availability across AZs (Assuming your Loadbalancer is spread across different AZs)
+        h.  Separate public facing traffic from private facing traffic.
