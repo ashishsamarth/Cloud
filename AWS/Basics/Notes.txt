@@ -1303,3 +1303,24 @@ ELB : Elastic Load Balancer
         
         Once you enable the stickiness, you have to provide the duration for the stickiness after which stickiness will expire
         The minimum value is 1 second while the maxixum value is 7 days.
+    
+    Q16: What is cross-zone load balancing?
+    A16: Consider the following scenario:
+        You have two AZs: AZ1 and AZ2; and AZ1 has LB as LB1, while AZ2 has LB as LB2.
+        Now, LB1 has two EC2 instances attached to it and LB2 has 8 instances attached to it.
+        So, over all we have 10 EC2 instances with two different LBs, this is a highly imbalanced situation for traffic.
+
+        With Cross Zone Load balancing:
+        Even if the client is sending equal (50%) traffic to both the LBs, each LB will distribute even (10%) traffic each EC2 instance.
+
+        Without Cross Zone load balacing:
+        With client sending equal(50%) traffic to both the LBs, LB1, will eventually end up 25% of traffic to each EC2 in AZ1, while LB2 
+        will send 6.25% traffic to each instance in AZ2
+
+        Special Note:  Cross Zone Load Balacing is Enabled on Disabled by default, depending on the type of the LB.
+        a.  CLB:
+            1.  If the CLB is created from the management console, 'Cross Zone Load Balancing' is enabled by default.
+            2.  If the CLB is creted by 'CLI/API', 'Cross Zone Load Balancing' is disabled by default.
+            3.  No Additional Charges are incurred between inter AZ data {when Cross Zone Load Balancing is enabled}
+        
+        b.  
