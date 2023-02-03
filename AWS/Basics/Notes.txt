@@ -1085,3 +1085,9 @@ ELB : Elastic Load Balancer
             So, the load balancer security will have these two rules
         b.  The EC2 instance is only exposed to the load balancer and hence can accespt incoming traffic at
             Port 80 over HTTP only from the LOAD BALANCER SECURITY GROUP
+    
+    Q07: What is a Classic Load Balancer(v1)?
+    A07: Classic Load Balancer are generation 1 load balancers and support HTTP, HTTPS and TCP protocols.
+        TCP is a layer4, HTTP and HTTPS are layer7 protocols.
+        a.  Health checks are TCP or HTTP based.
+        b.  Classic LB provide you with a fixed hostname: e.g; : xxx.region.elb.amazonaws.com
