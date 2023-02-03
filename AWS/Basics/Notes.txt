@@ -1130,4 +1130,7 @@ ELB : Elastic Load Balancer
         k.  Select the instances that you want to map to this classic load balancer.
         l.  Review and create and then 'Create' the Classic Load Balancer.
         
-    Q09: 
+    Q09: What does ELB status 'Out-of-Service' means?
+    A09: The status 'Out-of-Service' will be shown on the EC2 dashboard for the ELB, when
+        a.  The instance is newly created and the EC2 instances are still being registered with the ELB
+        b.  The instance is unhealthy and the healthchecks have failed consecutively.
