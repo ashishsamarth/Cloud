@@ -1330,3 +1330,19 @@ ELB : Elastic Load Balancer
         c.  NLB:
             1.  'Cross Zone Load Balancing' is DISABLED be default, but can be 'Enabled'
             2.  Additional charges are incurred for inter AZ data {when Cross Zone Load Balancing is enabled}
+
+    Q17: Explain SSL/TLS?
+    A17: An SSL certificate allows the traffic betweeb your clients and your load balancer to be encrypted in transit (in-flight encryption)
+        a.  SSL refers to the 'Secure Socket Layer', used to encrypt connections.
+        b.  TLS refers to Transport Layer security, which is a newer version.
+        
+        Now a days, TLS certificates are mainly used
+        Public certificates are issued by Certificate Authorities (CA): Symantec, GoDaddy, Digicert etc.
+
+        Special Note: SSL certificates have an expiration date and must be renewed. 
+
+        Load Balancer SSL certificates
+
+                    (HTTPS encrypted over www)          (HTTP over private VPC)
+        USERS   ----------------------------->  ELB ----------------------------->  EC2
+                <-----------------------------      <-----------------------------
