@@ -1118,3 +1118,15 @@ ELB : Elastic Load Balancer
             4. InstancePort        :   80
         g.  Since this will be a public facing ELB, DO NOT select 'Create an internal Load Balancer'.
         h.  On the 'Assign Security Group' select the security group that was create in step (b)
+        i.  Since we have HTTP protocol and not HTTPS, AWS will show a warning message.
+        j.  On the 'Configure Health Check'
+            1. Ping Protocol: HTTP
+            2. Ping Port: 80
+            3. Ping Path: can be '/' or '/index.html' depending on if you have HTTPD enabled and have a index.html in /var/www/html/index.html
+            4. Response Timeout: 5 seconds
+            5. Interval: 30 seconds
+            6. Unhealthy Threshold: 2 seconds
+            7. Healthy Threshold: 10
+        k.  Select the instances that you want to map to this classic load balancer.
+        l.  Review and create and then 'Create' the Classic Load Balancer.
+        
