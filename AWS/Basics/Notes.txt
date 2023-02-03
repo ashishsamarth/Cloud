@@ -1145,5 +1145,17 @@ ELB : Elastic Load Balancer
         f.  Supports routing based on hostname in URL (one.example.com & other.example.com)
         g.  Supports routing based on query string, headers (example.com/users?id=123&order=false)
     
-        Special Note: ALBs are great fit for microservices & container-based applications (e.g; Docker & Amazon ECS), because these have a 
-            port mapping feature to redirect to a dynamic port in ECS (Elastic Container Service)
+        Special Note: 
+            a.  ALBs are great fit for microservices & container-based applications (e.g; Docker & Amazon ECS), because these have a 
+                port mapping feature to redirect to a dynamic port in ECS (Elastic Container Service).
+            b.  ALBs also provide a fixed hostname like Classic LBs (XXX.region.elb.amazonaws.com)
+            c.  The application servers dont see the IP of the client directly, rather the true information of the clients are in the headers
+                1. X-Forwarded-For: ClientIP
+                2. X-Forwaded-port: Port
+                3. X-Forwaded-Proto: Protocol
+        
+        ALBs can route traffic to: (IP Addresses - MUST BE PRIVATE IPS)
+            a.  EC2 instances (can be managed by an Auto Scaling Group) - HTTP
+            b.  ECS tasks (managed by ECS itself) - HTTP
+            c.  Lambda Functions - HTTP Request is translated into a JSON format.
+            d.  Multiple Target groups, and health checks are at the target level.
