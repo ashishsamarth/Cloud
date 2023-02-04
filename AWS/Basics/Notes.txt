@@ -1424,4 +1424,16 @@ Auto Scaling Group:
         CloudWatch --------Trigger Scaling------------------->  | EC2-1; EC2-2; EC2-3......EC2-N            |
         ALARM                                                   ---------------------------------------------
     
-    Q02:
+    Q02: What are Auto Scaling Rules?
+    A02: Its now possible to define 'Better' auto scaling rules that are directly managed by EC2, based on
+        a.  Target Average CPU Usage
+        b.  Number of requests on the ELB per instance. (for e.g. 100 requests to one instance from ELB to trigger scaling)
+        c.  Average Network In
+        d.  Average Network Out
+    
+        Auto Scaling Custom Metrics:
+        We can auto scale based on a custom metric as well (for e.g. number of connected users)
+        a.  Send Custom Metric from application on EC2 to CloudWatch (using PutMetric API)
+        b.  Create CloudWatch alarm to react to low / high values
+        c.  Use the CloudWatch alarm as the scaling policy for the ASG.
+
