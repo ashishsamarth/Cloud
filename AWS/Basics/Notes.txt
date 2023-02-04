@@ -1443,4 +1443,44 @@ Auto Scaling Group:
         b.  Create CloudWatch alarm to react to low / high values
         c.  Use the CloudWatch alarm as the scaling policy for the ASG.
 
-        
+    Q03: How to create an Auto Scaling Group?
+    A03: Following are the steps:
+        a.  Login to the EC2 Dashboard
+        b.  In the left side vertical menu, under 'Auto Scaling' click on 'Auto Scaling Groups' then click on 'Create Auto Scaling Group'
+        c.  Provide a name for the 'Auto Scaling Group'
+        d.  Under 'Launch Template' click on 'Create a Launch Template'
+            1.  Provide a name for the launch template.
+            2.  Provide a name for the template version description.
+            3.  Under Launch Template Contents
+                i.  Select an AMI
+                ii. Select an Instance type
+                iii.Select a Key-Pair OR you can create one
+                iv. Under Network Settings - Select Virtual Private Cloud (VPC)
+                v.  Select 'Security Groups': This must be accurate or else the EC2 instances will not be accessible by you or the ELB.
+                vi. Select Storage
+                vii.Under Advanced details, add user data that you want to use.
+        e.  Now you will be redirected to 'Launch Template' and you can select the template that you created from the drop down.
+        f.  Under the 'Instance Purchase options' their are two values, select the one with which you are comfortable based on cost.
+            1.  Adhere to Launch Template: The Launch Template determines the purchase option (on-demand or spot) and instance type
+            2.  Combine Purchase options and Instance types: Specify how much on-demand and spot capacity to launch and multiple instance types 
+                (optional). This choise is most helpful for optimizing the scale and cost for a fleet of instances.
+        g.  Under 'Network'
+            1.  Select the default VPC
+            2.  And for subnets, select the AZs you want the EC2 instances to be launched (you can select one or many)
+        h.  Under 'Configure Advanced Options'
+            1.  Load Balancing (Optional) : You can either use an ELB or not
+                i.  No Load Balancer: Traffic to your auto scaling group will not be fronted by a load balancer.
+                ii. Attach to an existing load balancer: Choose from your existing load balancers.
+                iii.Attach to a new load balancer: Quickly create a basic load balancer to attach to your ASG.
+
+            If you select an ALB (that was created before), you will need to select a Target group as well.
+
+        i.  Under Health Checks (optional): Has two options:
+            1.  EC2     :   Selected by Default and cannot be un-selected
+            2.  ELB     :   Not Selected by default
+            If you select the ALB in previous step, ELB must be selected in health checks.
+            The idea is, if the EC2 instance is for some reason misbehaving and is deemed unhealth by LB, then it will deemed unhealthy in ASG as well.
+            Thereby triggering ASG to terminate the unhealthy instance and replacing it with a new one.
+
+
+
