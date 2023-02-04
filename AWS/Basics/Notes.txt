@@ -1411,6 +1411,12 @@ Auto Scaling Group:
     4.  Load Balancer Information
     5.  Scaling Policies
 
+    Special Notes:
+        a.  IAM roles attached to the ASG will automatically get assigned to the EC2 instances.
+        b.  ASG is free to use, however the cost is incurred for the underlying resources being launched.
+        c.  ASG does not stop or start instances, it will terminate the instance when LB marks the instance as unhealthy and REPLACES them
+        d.  Having instances under ASG< mean that if they get terminated for whatever reason, ASG will automatically create new ones as replacement.
+
     Q01: What is an Auto Scaling Alarms?
     A01: It is possible to scale an ASG based on CloudWatch alarms.
         A Cloudwatch alarm monitors a metric (such as an Average CPU)
