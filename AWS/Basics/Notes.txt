@@ -250,6 +250,7 @@ IAM: Identity & Access Management
     e.  SECURITY:   MFA + Password Policy
     f.  ACCESS KEYS: Access AWS using the CLI or SDK
     g.  Audit:      IAM Credentials and IAM Access Advisor
+    h.  Maximum Policies that can be associate with a USER Group is : 1o
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 AWS - CLI & Cloud Shell
