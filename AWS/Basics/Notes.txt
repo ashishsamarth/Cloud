@@ -1608,4 +1608,21 @@ RDS: Storage Auto Scaling
         a.  For RDS Read Replicas: If your RDS DB and RDS Read Replica are in the same region (may or may not be in different AZ), then no
             replication charges will be incurred.
         b.  For RDS Read Replicas: If you RDS DB and RDS Read Replica are in different regions, then replication charges will be incurred.
-        
+    
+    Q03: What is RDS Multi AZ?
+    A03: RDS multi AZ is used for disastor Recovery
+        a.  Unlike READ REPLICAS (which are A-SYNC replication), Multi AZ is SYNC Replication.
+        b.  RDS Multi AZ is one DNS name : And supports automatic Failover from the Master DB to the Standby DB
+        c.  RDS Multi AZ increases the application availability, due to automatic Failover
+        d.  Failover Will trigger:
+            1.  Due to Loss of AZ
+            2.  Due to Loss of network
+            3.  Due to Instance failure
+            4.  Due to storage failure
+        e.  Their are no manual intervention needed in applications to move the connection from Master DB to Standby DB, since the failover 
+            happens, beneath the DNS layer.
+        f.  The STANDBY DB cannot be used for SCALING, no body can directly read from or write to 'STANDBY' DB unless it becomes Master.
+
+        Special Note:
+        Common Exam Question: Can Read Replicas be setup as 'Multi-AZ' for Disaster Recovery (DR) purposes?
+        Answer              : YES
