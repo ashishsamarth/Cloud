@@ -822,7 +822,6 @@ AWS-EBS: Elastic Block Store
 
     Special Note: For EC2 instance, only gp2/gp3 and io1/io2 EBS volumes can be used for boot volumes.
 
-
     Q11: Explain the characteristics of General Purpose SSD EBS volume?
     A11: General Purpose SSDs are
         a.  Cost Effecive Storage, Low-latency
