@@ -1500,4 +1500,57 @@ Auto Scaling Group:
         If for some reason, the EC2 instance is unhealthy, ASG will terminate it and replace it with a new one, and the new EC2 instance
         will again be automatically registered with ELB.
 
+    Q04: How many ASG - Scaling Polcies are there?
+    A04: There are 3 ASG - Scaling Policies.
+        a.  Target Tracking Scaling:
+            e.g.:   You want the average ASG CPU to be around 40%, then ASG will scale out or scale in to match this rule depending on the CPU.
+        b.  Simple / Step Scaling:
+            e.g.:   When a CloudWatch alarm is triggered (if CPU > 70%), then add 2 EC2 units
+                    When a CloudWatch alarm is triggered (if CPU < 30%), then remove 1 EC2 units
+            This has some more control, since YOU are deciding the number of EC2 instances instead of letting ASG Decide.
+        c.  Sceduled Actions:
+            This policy is based on anticipation of the usage pattern.
+            e.g.:   Increase the minimum capacity to 10 EC2 instances on Black Friday at 6 AM.
+    
+    Q05: What is ASG - Scaling Cooldowns?
+    A05: The cooldown period helps to ensure that your Auto Scaling Group doesn't launch or terminate additional instances, before the 
+        previous scaling activity takes effect.
 
+        In Addition to the default cooldown for ASG: We can create cooldowns that apply to a specific 'SIMPLE SCALING POLICY'
+
+        USECASE:
+            One common use for scaling-specific cooldowns is with a scale-in policy:
+                A policy that terminates instances based on a specific criteria or metric. Because the policy terminates instances, 
+                ASG needs less time to determine, whether to terminate additional instances.
+            
+            If the default cool down period of 300 seconds is too long:
+                You can reduce costs by applying a scaling-specific cooldown period of 180 seconds to scale-in policy.
+            
+            If your application is scaling up and down multiple times in an hour, modify the ASG cool-down timers and the CloudWatch alarm 
+            period that triggers the scale in.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Amazon RDS
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+RDS stands for Relational Database Service.
+Its a managed DB service for DB use SQL as a query Language.
+It allows you to create databases in the cloud that are managed by AWS:
+    a.  Postgres
+    b.  MySQL
+    c.  MariaDB
+    d.  Oracle
+    e.  Microsoft SQL Server
+    f.  Aurora (AWS Proprietry Database)
+
+Advantage over using RDS versus deploying DB on EC2
+RDS is a managed service
+    a.  Automated Provisioning, OS patching
+    b.  Continuous backup and restore to specific timestamp (Point in time restore)
+    c.  Monitoring Dashboards
+    d.  Read Replicas for improved read performance
+    e.  Multi AZ setup for DR (Disasater Recovery)
+    f.  Maintenance windows for upgrades
+    g.  Scaling Capability (vertical and horizontal)
+    h.  Storage backed by Elastic Block Store (gp2 or io1)
+
+But, you cannot SSH into your instances.
