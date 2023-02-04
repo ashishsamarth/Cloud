@@ -1530,7 +1530,7 @@ Auto Scaling Group:
             period that triggers the scale in.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-Amazon RDS
+Amazon RDS (Relational Database Service)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 RDS stands for Relational Database Service.
 Its a managed DB service for DB use SQL as a query Language.
@@ -1553,4 +1553,4 @@ RDS is a managed service
     g.  Scaling Capability (vertical and horizontal)
     h.  Storage backed by Elastic Block Store (gp2 or io1)
 
-But, you cannot SSH into your instances.
+But, you cannot SSH into your RDS instances, since its a Managed Service.
