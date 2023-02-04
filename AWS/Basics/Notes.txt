@@ -1602,4 +1602,10 @@ RDS: Storage Auto Scaling
             c.  This way the production database is not overloaded and the application remains un-affected.
         Special Note:
             Read replicas are used for 'SELECT' only statements (not Insert, Update or Delete)
-            
+    
+    Q02: Explain associated costs for RDS Read Replicas - Across the network?
+    A02: Usually for AWS managed services, their is no network cost when the data travels from One AZ to another, however their are exceptsion.
+        a.  For RDS Read Replicas: If your RDS DB and RDS Read Replica are in the same region (may or may not be in different AZ), then no
+            replication charges will be incurred.
+        b.  For RDS Read Replicas: If you RDS DB and RDS Read Replica are in different regions, then replication charges will be incurred.
+        
