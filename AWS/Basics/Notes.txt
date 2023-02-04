@@ -1554,3 +1554,14 @@ RDS is a managed service
     h.  Storage backed by Elastic Block Store (gp2 or io1)
 
 But, you cannot SSH into your RDS instances, since its a Managed Service.
+
+RDS Backups:
+    a.  Backups are automatically enabled in RDS.
+    b.  Automated Backups:
+        1.  Daily Full backup of the database (during the maintenance window)
+        2.  Transaction Logs are backed-up by RDS every 5 minutes
+        3.  => ability to restore at any point in time (from oldest backup to 5 mins ago)
+        4.  7 Day retension (can be increased to 35 days)
+    c.  DB Snapshots.
+        1.  DB snapshots are manually triggered by the user
+        2.  Retention of backup for as long as you want
