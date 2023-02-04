@@ -1400,7 +1400,7 @@ Auto Scaling Group:
     c.  Ensure we have a minimum and maximum number of machines running
     d.  Automatically register new instances to a load balancer. (Via Automation)
 
-    1.  Launch Configuration for ASG have the following attributes:
+    1.  Launch Configuration / Launch Templates for ASG have the following attributes:
         a.  AMI + Instance Type
         b.  EC2 User Data
         c.  EBS Volumes
@@ -1432,8 +1432,9 @@ Auto Scaling Group:
         d.  Average Network Out
     
         Auto Scaling Custom Metrics:
-        We can auto scale based on a custom metric as well (for e.g. number of connected users)
+        We can auto scale based on a custom metric as well (for e.g. number of connected users or based on a schedule)
         a.  Send Custom Metric from application on EC2 to CloudWatch (using PutMetric API)
         b.  Create CloudWatch alarm to react to low / high values
         c.  Use the CloudWatch alarm as the scaling policy for the ASG.
 
+        
