@@ -1398,4 +1398,30 @@ Auto Scaling Group:
     a.  Scale OUT (Add EC2 Instances) to match an increased load
     b.  Scale IN (Remove EC2 Instances) to match a decreased load
     c.  Ensure we have a minimum and maximum number of machines running
-    d.  Automatically register new instances to a load balancer.
+    d.  Automatically register new instances to a load balancer. (Via Automation)
+
+    1.  Launch Configuration for ASG have the following attributes:
+        a.  AMI + Instance Type
+        b.  EC2 User Data
+        c.  EBS Volumes
+        d.  Security Groups
+        e.  SSH Key pairs
+    2.  Minimum Size / Maximum Size / Initial capacity
+    3.  Network + Subnets Information
+    4.  Load Balancer Information
+    5.  Scaling Policies
+
+    Q01: What is an Auto Scaling Alarms?
+    A01: It is possible to scale an ASG based on CloudWatch alarms.
+        A Cloudwatch alarm monitors a metric (such as an Average CPU)
+        Metrics are computed for the overall ASG instances.
+        Based on the alarms:
+            a.  We can create scale-out policies (increase the number of instances)
+            b.  We can create scale-in policies (decrease the number of instances)
+
+                                                                            Auto Scaling Group
+                                                                ---------------------------------------------
+        CloudWatch --------Trigger Scaling------------------->  | EC2-1; EC2-2; EC2-3......EC2-N            |
+        ALARM                                                   ---------------------------------------------
+    
+    Q02:
