@@ -1577,3 +1577,17 @@ RDS: Storage Auto Scaling
         3.  6 hours have passed since last modification
     f.  Useful for applications with un-predicable workloads
     g.  Supports all RDS Database Engines [Postgres, MySQL, MariaDB, Oracle, Microsoft SQL Server]
+
+    Q01: What is RDS Read Replication?
+    A01: Replication means a continuous copy of the data from one Database (master/publisher) to another Database (slave/subscriber). The slave/subscriber
+         Databases can be on the same server or different servers and contain the replica of the master database. The main aim of replication is to 
+         provide fault-tolerant access to data in case of failure of the master. Also, load balancing and routing some of the queries to the subscriber 
+         database to reduce the load on the primary Database.
+         Amazon RDS Read Replication is a feature on Amazon RDS that allows you to create one or more read copies (up to 5) of the primary Database within 
+         the same or different AWS region. The data from the master database is asynchronously copied to these slave or secondary databases.
+
+        a.  Up to 5 Read Replicas
+        b.  Read Replicas can be created - Within AZ, or Across AZs or Across Regions.
+        c.  Replication is ASYNC, so reads are eventually consistent
+        d.  Replicas CAN be promoted to their own Database, and then they will follow their own lifecycle.
+        e.  Applications must update the connection string to leveragee read replicas.
