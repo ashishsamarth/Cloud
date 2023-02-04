@@ -1482,5 +1482,22 @@ Auto Scaling Group:
             The idea is, if the EC2 instance is for some reason misbehaving and is deemed unhealth by LB, then it will deemed unhealthy in ASG as well.
             Thereby triggering ASG to terminate the unhealthy instance and replacing it with a new one.
 
+        j.  Under 'Configure Group Size and Scaling policies'
+            1. Select the : Desited Capacity, Minimum Capacity and Maximum capacity for count of EC2 instances to be launched.
+            2. Scaling Polies are optional: This helps to dynamically resize your ASG to meet the changes in demand.
+                Two Valid Values: 
+                i.  None
+                ii. 'Target Tracking Scaling Policy': Choose a desired outcome and leave it to the scaling policy to add and remove 
+                    capacity as needed to achieve the outcome.
+        k.  Instance scale-in-Protection (optional)
+            If protect from scale in is enabled, newly launched instanes will be protected from scale in by default.
+        l.  Review and create your 'Auto Scaling Group'.
+        m.  Once the 'ASG's is created, click on its name and go to 'Activity Tab' and then to 'Activity History'
+            You'll see the creation and termination of EC2 instances under 'Activity History'
+
+    Special Note:
+        If you select the ELB along with Auto Scaling Group, the EC2 instances will be automatically registered with the ELB.
+        If for some reason, the EC2 instance is unhealthy, ASG will terminate it and replace it with a new one, and the new EC2 instance
+        will again be automatically registered with ELB.
 
 
