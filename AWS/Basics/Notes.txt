@@ -1626,3 +1626,12 @@ RDS: Storage Auto Scaling
         Special Note:
         Common Exam Question: Can Read Replicas be setup as 'Multi-AZ' for Disaster Recovery (DR) purposes?
         Answer              : YES
+    
+    Q04: How to convert a RDS-Single AZ to RDS-Multi AZ?
+    A04: To conver a RDS-Single AZ to RDS-Multi AZ, we just need to modify the database and convert it.
+        a.  Their is no downtime to convert RDS from single-AZ to multi-AZ, since we dont need to stop the DB.
+        b.  When you convert a single-AZ to multi-AZ:
+            1.  A snapshot is taken from the Master DB
+            2.  A new standby DB is created.
+            3.  The snapshot is written to the standby DB
+            4.  After the snapshot is written, SYNC replication happens between master and standby, until Standy catches up completely.
