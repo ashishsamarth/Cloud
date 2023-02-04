@@ -1385,3 +1385,17 @@ ELB : Elastic Load Balancer
         b.  The default configuration to handling existing requests while the instance is 'de-registering' is 300 seconds, but can be between 1s to 1HR
         c.  This configuration can be disbaled as well.
         d.  This number should be configured based on your application behaviour.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+ASG: Auto Scaling Group
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Auto Scaling Group:
+    The load on your websites and applications change hence we need to either scale up or scale down depending on the transaction volume.
+    Cloud platforms provide the feasibility to add / remove servers with a click of few buttons.
+
+    The goal of Auto Scaling Group (ASG) is to:
+    a.  Scale OUT (Add EC2 Instances) to match an increased load
+    b.  Scale IN (Remove EC2 Instances) to match a decreased load
+    c.  Ensure we have a minimum and maximum number of machines running
+    d.  Automatically register new instances to a load balancer.
