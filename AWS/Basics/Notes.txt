@@ -1591,3 +1591,15 @@ RDS: Storage Auto Scaling
         c.  Replication is ASYNC, so reads are eventually consistent
         d.  Replicas CAN be promoted to their own Database, and then they will follow their own lifecycle.
         e.  Applications must update the connection string to leveragee read replicas.
+
+        USECASE:
+            Suppose you have a production database, that is operating under normal load. Now for some analytics or reporting tasks, you need access the 
+            production database.
+            a.  If both the application and the reporting tasks are accessing the production database simultaneously, then it may increase the load on the 
+                database.
+            b.  To avoid this, as a solution architect, you can create a "READ REPLICA" , so that only the application is working on the production DB, 
+                while the reporting tasks are working through the 'READ REPLICA'
+            c.  This way the production database is not overloaded and the application remains un-affected.
+        Special Note:
+            Read replicas are used for 'SELECT' only statements (not Insert, Update or Delete)
+            
