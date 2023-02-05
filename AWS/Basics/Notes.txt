@@ -1640,3 +1640,31 @@ RDS: Storage Auto Scaling
             2.  A new standby DB is created.
             3.  The snapshot is written to the standby DB
             4.  After the snapshot is written, SYNC replication happens between master and standby, until Standy catches up completely.
+
+    Q05: What is Data at rest?
+    A05: Data at rest refers to data residing in computer storage in any digital form. This data type is currently inactive and is not 
+        moving between devices or two network points. No app, service, tool, third-party, or employee is actively using this type of info.
+        At rest is not a permanent data state. As soon as someone requests a file, that data moves across a network and becomes 
+        in-transit data. Once someone (or something) starts processing a file, the data enters the in-use state
+
+        Data at rest includes both structured and unstructured data. Some examples of where a company can store data at rest are:
+
+        a.  Hard and SSD drives on PCs and laptops.
+        b.  Database servers.
+        c.  The cloud.
+        d.  At a third-party colocation facility.
+        e.  Edge-point devices and portable storage (mobile phones, USBs, tablets, portable hard drives, etc.).
+        f.  Network-attached storage (NAS).
+
+        Static data storage typically has a logical structure and meaningful file names, unlike individual in-motion packets moving through 
+        a network. Data at rest also typically contains the company's most valuable and private info, such as:
+
+        a.  Financial documents (past transactions, bank accounts, credit card numbers, etc.).
+        b.  Intellectual property (product information, business plans, schematics, code, etc.).
+        c.  Contacts.
+        d.  Marketing data (user interactions, strategies, directions, leads, etc.).
+        e.  Employee and customer personal info.
+        f.  Healthcare data.
+        g.  Contracts.
+        h.  Supply chain info.
+
