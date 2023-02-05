@@ -1730,3 +1730,8 @@ RDS: Storage Auto Scaling
             a.  Network In/Out is encrypted using SSL
             b.  IAM to centrally manage users instead of DB
             c.  Can Leverage IAM Roles and EC2 profiles for easy integration.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+AWS - Aurora
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
