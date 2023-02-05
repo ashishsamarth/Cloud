@@ -1668,3 +1668,44 @@ RDS: Storage Auto Scaling
         g.  Contracts.
         h.  Supply chain info.
 
+    Q06: What is Data at Rest Encryption?
+    A06: Data at rest encryption is a cybersecurity practice of encrypting stored data to prevent unauthorized access. Encryption scrambles 
+        data into ciphertext, and the only way to return files into the initial state is to use the decryption key.
+
+        Plain-Text Message                           Cipher-Text                             Plain-Text Message
+        --------------------      Encryption      --------------------      Decryption      -------------------
+        |  Data Storage 1a |  ------------------> | sdgsde7%^--4489-0|  ------------------> | Data Storage 1a | 
+        --------------------                      --------------------                      -------------------
+
+        If an un-authorized person accesses encrypted data but does not have the decryption key, the intruder must defeat the encryption to 
+        decipher the data. This process is significantly more complex and resource-consuming that accessing the unencrypted data one a HDD.
+
+        In most cases, at rest encryption relies on symmetric cryptography. The same key encrypts and decrypts the data, unlike with assymetric 
+        encryption in which one key scrambles data (public key) and the other deciphers file (private-key). Security teams typically choose 
+        symmetric cryptography when speed and responsiveness are the priority.
+
+    Q07: Explain RDS Security - Encryption?
+    A07: RDS Security - Encryption provides
+        a.  At rest encryption:
+            1.  Possibility to encrypt the master and read replicas with AWS-KMS-AES-256 encryption
+            2.  Encryption has to be defined at launch time.
+            3.  if the master is not encrypted, the read replicas CANNOT be encrypted
+            4.  Transparent Data Encryption (TDE) can be applied and is available for Oracle and SQL Server.
+        
+        b.  In-Flight Encryption:
+            1.  SSL Certificates to encrypt data to RDS in flight
+            2.  Provide SSL options with trust certificates when connecting to database.
+            3.  To enforce SSL:
+                i.  PostgreSQL: rds.force_ssl=1 in the AWS RDS console (Parameter Groups)
+                ii. MySQL: Within the DB:
+                    GRANT USAGE ON *.* TO 'mysqluser'@'%' REQUIRE SSL;
+    
+    Q08: Explain RDS Encryption Operations?
+    A08: Following are important details about RDS encryption operations.
+        a.  If you take a snapshot of an un-encrypted RDS Database, the snapshot will be 'Un-Encrypted' by default.
+        b.  If you take a snapshot of an encrypted RDS Database, the snapshot will be 'Encrypted' by default.
+        c.  TO Encrypt an un-encrypted RDS Database:
+            1.  Create a snapshot of the un-encrypted database.
+            2.  Copy the snapshot and enable encryption for the snapshot
+            3.  Restore the database from the encrypted snapshot
+            4.  Migrate applications to the new database, and delete the old database.
