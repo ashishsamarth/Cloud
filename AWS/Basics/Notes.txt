@@ -1688,7 +1688,7 @@ RDS: Storage Auto Scaling
     A07: RDS Security - Encryption provides
         a.  At rest encryption:
             1.  Possibility to encrypt the master and read replicas with AWS-KMS-AES-256 encryption
-            2.  Encryption has to be defined at launch time.
+            2.  Encryption HAS TO BE defined at RDS launch time.
             3.  if the master is not encrypted, the read replicas CANNOT be encrypted
             4.  Transparent Data Encryption (TDE) can be applied and is available for Oracle and SQL Server.
         
@@ -1709,3 +1709,24 @@ RDS: Storage Auto Scaling
             2.  Copy the snapshot and enable encryption for the snapshot
             3.  Restore the database from the encrypted snapshot
             4.  Migrate applications to the new database, and delete the old database.
+    
+    Q09: Explain RDS-Security at Network & IAM Levels?
+    A09: Network Security:
+            a.  RDS Database are usually deployed within a private subnet, not in a public one
+            b.  RDS Security works by leveraging security groups (Same as EC2 instances), it controls which IP / SG can COMMUNICATE with RDS.
+
+         Access Management:
+            a.  IAM policies help control who can manage AWS RDS (Through the RDS API)
+            b.  Traditional Username and Password can be used to login into the Database.
+            c.  IAM-Based authentication can be used to login into RDS MySQL & PostgreSQL.
+    
+    Q10: Explain RDS-IAM Authentication?
+    A10: 
+        a.  IAM database authentication works only with MySQL and PostgreSQL
+        b.  No password is needed, rather an Authentication Token is obtained through IAM and RDS API Calls
+        c.  Auth Token has a lifetime of 15 minutes
+
+        Benefits:
+            a.  Network In/Out is encrypted using SSL
+            b.  IAM to centrally manage users instead of DB
+            c.  Can Leverage IAM Roles and EC2 profiles for easy integration.
