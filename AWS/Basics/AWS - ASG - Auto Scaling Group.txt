@@ -3,7 +3,7 @@ ASG: Auto Scaling Group
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Auto Scaling Group:
-    The load on your websites and applications change hence we need to either scale up or scale down depending on the transaction volume.
+    The load on your websites and applications change, hence we need to either scale up or scale down depending on the transaction volume.
     Cloud platforms provide the feasibility to add / remove servers with a click of few buttons.
 
     The goal of Auto Scaling Group (ASG) is to:
