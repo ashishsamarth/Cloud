@@ -72,7 +72,7 @@ Auto Scaling Group:
                 vi. Select Storage
                 vii.Under Advanced details, add user data that you want to use.
         e.  Now you will be redirected to 'Launch Template' and you can select the template that you created from the drop down.
-        f.  Under the 'Instance Purchase options' their are two values, select the one with which you are comfortable based on cost.
+        f.  Under the 'Instance Purchase options' their are two values, select the one with which you are comfortable, based on cost.
             1.  Adhere to Launch Template: The Launch Template determines the purchase option (on-demand or spot) and instance type
             2.  Combine Purchase options and Instance types: Specify how much on-demand and spot capacity to launch and multiple instance types 
                 (optional). This choise is most helpful for optimizing the scale and cost for a fleet of instances.
