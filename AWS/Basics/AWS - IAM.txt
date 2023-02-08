@@ -182,7 +182,7 @@ IAM: Identity & Access Management
     A17: Their are two security tools
         a.  IAM Credentials Report
             This is at the account-level
-            Its a report that lists all your account uders and the status of their various credentials
+            Its a report that lists all your account under and the status of their various credentials
         
         b.  IAM Access Advisor
             This is at the user-level
