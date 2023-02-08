@@ -128,13 +128,13 @@ IAM: Identity & Access Management
         b.  Click on 'Security Credentials', it will take you to 'My Security Credentials' page
         c.  Scroll towards the bottom and look for 'Access Keys'
         d.  click on 'Create Access Keys', it will display the following options (radio buttons)
-            1.  Command Line Interface (CLI):   {You plan to use this access key to enable the AWS CLI to access your account}
-            2.  Local code: {You plan to use this access key to enable application code in a local development environment to access your AWS account}
-            3.  Application running on an AWS compute service:  {You plan to use this access key to enable application code running on an AWS compute 
+            1.  Command Line Interface (CLI)    :   {You plan to use this access key to enable the AWS CLI to access your account}
+            2.  Local code  :   {You plan to use this access key to enable application code in a local development environment to access your AWS account}
+            3.  Application running on an AWS compute service   :   {You plan to use this access key to enable application code running on an AWS compute 
                 service like Amazon EC2, Amazon ECS, Amazon Lambda to access your account}
-            4.  Third Party service:    {You plan to use this access key to enable access for a third party application or service that monitors or 
+            4.  Third Party service :   {You plan to use this access key to enable access for a third party application or service that monitors or 
                 manages your AWS}
-            5.  Application running outside AWS:    {You plan to use this access key to enable an application running on an on-premise host, or to 
+            5.  Application running outside AWS :   {You plan to use this access key to enable an application running on an on-premise host, or to 
                 use a local AWS client or third party aws plugin}
             6.  Other:  {Youyuse case is not listed here.}    
         e.  With selection of any option, AWS will provide a potential recommendation.
