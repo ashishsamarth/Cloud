@@ -30,7 +30,7 @@ RDS Backups:
         1.  Daily Full backup of the database (during the maintenance window)
         2.  Transaction Logs are backed-up by RDS every 5 minutes
         3.  => ability to restore at any point in time (from oldest backup to 5 mins ago)
-        4.  7 Day retension (can be increased to 35 days)
+        4.  7 Day retention (can be increased to 35 days)
     c.  DB Snapshots.
         1.  DB snapshots are manually triggered by the user
         2.  Retention of backup for as long as you want
