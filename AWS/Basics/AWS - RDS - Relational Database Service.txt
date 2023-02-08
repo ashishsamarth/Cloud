@@ -88,7 +88,7 @@ RDS: Storage Auto Scaling
             2.  Due to Loss of network
             3.  Due to Instance failure
             4.  Due to storage failure
-        e.  Their are no manual intervention needed in applications to move the connection from Master DB to Standby DB, since the failover 
+        e.  Their are no manual interventions needed in applications to move the connection from Master DB to Standby DB, since the failover 
             happens, beneath the DNS layer.
         f.  The STANDBY DB cannot be used for SCALING, no body can directly read from or write to 'STANDBY' DB unless it becomes Master.
 
