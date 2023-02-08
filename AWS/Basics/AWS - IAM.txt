@@ -243,11 +243,12 @@ IAM: Identity & Access Management
 
 
     IAM Summary:
-    a.  USERS:      Mapped to a physical user, has a password for AWS console
-    b.  GROUPS:     Contains Users only
-    c.  POLICIES:   JSON document that outlines permissions for users or groups
-    d.  ROLES:      For EC2 instances or AWS services
-    e.  SECURITY:   MFA + Password Policy
-    f.  ACCESS KEYS: Access AWS using the CLI or SDK
-    g.  Audit:      IAM Credentials and IAM Access Advisor
-    h.  Maximum Policies that can be associate with a USER Group is : 10
+    a.  USERS       :   Mapped to a physical user, has a password for AWS console
+    b.  GROUPS      :   Contains Users only
+    c.  POLICIES    :   JSON document that outlines permissions for users or groups
+    d.  ROLES       :   For EC2 instances or AWS services
+    e.  SECURITY    :   MFA + Password Policy
+    f.  ACCESS KEYS :   Access AWS using the CLI or SDK
+    g.  Audit       :   IAM Credentials and IAM Access Advisor
+
+    Note:   Maximum Policies that can be associate with a USER Group is : 10
