@@ -168,11 +168,11 @@ IAM: Identity & Access Management
             2.  AWS ServiceRoleForTrustedAdvisor
         d.  Click on 'Create Role'
         e.  Next Page will have a header 'Select Trusted Entity' with the following options (radio buttons)
-            1.  AWS Service:    {Allows AWS Services like EC2, Lambda or others to perform actions in this account}
-            2.  AWS Account:    {Allows entities in other AWS accounts belonging to you or a 3rd party to perform actions in this account}
-            3.  Web Identity:   {Allows users federated by the external web identity provider to assumer this role to perform actions in this account}
-            4.  SAML 2.0 Federation:    {Allows users federated with SAML 2.0 from a corporate directory to perform actions in this account}
-            5.  Custom Trust Policy:    {Create a custom trust policy to enable others to perform actions in this account}
+            1.  AWS Service         :   {Allows AWS Services like EC2, Lambda or others to perform actions in this account}
+            2.  AWS Account         :   {Allows entities in other AWS accounts belonging to you or a 3rd party to perform actions in this account}
+            3.  Web Identity        :   {Allows users federated by the external web identity provider to assumer this role to perform actions in this account}
+            4.  SAML 2.0 Federation :   {Allows users federated with SAML 2.0 from a corporate directory to perform actions in this account}
+            5.  Custom Trust Policy :   {Create a custom trust policy to enable others to perform actions in this account}
         f.  For ease of understanding, lets create an 'AWS Service' role for an EC2 instance to read data in IAM
         g.  On the 'Add Permissions' page for this new role, search and select 'IAMReadOnlyAccess'
         h.  On the next page, provide a role name and click next
