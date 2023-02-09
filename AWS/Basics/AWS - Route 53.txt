@@ -53,6 +53,7 @@ Cost:
         a.  If the record set created was of type 'A', it means the record set will have an IPV4 address.
             1.  Simply search for the host on the browser and check on browser console logs to see the resolving IP address
                 for e.g.: myfirstrecord.ashishsamarth.com
-        b.  Another way to verify is to perform an nslookup for the same host via Linux / Mac Terminal, and the terminal should return the same ipv4 address.
+        b.  Another way to verify is to perform an nslookup / dig for the same host via Linux / Mac Terminal, and the terminal should return the 
+            same ipv4 address.
 
-    
+
