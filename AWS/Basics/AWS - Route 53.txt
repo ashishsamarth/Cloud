@@ -22,4 +22,7 @@ Features:
 
 Cost:
     $0.50 per month per hosted zone
-    
+
+
+    Q01: How to navigate to Route53?
+    A01: On the AWS management console, search for 'Route 53' and you will be able to navigate to Route 53 dashboard.
