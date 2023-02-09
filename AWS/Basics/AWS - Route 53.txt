@@ -56,4 +56,20 @@ Cost:
         b.  Another way to verify is to perform an nslookup / dig for the same host via Linux / Mac Terminal, and the terminal should return the 
             same ipv4 address.
 
+    Q06: What is DNS records - TTL (Time to Live)?
+    A06: When you look for a URL address based on a hostname, the browser talks to the DNS asking for the IP Address to connect to. Since this is a 'Hostname'
+         to 'IP' request, it eventualy 'A' record. When the DNS responds with the 'A' record, it sends the browser two items, the first is the 'IP' address 
+         of the host and another parameter is 'TTL' (Time to Live), this TTL has an expiration value (in seconds/ mins/ hours / a day). This means, that the 
+         browser can save the IP address in its cache for the TTL value. Now if another tab on the browser, looks for the same 'Hostname' it will not call the
+         DNS, it will look inside its own cache first (if TTL has not expired) to get the 'IP'.
 
+         Special Note:
+         a. TTL is a mandatory parameter for each DNS record
+         b. Having a HIGH TTL Value means:
+            1.  Less traffic on DNS for querying the IP address based on supported parameters
+            2.  Possibly outdated records in the client browser, in case the records in DNS was updated before the TTL expiration
+         c. Having a LOW TTL value means:
+            1.  High traffic on DNS for querying the IP Address based on supported parameters
+            2.  Records in Client Browser Cache will be outdated for less duration
+            3.  Newly updated records in DNS, will be propogated quickly to client browsers.
+            
