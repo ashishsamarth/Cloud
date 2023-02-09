@@ -103,4 +103,12 @@ Cost:
         Special Note: 'Simple Routing Policy' does NOT support 'HEALTH CHECKS'
     
     Q09: Explain Route 53: Weighted Routing Policy?
-    A09: 
+    A09: Weighted Routing Policy, controls the '%' of the requests that go to a specific endpoint. Consider the following example:
+        Suppose you have Route 53 and you have to created a weighted policy, to redirect traffic to 3 EC2 instances, but since all the EC2 instances are 
+        not of the same specification, you want to balance the routing based on their specifications.
+            Higher specification instances gets more traffic, while lower specification instances gets less traffic. To deal with this scenario, 
+        weighted routing policy can help to send 70% of traffic to the 1st EC2 instance, 20% traffic to 2nd EC2 instance and 10% traffic to 3rd EC2 
+        instance. 
+        This is again impacted by the TTL, meaning if the first time the DNS responded back with the IP to the browser it received the IP address 
+        of 1st EC2 instances, now when the TTL expires, their is a 70% chance that the DNS will respond back with the IP address of the 1st EC2 instance,
+        while 20% for 2nd and 10% for 3rd EC2 instance, so the browser will send the traffic in the same manner.
