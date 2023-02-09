@@ -135,3 +135,6 @@ Cost:
         b.  An instance is deemed Healthy if it passes 'x' number of health checks in a row, by default x=3
         c.  Default Health Check Interval = 30 seconds, can also be modified to 10 seconds, but it will increase the cost.
         d.  HEALTH CHECKS can be performed on HTTP, TCP and HTTPS
+
+        Special Note:
+        1.  Health Checks can be linked to Route 53 DNS queries.
