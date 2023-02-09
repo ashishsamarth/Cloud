@@ -1,0 +1,25 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+AWS - Route 53 : Managed DNS
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Route53 is a managed DNS (Domain Name System). A DNS is a collection of rules and records, which helps clients to understand how to reach a server through 
+its domain name.
+
+In AWS: The most comman records as 
+a.  'A' record: Hostname to IPV4
+b.  'AAAA' record:  Hostname to IPV6
+c.  'CNAME' record: Hostname to Hostname
+d.  'Alias' record: hostname to AWS resource
+
+Route 53 can use:
+    a.  public domain names you own (or buy)
+    b.  private domain names that can be resolved by your instances in your VPCs
+
+Features:
+    a.  Load Balancing [Through DNS : Also called client load balancing]
+    b.  Health Checks [limited]
+    c.  Routing Policy: [simple; failover; geolocation; latency; weighted, multi value]
+
+Cost:
+    $0.50 per month per hosted zone
+    
