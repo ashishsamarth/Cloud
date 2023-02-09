@@ -63,13 +63,31 @@ Cost:
          browser can save the IP address in its cache for the TTL value. Now if another tab on the browser, looks for the same 'Hostname' it will not call the
          DNS, it will look inside its own cache first (if TTL has not expired) to get the 'IP'.
 
-         Special Note:
-         a. TTL is a mandatory parameter for each DNS record
-         b. Having a HIGH TTL Value means:
+        Special Note:
+        a. TTL is a mandatory parameter for each DNS record
+        b. Having a HIGH TTL Value means:
             1.  Less traffic on DNS for querying the IP address based on supported parameters
             2.  Possibly outdated records in the client browser, in case the records in DNS was updated before the TTL expiration
-         c. Having a LOW TTL value means:
+        c. Having a LOW TTL value means:
             1.  High traffic on DNS for querying the IP Address based on supported parameters
             2.  Records in Client Browser Cache will be outdated for less duration
             3.  Newly updated records in DNS, will be propogated quickly to client browsers.
-            
+
+    Q07: What is the difference in CNAME vs ALIAS?
+    A07: Following are the details:
+        a.  CNAME: CNAME is used when you want to point a hostname to any other hostname:
+            Consider an example where you are using some AWS resource (Load Balancer or Cloud Front), these resources expose an AWS hostname in the URL
+            'Ib1-1234.us-east-2.elb.amazonaws.com' and you want to point this to 'apex.ashishsamarth.com'. This is possible with a 'CNAME' record.
+            CNAME record ONLY works for a NON-ROOT-Domain.
+
+            What is a Non-Root Domain   :  'apex.ashishsamarth.com' is an example
+            What is a Root Domain       :   'ashishsamarth.com' is an example.
+        
+        b.  ALIAS: Alias is used when you want to point an AWS resource
+            Consider and example where you want to point your hostname to an AWS resource 
+            ('apex.ashishsamarth.com' --> 'Ib1-1234.us-east-2.elb.amazonaws.com' )
+
+            Advantage with ALIAS are: 
+            1.  It works for both the Root Domain and the Non-Root Domain
+            2.  Its Free
+            3.  Supports Native Health Check
