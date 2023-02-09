@@ -112,3 +112,10 @@ Cost:
         This is again impacted by the TTL, meaning if the first time the DNS responded back with the IP to the browser it received the IP address 
         of 1st EC2 instances, now when the TTL expires, their is a 70% chance that the DNS will respond back with the IP address of the 1st EC2 instance,
         while 20% for 2nd and 10% for 3rd EC2 instance, so the browser will send the traffic in the same manner.
+
+        Special Note:
+            1.  This routing policy is helpful to split traffic between two different regions alltogether depending on where the Target is located.
+            2.  'Weighted Routing Policy' supports 'HEALTH CHECKS'
+        
+        In Practicality:
+        You have to set up 3 (1 for 70% and target EC2, another for 20% and target EC2 and so on) different 'A' records in Route 53 with Weighted Policy.
