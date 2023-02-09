@@ -30,7 +30,7 @@ RDS Backups:
         1.  Daily Full backup of the database (during the maintenance window)
         2.  Transaction Logs are backed-up by RDS every 5 minutes
         3.  => ability to restore at any point in time (from oldest backup to 5 mins ago)
-        4.  7 Day retension (can be increased to 35 days)
+        4.  7 Day retention (can be increased to 35 days)
     c.  DB Snapshots.
         1.  DB snapshots are manually triggered by the user
         2.  Retention of backup for as long as you want
@@ -73,7 +73,7 @@ RDS: Storage Auto Scaling
             Read replicas are used for 'SELECT' only statements (not Insert, Update or Delete)
     
     Q02: Explain associated costs for RDS Read Replicas - Across the network?
-    A02: Usually for AWS managed services, their is no network cost when the data travels from One AZ to another, however their are exceptsion.
+    A02: Usually for AWS managed services, their is no network cost when the data travels from One AZ to another, however their are exceptions.
         a.  For RDS Read Replicas: If your RDS DB and RDS Read Replica are in the same region (may or may not be in different AZ), then no
             replication charges will be incurred.
         b.  For RDS Read Replicas: If you RDS DB and RDS Read Replica are in different regions, then replication charges will be incurred.
@@ -88,7 +88,7 @@ RDS: Storage Auto Scaling
             2.  Due to Loss of network
             3.  Due to Instance failure
             4.  Due to storage failure
-        e.  Their are no manual intervention needed in applications to move the connection from Master DB to Standby DB, since the failover 
+        e.  Their are no manual interventions needed in applications to move the connection from Master DB to Standby DB, since the failover 
             happens, beneath the DNS layer.
         f.  The STANDBY DB cannot be used for SCALING, no body can directly read from or write to 'STANDBY' DB unless it becomes Master.
 

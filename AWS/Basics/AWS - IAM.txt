@@ -37,7 +37,7 @@ IAM: Identity & Access Management
         a.  If you dont have an alias - It will enable the link to 'Create' an alias
         b.  If you have an alias - It will allow to 'Edit' or 'Delete' an alias
 
-        Important Note: Since IAM is a Global Service, the alia that you create must be unique for entire IAM service across all regions.
+        Important Note: Since IAM is a Global Service, the alias that you create must be unique for entire IAM service across all regions.
         You cannot create an alias if it already exists.
 
         e.g.:   https://samarth-aws.signin.aws.amazon.com/console
@@ -128,13 +128,13 @@ IAM: Identity & Access Management
         b.  Click on 'Security Credentials', it will take you to 'My Security Credentials' page
         c.  Scroll towards the bottom and look for 'Access Keys'
         d.  click on 'Create Access Keys', it will display the following options (radio buttons)
-            1.  Command Line Interface (CLI):   {You plan to use this access key to enable the AWS CLI to access your account}
-            2.  Local code: {You plan to use this access key to enable application code in a local development environment to access your AWS account}
-            3.  Application running on an AWS compute service:  {You plan to use this access key to enable application code running on an AWS compute 
+            1.  Command Line Interface (CLI)    :   {You plan to use this access key to enable the AWS CLI to access your account}
+            2.  Local code  :   {You plan to use this access key to enable application code in a local development environment to access your AWS account}
+            3.  Application running on an AWS compute service   :   {You plan to use this access key to enable application code running on an AWS compute 
                 service like Amazon EC2, Amazon ECS, Amazon Lambda to access your account}
-            4.  Third Party service:    {You plan to use this access key to enable access for a third party application or service that monitors or 
+            4.  Third Party service :   {You plan to use this access key to enable access for a third party application or service that monitors or 
                 manages your AWS}
-            5.  Application running outside AWS:    {You plan to use this access key to enable an application running on an on-premise host, or to 
+            5.  Application running outside AWS :   {You plan to use this access key to enable an application running on an on-premise host, or to 
                 use a local AWS client or third party aws plugin}
             6.  Other:  {Youyuse case is not listed here.}    
         e.  With selection of any option, AWS will provide a potential recommendation.
@@ -168,11 +168,11 @@ IAM: Identity & Access Management
             2.  AWS ServiceRoleForTrustedAdvisor
         d.  Click on 'Create Role'
         e.  Next Page will have a header 'Select Trusted Entity' with the following options (radio buttons)
-            1.  AWS Service:    {Allows AWS Services like EC2, Lambda or others to perform actions in this account}
-            2.  AWS Account:    {Allows entities in other AWS accounts belonging to you or a 3rd party to perform actions in this account}
-            3.  Web Identity:   {Allows users federated by the external web identity provider to assumer this role to perform actions in this account}
-            4.  SAML 2.0 Federation:    {Allows users federated with SAML 2.0 from a corporate directory to perform actions in this account}
-            5.  Custom Trust Policy:    {Create a custom trust policy to enable others to perform actions in this account}
+            1.  AWS Service         :   {Allows AWS Services like EC2, Lambda or others to perform actions in this account}
+            2.  AWS Account         :   {Allows entities in other AWS accounts belonging to you or a 3rd party to perform actions in this account}
+            3.  Web Identity        :   {Allows users federated by the external web identity provider to assumer this role to perform actions in this account}
+            4.  SAML 2.0 Federation :   {Allows users federated with SAML 2.0 from a corporate directory to perform actions in this account}
+            5.  Custom Trust Policy :   {Create a custom trust policy to enable others to perform actions in this account}
         f.  For ease of understanding, lets create an 'AWS Service' role for an EC2 instance to read data in IAM
         g.  On the 'Add Permissions' page for this new role, search and select 'IAMReadOnlyAccess'
         h.  On the next page, provide a role name and click next
@@ -182,7 +182,7 @@ IAM: Identity & Access Management
     A17: Their are two security tools
         a.  IAM Credentials Report
             This is at the account-level
-            Its a report that lists all your account uders and the status of their various credentials
+            Its a report that lists all your account under and the status of their various credentials
         
         b.  IAM Access Advisor
             This is at the user-level
@@ -243,11 +243,12 @@ IAM: Identity & Access Management
 
 
     IAM Summary:
-    a.  USERS:      Mapped to a physical user, has a password for AWS console
-    b.  GROUPS:     Contains Users only
-    c.  POLICIES:   JSON document that outlines permissions for users or groups
-    d.  ROLES:      For EC2 instances or AWS services
-    e.  SECURITY:   MFA + Password Policy
-    f.  ACCESS KEYS: Access AWS using the CLI or SDK
-    g.  Audit:      IAM Credentials and IAM Access Advisor
-    h.  Maximum Policies that can be associate with a USER Group is : 10
+    a.  USERS       :   Mapped to a physical user, has a password for AWS console
+    b.  GROUPS      :   Contains Users only
+    c.  POLICIES    :   JSON document that outlines permissions for users or groups
+    d.  ROLES       :   For EC2 instances or AWS services
+    e.  SECURITY    :   MFA + Password Policy
+    f.  ACCESS KEYS :   Access AWS using the CLI or SDK
+    g.  Audit       :   IAM Credentials and IAM Access Advisor
+
+    Note:   Maximum Policies that can be associate with a USER Group is : 10
