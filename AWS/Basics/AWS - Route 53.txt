@@ -24,5 +24,16 @@ Cost:
     $0.50 per month per hosted zone
 
 
-    Q01: How to navigate to Route53?
+    Q01: How to navigate to Route 53?
     A01: On the AWS management console, search for 'Route 53' and you will be able to navigate to Route 53 dashboard.
+
+    Q02: Can you purchase a domain directly from Route 53?
+    A02: Yes, we can purchase a domain directly from Route 53. Following are the steps:
+        a.  On the Route 53 Dashboard, under the left vertical menu, click on 'Registered domains' under 'Domains'
+        b.  Click on 'Register domain'
+        c.  Next screen is - 'Choose a domain name', search a domain name of your choice to check its availability and the price.
+        d.  Then 'Add to Cart' and click on 'buy' for one year
+        e.  Provide your contact details and update your privacy options.
+
+    Q03: Is the 'Hosted Zone' created automatically, if you buy a domain from Route 53 dashboard?
+    A03: Yes, a 'Hosted Zone' is created automatically, if we buy a domain from the Route 53 dashboard.
