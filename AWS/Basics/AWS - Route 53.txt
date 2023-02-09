@@ -119,3 +119,11 @@ Cost:
         
         In Practicality:
         You have to set up 3 (1 for 70% and target EC2, another for 20% and target EC2 and so on) different 'A' records in Route 53 with Weighted Policy.
+    
+    Q10: Explain Route 53: Latency Routing Policy?
+    A10: Latency Routing Policy, is the one of the most useful routing policy, because ir re-directs the user to the server that has the least latency 
+        close to us. This policy is very helpful when, Latency of Users is a priority. 
+
+        Special Note:
+        1.  Latency is evaluated on the terms of 'USER TO DESIGNATED AWS REGION'
+            e.g.:   Users in Germany may be re-directed to the US Region (if thats the lowest latency)
