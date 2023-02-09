@@ -37,3 +37,13 @@ Cost:
 
     Q03: Is the 'Hosted Zone' created automatically, if you buy a domain from Route 53 dashboard?
     A03: Yes, a 'Hosted Zone' is created automatically, if we buy a domain from the Route 53 dashboard.
+
+    Q04: How to create a record set in the hosted zone?
+    A04: Once you have a registered domain, On the left vertical menu, click on 'Hosted Zone'
+        a.  To create a new record set, 'Click on Record Set'
+            1.  Provide a Name for the recrd set
+            2.  Select the type of record ('A' or 'AAAA', 'CNAME' , 'Alias')
+            3.  Define Time to Live (TTL) (multiple options in seconds, minutes, hours and day)
+            4.  Provide the value based on the record type [for 'A' record, it will be an ipv4 address]
+            5.  From the 'Routing Policy' select 'Simple'
+            6.  Click on 'Create'
