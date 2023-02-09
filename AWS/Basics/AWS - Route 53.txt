@@ -127,3 +127,11 @@ Cost:
         Special Note:
         1.  Latency is evaluated on the terms of 'USER TO DESIGNATED AWS REGION'
             e.g.:   Users in Germany may be re-directed to the US Region (if thats the lowest latency)
+    
+    Q11: Explain HEALTH CHECKS in Route 53?
+    A11: HEALTH CHECK in Route 53 is similar to ELB, where if an instance is deemed unhealth, Route 53 will not send any traffic to that particular instance.
+        Following is the Frequency of HEALTH CHECKS in Route 53:
+        a.  An instance is deemed UN-Healthy if it fails 'x' number of health checks in a row, by default x=3
+        b.  An instance is deemed Healthy if it passes 'x' number of health checks in a row, by default x=3
+        c.  Default Health Check Interval = 30 seconds, can also be modified to 10 seconds, but it will increase the cost.
+        d.  HEALTH CHECKS can be performed on HTTP, TCP and HTTPS
