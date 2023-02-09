@@ -91,3 +91,16 @@ Cost:
             1.  It works for both the Root Domain and the Non-Root Domain
             2.  Its Free
             3.  Supports Native Health Check
+
+    Q08: Explain Route 53: Simple Routing Policy?
+    A08: Suppose on a web-browser you are looking for a hostname 'apex.ashishsamarth.com', this query goes to the DNS (Route 53) and the DNS responds back 
+        with the 'A' record (IP Address, along with the TTL). 'Simple' Routing policy is usually used to redirect to a single resource, but can also be used
+        to redirect to multiple resources (more than 1 IP address). In case of multiple IP addresses in the 'Simple' Routing policy, the DNS will return one 
+        record for the TTL expiration and may or may not return the other configured IP address.
+            So at a high level, this may seem like a 'Client Side Load Balancing' (since browser is asking for IP based on every refresh), but not very 
+            reliable.
+        
+        Special Note: 'Simple Routing Policy' does NOT support 'HEALTH CHECKS'
+    
+    Q09: Explain Route 53: Weighted Routing Policy?
+    A09: 
