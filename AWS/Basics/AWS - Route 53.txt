@@ -138,3 +138,32 @@ Cost:
 
         Special Note:
         1.  Health Checks can be linked to Route 53 DNS queries.
+    
+    Q12: Explain Route 53: Failover Routing Policy?
+    A12: Consider an example where you have two EC2 instances, the first EC2 instance is primary and the second EC2 instance is secondary. By default, when 
+        a web-browser requests a DNS query to Route 53, based on the 'Failover Routing Policy' Route 53 will respond back with the 1st EC2 instance, until 
+        the primary EC2 instance is healthy. The moment 'Health Check' fails for the primary EC2 instance, the DNS will replace the 'A' record to be sent 
+        to the Web-Browser on the next DNS query with the IPv4 address of the 2nd EC2 instance. The failover from the Primary Instance to the Secondary 
+        instance, happens based on the 'HEALTH CHECK' of the instance.
+
+        Special Note: HEALTH CHECK is mandatory (for the Primary Instance) for this routing policy.
+    
+    Q13: Explain Route 53: Geo Location Routing Policy?
+    A13: This policy routes the traffic based on the USER location. Consider an example where the end user is location in UK, and we have an EC2 instance in 
+        France, then using this policy, we can redirect traffic from all users located in UK to be sent over to the EC2 instance in France. Along with this 
+        we need to also create a default policy, where any body in location other than UK, should be re-directed to a different location in AWS region.
+    
+    Q14: Explain Route 53: Geo-Proximity Routing Policy?
+    A14: This policy routes the traffic based on
+        1.  User geographic location
+        2.  AWS resources geographic location, closer to user.
+
+        Consider the following example:
+        Their are 4 users (1st in Washington, 2nd in Idaho, 3rd in Chicago, 4rh in Newyork), and 2 regions (1st in California, 2nd in Atlanta). Now with 
+        usual 'Geo-Proximity Routing' the first two users will be wouted to California region, and the remaing two users will be routed to Atlanta region.
+        In this policy, their is a special parameter called 'Bias', this parameter allows to shift the balance of traffic based on +ve and -ve values.
+        If you want more traffic to be handled by a region, give it a positive bias value (between 1 and 99), when you want less traffic to be sent over 
+        to a region, give it a negative bias value (between -1 to -99).
+
+        Now if we give a +ve bias value (e.g. 50) to the Geo-Proximity policy for resource in Atlanta region then 3 out of 4 users will be routed to the 
+        Atlanta region and the remaining 1 will be routed to California region.
