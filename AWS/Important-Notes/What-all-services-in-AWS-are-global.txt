@@ -4,3 +4,4 @@ a.  IAM
 b.  Route53
 c.  CloudFront
 d.  AWS Global Accelerator
+e.  Web Access Firewall
