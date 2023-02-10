@@ -6,3 +6,5 @@ c.  VPC
 d.  Security Groups
 e.  Elastic IP Address
 f.  Transit Gateway
+g.  AMI
+h.  Auto-Scaling
