@@ -3,3 +3,4 @@ Following are the regional services in AWS
 a.  EC2 instances   [Security Groups]
 b.  Load Balancers  [Multi-AZ]
 c.  VPC
+d.  Security Groups
