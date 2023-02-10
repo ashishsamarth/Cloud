@@ -9,3 +9,6 @@ f.  Transit Gateway
 g.  AMI
 h.  Auto-Scaling
 i.  ECS
+j.  S3
+k.  DynamoDB
+l.  Storage Gateway
