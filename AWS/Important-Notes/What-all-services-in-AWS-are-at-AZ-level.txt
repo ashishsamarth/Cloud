@@ -4,3 +4,4 @@ a.  Subnet
 b.  Elastic Network Interface
 c.  Instances
 d.  EBS Volumes
+e.  Cluster Placement Groups
