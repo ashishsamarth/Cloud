@@ -4,3 +4,5 @@ a.  EC2 instances   [Security Groups]
 b.  Load Balancers  [Multi-AZ]
 c.  VPC
 d.  Security Groups
+e.  Elastic IP Address
+f.  Transit Gateway
