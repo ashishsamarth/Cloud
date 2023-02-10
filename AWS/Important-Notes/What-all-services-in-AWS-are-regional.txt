@@ -18,3 +18,4 @@ o.  AWS Macie
 p.  AWS Inspector
 q.  AWS Security Hub
 r.  AWS Migration Hub
+s.  EBS Snapshots
