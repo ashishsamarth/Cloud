@@ -20,3 +20,4 @@ AWS S3: It advertised as the infinetly scaling storage, hence we do not define i
         2.  If uploading more than 5GB in one go, the user must use 'Multi-Part' upload
         3.  Each object in S3, can have 'metadata' (filename, fileowner, created-date, some system data etc)
         4.  Each object in S3, can have Tags (a maximum of 10, which is useful for security / identification and lifecycle management)
+        5.  Each object in S3, can have its Version ID (if versioning is enabled)
