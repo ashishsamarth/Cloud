@@ -1,0 +1,17 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+AWS - S3 : SimpleStorageService
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+AWS S3: It advertised as the infinetly scaling storage, hence we do not define its size while provisioning it (unlink EBS or EFS). It allows the users to 
+    store objects (files) in 'buckets' (directories).
+    a.  Buckets MUST have a globally-unique-name
+    b.  Buckets are defined at the regional level
+    c.  Follows a specific naming convention
+        1.  No Uppercase
+        2.  NO underscore
+        3.  Between 3-63 characters long
+        4.  Not an IP
+        5.  Must Start with lowercase letter or number
+    d.  OBJECTS (files) have a key, the key is basically the complete path to the file, for.e.g.
+        1.  s3://my-bucket/my_file.txt                              :   here the 'key' is : my_file.txt
+        2.  s3://my-bucket/root-folder/child-folder/my_file.txt     :   here the 'key' is : root-folder/child-folder/my_file.txt
