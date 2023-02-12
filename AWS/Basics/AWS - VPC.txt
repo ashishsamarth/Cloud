@@ -6,31 +6,36 @@ VPC can have multiple subnets. A Subnet allows you to partition your network ins
 When an AWS account is created for you, it will only have 'Public Subnets' it will not have any 'Private Subnets'. Also, you will have one Default VPC per 
 region that is available to you, so essentially 'AZs' with in the region will have the same VPC.
 
-                            Internet
-        ----------------------|----------------------
-        | VPC                 |                     |
-        |   __________________|_________________    |
-        |   |                 |                 |   |
-        |   |   **************|*************    |   |
-        |   |   |             |            |    |   |
-        |   |   |   ~~~~~~~~~~V~~~~~~~~~   |    |   |
-        |   |   |   |   EC2 Instance   |   |    |   |
-        |   |   |   ~~~~~~~~~~~~~~~~~~~~   |    |   |
-        |   |   |    Public Subnet         |    |   |
-        |   |   ****************************    |   |
-        |   |                                   |   |
-        |   |                                   |   |
-        |   |   ****************************    |   |
-        |   |   |   ~~~~~~~~~~~~~~~~~~~~   |    |   |
-        |   |   |   |   EC2 Instance    |  |    |   |
-        |   |   |   ~~~~~~~~~~~~~~~~~~~~   |    |   |
-        |   |   |     Private Subnet       |    |   |
-        |   |   ****************************    |   |
-        |   |     AVAILABILITY ZONE A           |   |
-        |   |___________________________________|   |
-        |                                           |
-        |                                           |
-        ---------------------------------------------
+
+
+                            INTERNET
+                              ^
+                              |
+                              |
+        ----------------------|-----------------------------------
+        | VPC          INTERNET GATEWAY------^                   |
+        |   __________________|______________|_______________    |
+        |   |                 |              |               |   |
+        |   |   **************|**************|***********    |   |
+        |   |   |             |              |          |    |   |
+        |   |   |   ~~~~~~~~~~V~~~~~~~~~~~~~~|~~~~~~    |    |   |
+        |   |   |   |   EC2 Instance        NAT     |   |    |   |
+        |   |   |   ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~   |    |   |
+        |   |   |    Public Subnet           |          |    |   |
+        |   |   *****************************|***********    |   |
+        |   |                                |               |   |
+        |   |                                |               |   |
+        |   |   *****************************|*******        |   |
+        |   |   |   ~~~~~~~~~~~~~~~~~~~~     |      |        |   |
+        |   |   |   |   EC2 Instance <-|------      |        |   |
+        |   |   |   ~~~~~~~~~~~~~~~~~~~~            |        |   |
+        |   |   |     Private Subnet                |        |   |
+        |   |   *************************************        |   |
+        |   |     AVAILABILITY ZONE A                        |   |
+        |   |________________________________________________|   |
+        |                                                        |
+        |                                                        |
+        ----------------------------------------------------------
 
 
 
@@ -42,3 +47,14 @@ region that is available to you, so essentially 'AZs' with in the region will ha
     
     Q02: Which component is used to define access to the internet and between the subnets?
     A02: To define access to the internet and between the subnets, we use Route Tables
+
+    Q03: How does a resource deployed under the public subnet accesses the internet?
+    A03: Since the 'Public Subnet' is connected to the internet via an 'Internet Gateway', the resource deployed in this subnet is able to access the 
+        Internet
+    
+    Q04: How does a resource deployed under the private subnet accesses the internet?
+    A04: The 'Private Subnet' does not connect to the internet or the internet gateway directly thats why its called Private due to the isoliation for 
+        security features. However resource deployed in this subnet may need occasional public internet access for software upgrades or security patches.
+        To handle this isolation, we deploy a 'NAT' in the public subnet, and this NAT will be able to access the internet via the 'Internet Gateway'.
+        Once the NAT is able to connect to the Internet Gateway, we can connect this NAT (placed in public subnet) to the resources placed in the 
+        'Private Subnet' and then these resources can access the internet, even being inthe private subnet
