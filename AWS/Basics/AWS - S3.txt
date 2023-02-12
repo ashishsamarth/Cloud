@@ -15,3 +15,8 @@ AWS S3: It advertised as the infinetly scaling storage, hence we do not define i
     d.  OBJECTS (files) have a key, the key is basically the complete path to the file, for.e.g.
         1.  s3://my-bucket/my_file.txt                              :   here the 'key' is : my_file.txt
         2.  s3://my-bucket/root-folder/child-folder/my_file.txt     :   here the 'key' is : root-folder/child-folder/my_file.txt
+    e.  OBJECT (files) have a value as well. The values of these keys is basically, the content of the file
+        1.  Maximum Object size in S3 is 5TB
+        2.  If uploading more than 5GB in one go, the user must use 'Multi-Part' upload
+        3.  Each object in S3, can have 'metadata' (filename, fileowner, created-date, some system data etc)
+        4.  Each object in S3, can have Tags (a maximum of 10, which is useful for security / identification and lifecycle management)
