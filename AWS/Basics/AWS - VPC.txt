@@ -3,6 +3,8 @@ AWS - VPC
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 VPC is private network to deploy your resources. Its a regional resource and a logical construct.
 VPC can have multiple subnets. A Subnet allows you to partition your network inside your VPC (an Availability Zone resource)
+When an AWS account is created for you, it will only have 'Public Subnets' it will not have any 'Private Subnets'. Also, you will have one Default VPC per 
+region that is available to you, so essentially 'AZs' with in the region will have the same VPC.
 
                             Internet
         ----------------------|----------------------
