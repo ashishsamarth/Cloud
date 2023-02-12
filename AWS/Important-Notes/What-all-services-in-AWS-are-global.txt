@@ -6,3 +6,4 @@ c.  CloudFront
 d.  AWS Global Accelerator
 e.  Web Access Firewall
 f.  Direct Connect Gateway
+g.  S3
