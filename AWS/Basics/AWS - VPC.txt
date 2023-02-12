@@ -17,7 +17,7 @@ region that is available to you, so essentially 'AZs' with in the region will ha
         |   __________________|______________|_______________    |
         |   |                 |              |               |   |
         |   |   **************|**************|***********    |   |
-        |   |   |             |              |          |    |   |
+        |   |   |      NETWORK| ACL          |          |    |   |
         |   |   |   ~~~~~~~~~~V~~~~~~~~~~~~~~|~~~~~~    |    |   |
         |   |   |   |   EC2 Instance        NAT     |   |    |   |
         |   |   |   ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~   |    |   |
@@ -57,4 +57,18 @@ region that is available to you, so essentially 'AZs' with in the region will ha
         security features. However resource deployed in this subnet may need occasional public internet access for software upgrades or security patches.
         To handle this isolation, we deploy a 'NAT' in the public subnet, and this NAT will be able to access the internet via the 'Internet Gateway'.
         Once the NAT is able to connect to the Internet Gateway, we can connect this NAT (placed in public subnet) to the resources placed in the 
-        'Private Subnet' and then these resources can access the internet, even being inthe private subnet
+        'Private Subnet' and then these resources can access the internet, even being inthe private subnet.
+
+        Special Note: NAT Gateways are AWS-Managed, while NAT instances are SELF-Managed
+    
+    Q05: Explain Network ACL & Security groups
+    A05: NACL: 
+        a.  Its a firewall which controls traffic from and to the subnet
+        b.  Can have ALLOW and DENY rules
+        c.  Are attached at the Subnet level
+        d.  Rules only include IP Address
+    
+        SECURITY GROUPS:
+        a.  A firewall that controls traffic to and from an ENI / an EC2 instance
+        b.  Can have only ALLOW rules
+        c.  Rules include IP Address and other security groups
