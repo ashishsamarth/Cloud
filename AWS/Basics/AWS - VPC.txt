@@ -4,6 +4,35 @@ AWS - VPC
 VPC is private network to deploy your resources. Its a regional resource and a logical construct.
 VPC can have multiple subnets. A Subnet allows you to partition your network inside your VPC (an Availability Zone resource)
 
+                            Internet
+        ----------------------|----------------------
+        | VPC                 |                     |
+        |   __________________|_________________    |
+        |   |                 |                 |   |
+        |   |   **************|*************    |   |
+        |   |   |             |            |    |   |
+        |   |   |   ~~~~~~~~~~V~~~~~~~~~   |    |   |
+        |   |   |   |   EC2 Instance   |   |    |   |
+        |   |   |   ~~~~~~~~~~~~~~~~~~~~   |    |   |
+        |   |   |    Public Subnet         |    |   |
+        |   |   ****************************    |   |
+        |   |                                   |   |
+        |   |                                   |   |
+        |   |   ****************************    |   |
+        |   |   |   ~~~~~~~~~~~~~~~~~~~~   |    |   |
+        |   |   |   |   EC2 Instance    |  |    |   |
+        |   |   |   ~~~~~~~~~~~~~~~~~~~~   |    |   |
+        |   |   |     Private Subnet       |    |   |
+        |   |   ****************************    |   |
+        |   |     AVAILABILITY ZONE A           |   |
+        |   |___________________________________|   |
+        |                                           |
+        |                                           |
+        ---------------------------------------------
+
+
+
+
     Q01: What are the teo types of subnets?
     A01: Following are the types of subnets
         a.  Public Subnet:  This is a subnet which is accesible from the internet
