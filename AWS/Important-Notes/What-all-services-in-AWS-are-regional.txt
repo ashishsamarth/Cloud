@@ -9,7 +9,7 @@ f.  Transit Gateway
 g.  AMI
 h.  Auto-Scaling
 i.  ECS
-j.  S3
+j.  S3-Buckets
 k.  DynamoDB
 l.  Storage Gateway
 m.  AWS Guard Duty
