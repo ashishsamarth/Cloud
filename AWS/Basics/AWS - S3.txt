@@ -17,7 +17,218 @@ AWS S3: It advertised as the infinetly scaling storage, hence we do not define i
         2.  s3://my-bucket/root-folder/child-folder/my_file.txt     :   here the 'key' is : root-folder/child-folder/my_file.txt
     e.  OBJECT (files) have a value as well. The values of these keys is basically, the content of the file
         1.  Maximum Object size in S3 is 5TB
-        2.  If uploading more than 5GB in one go, the user must use 'Multi-Part' upload
-        3.  Each object in S3, can have 'metadata' (filename, fileowner, created-date, some system data etc)
-        4.  Each object in S3, can have Tags (a maximum of 10, which is useful for security / identification and lifecycle management)
-        5.  Each object in S3, can have its Version ID (if versioning is enabled)
+        2.  If uploading more than 5GB in one go, the user must use 'Multi-Part' upload.
+        3.  If uploading a file more than 160 GB, you must use AWS-CLI, AWS SDK, or AWS S3 Rest API
+        4.  Each object in S3, can have 'metadata' (filename, fileowner, created-date, some system data etc)
+        5.  Each object in S3, can have Tags (a maximum of 10, which is useful for security / identification and lifecycle management)
+        6.  Each object in S3, can have its Version ID (if versioning is enabled)
+
+    Q01: What is the minimum policy required to be able to create a S3 Bucket?
+    A01: The minimum role required for a user to be able to create an S3 bucket is - AmazonS3FullAccess
+
+    Q02: How to create a S3 Bucket?
+    A02: Following are the steps to create a S3 bucket
+        a.  Login to the AWS management console with a user that has the permissions to create a S3 Bucket
+        b.  Search for S3 on the AWS management console
+        c.  On the S3 dashboard, click on 'Create Bucket'
+        d.  Provide a 'Bucket Name' to the bucket [This name must be globally unique]
+        e.  Select the AWS region where you want to create the bucket [Even though S3 is global service, but buckets are regional]
+        f.  On the 'Object Ownership section, select 'ACLs Disabled' [All accounts in this bucket are owned by this account, Access to the bucket 
+            and its objects is specified using only policies]
+        g.  'Block all public access' is enabled by default.
+        h.  On 'Bucket Versioning', 'disabled' is selected by default
+        i.  Default Encryption is selected as - 'Amazon-S3-managed-keys'
+        j.  Under 'Advanced Settings' - Object Lock is 'disabled' by default
+            [Store objects using a write-once-read-many (WORM) model to help you prevent objects from being deleted or overwritten for a fixed 
+            amount of time or indefinitely]
+        k.  Once the bucket is created, you can click on the bucket name and check the properties / permissions / Metrics / Access points etc.
+    
+    Q03: How to upload an object in to an S3 bucket?
+    A03: Once the S3 bucket is created:
+        a.  Click on the 'Buckets' section of S3 Dashboard.
+        b.  Click on the bucket name, and then click on upload.
+        c.  Under 'Upload' click on 'Add Files' or 'Add Folders' and navigate to the file or folder on your machine.
+        d.  'Destination URL' will be prebuilt based on your S3 bucket.
+        e.  Select the 'Storage Class' and then click on 'Upload'
+        f.  Once the object is uploaded successfully, it will visible under the 'Bucket' --> 'Objects'
+
+    Q04: How many storage classes are there in S3?
+    A04: S3 has the following storage classes.
+        a.  Standard                :   Designed for                    : Frequently Accessed Data (more than once a month) with milliseconds access
+                                        Available in                    : More than or equal to 3 AZs
+                                        Minimum Storage Duration        : None
+                                        Minimum Billable Objext size    : None
+                                        Monitoring & Auto tiering fees  : None
+                                        Retrieval fees                  : None
+        
+        b.  Intelligent Teiring     :   Designed for                    : Data with changing and unknown access patterns
+                                        Available in                    : More than or equal to 3 AZs
+                                        Minimum Storage Duration        : None
+                                        Minimum Billable Objext size    : None
+                                        Monitoring & Auto tiering fees  : Per-object fees apply for objects >= 128kb
+                                        Retrieval fees                  : None
+
+        c.  Standard-IA             :   Designed for                    : Infrequently accessed data (once a month) with milliseconds access
+                                        Available in                    : More than or equal to 3 AZs
+                                        Minimum Storage Duration        : 30 Days
+                                        Minimum Billable Objext size    : 128 KB
+                                        Monitoring & Auto tiering fees  : None
+                                        Retrieval fees                  : Per-GB fees apply
+        
+        d.  One Zone-IA             :   Designed for                    : Recreatable, infrequently accessed data (once a month) stored in a single 
+                                                                          Availability Zone with milliseconds access
+                                        Available in                    : 1 AZ
+                                        Minimum Storage Duration        : 30 Days
+                                        Minimum Billable Objext size    : 128 KB
+                                        Monitoring & Auto tiering fees  : None
+                                        Retrieval fees                  : Per-GB fees apply
+        
+        e.  Glacier Instant Retrieval:  Designed for                    : Long-lived archive data accessed once a quarter with instant retrieval in 
+                                                                          milliseconds
+                                        Available in                    : More than or equal to 3 AZs
+                                        Minimum Storage Duration        : 90 Days
+                                        Minimum Billable Objext size    : 128 KB
+                                        Monitoring & Auto tiering fees  : None
+                                        Retrieval fees                  : Per-GB fees apply
+        
+        f.  Glacier Flexible Retrieval: Designed for                    : Long-lived archive data accessed once a year with retrieval of minutes to hours
+            (formerly Glacier)
+                                        Available in                    : More than or equal to 3 AZs
+                                        Minimum Storage Duration        : 90 Days
+                                        Minimum Billable Objext size    : None
+                                        Monitoring & Auto tiering fees  : None
+                                        Retrieval fees                  : Per-GB fees apply
+        
+        g.  Glacier Deep Archive    :   Designed for                    : Long-lived archive data accessed less than once a year with retrieval of hours
+                                        Available in                    : More than or equal to 3 AZs
+                                        Minimum Storage Duration        : 180 Days
+                                        Minimum Billable Objext size    : None
+                                        Monitoring & Auto tiering fees  : None
+                                        Retrieval fees                  : Per-GB fees apply
+
+        h.  Reduced Redundancy      :   Designed for                    : Noncritical, frequently accessed data with milliseconds access 
+                                                                          (not recommended as S3 Standard is more cost effective)
+                                        Available in                    : More than or equal to 3 AZs
+                                        Minimum Storage Duration        : None
+                                        Minimum Billable Objext size    : None
+                                        Monitoring & Auto tiering fees  : None
+                                        Retrieval fees                  : Per-GB fees apply
+
+    Q05: How to check the properties of an uploaded object?
+    A05: Following are the steps:
+        a.  Once you are inside the S3 bucket, click on the object, you wish to check the properties for.
+        b.  A new standard dialog will open and the 'Properties' tab will be pre-selected, their are two more tabs, Permissions and Versions
+        c.  On this page, their are 4 more options on the right top [Copy S3 URI, DOWNLOAD, OPEN, Object Options]
+        d.  If you wish to see the object content without downloading it, simply click on 'OPEN'
+        e.  When you click on 'Open', AWS opens a link which points to this object and has a pre-signed URL with AWS security token
+        f.  If you try to open the same objec using 'Object URL', it will fail, since this URL does not have the pre-signed AWS security token
+    
+    Q06: Explain key points of S3 Bucket versioning feature?
+    A06: Amazon S3 allows for versioning of the files
+        a.  Its enabled at the bucket level
+        b.  Same Key overwrite will increment the 'Version': 1,2,3 etc.
+        c.  Its a best practice to version your buckets.
+            1.  So that you are protected against unintended deletes (ability to restore a version)
+            2.  Easy Rollback to a previous version
+        
+        Special Note:
+            1.  Any file, that is not versioned prior to enabling versioning, will have version id as NULL
+            2.  Suspending versioning, does not delete the previous versions.
+    
+    Q07: What happens if you upload a file with the same name with S3 Bucket versioning enabled?
+    A07: If we upload two files of the same name with S3 bucket versioning enabled, then both the file will be enabled and will have 'Version ID'
+        populated with some 'string value' as the version id of both the files.
+        The version of the file can be seen, under the 'Bucket' - 'Show Versions', and both the files with the same name but different version ids
+        will be shown to the user.
+    
+    Q08: What is the difference between 'delete' vs 'Permanently Delete' in S3 Bucket?
+    A08: Suppose you attempt to delete a file, (which has multiple versions, but since 'Show Versions' is disabled, you cant see those versions).
+        using the 'checkbox' and 'delete' button on the s3 bucket page.
+        On the delete objects page, you will see the name of the file and a confirmation to type 'delete' and clicked on 'delete objects'
+
+        Now when you go back to the s3 bucket and enable 'Show versions' you will see another version of the file with type as 'Delete Marker'
+        but size 0.The Delete Marker makes AWS S3 behave as if the object has been deleted.
+
+        *   Delete Marker object does not have any data or ACL associated with it, just the key and the version ID
+        *   An object retrieval on a bucket with a delete marker as the Current version would return a 404
+        *   Only a DELETE operation is allowed on the Delete Marker object
+        *   If the Delete marker object is deleted by specifying its version ID, the previous non-current version object becomes current version object
+        *   If a DELETE request is fired on an object with Delete Marker as the current version, the Delete marker object is not deleted but a 
+            Delete Marker is added again
+
+        If you have 'Show Versions' enabled and you select all the version of the file you wish to delete, then the files will be permanently deleted
+
+    Q09: Explain S3 Encryption for objects?
+    A09: Their are primarily 4 methods for object encryption in S3
+        a.  SSE-S3  :   Encrypts S3 objects, using keys handled and managed by AWS on the ServerSide
+        b.  SSE-KMS :   Leverage AWS Key Management Service to manage encryption keys on the ServerSide
+        c.  SSE-C   :   When the customer wants to manage the encryption keys on the ServerSide
+        d.  Client Side Encryption
+
+    Q10: Explain SSE-S3 encryption?
+    A10: SSE-S3: Its a server side encryption scheme, where the object encryption happens, using keys handled and managed by S3 with AES-256 algorithm.
+        To upload an object and set the SSE as AES256, you must set the header as 'x-amz-server-side-encryption':'AES256'
+        Here's the flow:
+
+
+                                                                    |-----------------------------------------------------|
+                         HTTP/S + HEADER                            |   |~~~~~~~~~~~~~~~~~~~~~|                     S3    |
+        __________       ('x-amz-server-side-encryption':'AES256')  |   | [ object ]          | Encryption                |
+        | OBJECT |--------------------------------------------------->  |    +                |-----------> { BUCKET}     |
+        ----------                                                  |   | S3 Managed Data Key |                           |
+                                                                    |   ~~~~~~~~~~~~~~~~~~~~~~                            | 
+                                                                    |-----------------------------------------------------|
+
+    Q11: Explain SSE-KMS encryption?
+    A11: SSE-KMS: Its a server side encryption scheme, where the object encryption happens, using keys handled and managed by KMS.
+        KMS provides advantages in terms of User Control and Audit Trail.
+        To upload an object and set the SSE as AES256, you must set the header as 'x-amz-server-side-encryption':'aws:kms'
+        Here's the flow:
+
+                                                                    |-----------------------------------------------------------|
+                         HTTP/S + HEADER                            |   |~~~~~~~~~~~~~~~~~~~~~~~~~~~|                     S3    |
+        __________       ('x-amz-server-side-encryption':'AES256')  |   | [ object ]                | Encryption                |
+        | OBJECT |--------------------------------------------------->  |    +                      |-----------> { BUCKET}     |
+        ----------                                                  |   | KMS Customer Master Key   |                           |
+                                                                    |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                           | 
+                                                                    |-----------------------------------------------------------|
+    
+    Q12: Explain SSE-C encryption?
+    A12: SSE-C: Its a server side encryption scheme, where the object encryption happens using data keys fully managed by customer outside AWS.
+        AWS-S3, DOES NOT store the encryption keys that you provide.
+        HTTPS is a must for this type of encryption, and is ONLY availabel using AWS CLI
+        Here's the flow:
+
+    ----------------------------------------                                      |-----------------------------------------------------------|  
+    |    _____________                      |                                     |                                                     S3    |
+    |    [   OBJECT  ]                      |                                     | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                             |
+    |    -------------                      |   HTTPS ONLY + DATA KEY in HEADER   | | [ Object ]                | Encryption                  |
+    |          +                            |------------------------------------>| |   +                       |--------------> { BUCKET }   |
+    |    _____________________________      |                                     | | [Client Provided Data Key]|                             |
+    |    [   CLIENT SIDE DATA KEYS   ]      |                                     | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                             |
+    |    -----------------------------      |                                     |                                                           |
+    |----------------------------------------                                     |-----------------------------------------------------------|  
+
+    Special Note: For both uploading and downloading the data, the client side data keys must be passed in to the header
+
+    Q13: Explain Client Side Encryption?
+    A13: For client side encryption, the object is encryption before its being uploaded to the S3 bucket. In this encryption scheme, clients 
+        MUST encrypt the object themselves before sending to S3, and also MUST decrypt data themselves when retrieving data from S3.
+        A client library, such as Amazon S3 encryption client can be used to encryption / decryption. The customer manages the keys and the 
+        encryption cycle.
+        Here's the file:
+
+    |----------------------------------------------------------------|
+    |                   Client - S3 Encryption SDK                   |
+    |  ~~~~~~~~~~~~~~~~~~~~~~~~~~                                    |              |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    |  | [   OBJECT  ]          | Encryption                         |  HTTPS       |                       S3       |
+    |  |         +              |----------------> [Encrypted Obkect]|------------> |       {   BUCKET  }            |
+    |  | [Client Side Data Key] |                                    |              |                                |
+    |  ~~~~~~~~~~~~~~~~~~~~~~~~~~                                    |              |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    |                                                                |
+    |----------------------------------------------------------------|    
+
+    Q14: Apart from the object encryption schemes, how else can we encrypt the objects?
+    A14: Rather than selecting the encryption scheme for each object while its being upload, we can also set a 'DEFAULT' encryption scheme 
+        at the BUCKET Level, so that every time an object is being uploaded, it will have the default encryption scheme attached to it.
+    
