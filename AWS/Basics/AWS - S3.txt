@@ -232,3 +232,8 @@ AWS S3: It advertised as the infinetly scaling storage, hence we do not define i
     A14: Rather than selecting the encryption scheme for each object while its being upload, we can also set a 'DEFAULT' encryption scheme 
         at the BUCKET Level, so that every time an object is being uploaded, it will have the default encryption scheme attached to it.
     
+    Q15: Explain AWS - S3 Security?
+    A15: AWS S3 has two types of security
+        a.  User Based:     IAM Policies: Identify which api calls should be allowed for a specific user from IAM console.
+        b.  Resource Based:
+            1.  Bucket Policies:    Bucket wide rules from the S3 console, which allows cross account access.
