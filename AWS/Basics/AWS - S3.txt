@@ -277,4 +277,4 @@ AWS S3: It advertised as the infinetly scaling storage, hence we do not define i
         b.  Any Access Control List (ACLs)
         c.  New Public Bucket or Access Point Policies
 
-        Block public 
+        Block public and cross-account access to buckets and objects through any public bucket or access point policies.
