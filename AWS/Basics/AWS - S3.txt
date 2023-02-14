@@ -243,4 +243,28 @@ AWS S3: It advertised as the infinetly scaling storage, hence we do not define i
         Special Note:
             An IAM Principal (user or group) can access an S3 object if:
             1.  The user IAM permissions allow it OR the resource policy allows it
-            2.  AND their is NO explicit deny 
+            2.  AND their is NO explicit deny
+
+    Q16: Explain S3 Bucket Policy?
+    A16: S3 Bucket Policy, is JSON based policy, here's an example
+            {
+                "Version": "2023-02-13",
+                "Statement": [
+                    {
+                        "Sid": "PublicRead",
+                        "Effect": "Allow",
+                        "Principal": "*",
+                        "Action": ["s3: GetObject"],
+                        "Resource": ["arn:aws:s3:::examplebucket/*"]
+                    }
+                ]
+            }
+
+        Here:
+        Resource: Are buckets and objects
+        Actions: Set of API to Allow or deny
+        Effect: Allow or deny
+        Principal: The account or user to apply the policy to
+
+        You can use S3 Bucket policy to:
+        1.  Grant public Access to the bucket
