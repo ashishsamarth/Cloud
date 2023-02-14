@@ -237,3 +237,10 @@ AWS S3: It advertised as the infinetly scaling storage, hence we do not define i
         a.  User Based:     IAM Policies: Identify which api calls should be allowed for a specific user from IAM console.
         b.  Resource Based:
             1.  Bucket Policies:    Bucket wide rules from the S3 console, which allows cross account access.
+            2.  Object Access Control List (ACL):   Rarely used.
+            3.  Bucket Access Control List (ACL):   Rarely used.
+
+        Special Note:
+            An IAM Principal (user or group) can access an S3 object if:
+            1.  The user IAM permissions allow it OR the resource policy allows it
+            2.  AND their is NO explicit deny 
