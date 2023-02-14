@@ -246,6 +246,10 @@ AWS S3: It advertised as the infinetly scaling storage, hence we do not define i
             An IAM Principal (user or group) can access an S3 object if:
             1.  The user IAM permissions allow it OR the resource policy allows it
             2.  AND their is NO explicit deny
+        
+        S3 Logging and Auditing:
+            1.  S3 Access Logs can be stored in other S3 bucket
+            2.  API Calls can be logged in AWS Cloud Trail
 
     Q16: Explain S3 Bucket Policy?
     A16: S3 Bucket Policy, is JSON based policy, here's an example
