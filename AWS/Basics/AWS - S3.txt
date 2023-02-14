@@ -251,6 +251,10 @@ AWS S3: It advertised as the infinetly scaling storage, hence we do not define i
             1.  S3 Access Logs can be stored in other S3 bucket
             2.  API Calls can be logged in AWS Cloud Trail
 
+        User Security:
+            1.  MFA Delete: MFA can be enabled in versioned buckets to delete objects
+            2.  
+
     Q16: Explain S3 Bucket Policy?
     A16: S3 Bucket Policy, is JSON based policy, here's an example
             {
