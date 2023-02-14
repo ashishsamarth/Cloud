@@ -268,3 +268,5 @@ AWS S3: It advertised as the infinetly scaling storage, hence we do not define i
 
         You can use S3 Bucket policy to:
         1.  Grant public Access to the bucket
+        2.  Force objects to be encrypted at upload
+        3.  Grant Access to another account (Cross Account)
