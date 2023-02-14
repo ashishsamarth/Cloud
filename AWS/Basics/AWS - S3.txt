@@ -239,6 +239,8 @@ AWS S3: It advertised as the infinetly scaling storage, hence we do not define i
             1.  Bucket Policies:    Bucket wide rules from the S3 console, which allows cross account access.
             2.  Object Access Control List (ACL):   Rarely used.
             3.  Bucket Access Control List (ACL):   Rarely used.
+        c.  Network Based:
+            1.  Suports VPC endpoints (for instances in VPC without internet)
 
         Special Note:
             An IAM Principal (user or group) can access an S3 object if:
