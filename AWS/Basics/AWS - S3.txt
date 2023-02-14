@@ -278,3 +278,4 @@ AWS S3: It advertised as the infinetly scaling storage, hence we do not define i
         c.  New Public Bucket or Access Point Policies
 
         Block public and cross-account access to buckets and objects through any public bucket or access point policies.
+        These were created to prevent company data leaks
