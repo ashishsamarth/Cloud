@@ -8,6 +8,10 @@ tasks using the CLI (without even logging in to the Management Console)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 S3 - CLI
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+s3: ls
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     SCN#01  :   List existing S3 buckets on your account
     Command :   aws s3 ls
 
@@ -27,7 +31,21 @@ S3 - CLI
     */
     *******************************************************************************************************************************************************
 
-    SCN#03  :   Upload a single file from local directory to S3 bucket
+    SCN#03  :   List the contents of child directory in a S3 Bucket
+    Command :   aws s3 ls s3://samarth-ashish-aws-developer-021223/my_multi_upload/
+    Syntax  :   aws s3 ls s3://<bucket_name>/<child_dir_name>/
+    Note    :   a '/' is needed at the end, otherwise, S3 will only show the result as the child directory instead of the files inside it
+
+    /*
+    C:\Users\samarth\Downloads>aws s3 ls s3://samarth-ashish-aws-developer-021223/my_multi_upload/
+    2023-02-15 06:32:41          1 1.txt
+    2023-02-15 06:32:41          1 2.txt
+    2023-02-15 06:32:41          1 3.txt
+    */    
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+s3: cp
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    SCN#01  :   Upload a single file from local directory to S3 bucket
     command :   aws s3 cp Test-File.txt s3://samarth-ashish-aws-developer-021223
     Syntax  :   aws s3 cp <local_file_name_in_current_dir> s3://<bucket-name>
 
@@ -37,7 +55,7 @@ S3 - CLI
     */
     *******************************************************************************************************************************************************
 
-    SCN#04  :   Upload all files from local directory to S3 bucket
+    SCN#02  :   Upload all files from local directory to S3 bucket
     Command :   aws s3 cp . s3://samarth-ashish-aws-developer-021223 --recursive
     Syntax  :   aws s3 cp <current_directory> s3://<bucket_name> --recursive
 
@@ -49,7 +67,20 @@ S3 - CLI
     */
     *******************************************************************************************************************************************************
 
-    SCN#05  :   Remove a single file from S3 bucket
+    SCN#03  :   Upload a directory (having multiple files) to a S3 Bucket in a sub-directory
+    Command :   s3 cp my_multi_upload s3://samarth-ashish-aws-developer-021223/my_multi_upload --recursive
+    Syntax  :   s3 cp <local_folder_name_to_be_uploaded> s3://<bucket_name>/<new_folder_name> --recursive
+
+    /*
+    C:\Users\samarth\Downloads>aws s3 cp my_multi_upload s3://samarth-ashish-aws-developer-021223/my_multi_upload --recursive
+    upload: my_multi_upload\3.txt to s3://samarth-ashish-aws-developer-021223/my_multi_upload/3.txt
+    upload: my_multi_upload\1.txt to s3://samarth-ashish-aws-developer-021223/my_multi_upload/1.txt
+    upload: my_multi_upload\2.txt to s3://samarth-ashish-aws-developer-021223/my_multi_upload/2.txt 
+    */
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+s3: rm
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    SCN#01  :   Remove a single file from S3 bucket
     Command :   aws s3 rm s3://samarth-ashish-aws-developer-021223/Test-File.txt.txt
     Syntax  :   aws s3 rm s3://<bucket_name>/file_name
 
@@ -59,7 +90,7 @@ S3 - CLI
     */
     *******************************************************************************************************************************************************
 
-    SCN#06  :   Remove all files from the S3 bucket
+    SCN#02  :   Remove all files from the S3 bucket
     Command :   aws s3 rm s3://samarth-ashish-aws-developer-021223/ --recursive
     Syntax  :   aws s3 rm s3://<bucket_name> --recursive
 
@@ -71,7 +102,7 @@ S3 - CLI
     */
     *******************************************************************************************************************************************************
 
-    SCN#07  :   Remove specific files from the S3 bucket
+    SCN#03  :   Remove specific files from the S3 bucket
     Command :   aws s3 rm s3://samarth-ashish-aws-developer-021223/ --recursive --exclude "3.txt"
     Syntax  :   aws s3 rm s3://<bucket_name> --recursive --exclude "Filename-You-Wish-do-not-delete"
 
@@ -110,7 +141,7 @@ S3 - CLI
     */
     *******************************************************************************************************************************************************
 
-    SCN#-8  :   Empty a S3 bucket
+    SCN#04  :   Empty a S3 bucket
     Command :   aws s3 rm s3://samarth-ashish-aws-developer-021223 --recursive
     Syntax  :   aws s3 rm s3://<bucket_name> --recursive
 
@@ -129,14 +160,3 @@ S3 - CLI
     C:\Users\samarth\Downloads\my_multi_upload>
     */
     *******************************************************************************************************************************************************
-
-    SCN#09  :   Upload a directory (having multiple files) to a S3 Bucket in a sub-directory
-    Command :   s3 cp my_multi_upload s3://samarth-ashish-aws-developer-021223/my_multi_upload --recursive
-    Syntax  :   s3 cp <local_folder_name_to_be_uploaded> s3://<bucket_name>/<new_folder_name> --recursive
-
-    /*
-    C:\Users\samarth\Downloads>aws s3 cp my_multi_upload s3://samarth-ashish-aws-developer-021223/my_multi_upload --recursive
-    upload: my_multi_upload\3.txt to s3://samarth-ashish-aws-developer-021223/my_multi_upload/3.txt
-    upload: my_multi_upload\1.txt to s3://samarth-ashish-aws-developer-021223/my_multi_upload/1.txt
-    upload: my_multi_upload\2.txt to s3://samarth-ashish-aws-developer-021223/my_multi_upload/2.txt 
-    */
