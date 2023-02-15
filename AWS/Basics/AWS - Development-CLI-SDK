@@ -130,4 +130,10 @@ S3 - CLI
     */
     *******************************************************************************************************************************************************
 
+    SCN#09  :   Upload a directory (having multiple files) to a S3 Bucket in a sub-directory
+    Command :   s3 cp my_multi_upload s3://samarth-ashish-aws-developer-021223/my_multi_upload --recursive
+    Syntax  :   s3 cp <local_folder_name_to_be_uploaded> s3://<bucket_name>/<new_folder_name> --recursive
+
+    /*
     
+    */
