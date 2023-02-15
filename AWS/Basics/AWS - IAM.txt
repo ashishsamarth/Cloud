@@ -8,6 +8,30 @@ IAM: Identity & Access Management
     a.  The root user is the most powerful user (it can do anything and everything in an AWS account), hence its recommended to create new users to 
         perform specific tasks and limit their capabilites using policies and groups. Since we must follow the principle of least privilege.
 
+    IAM allows you to manage users and their level of access to the AWS Console. It is important to understand IAM and how it works, both for the exam and 
+    for administrating a company's AWS account in real life.
+
+    Things that IAM Provides
+
+    a.  Centralized control of your AWS account
+    b.  Shared Access to your AWS account
+    c.  Granular permissions
+    d.  Identity Federation (including Active Directory, Facebook, LinkedIn, etc.)
+    e.  Multi-factor Authentication
+    f.  Provides temporary access for users/devices and services, as necessary
+    g.  Allows you to setup your own password rotation policy
+    h.  Integrates with many different AWS services
+    j.  Supports PCI DSS Compliance, for any applications associated with the payment card industry.
+
+
+    IAM Terms to Know
+
+    a.  Users: End Users (think people).
+    b.  Groups: A collection of users under one set of permissions.
+    c.  Roles: Used to assign a set of permissions to AWS resources. For example, you might create a role that provides S3 access to an EC2 instance.
+    d.  Policies: A document that defines one (or more) permissions. Policies can be attached to either a User, a Group, or a Role. Once attached, a policy 
+            will grant to the assignee the permissions associated with that policy.
+
 
     Q01: When creating a USER, how many types of 'Access Types' can be provisioned?
     A01: Their are two types of 'Access Types' that can be utilized
@@ -280,3 +304,29 @@ IAM: Identity & Access Management
         In most cases, AWS recommends using Managed Policies over Inline Policies.
         Inline Policies are useful when you want to be sure that the permissions in a policy are not inadvertently assigned to any other user, 
         group, or role than the one for which they're intended (i.e. you are creating a policy that must only ever be attached to a single user, group, or role).
+    
+
+IAM Exam Tips:
+
+a.  IAM is universal; It does not apply to regions at this time.
+b.  A Root Account is simply the account created when first setting up an AWS account. It has complete Admin access and should not be used for day-to-day 
+    activities.
+c.  When first created, new users have *NO permissions. Permissions must be explicitly given via a group or policy.
+d.  New users are asssigned Access Key ID & Secret Access Keys when first created. These are not the same as a password and cannot be used to login to the 
+    AWS Console; instead, they are used to access AWS via the APIs and Command Line.
+e.  You can only view the Access Key ID & Secret Access key once. If you lose them, you must regenerate them. Save them in a secure location.
+f.  Always setup *Multifactor Authentication (MFA) on your root account.
+g.  You can create and customize your own password rotation policies.
+
+Policy Document example
+{
+    "Version": "2012-10-17",
+    "Statement":
+    [
+        {
+            "Effect": "Allow",
+            "Action": "*",
+            "Resource": "*"
+        }
+    ]
+}
