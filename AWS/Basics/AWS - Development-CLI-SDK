@@ -46,7 +46,7 @@ s3: ls  :   The ls command is used to list the buckets or the contents of the bu
 s3: cp  :   The cp command simply copies the data to and from S3 buckets. It can be used to copy files from local to S3, from S3 to local, and between 
             two S3 buckets. There are a lot of other parameters that you can supply with the commands.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    SCN#01  :   Upload a single file from local directory to S3 bucket
+    SCN#01  :   Copy a single file from local directory to S3 bucket
     command :   aws s3 cp Test-File.txt s3://samarth-ashish-aws-developer-021223
     Syntax  :   aws s3 cp <local_file_name_in_current_dir> s3://<bucket-name>
 
@@ -56,7 +56,7 @@ s3: cp  :   The cp command simply copies the data to and from S3 buckets. It can
     */
     *******************************************************************************************************************************************************
 
-    SCN#02  :   Upload all files from local directory to S3 bucket
+    SCN#02  :   Copy all files from local directory to S3 bucket
     Command :   aws s3 cp . s3://samarth-ashish-aws-developer-021223 --recursive
     Syntax  :   aws s3 cp <current_directory> s3://<bucket_name> --recursive
 
@@ -68,7 +68,7 @@ s3: cp  :   The cp command simply copies the data to and from S3 buckets. It can
     */
     *******************************************************************************************************************************************************
 
-    SCN#03  :   Upload a directory (having multiple files) to a S3 Bucket in a sub-directory
+    SCN#03  :   Copy a directory (having multiple files) to a S3 Bucket in a sub-directory
     Command :   s3 cp my_multi_upload s3://samarth-ashish-aws-developer-021223/my_multi_upload --recursive
     Syntax  :   s3 cp <local_folder_name_to_be_uploaded> s3://<bucket_name>/<new_folder_name> --recursive
 
@@ -78,6 +78,16 @@ s3: cp  :   The cp command simply copies the data to and from S3 buckets. It can
     upload: my_multi_upload\1.txt to s3://samarth-ashish-aws-developer-021223/my_multi_upload/1.txt
     upload: my_multi_upload\2.txt to s3://samarth-ashish-aws-developer-021223/my_multi_upload/2.txt 
     */
+    *******************************************************************************************************************************************************
+
+    SCN#04  :   Copy a single file from local directory to S3 bucket - IA (infrequent Access)
+    Command :   aws s3 cp file_name.txt s3://bucket_name/file_name_2.txt --storage-class STANDARD_IA 
+    *******************************************************************************************************************************************************
+
+    SCN#05  :   Copy data between s3 buckets
+    Command :   
+
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 s3: mv  :   The mv command simply moves the data to and from S3 buckets. Just like the cp command, mv command is used to move data from local to S3, S3 to local, 
             or between two S3 buckets.
@@ -262,5 +272,15 @@ s3: rm  :   The rm command is simply used to delete the objects in S3 buckets.
     */
     *******************************************************************************************************************************************************
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-s3: mb
+s3: mb  :   The mb command is simply used to create new S3 buckets. This is a fairly simple command but to create new buckets, the name of the new bucket 
+            should be unique across all the S3 buckets
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    SCN#01  :   Create a new bucket in S3
+    Command :   aws s3 mb s3://samarth-ashish-aws-developer-021523
+    Syntax  :   aws s3 mb s3://<new_bucket_name>
+
+    /*
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 mb s3://samarth-ashish-aws-developer-021523
+    make_bucket: samarth-ashish-aws-developer-021523
+    */
+    
