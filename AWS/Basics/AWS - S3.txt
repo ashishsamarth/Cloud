@@ -289,3 +289,8 @@ AWS S3: It advertised as the infinetly scaling storage, hence we do not define i
 
         Block public and cross-account access to buckets and objects through any public bucket or access point policies.
         These were created to prevent company data leaks
+
+    Q15: Explain S3 Websites?
+    A15: S3 can host static websites and have them accesible on the world wide web. The website URLs will look like the following.
+        <bucket-name>.s3-website.<AWS-region>.amazonaws.com
+        If you get a 403 (forbidden) error, make sure, the bucket policy allows public reads.
