@@ -212,6 +212,47 @@ s3: mv  :   The mv command simply moves the data to and from S3 buckets. Just li
 
     C:\Users\samarth\Downloads\my_multi_upload>
     */
+    *******************************************************************************************************************************************************
+
+    SCN#03  :   Move a specific file from one S3 bucket to another s3 bucket
+    Command :   aws s3 mv s3://samarth-ashish-aws-developer-021223/2.txt s3://samarth-ashish-aws-developer-021523
+    Syntax  :   aws s3 mv s3://<bucket_name_1>/<file_name_to_be_moved> s3://<bucket_name_2>
+
+    /*
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls
+    2023-02-12 18:59:47 samarth-ashish-aws-developer-021223
+    2023-02-15 07:05:06 samarth-ashish-aws-developer-021523
+
+    C:\Users\samarth\Downloads\my_multi_upload>
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls s3://samarth-ashish-aws-developer-021223
+    2023-02-15 07:10:21          1 1.txt
+    2023-02-15 07:10:21          1 2.txt
+    2023-02-15 07:10:21          1 5.txt
+
+    C:\Users\samarth\Downloads\my_multi_upload>
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls s3://samarth-ashish-aws-developer-021523
+    2023-02-15 07:11:37          1 5.txt
+
+    C:\Users\samarth\Downloads\my_multi_upload>
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 mv s3://samarth-ashish-aws-developer-021223/2.txt s3://samarth-ashish-aws-developer-021523
+    move: s3://samarth-ashish-aws-developer-021223/2.txt to s3://samarth-ashish-aws-developer-021523/2.txt
+
+    C:\Users\samarth\Downloads\my_multi_upload>
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls s3://samarth-ashish-aws-developer-021223
+    2023-02-15 07:10:21          1 1.txt
+    2023-02-15 07:10:21          1 5.txt
+
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls s3://samarth-ashish-aws-developer-021523
+    2023-02-15 07:14:19          1 2.txt
+    2023-02-15 07:11:37          1 5.txt
+
+    C:\Users\samarth\Downloads\my_multi_upload>
+    */
+    *******************************************************************************************************************************************************
+
+    SCN#04  :   Move a specific file from local to s3 bucket -IA (Infrequent Access)
+    Command :   aws s3 mv file_name.txt s3://bucket_name/file_name_2.txt --storage-class STANDARD_IA 
+
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 s3: rm  :   The rm command is simply used to delete the objects in S3 buckets. 
@@ -314,4 +355,52 @@ s3: mb  :   The mb command is simply used to create new S3 buckets. This is a fa
 
     C:\Users\samarth\Downloads\my_multi_upload>
     */
-    
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+s3: rb  :   The rb command is simply used to delete S3 buckets
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+s3: sync    :   The sync command copies and updates files from the source to the destination just like the cp command. It is important that we understand 
+                the difference between the cp and the sync command. When you use cp it copies data from source to destination even if the data already exists 
+                in the destination.
+                It will also not delete files from the destination if they are deleted from the source. However, sync looks at the destination before copying 
+                your data and only copies the new and updated files. The sync command is similar to committing and pushing changes to a remote branch in git. 
+                The sync command offers a lot of options to customize the command. 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    SCN#01  :   Sync files between two s3 buckets
+    Command :   aws s3 sync s3://samarth-ashish-aws-developer-021223 s3://samarth-ashish-aws-developer-021523
+    Syntax  :   aws s3 sync s3://<source_bucket_name> s3://<target_bucket_name>
+
+    /*
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls
+    2023-02-12 18:59:47 samarth-ashish-aws-developer-021223
+    2023-02-15 07:05:06 samarth-ashish-aws-developer-021523
+
+    C:\Users\samarth\Downloads\my_multi_upload>
+    C:\Users\samarth\Downloads\my_multi_upload>
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls samarth-ashish-aws-developer-021223
+    2023-02-15 07:10:21          1 1.txt
+    2023-02-15 07:10:21          1 5.txt
+
+    C:\Users\samarth\Downloads\my_multi_upload>
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls samarth-ashish-aws-developer-021523
+    2023-02-15 07:14:19          1 2.txt
+    2023-02-15 07:11:37          1 5.txt
+
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 sync s3://samarth-ashish-aws-developer-021223 s3://samarth-ashish-aws-developer-021523
+    copy: s3://samarth-ashish-aws-developer-021223/1.txt to s3://samarth-ashish-aws-developer-021523/1.txt
+
+    C:\Users\samarth\Downloads\my_multi_upload>
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls samarth-ashish-aws-developer-021523
+    2023-02-15 07:38:04          1 1.txt
+    2023-02-15 07:14:19          1 2.txt
+    2023-02-15 07:11:37          1 5.txt
+
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls samarth-ashish-aws-developer-021223
+    2023-02-15 07:10:21          1 1.txt
+    2023-02-15 07:10:21          1 5.txt
+
+    C:\Users\samarth\Downloads\my_multi_upload>
+    */ 
