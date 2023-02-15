@@ -85,7 +85,32 @@ s3: cp  :   The cp command simply copies the data to and from S3 buckets. It can
     *******************************************************************************************************************************************************
 
     SCN#05  :   Copy data between s3 buckets
-    Command :   
+    Command :   aws s3 cp s3://samarth-ashish-aws-developer-021223/5.txt s3://samarth-ashish-aws-developer-021523
+    Syntax  :   aws s3 cp s3://<bucket_name_1>/<file_to_be_copied_over> s3://<bucket_name_2>
+
+    /*
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls
+    2023-02-12 18:59:47 samarth-ashish-aws-developer-021223
+    2023-02-15 07:05:06 samarth-ashish-aws-developer-021523
+
+    C:\Users\samarth\Downloads\my_multi_upload>
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls s3://samarth-ashish-aws-developer-021223
+    2023-02-15 07:10:21          1 1.txt
+    2023-02-15 07:10:21          1 2.txt
+    2023-02-15 07:10:21          1 5.txt
+
+    C:\Users\samarth\Downloads\my_multi_upload>
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls s3://samarth-ashish-aws-developer-021523
+
+    C:\Users\samarth\Downloads\my_multi_upload>
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 cp s3://samarth-ashish-aws-developer-021223/5.txt s3://samarth-ashish-aws-developer-021523
+    copy: s3://samarth-ashish-aws-developer-021223/5.txt to s3://samarth-ashish-aws-developer-021523/5.txt
+
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls s3://samarth-ashish-aws-developer-021523
+    2023-02-15 07:11:37          1 5.txt
+
+    C:\Users\samarth\Downloads\my_multi_upload>
+    */
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
