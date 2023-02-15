@@ -37,4 +37,13 @@ S3 - CLI
     */
     *******************************************************************************************************************************************************
 
-    
+    SCN#04  :   Upload all files from local directory to S3 bucket
+    Command :   aws s3 cp . s3://samarth-ashish-aws-developer-021223 --recursive
+    Syntax  :   aws s3 cp <current_directory> s3://<bucket_name> --recursive
+
+    /*
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 cp . s3://samarth-ashish-aws-developer-021223 --recursive
+    upload: .\3.txt to s3://samarth-ashish-aws-developer-021223/3.txt
+    upload: .\1.txt to s3://samarth-ashish-aws-developer-021223/1.txt
+    upload: .\2.txt to s3://samarth-ashish-aws-developer-021223/2.txt
+    */
