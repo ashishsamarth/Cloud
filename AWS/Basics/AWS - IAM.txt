@@ -252,3 +252,11 @@ IAM: Identity & Access Management
     g.  Audit       :   IAM Credentials and IAM Access Advisor
 
     Note:   Maximum Policies that can be associate with a USER Group is : 10
+
+    Q20: What are inline policies?
+    A20: An Inline Policy is an IAM policy which is actually embedded within the user, group, or role to which it applies. There is a strict 1:1 
+        relationship between the entity and the policy.When you delete the user, group, or role in which the Inline policy is embedded, the policy 
+        will also be deleted
+        In most cases, AWS recommends using Managed Policies over Inline Policies.
+        Inline Policies are useful when you want to be sure that the permissions in a policy are not inadvertently assigned to any other user, 
+        group, or role than the one for which they're intended (i.e. you are creating a policy that must only ever be attached to a single user, group, or role).
