@@ -266,6 +266,8 @@ IAM: Identity & Access Management
         These AWS-provided policies allow you to assign appropriate permissions to your users, groups, and roles without having to write the policy yourself.
         A single Managed Policy can be attached to multiple users, groups, or roles within the same AWS account and across different accounts.
         You cannot change the permissions defined in an AWS Managed Policy.
+    
+    
 
     Q23: What are inline policies?
     A23: An Inline Policy is an IAM policy which is actually embedded within the user, group, or role to which it applies. There is a strict 1:1 
