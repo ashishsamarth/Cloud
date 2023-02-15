@@ -359,7 +359,35 @@ s3: mb  :   The mb command is simply used to create new S3 buckets. This is a fa
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 s3: rb  :   The rb command is simply used to delete S3 buckets
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    SCN#01  :   Remove a s3 bucket
+    Command :   aws s3 rb s3://samarth-ashish-aws-developer-021523              [If the bucket is empty]
+    Syntax  :   aws s3 rb s3://<bucket_name_to_be_deleted>
 
+    Command :   aws s3 rb s3://samarth-ashish-aws-developer-021523 --force      [If the bucket is not empty]
+    Syntax  :   aws s3 rb s3://<bucket_name_to_be_deleted> --force
+
+    /*
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls
+    2023-02-12 18:59:47 samarth-ashish-aws-developer-021223
+    2023-02-15 07:05:06 samarth-ashish-aws-developer-021523
+
+    C:\Users\samarth\Downloads\my_multi_upload>
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 rb s3://samarth-ashish-aws-developer-021523
+    remove_bucket failed: s3://samarth-ashish-aws-developer-021523 An error occurred (BucketNotEmpty) when calling the DeleteBucket operation: The bucket you tried to delete is not empty
+
+    C:\Users\samarth\Downloads\my_multi_upload>
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 rb s3://samarth-ashish-aws-developer-021523 --force
+    delete: s3://samarth-ashish-aws-developer-021523/1.txt
+    delete: s3://samarth-ashish-aws-developer-021523/5.txt
+    delete: s3://samarth-ashish-aws-developer-021523/2.txt
+    remove_bucket: samarth-ashish-aws-developer-021523
+
+    C:\Users\samarth\Downloads\my_multi_upload>
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls
+    2023-02-12 18:59:47 samarth-ashish-aws-developer-021223
+
+    C:\Users\samarth\Downloads\my_multi_upload>
+    */
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 s3: sync    :   The sync command copies and updates files from the source to the destination just like the cp command. It is important that we understand 
@@ -421,5 +449,8 @@ s3: presign :   The presign command generates a pre-signed URL for a key in the 
     */
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+s3: website:    The website command is used to configure the S3 static website hosting for your bucket.
+                You specify the index and the error files and the S3 gives you a URL where you can view the file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    SCN#01  :   Configure a static webssite
+    Command :   aws s3 website s3://bucket_name --index-document index.html --error-document error.html
