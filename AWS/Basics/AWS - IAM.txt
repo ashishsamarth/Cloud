@@ -305,6 +305,9 @@ IAM: Identity & Access Management
         Inline Policies are useful when you want to be sure that the permissions in a policy are not inadvertently assigned to any other user, 
         group, or role than the one for which they're intended (i.e. you are creating a policy that must only ever be attached to a single user, group, or role).
     
+    Q24: What is Policy Simulator?
+    A24: Policy Simulator is a web-interface (available at: https://policysim.aws.amazon.com) that allows you to test policy against specific service and Action
+        If you building your own inline policy, its always better to use the policy simulator to test your policy and make changes to get desired results.
 
 IAM Exam Tips:
 
