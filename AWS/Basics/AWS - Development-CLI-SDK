@@ -15,6 +15,7 @@ S3 - CLI
     C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls
     2023-02-12 18:59:47 samarth-ashish-aws-developer-021223
     */
+    *******************************************************************************************************************************************************
 
     SCN#02  :   List all the files inside a S3 bucket
     Command :   aws s3 ls s3://samarth-ashish-aws-developer-021223
@@ -24,3 +25,16 @@ S3 - CLI
     C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls s3://samarth-ashish-aws-developer-021223
     2023-02-14 20:46:49          6 Test-File.txt.txt
     */
+    *******************************************************************************************************************************************************
+
+    SCN#03  :   Upload a single file from local directory to S3 bucket
+    command :   aws s3 cp Test-File.txt s3://samarth-ashish-aws-developer-021223
+    Syntax  :   aws s3 cp <local_file_name_in_current_dir> s3://<bucket-name>
+
+    /*
+    C:\Users\samarth\Downloads\aws s3 cp Test-File.txt.txt s3://samarth-ashish-aws-developer-021223
+    2023-02-14 20:46:49          6 Test-File.txt.txt
+    */
+    *******************************************************************************************************************************************************
+
+    
