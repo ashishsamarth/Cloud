@@ -16,4 +16,11 @@ S3 - CLI
     2023-02-12 18:59:47 samarth-ashish-aws-developer-021223
     */
 
-    
+    SCN#02  :   List all the files inside a S3 bucket
+    Command :   aws s3 ls s3://samarth-ashish-aws-developer-021223
+    Syntax  :   aws s3 ls s3://<bucket-name>
+
+    /*
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls s3://samarth-ashish-aws-developer-021223
+    2023-02-14 20:46:49          6 Test-File.txt.txt
+    */
