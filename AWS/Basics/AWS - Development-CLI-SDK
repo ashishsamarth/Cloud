@@ -282,5 +282,11 @@ s3: mb  :   The mb command is simply used to create new S3 buckets. This is a fa
     /*
     C:\Users\samarth\Downloads\my_multi_upload>aws s3 mb s3://samarth-ashish-aws-developer-021523
     make_bucket: samarth-ashish-aws-developer-021523
+
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls
+    2023-02-12 18:59:47 samarth-ashish-aws-developer-021223
+    2023-02-15 07:05:06 samarth-ashish-aws-developer-021523
+
+    C:\Users\samarth\Downloads\my_multi_upload>
     */
     
