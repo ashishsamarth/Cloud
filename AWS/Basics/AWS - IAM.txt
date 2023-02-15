@@ -267,7 +267,11 @@ IAM: Identity & Access Management
         A single Managed Policy can be attached to multiple users, groups, or roles within the same AWS account and across different accounts.
         You cannot change the permissions defined in an AWS Managed Policy.
     
-    
+    Q22: What are Customer Managed Policies?
+    A22: A Customer Managed Policy is a standalone policy that you create and administer inside your own AWS account. You can attach this policy to multiple users, 
+        groups, and roles; but only within your own account.
+        In order to create a Customer Managed Policy, you can copy an existing AWS Managed Policy and customize it to fit the requirements of your organization.
+        Recommended for use cases where the existing AWS Managed Policies don't meet the needs of your environment.
 
     Q23: What are inline policies?
     A23: An Inline Policy is an IAM policy which is actually embedded within the user, group, or role to which it applies. There is a strict 1:1 
