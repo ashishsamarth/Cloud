@@ -294,3 +294,47 @@ AWS S3: It advertised as the infinetly scaling storage, hence we do not define i
     A15: S3 can host static websites and have them accesible on the world wide web. The website URLs will look like the following.
         <bucket-name>.s3-website.<AWS-region>.amazonaws.com
         If you get a 403 (forbidden) error, make sure, the bucket policy allows public reads.
+    
+    Q16: How to create a S3 website?
+    A16: S3 website can be use to host static webpages. Along with the webpages, you will need two files, once is index.html and other is
+        error.html, which will look like the following.
+        1.  index.html
+
+            <html>
+                <head>
+                    <titile>My First Webpage</title>
+                </head>
+                <body>
+                    <h1>I love coffe</h1>
+                    <p>Hellow World!</p>
+                </body>
+
+                <img src="coffee.jpg" width=500/>
+            </html>
+        
+        2.  error.html
+        
+            <h1>Uh oh, there was an error</h1>
+
+        Following are the steps:
+        a.  On the S3 dashboard, click on 'Buckets'
+        b.  Then click on the Bucket Name that is already created.
+        c.  Click on 'Properties' of the bucket.
+        d.  Scroll to the bottom of the page, and then click on 'Edit' for 'Static Website Hosting'
+        e.  'Enable' the static website option, select 'Hosting Type' as 'Host a Static Website'
+        f.  Upload the 'index.html' and provide the name of the 'Index Document' as 'index.html'
+        g.  Upload the 'error.html' and provide the name of the 'Error Document' as 'error.html'
+        h.  Click on 'Permissions' of the bucket.
+        i.  Edit the 'Block Public Access' and turn it off.
+        j.  Edit the 'Bucket Policy', then click on 'Policy Generator'
+        k.  On the new webpage, there are following options
+            1.  Select Policy Type:- as 'S3 Bucket Policy'
+                SQS Queue Policy, S3 Bucket Policy, VPC Endpoint Policy, IAM Policy, SNS Topic Policy
+
+            2.  Under Add Statement(s)
+                Effect: Allow
+                Principal: *    (So that any body can access the static pages)
+                AWS Service: Will be automatically selected as 'Amazon S3' based on #1
+                Actions: GetObject
+                Amazon Resource Name (ARN): Will be available on the 'Edit Bucket Policy page'
+        l.  Now, if you try to access the static website, using the URL under 'Static Website Hosting', you should be able to see the page.
