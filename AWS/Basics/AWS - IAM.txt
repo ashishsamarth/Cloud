@@ -253,8 +253,22 @@ IAM: Identity & Access Management
 
     Note:   Maximum Policies that can be associate with a USER Group is : 10
 
-    Q20: What are inline policies?
-    A20: An Inline Policy is an IAM policy which is actually embedded within the user, group, or role to which it applies. There is a strict 1:1 
+    Q20: How many types of IAM policies are available in AWS?
+    A20: Identity access management (IAM) is used to define user access permissions with in AWS.
+        There are 3 different types of IAM policies available.
+        a.  Managed Policies
+        b.  Customer Managed Policies
+        c.  Inline Policies
+
+    Q21: What are AWS Managed Policies?
+    A21: A Managed Policy is an IAM policy which is created and administered by AWS. AWS provided aMnaged Policies for common use cases based on job function 
+        (e.g. AmazonDynamoDBFullAccess, AWSCodeCommitPowerUser, AmazonEC2ReadOnlyAccess, etc.)
+        These AWS-provided policies allow you to assign appropriate permissions to your users, groups, and roles without having to write the policy yourself.
+        A single Managed Policy can be attached to multiple users, groups, or roles within the same AWS account and across different accounts.
+        You cannot change the permissions defined in an AWS Managed Policy.
+
+    Q23: What are inline policies?
+    A23: An Inline Policy is an IAM policy which is actually embedded within the user, group, or role to which it applies. There is a strict 1:1 
         relationship between the entity and the policy.When you delete the user, group, or role in which the Inline policy is embedded, the policy 
         will also be deleted
         In most cases, AWS recommends using Managed Policies over Inline Policies.
