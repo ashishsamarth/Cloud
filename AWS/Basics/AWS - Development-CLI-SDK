@@ -1,3 +1,19 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 AWS - Development-CLI-SDK
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Assuming that you have your access-key and secret key. and the local os has the 'aws configure' executed. Following are few useful CLI commands to perform
+tasks using the CLI (without even logging in to the Management Console)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+S3 - CLI
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    SCN#01  :   List existing S3 buckets on your account
+    Command :   aws s3 ls
+
+    /*
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls
+    2023-02-12 18:59:47 samarth-ashish-aws-developer-021223
+    */
+
+    
