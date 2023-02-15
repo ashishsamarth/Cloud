@@ -135,5 +135,8 @@ S3 - CLI
     Syntax  :   s3 cp <local_folder_name_to_be_uploaded> s3://<bucket_name>/<new_folder_name> --recursive
 
     /*
-    
+    C:\Users\samarth\Downloads>aws s3 cp my_multi_upload s3://samarth-ashish-aws-developer-021223/my_multi_upload --recursive
+    upload: my_multi_upload\3.txt to s3://samarth-ashish-aws-developer-021223/my_multi_upload/3.txt
+    upload: my_multi_upload\1.txt to s3://samarth-ashish-aws-developer-021223/my_multi_upload/1.txt
+    upload: my_multi_upload\2.txt to s3://samarth-ashish-aws-developer-021223/my_multi_upload/2.txt 
     */
