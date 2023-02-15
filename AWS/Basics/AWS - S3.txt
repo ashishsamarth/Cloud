@@ -372,3 +372,20 @@ AWS S3: It advertised as the infinetly scaling storage, hence we do not define i
 
         Then the web-browser, requests an allowed method (for e.g. GET to Host2) and Host2 responds back with the resource
         
+        Another Example:
+        We have two S3 buckets, which Static Website Hosting enabled, the first S3 bucket, only have the index.html and the error.html
+        While the 2nd S3 bucket, has the assets. In this case, the web-browser will talk to the first S3 bucket, since it has the index.html.
+        and then it will talk to the 2nd S3 bucket which has the assets that can be returned back.
+        In this case, the 2nd S3 bucket is the Cross-Origin, and if the web-browser is to get the requested resource, the 'Cross-Origin' 
+        must be enabled at the second S3 bucket.
+    
+    Q18: Explain S3 - Consistency Model?
+    A18: S3 has strong consitency as of december 2020
+        a.  After a:
+            1.  Successful write of a new object (new PUT)
+            2.  Or an overwrite or delete of an existing object (otherwise PUT or DELETE)
+        
+        b.  After any:
+            1.  Subsequent read request immediately receives the latest version of the object (read after write consistency)
+            2.  Subsequent list request immediately reflects changes (list consistency)
+        No additional charges for this strong consistency and no performance impact.
