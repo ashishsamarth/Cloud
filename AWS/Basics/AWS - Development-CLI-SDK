@@ -44,7 +44,7 @@ s3: ls
     */    
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 s3: cp
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     SCN#01  :   Upload a single file from local directory to S3 bucket
     command :   aws s3 cp Test-File.txt s3://samarth-ashish-aws-developer-021223
     Syntax  :   aws s3 cp <local_file_name_in_current_dir> s3://<bucket-name>
@@ -78,8 +78,105 @@ s3: cp
     upload: my_multi_upload\2.txt to s3://samarth-ashish-aws-developer-021223/my_multi_upload/2.txt 
     */
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+s3: mv
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    SCN#01  :   Move a specific file from local storage to s3 bucket
+    Command :   aws s3 mv 3.txt s3://samarth-ashish-aws-developer-021223/
+    Syntax  :   aws s3 mv <local_file_name> s3://<bucket_name>/
+    Note    :   The difference between 'cp' and 'mv' is: mv will delete the file from the source and place it in s3 bucket, while cp does not delete the 
+                file from the source
+
+    /*
+    C:\Users\samarth\Downloads\my_multi_upload>dir
+    Volume in drive C has no label.
+    Volume Serial Number is 00AF-4A73
+
+    Directory of C:\Users\samarth\Downloads\my_multi_upload
+
+    02/14/2023  08:50 PM    <DIR>          .
+    02/14/2023  08:50 PM    <DIR>          ..
+    02/14/2023  08:51 PM                 1 1.txt
+    02/14/2023  08:51 PM                 1 2.txt
+    02/14/2023  08:51 PM                 1 3.txt
+                3 File(s)              3 bytes
+                2 Dir(s)  409,548,005,376 bytes free
+
+    C:\Users\samarth\Downloads\my_multi_upload>
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 mv 3.txt s3://samarth-ashish-aws-developer-021223/
+    move: .\3.txt to s3://samarth-ashish-aws-developer-021223/3.txt
+
+    C:\Users\samarth\Downloads\my_multi_upload>
+    C:\Users\samarth\Downloads\my_multi_upload>dir
+    Volume in drive C has no label.
+    Volume Serial Number is 00AF-4A73
+
+    Directory of C:\Users\samarth\Downloads\my_multi_upload
+
+    02/15/2023  06:49 AM    <DIR>          .
+    02/15/2023  06:49 AM    <DIR>          ..
+    02/14/2023  08:51 PM                 1 1.txt
+    02/14/2023  08:51 PM                 1 2.txt
+                2 File(s)              2 bytes
+                2 Dir(s)  409,547,026,432 bytes free
+
+    C:\Users\samarth\Downloads\my_multi_upload>
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls s3://samarth-ashish-aws-developer-021223
+    2023-02-15 06:49:01          1 3.txt
+
+    C:\Users\samarth\Downloads\my_multi_upload>
+    */
+    *******************************************************************************************************************************************************
+
+    SCN#02  :   Move a specific file from s3 bucket to local storage
+    Command :   aws s3 mv s3://samarth-ashish-aws-developer-021223/3.txt 5.txt
+    Syntax  :   aws s3 mv s3://<bucket_name>/<s3_file_name> <new_file_name>
+
+    /*
+    C:\Users\samarth\Downloads\my_multi_upload>dir
+    Volume in drive C has no label.
+    Volume Serial Number is 00AF-4A73
+
+    Directory of C:\Users\samarth\Downloads\my_multi_upload
+
+    02/15/2023  06:49 AM    <DIR>          .
+    02/15/2023  06:49 AM    <DIR>          ..
+    02/14/2023  08:51 PM                 1 1.txt
+    02/14/2023  08:51 PM                 1 2.txt
+                2 File(s)              2 bytes
+                2 Dir(s)  409,545,854,976 bytes free
+
+    C:\Users\samarth\Downloads\my_multi_upload>
+    C:\Users\samarth\Downloads\my_multi_upload>
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls s3://samarth-ashish-aws-developer-021223
+    2023-02-15 06:49:01          1 3.txt
+
+    C:\Users\samarth\Downloads\my_multi_upload>
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 mv s3://samarth-ashish-aws-developer-021223/3.txt 5.txt
+    move: s3://samarth-ashish-aws-developer-021223/3.txt to .\5.txt
+
+    C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls s3://samarth-ashish-aws-developer-021223
+
+    C:\Users\samarth\Downloads\my_multi_upload>
+    C:\Users\samarth\Downloads\my_multi_upload>dir
+    Volume in drive C has no label.
+    Volume Serial Number is 00AF-4A73
+
+    Directory of C:\Users\samarth\Downloads\my_multi_upload
+
+    02/15/2023  06:55 AM    <DIR>          .
+    02/15/2023  06:55 AM    <DIR>          ..
+    02/14/2023  08:51 PM                 1 1.txt
+    02/14/2023  08:51 PM                 1 2.txt
+    02/15/2023  06:49 AM                 1 5.txt
+                3 File(s)              3 bytes
+                2 Dir(s)  409,545,535,488 bytes free
+
+    C:\Users\samarth\Downloads\my_multi_upload>
+    */
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 s3: rm
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     SCN#01  :   Remove a single file from S3 bucket
     Command :   aws s3 rm s3://samarth-ashish-aws-developer-021223/Test-File.txt.txt
     Syntax  :   aws s3 rm s3://<bucket_name>/file_name
