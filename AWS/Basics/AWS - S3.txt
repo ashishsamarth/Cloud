@@ -351,4 +351,24 @@ AWS S3: It advertised as the infinetly scaling storage, hence we do not define i
         b.  Different Origins   : http://www.example.com and http://other.example.com
 
         The requests wont be fullfilled unless the other origin allows for the requests, using CORS headers (e.g.: Access-Control-Allow-Origin)
+
+        Here's the flow:
+        Consider their are two servers (host1: https://www.example.com; host2: https://www.other.example.com), a web-browser makes a request to 
+        host1, and host1 tell the web-browser that you need to talk to host2 to get the actual files (since they are hosted there). In turn, the 
+        web-browser then talks to host2 sending something called as a 'Pre-Flight Request' which looks like the following
+
+        Pre-flight Request
+        ------------------------------------------------
+        | OPTIONS/                                      |
+        | Host: www.other.com                           |
+        | Origin: https://www.example.com               |
+        ------------------------------------------------
+
+        Host2 (which is Cross Origin in this case) provides a pre-flight response
+        ---------------------------------------------------------
+        |Access-Control-Allow-Origin: https://www.example.com   |
+        |Access-Control-Allow-Methods:GET, PUT, DELETE          |
+        ---------------------------------------------------------
+
+        Then the web-browser, requests an allowed method (for e.g. GET to Host2) and Host2 responds back with the resource
         
