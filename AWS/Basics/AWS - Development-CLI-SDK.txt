@@ -520,3 +520,13 @@ reservation-id
 security-groups
 services/
 system[ec2-user@ip-172-31-62-238 ~]$
+
+    *******************************************************************************************************************************************************
+    SCN#01  :   Get Hostname for the EC2 Instance using the metadata service
+    Command :   curl http://169.254.169.254/latest/meta-data/hostname; echo -e "\n"
+    Syntax  :   curl <meta-data-url>/<api_name> ; echo <new-line-character>
+
+    /* 
+    [ec2-user@ip-172-31-62-238 ~]$ curl http://169.254.169.254/latest/meta-data/hostname; echo -e "\n"
+    ip-172-31-62-238.ec2.internal
+    */
