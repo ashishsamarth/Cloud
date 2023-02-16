@@ -541,3 +541,5 @@ system[ec2-user@ip-172-31-62-238 ~]$
     Public-Access-HTTP-80-Inbound-EC2
     launch-wizard-1
     */
+
+    The output indicates, that this particular EC2 instance, has two security groups attached to it.
