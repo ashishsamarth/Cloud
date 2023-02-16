@@ -480,3 +480,10 @@ Usage on CLI:
 Scenario: If you run a command on the CLI which generates and error with an encoded failure message, we can use STS to decode that message
 Command : aws sts decode-authorization-message -encoded-message <paste your encoded message here>
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+EC2 Instance Metadata - CLI
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+AWS EC2 instance metadata allows EC2 instance to 'learn about themselves' without using an IAM role for that purpose. The URL for the metadata endpoint is
+http://169.254.169.254/latest/meta-data/ and it only works from inside the ec2 instance.
+
+Note: You can retrieve the IAM role name from the metadata, but you cannot retrieve the IAM policy.
