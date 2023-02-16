@@ -611,7 +611,7 @@ Then we have to provide
     c.  Default region name
     d.  Default output format
 
-When this is done, it creates two files having the following data with [default entries]
+When this is done, it CREATES two files having the following data with [default entries]
     File#1: Credentials
     Content:
         [default]
@@ -633,3 +633,20 @@ Then we have to provide
     b.  AWS Secret Access Key
     c.  Default region name
     d.  Default output format
+
+When this is done, it MODIFIES two files having the following data with [default entries] with additional data for the new profile
+    File#1: Credentials
+    Content:
+        [default]
+        aws_aceess_key_id = <some_value>
+        aws_secret_access_key = <some_value>
+        [whatever-you-want-to-name-this-profile]
+        aws_aceess_key_id = <some_value>
+        aws_secret_access_key = <some_value>        
+    
+    File#2: config
+    Content:
+        [default]
+        region = <some_value>
+        [whatever-you-want-to-name-this-profile]
+        region = <some_value>
