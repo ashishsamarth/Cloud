@@ -650,3 +650,9 @@ When this is done, it MODIFIES two files having the following data with [default
         region = <some_value>
         [whatever-you-want-to-name-this-profile]
         region = <some_value>
+    
+Practical Usage:
+    a.  If you run 'aws s3 ls' ; this will run against the [default] profile and list the S3 buckets in that default profile
+    b.  If you run 'aws s3 ls --profile <whatever-you-want-to-name-this-profile> ; this will run against the <whatever-you-want-to-name-this-profile> profile
+
+This way you can run any command, against the default profile or a specific profile
