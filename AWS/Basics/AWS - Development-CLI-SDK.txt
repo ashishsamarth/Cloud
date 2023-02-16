@@ -663,3 +663,13 @@ MFA : CLI
 To use MFA with the CLI, you must create a temporary session
 To do so, you must run the STS GetSession Token API call
 
+aws sts get-session-token --serial-number arn-of-the-mfa-device --token-code code-from-token --duration-seconds 3600
+
+{
+    "Credentials": {
+        "SecretAccessKey": "secret-access-key",
+        "SessionToken" : "temporary-session-token",
+        "Expiration": "expiration-date-time",
+        "AccessKeyId": "access-key-id"
+    }
+}
