@@ -596,3 +596,35 @@ system[ec2-user@ip-172-31-62-238 ~]$
     [ec2-user@ip-172-31-62-238 ~]$ curl http://169.254.169.254/latest/meta-data/instance-id; echo -e "\n"
     i-0b4ee75b7d98b93c7
     */
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+AWS : Configure Multiple Profiles
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+If you are user, that manages multiple AWS accounts and would need to run CLI operations for these different accounts, its better to have a different profile
+usually, if we configure AWS CLI on local machine we run the following
+
+    aws configure
+
+Then we have to provide
+    a.  AWS Access Key ID
+    b.  AWS Secret Access Key
+    c.  Default region name
+    d.  Default output format
+
+When this is done, it creates two files having the following data with [default entries]
+    File#1: Credentials
+    Content:
+        [default]
+        aws_aceess_key_id = <some_value>
+        aws_secret_access_key = <some_value>
+    
+    File#2: config
+    Content:
+        [default]
+        region = <some_value>
+
+Now; if you manage different accounts, you should be able to manage this other account (which is not the default account). For this to be done, you need to
+configure this account (using a profile, so that the profile is loaded everytime you use this other account). To configure, run the following
+
+aws 
+
