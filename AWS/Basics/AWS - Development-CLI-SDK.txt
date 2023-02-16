@@ -656,3 +656,10 @@ Practical Usage:
     b.  If you run 'aws s3 ls --profile <whatever-you-want-to-name-this-profile> ; this will run against the <whatever-you-want-to-name-this-profile> profile
 
 This way you can run any command, against the default profile or a specific profile
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+MFA : CLI
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+To use MFA with the CLI, you must create a temporary session
+To do so, you must run the STS GetSession Token API call
+
