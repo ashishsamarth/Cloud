@@ -309,6 +309,10 @@ IAM: Identity & Access Management
     A24: Policy Simulator is a web-interface (available at: https://policysim.aws.amazon.com) that allows you to test policy against specific service and Action
         If you building your own inline policy, its always better to use the policy simulator to test your policy and make changes to get desired results.
 
+        Another way to test a policy is via the CLI using the --dry-run flag
+        a. --dry-run lets you test an action, it will fail if you do not have the correct permissions.
+        b.  It will error out, if the operation can be executed successfully [Request would have succeeded, but DryRun flag is set]
+
 IAM Exam Tips:
 
 a.  IAM is universal; It does not apply to regions at this time.
