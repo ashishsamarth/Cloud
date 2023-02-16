@@ -626,5 +626,10 @@ When this is done, it creates two files having the following data with [default 
 Now; if you manage different accounts, you should be able to manage this other account (which is not the default account). For this to be done, you need to
 configure this account (using a profile, so that the profile is loaded everytime you use this other account). To configure, run the following
 
-aws 
+    aws configure --profile <whatever-you-want-to-name-this-profile>
 
+Then we have to provide
+    a.  AWS Access Key ID
+    b.  AWS Secret Access Key
+    c.  Default region name
+    d.  Default output format
