@@ -147,7 +147,7 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
         On the delete objects page, you will see the name of the file and a confirmation to type 'delete' and clicked on 'delete objects'
 
         Now when you go back to the s3 bucket and enable 'Show versions' you will see another version of the file with type as 'Delete Marker'
-        but size 0.The Delete Marker makes AWS S3 behave as if the object has been deleted.
+        but size 0. The Delete Marker makes AWS S3 behave as if the object has been deleted.
 
         *   Delete Marker object does not have any data or ACL associated with it, just the key and the version ID
         *   An object retrieval on a bucket with a delete marker as the Current version would return a 404
