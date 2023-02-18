@@ -142,7 +142,7 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
         will be shown to the user.
     
     Q08: What is the difference between 'delete' vs 'Permanently Delete' in S3 Bucket?
-    A08: Suppose you attempt to delete a file, (which has multiple versions, but since 'Show Versions' is disabled, you cant see those versions).
+    A08: Suppose you attempt to delete a file, (which has multiple versions, but since 'Show Versions' is disabled, you cannot see those versions).
         using the 'checkbox' and 'delete' button on the s3 bucket page.
         On the delete objects page, you will see the name of the file and a confirmation to type 'delete' and clicked on 'delete objects'
 
