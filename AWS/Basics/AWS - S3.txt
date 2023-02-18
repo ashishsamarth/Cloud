@@ -61,7 +61,7 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
                                         Monitoring & Auto tiering fees  : None
                                         Retrieval fees                  : None
         
-        b.  Intelligent Teiring     :   Designed for                    : Data with changing and unknown access patterns
+        b.  Intelligent Tiering     :   Designed for                    : Data with changing and unknown access patterns
                                         Available in                    : More than or equal to 3 AZs
                                         Minimum Storage Duration        : None
                                         Minimum Billable Objext size    : None
