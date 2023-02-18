@@ -121,7 +121,7 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
         c.  On this page, their are 4 more options on the right top [Copy S3 URI, DOWNLOAD, OPEN, Object Options]
         d.  If you wish to see the object content without downloading it, simply click on 'OPEN'
         e.  When you click on 'Open', AWS opens a link which points to this object and has a pre-signed URL with AWS security token
-        f.  If you try to open the same objec using 'Object URL', it will fail, since this URL does not have the pre-signed AWS security token
+        f.  If you try to open the same object using 'Object URL', it will fail, since this URL does not have the pre-signed AWS security token
     
     Q06: Explain key points of S3 Bucket versioning feature?
     A06: Amazon S3 allows for versioning of the files
