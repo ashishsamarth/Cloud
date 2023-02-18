@@ -64,14 +64,14 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
         b.  Intelligent Tiering     :   Designed for                    : Data with changing and unknown access patterns
                                         Available in                    : More than or equal to 3 AZs
                                         Minimum Storage Duration        : None
-                                        Minimum Billable Objext size    : None
+                                        Minimum Billable Object size    : None
                                         Monitoring & Auto tiering fees  : Per-object fees apply for objects >= 128kb
                                         Retrieval fees                  : None
 
         c.  Standard-IA             :   Designed for                    : Infrequently accessed data (once a month) with milliseconds access
                                         Available in                    : More than or equal to 3 AZs
                                         Minimum Storage Duration        : 30 Days
-                                        Minimum Billable Objext size    : 128 KB
+                                        Minimum Billable Object size    : 128 KB
                                         Monitoring & Auto tiering fees  : None
                                         Retrieval fees                  : Per-GB fees apply
         
@@ -79,7 +79,7 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
                                                                           Availability Zone with milliseconds access
                                         Available in                    : 1 AZ
                                         Minimum Storage Duration        : 30 Days
-                                        Minimum Billable Objext size    : 128 KB
+                                        Minimum Billable Object size    : 128 KB
                                         Monitoring & Auto tiering fees  : None
                                         Retrieval fees                  : Per-GB fees apply
         
