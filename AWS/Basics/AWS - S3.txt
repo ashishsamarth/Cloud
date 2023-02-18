@@ -240,7 +240,7 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
             2.  Object Access Control List (ACL):   Rarely used.
             3.  Bucket Access Control List (ACL):   Rarely used.
         c.  Network Based:
-            1.  Suports VPC endpoints (for instances in VPC without internet)
+            1.  Supports VPC endpoints (for instances in VPC without internet)
 
         Special Note:
             An IAM Principal (user or group) can access an S3 object if:
