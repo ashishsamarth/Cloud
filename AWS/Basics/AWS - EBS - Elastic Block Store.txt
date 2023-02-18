@@ -196,7 +196,7 @@ AWS-EBS: Elastic Block Store
         1.  st1: These are throughput optimized HDDs, good for Big Data, Data Warehouses and Log processing workloads.
         2.  sc1: These are cold HHDs, and good for infrequently (archival) accessed data, and has the lowest cost of all.
     
-    Q14: What is EBS Multi-Atatch?
+    Q14: What is EBS Multi-Attach?
     A14: Multi-Attach is a functionality that allows you to "attach one EBS volume to multiple EC2 instances in the SAME AZ."
         This functionality is only available for EBS volumes from the io1/io2 family
         Note:
