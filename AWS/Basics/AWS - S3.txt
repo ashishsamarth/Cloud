@@ -196,7 +196,7 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
     Q12: Explain SSE-C encryption?
     A12: SSE-C: Its a server side encryption scheme, where the object encryption happens using data keys fully managed by customer outside AWS.
         AWS-S3, DOES NOT store the encryption keys that you provide.
-        HTTPS is a must for this type of encryption, and is ONLY availabel using AWS CLI
+        HTTPS is a must for this type of encryption, and is ONLY available using AWS CLI
         Here's the flow:
 
     ----------------------------------------                                      |-----------------------------------------------------------|  
