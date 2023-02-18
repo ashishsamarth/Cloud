@@ -222,7 +222,7 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
     |                   Client - S3 Encryption SDK                   |
     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~                                    |              |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     |  | [   OBJECT  ]          | Encryption                         |  HTTPS       |                       S3       |
-    |  |         +              |----------------> [Encrypted Obkect]|------------> |       {   BUCKET  }            |
+    |  |         +              |----------------> [Encrypted Object]|------------> |       {   BUCKET  }            |
     |  | [Client Side Data Key] |                                    |              |                                |
     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~                                    |              |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     |                                                                |
