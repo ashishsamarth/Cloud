@@ -84,7 +84,7 @@ AWS-EBS: Elastic Block Store
             4.  Encryption: Its a checkmark
         f.  Click on create volume
         g.  Now that the EBS volume has been created, click on 'Volume' under 'Elastic Block Store'
-        h.  You should be able to see the new volume in the new availiability zone.
+        h.  You should be able to see the new volume in the new availability zone.
 
         This is how you take a snapshot and copy the data from one AZ to Another AZ in the same region.
 
