@@ -4,7 +4,7 @@ AWS - CLI & Cloud Shell
     
     
     Q01: In how many ways, can the users access AWS?
-    A01: Their are 3 ways by which users can access AWS
+    A01: There are 3 ways by which users can access AWS
         a.  AWS Management Console (protected by password + MFA)
         b.  AWS Command Line Interface (CLI): protected by access keys
         c.  AWS Software Development Kit (SDK): for code: protected by access keys
