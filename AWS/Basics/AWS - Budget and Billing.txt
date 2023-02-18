@@ -4,7 +4,7 @@ Budget and Billing
 
     Q01: Can an IAM user access the Billing and Cost Management Dashboard by default?
     A01: No, the only user who can access Billing and Cost Management Dashboard by default is the root user.
-    The root user need to provide permisions to IAM user - so that they can also access Billing and Cost information
+    The root user needs to provide permisions to IAM user - so that they can also access Billing and Cost information
 
     Following are the steps for the root user to allow access.
     Note:   This approach only works for an IAM user with Administrator Access
