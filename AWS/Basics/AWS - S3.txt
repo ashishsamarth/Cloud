@@ -2,7 +2,7 @@
 AWS - S3 : SimpleStorageService
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-AWS S3: It advertised as the infinetly scaling storage, hence we do not define its size while provisioning it (unlink EBS or EFS). It allows the users to 
+AWS S3: It advertised as the infinitely scaling storage, hence we do not define its size while provisioning it (unlink EBS or EFS). It allows the users to 
     store objects (files) in 'buckets' (directories).
     a.  Buckets MUST have a globally-unique-name
     b.  Buckets are defined at the regional level
