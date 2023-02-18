@@ -38,7 +38,7 @@ Budget and Billing
             2.  'Monthly Cost Budget':  {Create a monthly budget that notified you if you exceed, or are forecasted to exceed, the budget amount}
             3.  'Daily Savings Plans Coverage budget':  {Create a coverage budget for your savings plans that notifies you when you fall below the 
                 defined target}
-            4.  'Daily reservation utilization budget': {Ceate a utilization budget for your reservations that notifies you when you fall below the 
+            4.  'Daily reservation utilization budget': {Create a utilization budget for your reservations that notifies you when you fall below the 
                 defined target}
         g.  Click on 'Monthly Cost Budget'
         h.  Provide the following values
