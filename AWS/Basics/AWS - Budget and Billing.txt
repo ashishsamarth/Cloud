@@ -23,7 +23,7 @@ Budget and Billing
     d.  Click the group, to which the non-administrative IAM user belongs to
     e.  Click on 'Permissions'
     f.  Search for 'Billing' permission policy and attach this policy to this group.
-    8.  Now th 'Non-administrative' IAM User should also have access to the AWS Billing dashboard.
+    8.  Now the 'Non-administrative' IAM User should also have access to the AWS Billing dashboard.
 
 
     Q02: How to create a Budget?
