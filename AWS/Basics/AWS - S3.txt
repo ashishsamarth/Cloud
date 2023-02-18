@@ -75,7 +75,7 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
                                         Monitoring & Auto tiering fees  : None
                                         Retrieval fees                  : Per-GB fees apply
         
-        d.  One Zone-IA             :   Designed for                    : Recreatable, infrequently accessed data (once a month) stored in a single 
+        d.  One Zone-IA             :   Designed for                    : Re-creatable, infrequently accessed data (once a month) stored in a single 
                                                                           Availability Zone with milliseconds access
                                         Available in                    : 1 AZ
                                         Minimum Storage Duration        : 30 Days
