@@ -36,7 +36,7 @@ Budget and Billing
         f.  Their are multiple templates, namely (Radio Buttons)
             1.  'Zero spend budget':    {Create a budget that notified you once your spending exceeds $0.01 which is above the AWS free tier limits}
             2.  'Monthly Cost Budget':  {Create a monthly budget that notified you if you exceed, or are forecasted to exceed, the budget amount}
-            3.  'Daily Savings Plans Coverage budget':  {Create a converage budget for your savings plans that notifies you when you fall below the 
+            3.  'Daily Savings Plans Coverage budget':  {Create a coverage budget for your savings plans that notifies you when you fall below the 
                 defined target}
             4.  'Daily reservation utilization budget': {Ceate a utilization budget for your reservations that notifies you when you fall below the 
                 defined target}
