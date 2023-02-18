@@ -18,7 +18,7 @@ AWS-EBS: Elastic Block Store
             1.  Its a network drive, i.e. Not a Physical Drive
                 a.  It uses the network to communicate with the instance, which means there might be a bit of latency.
                 b.  It can be detached from an EC2 instance and attached to another one quickly
-            2.  Its locked to an Availiability Zone (AZ)
+            2.  Its locked to an Availability Zone (AZ)
                 a.  An EBS volume in us-east-1a cannot be attached to us-east-1b
                 b.  To move a volume across, you first need to snapshot it
             3.  Have a provisioned capacity (size in GBs, and IOPS)
