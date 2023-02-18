@@ -39,11 +39,11 @@ AWS-EBS: Elastic Block Store
 
             : This attribute can be controlled by the AWS console / AWS CLI.
         
-        USECASE: How to perserve the root volume when instance is terminated.
+        USECASE: How to preserve the root volume when instance is terminated.
     
     Q02: What is EBS Snapshots?
     A02: EBS Snapshots are used to
-        a.  Maske a backup (snapshot) of your EBS volume at a point in time
+        a.  Make a backup (snapshot) of your EBS volume at a point in time
         b.  Not necessary to detach a volume to do snapshot, but recommended
         c.  Copy snapshots across AZ or Region.
     
