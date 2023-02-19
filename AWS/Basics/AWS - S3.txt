@@ -582,7 +582,7 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
     Q25: Explain S3-Lifecycle Rules?
     A25: S3 Lifecycle rules defines, 'What to do with the objects in S3' in an automated way, there are two types of access supported by S3 - Lifecycle
         a.  Transition Actions: It defines when objects are transitioned to another storage class
-            1.  Move objects to Standard IA class 60 days after creation
+            1.  Move objects (current or previos if versioning is enabled) to Standard IA class 60 days after creation
             2.  Move to Glacier for archiving after 6 months
         
         b.  Expiration Actions: Conigure objects to expire (Delete) after some time
