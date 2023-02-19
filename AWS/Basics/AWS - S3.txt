@@ -577,3 +577,18 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
             b.  Bulk (48 hours)
 
             Minimum Storage duration is 180 days
+
+
+    Q25: Explain S3-Lifecycle Rules?
+    A25: S3 Lifecycle rules defines, 'What to do with the objects in S3' in an automated way, there are two types of access supported by S3 - Lifecycle
+        a.  Transition Actions: It defines when objects are transitioned to another storage class
+            1.  Move objects to Standard IA class 60 days after creation
+            2.  Move to Glacier for archiving after 6 months
+        
+        b.  Expiration Actions: Conigure objects to expire (Delete) after some time
+            1.  Access log files can be set to delete after 365 days
+            2.  Can be used to delete old version of files (if versioning is enabled)
+            3.  Can be used to delete incomplete multi-part Uploads
+        
+        Rules can be created for a certain prefix (e.g. : s3://my_bucket/ics-files/*)
+        Rules can be created for a certain object tags (e.g. : Department: Finance)
