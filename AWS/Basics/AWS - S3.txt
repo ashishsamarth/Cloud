@@ -528,9 +528,9 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
 
         b.  AWS S3 Standard-Infrequent Access (IA)
             1.  Suitable for data that is less frequently accessed, but requires rapid access when needed
-            2.  High Durability (99.99999999999%) (10- 9s) of objects across multiple AZ
+            2.  High Durability (99.999999999999%) (10- 9s) of objects across multiple AZ
             3.  99.99% Availability over a give year
-            4.  Low cost compared to AWS S3 standard
+            4.  Low cost compared to AWS S3 standard, and minimum storage duration is 30 days
             5.  Can sustain 2 Concurrent Facility Failures
             6.  Use Cases:
                 i.  As a Data Store for Disastor Recovery, Backups
@@ -541,7 +541,7 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
             3.  99.5 % Availability over a give year
             4.  Low latency and high throughput performance
             5.  Supports SSL for data at transit and encryption at rest
-            6.  Low cost compared to IA (by 20%)
+            6.  Low cost compared to IA (by 20%) and minimum storage duration is 30 days
             7.  Use Cases:
                 i.  Storing Secondary Backup Copies of on-premise data, or storing data that you can recreate.
 
@@ -552,12 +552,13 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
             4.  High Durability (99.999999999999%) (11- 9s) of objects across multiple AZ
             5.  Resilient against events that impact and entire AZ
             6.  99.99% Availability over a give year
+            7.  Minimum storage duration is 30 days
 
         e.  AWS Glacier
             1.  Low cost object storage meant for archiving / Backup
             2.  Data is retained for the longer term (10+ years)
             3.  Alternative to on-premise magnetic tape storage
-            4.  Average durability is 99.999999999 % (9 - 9s)
+            4.  Average durability is 99.99999999999 % (11 - 9s)
             5.  Cost per storage per month ($ 0.004 / GB) + retrieval cost
             6.  Each Item in Glacier is called 'ARCHIVE' (instead of Objects in S3) and each archive be up to 40 TB
             7.  Archives are stored in 'Vaults'
