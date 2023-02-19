@@ -389,3 +389,125 @@ AWS S3: It advertised as the infinetly scaling storage, hence we do not define i
             1.  Subsequent read request immediately receives the latest version of the object (read after write consistency)
             2.  Subsequent list request immediately reflects changes (list consistency)
         No additional charges for this strong consistency and no performance impact.
+
+    Q19: What are S3 Access Logs
+    A19: If you need to log the access requests coming into S3, you can use S3 access logs. This is for audit purpose. The results of the access requests
+        may be 'authorized' / 'denied' and all of it will be logged into another S3 bucket.
+
+        Once the data is inside the S3 bucket, it can analyzed using any data analysis tool or in Amazon Athena
+
+        The log format is at:
+        https://docs.aws.amazon.com/AmazonS3/latest/dev/LogFormat.html
+
+
+        ----------
+        |{USER-1}|---|
+        ----------   | Requests
+        |{USER-2}|---|<-------> {S3 Bucket}
+        ----------   |              |
+        |{USER-3}|---|              | Log All Requests
+        ----------                  | 
+                                    V
+                                {Logging Bucket}
+        
+        Logging Bucket should always be a different bucket, so maintain the size of the bucket. Functionally its allowed to have the same bucket to be the 
+        application bucket and the logging bucket, but depending on the traffic and size of the buket, if we add logging data (creating logging loops) to 
+        the same bucket, the size will grow exponentially.
+    
+    Q20: How to enable S3 Access Logs:
+    A20: Once you have created a new bucket which will be the 'Logging-Bucket' for the 'Monitored-Bucket'.
+        On the S3 dashboard, click on the Left Panel Menu - 'Buckets'
+        a.  Click on the Bucket (Monitored Bucket) you wish to log the access requests
+        b.  Click on 'Properties' and then click on 'Server access logging'. Its 'Disabled' by default, click on edit and enable it.
+        c.  Once you enable it, the page will ask for 'Target Bucket'
+        d.  Browse the 'Bucket-Name' where you want the access logs to be written.
+        e.  Be VERY CAREFUL, not to select the same bucket (as the monitored bucket, else you'll end up with a huge AWS bill)
+    
+        Special Note: Once you enable the server access logging, the 'Bucket Policy' gets updated to be able to 'write' logs to another bucket (S3 Log Delivery group)
+        Bucket Policy: When you enable server access logging, the S3 console automatically updates your bucket policy to include access to the S3 log delivery group.
+
+        It takes about an hour or two to have the Access logs written to the target bucket
+
+        Its a good idea to add an additional directory inside the target S3 bucket to be able to store logs from multiple buckets logically
+        e.g. Target Bucket: s3://samarth-ashish-aws-developer-021223/s3-021623-bucket-logs/
+
+
+    Q21: Explain S3 Replication?
+    A21: AWS S3 has two types of replication
+        a.  CRR :   Cross Region Replication
+        b.  SRR :   Same Region Replication
+
+        For both of these replication types, Bucket versioning MUST be enabled in both Source Bucket and Target Bucket
+        The source bucket and target bucket can be in different accounts.
+        Must have appropriate permissions (for source bucket to copy items over to target bucket)
+
+
+        ----------------        Asynchronous Replication        ----------------
+        [ Source Bucket]--------------------------------------> [Target Bucket]
+        ----------------                                        ----------------
+
+        If both the buckets are in the same region: Use Same Region Replication
+        If the buckets are NOT in the same region: Use Cross Region Replication
+
+        USE CASES:
+        CRR :   Compliance, Disastor Recovery, Lower Latency Access, Replication Cross account
+        SRR :   Log Aggregation, Live Replication between production and test accounts.
+
+        Special Note: Once the replication is activated, Only NEW objects or NEW versions of existing object will be replicated (old objects will not be replicated).
+            However, you can manually copy the previous objects
+        
+        Objects with DELETE marker are not replicated by default, but can be enabled.
+        Their is no 'Chaining of Replication'
+            : If bucket 1 has replication into bucket 2, which has replication ino bucket 3. then objects created in bucket 1 are not replicated to bucket 3
+
+    Q22: How to enable S3 replication?
+    A22: For S3 replication to be enabled, the pre-requisite it to have 'Versioning' Enabled on both the source bucket and the target bucket.
+        Once the pre-requisite is completed / verified, follow these steps:
+        a.  Click on the source bucket and navigate to 'Management' 
+        b.  Under 'Replication Rules' click on 'Create Replication Rule' 
+        c.  On the 'Create Replication Rule' page: provide the following
+            1.  A replication rule name of your choice.
+            2.  Source Bucket:
+                i.  Chose a rule scope:
+                    *.  Limit the scope of this rule using one or more filters  : Use this if you want to filter objects by their type
+                    *.  Apply to all objects in the bucket
+                ii. Destination:
+                    *.  Choose a bucket in this account
+                    *.  Specify a bucket in another account     : This one is easier
+                iii.IAM Role
+                    *.  Select 'Choose from existing IAM rules' and then select 'Create New Role' form the drop down.
+            3.  Click Save and your replication rules are set.
+
+        Note: 
+            Replication rules will work only on new objects or new version of same objects that are uploaded to source S3 bucket.
+            Objects with 'Delete Markers' are not replicated by default.
+        
+    Q23: What are S3-Pre-signed URLs?
+    A23: 
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        s3: presign :   The presign command generates a pre-signed URL for a key in the S3 bucket. You can use this command to generate URLs that can be used by 
+                others to access a file in the specified S3 bucket key.
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        SCN#01  :   Generate a pre-signed url
+        Command :   aws s3 presign s3://bucket_name/samplePrefix/file_name.png --expires-in 3600
+        
+        /*
+        Sample Output:
+        Output:
+        https://s3.ap-south-1.amazonaws.com/bucket_name/samplePrefix/file_name.png?
+        X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MCZT73PAX7ZMVFW%2F20220314%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20220314T054113Z&X-Amz-Expires=3600
+        &X-Amz-SignedHeaders=host&X-Amz-Signature=f14608bbf3e1f9f8d215eb5b439b87e167b1055bcd7a45c13a33debd3db1be96
+        */
+
+        S3 pre-signed urls ca be generated using CLI or SDK.
+            For Downloads, it can be easily generated using the CLI
+            For Uploads, it can be easily generated using the SDK
+        
+        Valid for a default of 3600 seconds, but is configurable to change the timeout with '--expires-in[time_by_seconds]' argument
+
+        Important Note: Users with a pre-signed URL inherit the permissions of the persion who generated the URL for allowed actions (GET / PUT)
+
+        Examples:
+            a.  Allow only logged in users to download a premium video on your S3 bucket
+            b.  Allow an ever changing list of users to download files by generating urls dynamically
+            c.  Allow temporarily a user to upload to a precise location in our bucket.
