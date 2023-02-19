@@ -554,4 +554,12 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
             6.  99.99% Availability over a give year
 
         e.  AWS Glacier
+            1.  Low cost object storage meant for archiving / Backup
+            2.  Data is retained for the longer term (10+ years)
+            3.  Alternative to on-premise magnetic tape storage
+            4.  Average durability is 99.999999999 % (9 - 9s)
+            5.  Cost per storage per month ($ 0.004 / GB) + retrieval cost
+            6.  Each Item in Glacier is called 'ARCHIVE' (instead of Objects in S3) and each archive be up to 40 TB
+            7.  Archives are stored in 'Vaults'
+
         f.  AWS Glacier Deep Archive
