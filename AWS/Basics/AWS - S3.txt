@@ -592,3 +592,76 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
         
         Rules can be created for a certain prefix (e.g. : s3://my_bucket/ics-files/*)
         Rules can be created for a certain object tags (e.g. : Department: Finance)
+
+    Q26: Explain S3 - KMS Limitation?
+    A26: If you use SSE-KMS, you may be impacted by KMS Limits
+        Here's the explanation: When you upload ab object, S3 calls the 'GenerateDataKey' KMS API, when you download it, it call the Decrypt API. Thesse calls gets 
+        counted against the KMS quota per second (it can be 5500 or 10000 or 300000 requests per second based on the region). This may eventually limit the performance 
+        if your S3 objects are in the high read / write application.
+
+        Note: As of today, you cannot request a quota increase for KMS
+    
+    Q27: How to enhance S3 performance?
+    A27: These are the following ways to enhance S3 performance
+        a.  Multi-Part Upload: This is a mechanism to 'parallelize' upload of a file by breaking it to small (multiple pieces). This method is recommended for files > 100 MB,
+            and are a MUST for files > 5GB. 'Parallelization' helps to speed up the transfer, and S3 is smart enough to rejoin these small parts and create the same file again.
+
+        b.  S3 Transfer Acceleration: Suppose you want to make an object available in Australia, but you are in USA. So this mechanism allows you to upload the object 
+            using edge locations in USA (via public internet) and then AWS can upload the same object to S3 bucket in Austrailia using AWS private network. This process 
+            is called, S3-Transfer Acceleration
+
+        c.  S3 Byte-Range Fetches: While the above two mechanism are good for upload, the following is better for downloads. When you want to download a big file from 
+            S3 bucket, AWS runs something called as Parallelize GETs by requesting specific byte range. For e.g. if you install a docker image, which may be big, its starts 
+            to download the image in multiple parts say for e.g. 10 files with each having a size of 10 mb each and it also shows the progress bar). These Parallelize GETs
+            behave the same way and asks for multiple parts with each part for a specific range(0-10, 11-20, 21-30 etc). This mechanism is very resilient to failure and save 
+            a lot of time and bandwidth. This is alao very useful, if you only want the file / object header before the actual file, so in that case you can only request the 
+            header information (which may be first 50 bytes of the file), rather than downloading the entire file.
+    
+    Q28: Explain S3-Select / Glacier-Select?
+    A28: Anyone who works with data has probably used a cloud-based storage solution at some point in their data pipeline. For example, if you need the first 1000 lines of a 1 million line
+         dataset you have to retrieve the entire dataset and filter locally. This makes it impractical to use Amazon S3 as the sole database for applications, particularly apps that 
+         constantly need to retrieve subsets of a larger dataset.
+         Amazon S3 Select lets you use simple SQL expressions to pull out only the data you need from an Amazon S3 object
+         With S3 Select you no longer need to retrieve an entire dataset only to retain a few lines. Instead, you can use classic SQL expressions to query data in place and retrieve only a 
+         subset, such as data between two dates or above a certain price. Currently Amazon S3 Select works with objects in CSV, JSON, and Apache Parquet format
+         By reducing the volume of data that has to be loaded and processed by your applications, S3 Select can improve the performance of most applications that frequently access data from 
+         S3 by up to 400%
+
+         The best part of Amazon S3 Select is how it simplifies application structure. Prior to Amazon S3 Select, the typical structure of a web app may have looked like the following
+        a.  Store data in a classic SQL (i.e. MySQL or PostgreSQL) or NoSQL (i.e. DynamoDB) database where it can be queried
+        b.  Keep backup copies of the data in persistent object storage (i.e. Amazon S3)
+        c.  Transfer new data into Amazon S3 and then add to the database.
+
+        With Amazon S3 Select the structure of the web app looks like the following
+        a.  Store data in Amazon S3 where it can be queried.
+
+    Q29: Explain S3 Object Lock and Glacier Vault Lock?
+    A29: S3 Object Lock:
+        Follows the WORM model: Write Once, Read Many
+        Block an object version, no one can delete or modify
+
+        Glacier Object Lock: 
+        Follows the WORM model: Write Once, Read Many
+        Block an object version, no one can delete or modify
+
+        Note:
+            1.  Lock can be applied at both, Object Level & Bucket Level
+            2.  Lock has the following modes
+                a.  Governance Mode: Users with special permissions can override the rules and retention period
+                b.  Compliance Mode: No One, even the root user cannot overide the rules and retention period.
+
+    Q30: Explain S3 Event Notifications?
+    A30: If some events happen in your S3 bucket, like the following
+        a.  A new object has been created       :   S3:ObjectCreated
+        b.  An existing object has been removed :   S3:ObjectRemoved
+        c.  A deleted object has been restored  :   S3:ObjectRestore
+        d.  A replication event has started     :   S3:Replication
+
+        And you want to be able to react to these events, so you can create event notifications rules. Following notifications services can be used
+        1.  SNS: Simple Notifications Service
+        2.  SQS: Simple Queue Service
+        3.  Lambda Function
+
+        Note: S3 Event Notifications typically deliver events in seconds but can sometimes take a minute of two.
+        If two writes are made to a single non-versioned object at the same time, its possible that only a single event notification will be sent
+        If you want to ensure that an event notification is sent for every successful write, you can enable versioning on your bucket.
