@@ -489,7 +489,7 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
                 others to access a file in the specified S3 bucket key.
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         SCN#01  :   Generate a pre-signed url
-        Command :   aws s3 presign s3://bucket_name/samplePrefix/file_name.png --expires-in 3600
+        Command :   aws s3 presign s3://bucket_name/samplePrefix/file_name.png --region us-east-1 --expires-in 3600
         
         /*
         Sample Output:
