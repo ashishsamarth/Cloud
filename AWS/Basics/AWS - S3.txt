@@ -518,7 +518,7 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
     Q24: Explain S3-Storage Classes?
     A24: Following are the S3-Storage Classes
         a.  AWS S3 Standard - General purpose
-            1.  High Durability (99.999999999999%) of objects across multiple AZ
+            1.  High Durability (99.999999999999%) (11- 9s) of objects across multiple AZ
             2.  If you stire 10,000,000 objects with AWS S3, on an average you can expect to incur loss of a single object once 
                 every 10000 years
             3.  99.99% Availability over a give year
@@ -527,6 +527,15 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
                 i.  Big Data Analytics, Mobile & Gaming Applications, Content Distribution
 
         b.  AWS S3 Standard-Infrequent Access (IA)
+            1.  Suitable for data that is less frequently accessed, but requires rapid access when needed
+            2.  High Durability (99.99999999999%) (10- 9s) of objects across multiple AZ
+            3.  99.99% Availability over a give year
+            4.  Low cost compared to AWS S3 standard
+            5.  Can sustain 2 Concurrent Facility Failures
+            6.  Use Cases:
+                i.  As a Data Store for Disastor Recovery, Backups
+
+
         c.  AWS S3 One Zone-Infrequent Access
         d.  AWS S3 Intelligent Tiering
         e.  AWS Glacier
