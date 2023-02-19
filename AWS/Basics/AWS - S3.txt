@@ -535,7 +535,6 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
             6.  Use Cases:
                 i.  As a Data Store for Disastor Recovery, Backups
 
-
         c.  AWS S3 One Zone-Infrequent Access
             1.  Same as Infrequent Access, but data is stored in a single AZ
             2.  High Durability (99.999999999999%) (11- 9s) of objects across SINGLE AZ
@@ -547,5 +546,12 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
                 i.  Storing Secondary Backup Copies of on-premise data, or storing data that you can recreate.
 
         d.  AWS S3 Intelligent Tiering
+            1.  Low latency and high throughput performance as S3 standard
+            2.  Small monthly monitoring and auto-tiering fee
+            3.  Automatically moves objects between two access tiers (S3 Standard and S3-IA) based on changing access patterns
+            4.  High Durability (99.999999999999%) (11- 9s) of objects across multiple AZ
+            5.  Resilient against events that impact and entire AZ
+            6.  99.99% Availability over a give year
+
         e.  AWS Glacier
         f.  AWS Glacier Deep Archive
