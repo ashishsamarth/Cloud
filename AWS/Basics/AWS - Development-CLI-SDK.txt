@@ -455,6 +455,24 @@ s3: website:    The website command is used to configure the S3 static website h
     SCN#01  :   Configure a static webssite
     Command :   aws s3 website s3://bucket_name --index-document index.html --error-document error.html
 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+s3: MFA-Delete:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    MFA [Multi Factor Authentication] forces user to generate a code on a device (usually a mobile phone or hardware) before doing import operations on S3
+
+    To use MFA-Delete, enable versioning on the S3 bucket
+    You will need MFA to
+        a.  Permanently delete an object version
+        b.  suspend versioning on the bucket
+    
+    You wont need MFA for
+        a.  enabling versioning
+        b.  listing deleted versions
+    
+    Only the bucket owner (root account) can enable / disable MFA-Delete
+    MFA-Delete currently can only be enabled using the CLI, and the pre-requisite it to have MFA Device configured on your account (under IAM)
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 STS - CLI
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
