@@ -562,4 +562,17 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
             6.  Each Item in Glacier is called 'ARCHIVE' (instead of Objects in S3) and each archive be up to 40 TB
             7.  Archives are stored in 'Vaults'
 
+            Retrieval Options
+            a.  Expedited (1 to 5 minutes
+            b.  Standard (3 t0 5 hours)
+            c.  Bulk (5 to 12 hours)
+
+            Minimum Storage duration is 90 days
+
         f.  AWS Glacier Deep Archive
+            1. For even longer term storage and cheaper than AWS Glacier
+            Retrieval Options
+            a.  Standard (12 hours)
+            b.  Bulk (48 hours)
+
+            Minimum Storage duration is 180 days
