@@ -511,3 +511,6 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
             a.  Allow only logged in users to download a premium video on your S3 bucket
             b.  Allow an ever changing list of users to download files by generating urls dynamically
             c.  Allow temporarily a user to upload to a precise location in our bucket.
+        
+        Note: If you get any issues you can run the following command to configure
+            aws configure set default.s3.signature_version s3v4
