@@ -564,7 +564,7 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
             7.  Archives are stored in 'Vaults'
 
             Retrieval Options
-            a.  Expedited (1 to 5 minutes
+            a.  Expedited (1 to 5 minutes) for files less than 250 MB
             b.  Standard (3 t0 5 hours)
             c.  Bulk (5 to 12 hours)
 
