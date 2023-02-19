@@ -3,13 +3,13 @@ AWS-EBS: Elastic Block Store
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
     Q01: What's an EBS volume?
-    A01: An EBS volumn is a NETWORK Drive (like a network usb stick) that you can attach to your instance while they run.
+    A01: An EBS volume is a NETWORK Drive (like a network usb stick) that you can attach to your instance while they run.
         It allows the instances to persist data, even after their termination, which means, if take a snapshot of the volume before the instance was 
         terminated. You can utilize the snapshot to retain the data and a new EBS volume can be used on a new EC2 instances with the old data.
         a.  EBS volumes can be mounted to only one instance at a time (CCP-Level), and one instance can have multiple EBS volumes to it.
             Their is an 'multi-attach' functionality for EBS volumes, but that is more advanced
         b.  When an EC2 instance is created, an EBS volume is attached to it, for the boot.
-        c.  EBS volumes are bound to a specific availiability zone, that means once created in a specific availiability zone it cannot be utilized in 
+        c.  EBS volumes are bound to a specific availability zone, that means once created in a specific availability zone it cannot be utilized in 
             another zone
 
         Free-Tier: 30 GB of free EBS storage of type (General Purpose SSD) or magnetic per month
@@ -18,7 +18,7 @@ AWS-EBS: Elastic Block Store
             1.  Its a network drive, i.e. Not a Physical Drive
                 a.  It uses the network to communicate with the instance, which means there might be a bit of latency.
                 b.  It can be detached from an EC2 instance and attached to another one quickly
-            2.  Its locked to an Availiability Zone (AZ)
+            2.  Its locked to an Availability Zone (AZ)
                 a.  An EBS volume in us-east-1a cannot be attached to us-east-1b
                 b.  To move a volume across, you first need to snapshot it
             3.  Have a provisioned capacity (size in GBs, and IOPS)
@@ -39,11 +39,11 @@ AWS-EBS: Elastic Block Store
 
             : This attribute can be controlled by the AWS console / AWS CLI.
         
-        USECASE: How to perserve the root volume when instance is terminated.
+        USECASE: How to preserve the root volume when instance is terminated.
     
     Q02: What is EBS Snapshots?
     A02: EBS Snapshots are used to
-        a.  Maske a backup (snapshot) of your EBS volume at a point in time
+        a.  Make a backup (snapshot) of your EBS volume at a point in time
         b.  Not necessary to detach a volume to do snapshot, but recommended
         c.  Copy snapshots across AZ or Region.
     
@@ -80,11 +80,11 @@ AWS-EBS: Elastic Block Store
         e.  One the 'Create Volume' window. provide the following
             1.  Volume Type: Its a dropdown list, you can select whatever is your Requirements
             2.  Size in GBs
-            3.  Availiability Zone: Its a drop down list of AZs in your current region
+            3.  Availability Zone: Its a drop down list of AZs in your current region
             4.  Encryption: Its a checkmark
         f.  Click on create volume
         g.  Now that the EBS volume has been created, click on 'Volume' under 'Elastic Block Store'
-        h.  You should be able to see the new volume in the new availiability zone.
+        h.  You should be able to see the new volume in the new availability zone.
 
         This is how you take a snapshot and copy the data from one AZ to Another AZ in the same region.
 
@@ -111,7 +111,7 @@ AWS-EBS: Elastic Block Store
         d.  Provide a name to the image
         e.  You will notice, the image creation has automatically select the EBS volume used to boot this current EC2 instance, with the 
             attribute (Delete on Termination) enabled.
-        f.  Their are two following options for tags {Radio Buttons}
+        f.  There are two following options for tags {Radio Buttons}
             1.  Tag image and snapshots together
             2.  Tag image and snapshots separately
         g.  Click on 'Create Image' on this page.
@@ -141,7 +141,7 @@ AWS-EBS: Elastic Block Store
         f.  The instances usually start with 'i' in the naming conventions (e.g. i3.large, i3en.metal, i3.metal, i3.8xlarge)
 
     Q10: Explain the types of EBS Volumes?
-    A10: Their are total 6 types of EBS volumes for now, following are the categories.
+    A10: There are total 6 types of EBS volumes for now, following are the categories.
         a.  gp2 / gp3 (SSD) : General purpose SSD volumes that balance price and performance for a variety of workloads
         b.  io1/ io2 (SSD)  : Highest performance SSD volume for mission-critical low-latency or high-throughput workloads
         c.  st1 (HDD)   : Low Cost HDD volume designed for frequently accessed, throughput-intensive workloads.
@@ -157,7 +157,7 @@ AWS-EBS: Elastic Block Store
 
     Q11: Explain the characteristics of General Purpose SSD EBS volume?
     A11: General Purpose SSDs are
-        a.  Cost Effecive Storage, Low-latency
+        a.  Cost Effective Storage, Low-latency
         b.  Used for : System boot volumes, Virtual Desktops, Development and Test environments.
         c.  Size is between: 1GB - 16TB
     
@@ -184,7 +184,7 @@ AWS-EBS: Elastic Block Store
         
         Their is a new type of io volume namely io2 Block Express
             1.  Size range is 4GB to 64TB
-            2.  Sub-Milisecond latency
+            2.  Sub-Millisecond latency
             3.  Max PIOPS: 256000 with an IOPS:GB ratio of 1000:1
     
     Q13: Explain the characteristics of HDD EBS volume?
@@ -196,7 +196,7 @@ AWS-EBS: Elastic Block Store
         1.  st1: These are throughput optimized HDDs, good for Big Data, Data Warehouses and Log processing workloads.
         2.  sc1: These are cold HHDs, and good for infrequently (archival) accessed data, and has the lowest cost of all.
     
-    Q14: What is EBS Multi-Atatch?
+    Q14: What is EBS Multi-Attach?
     A14: Multi-Attach is a functionality that allows you to "attach one EBS volume to multiple EC2 instances in the SAME AZ."
         This functionality is only available for EBS volumes from the io1/io2 family
         Note:
