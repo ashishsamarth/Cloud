@@ -514,3 +514,12 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
         
         Note: If you get any issues you can run the following command to configure
             aws configure set default.s3.signature_version s3v4
+    
+    Q24: Explain S3-Storage Classes?
+    A24: Following are the S3-Storage Classes
+        a.  AWS S3 Standard - General purpose
+        b.  AWS S3 Standard-Infrequent Access (IA)
+        c.  AWS S3 One Zone-Infrequent Access
+        d.  AWS S3 Intelligent Tiering
+        e.  AWS Glacier
+        f.  AWS Glacier Deep Archive
