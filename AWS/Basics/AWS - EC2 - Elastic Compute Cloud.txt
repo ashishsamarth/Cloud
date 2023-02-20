@@ -103,7 +103,7 @@ EC2 User Data
         f.  All outbound traffic is 'AUTHORIZED' by default
 
         Special Note:
-        a.  If your application is not accessible (TIME OUT), then its a 'security group'issue
+        a.  If your application is not accessible (TIME OUT), then its a 'security group' issue
         b.  If your application gives a 'connection refused' error, then its an application error or its not launched.
 
     Q08: What is an security group referencing in AWS?
