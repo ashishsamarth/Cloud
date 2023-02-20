@@ -97,7 +97,7 @@ AWS-EBS: Elastic Block Store
         c.  You can launch EC2 instances from:
             1.  A public AMI: Provided by AWS
             2.  Your Own AMI: You make and maintain them yourself.
-            3.  AWS Marketplace AMI: An AMI someone else made(and potentially sells)
+            3.  AWS Marketplace AMI: An AMI someone else made (and potentially sells)
     
     Q07: How to create an AMI from an EC2 Instance?
     A07: Start an EC2 instance with any specific AMI, then customize it (add JDK, Tomcat, DB etc) and then stop the instance.
