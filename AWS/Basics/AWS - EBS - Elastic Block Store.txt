@@ -91,7 +91,7 @@ AWS-EBS: Elastic Block Store
     Q06: What is an AMI?
     A06: AMI is Amazon Machine Image
         a.  AMIs are a customization of an EC2 instance.
-            1.  You add your own software, configuration, OS , monitoring etc.
+            1.  You add your own software, configuration, OS, monitoring etc.
             2.  Faster Boot / Configuration time because all of your software is pre-packaged
         b.  AMI are built for SPECIFIC region (And can be copied across regions)
         c.  You can launch EC2 instances from:
