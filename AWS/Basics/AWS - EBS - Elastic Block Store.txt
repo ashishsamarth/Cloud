@@ -182,7 +182,7 @@ AWS-EBS: Elastic Block Store
             2.  Can increase PIOPS independently from Storage size
             3.  io2 have more durability and more IOPS per GB (at the same price of io1)
         
-        Their is a new type of io volume namely io2 Block Express
+        There is a new type of io volume namely io2 Block Express
             1.  Size range is 4GB to 64TB
             2.  Sub-Millisecond latency
             3.  Max PIOPS: 256000 with an IOPS:GB ratio of 1000:1
