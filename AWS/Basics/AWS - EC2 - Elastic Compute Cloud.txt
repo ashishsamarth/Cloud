@@ -68,7 +68,7 @@ EC2 User Data
 
     Q05: Explain the characteristics of EC2 Instance type: Memory Optimized
     A05: Memory Optimized instance types are great for
-        a.  High prformanc, relational or non-relational database
+        a.  High performance, relational or non-relational database
         b.  Distributed web scale cache stores
         c.  In-memory databases optimized for BI (business intelligence)
         d.  Applications performing real-time processing of big unstructured data
