@@ -34,7 +34,7 @@ EC2 User Data
     Special Note: Anything that you run as EC2 User data will be executed as a 'root' user.
 
     Q01: What are the different types of EC2 Instance Types?
-    A01: Their are 7 different types of EC2 Instance types, namely:
+    A01: There are 7 different types of EC2 Instance types, namely:
         a.  General Purpose (GP)
         b.  Compute Optimized
         c.  Memory Optimized
