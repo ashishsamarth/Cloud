@@ -127,7 +127,7 @@ EC2 User Data
         f.  3389 = RDP (Remote Desktop Protocol) - Login to windows instance.
 
     Q10: How to change the file permissions for .ppk file in windows?
-    A10: While the chmod command works in Linux or Mac, windows doesnot have any such command available. Here's how you change the permissions
+    A10: While the chmod command works in Linux or Mac, windows does not have any such command available. Here's how you change the permissions
         a.  Right click on the file and go to properties and then security.
         b.  Under security click on 'Advanced'
         c.  Click on 'Disable Inheritence' and then click on 'Convert inherited permissions to explicit permissions on this object'
