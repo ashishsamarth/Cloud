@@ -107,7 +107,7 @@ EC2 User Data
         b.  If your application gives a 'connection refused' error, then its an application error or its not launched.
 
     Q08: What is an security group referencing in AWS?
-    A08: Assume the following sceario:
+    A08: Assume the following scenario:
         a.  You have an EC2 instance with Security Group A attached to it
         b.  This security group A basically authorizes inbound traffic which are part of security group B and C
         c.  Now if you have another EC2 instance which has security group B attached to it, then this will enable the 2nd EC2 instance to be able 
