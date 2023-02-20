@@ -192,7 +192,7 @@ AWS-EBS: Elastic Block Store
         a. Cannot be a boot volume
         b. Size ranges between 125MB to 16TB
         
-        Their are two types of HDD EBS Volumes
+        There are two types of HDD EBS Volumes
         1.  st1: These are throughput optimized HDDs, good for Big Data, Data Warehouses and Log processing workloads.
         2.  sc1: These are cold HHDs, and good for infrequently (archival) accessed data, and has the lowest cost of all.
     
