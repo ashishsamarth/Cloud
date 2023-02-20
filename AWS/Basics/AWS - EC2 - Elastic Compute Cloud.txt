@@ -9,7 +9,7 @@ It has the following capabilities
     b.  Storing Data on Virtual Drives (EBS - Elastic Block Storage)
     c.  Distributing Load Across Machines (ELB - Elastic Load Balancer)
     d.  Scaling the services using an auto-scaling group (ASG - Auto Scaling Group)
-Knowling EC2 is the fundamental to understand how the cloud works
+Knowing EC2 is the fundamental to understand how the cloud works
 
 EC2 Sizing & Configuration options
     a.  Operating Systems Supported: Linux, Windows or MAC OS
