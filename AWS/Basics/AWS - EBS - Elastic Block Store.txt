@@ -80,7 +80,7 @@ AWS-EBS: Elastic Block Store
         e.  One the 'Create Volume' window. provide the following
             1.  Volume Type: Its a dropdown list, you can select whatever is your Requirements
             2.  Size in GBs
-            3.  Availability Zone: Its a drop down list of AZs in your current region
+            3.  Availability Zone: Its a dropdown list of AZs in your current region
             4.  Encryption: Its a checkmark
         f.  Click on create volume
         g.  Now that the EBS volume has been created, click on 'Volume' under 'Elastic Block Store'
