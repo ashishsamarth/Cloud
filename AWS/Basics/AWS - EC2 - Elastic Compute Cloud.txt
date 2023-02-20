@@ -1,7 +1,7 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 AWS-EC2: Elastic Compute Cloud
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-EC2 is the most popular offerting of AWS's offering
+EC2 is the most popular offering of AWS's offering
 EC2 = Elastic Compute Cloud is an IaaS (Infrastructure as a Service)
 
 It has the following capabilities
