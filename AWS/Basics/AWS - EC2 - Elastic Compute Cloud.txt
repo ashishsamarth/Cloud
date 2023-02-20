@@ -112,7 +112,7 @@ EC2 User Data
         b.  This security group A basically authorizes inbound traffic which are part of security group B and C
         c.  Now if you have another EC2 instance which has security group B attached to it, then this will enable the 2nd EC2 instance to be able 
             to connect to the first EC2 instance on the specific port (allowed by the inbound rule in security group A)
-        d.  Now if you have a third EC2 instance which has security group C attachedto it, then this will enable the 3rd EC2 instance to be able 
+        d.  Now if you have a third EC2 instance which has security group C attached to it, then this will enable the 3rd EC2 instance to be able 
             to connect to the first ES2 instance on the specific port (allowed by the inbound rule in security group A)
         e.  This internal communication between EC2 instances is simply possible because the Security Group A authorized the inbound traffic from 
             security group B and C
