@@ -7,7 +7,7 @@ AWS-EBS: Elastic Block Store
         It allows the instances to persist data, even after their termination, which means, if take a snapshot of the volume before the instance was 
         terminated. You can utilize the snapshot to retain the data and a new EBS volume can be used on a new EC2 instances with the old data.
         a.  EBS volumes can be mounted to only one instance at a time (CCP-Level), and one instance can have multiple EBS volumes to it.
-            Their is an 'multi-attach' functionality for EBS volumes, but that is more advanced
+            There is an 'multi-attach' functionality for EBS volumes, but that is more advanced
         b.  When an EC2 instance is created, an EBS volume is attached to it, for the boot.
         c.  EBS volumes are bound to a specific availability zone, that means once created in a specific availability zone it cannot be utilized in 
             another zone
