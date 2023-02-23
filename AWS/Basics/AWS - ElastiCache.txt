@@ -51,6 +51,7 @@ Elasticache Benefits and Use Cases
     a. Improves performance for read-heavy workloads. E.g. Social Networking, gaming media sharing, and Q&A Portals
     b. Frequently-accessed data is stored in-memory for low latency access, improving overall performance of the application
     c. Also good for compute-heavy workloads (e.g. recommendation engines)
+    d. Can be used to store results of I/O intensive database queries or output of compute-intense calculations
 
     Q01: What is REDIS?
     A01: Redis is ‘an open source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker.
