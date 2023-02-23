@@ -47,6 +47,9 @@ Elasticache is in-memory caching that can be used in front of any RDS database a
     d. Takes the load off of your databases
     e. Good if your database is particularly read-heavy and the data is not changing frequently
 
+Elasticache Benefits and Use Cases
+    a. 
+
     Q01: What is REDIS?
     A01: Redis is ‘an open source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker.
         Redis is a way to store key-value pairs, in a selection of different data types such as Lists, Sets, and Hashes. Redis keeps this data in memory, 
