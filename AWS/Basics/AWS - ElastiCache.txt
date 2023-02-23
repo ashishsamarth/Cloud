@@ -43,6 +43,8 @@ Elasticache is in-memory caching that can be used in front of any RDS database a
     a. Elasticache is in-memory cache in the cloud
     b. Imporves performance of web applications, allowing you to retrieve information from fast in-memory caches rather than slower disk-based databases
     c. Sits between your application and the database
+        E.g. an application that frequently requesting specific product information for your best selling products
+    d. 
 
     Q01: What is REDIS?
     A01: Redis is ‘an open source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker.
