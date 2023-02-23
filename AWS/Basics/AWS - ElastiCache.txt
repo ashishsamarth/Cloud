@@ -37,6 +37,9 @@ Once such example is:
     The use will be able to continue the activity without login in again for another instance, since application will be able retrieve the session data 
     from ElastiCache
 
+Additional Info from another source:
+
+Elasticache is in-memory caching that can be used in front of any RDS database and can be used in front of a DynamoDB database as well
 
     Q01: What is REDIS?
     A01: Redis is ‘an open source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker.
