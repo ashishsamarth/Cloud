@@ -5,3 +5,6 @@ CloudFormation is a service that allows you to
     a.  manage
     b.  configure
     c.  provision your AWS infrastructure as code.
+
+    Special Note:
+    a. Resources are defined using a CloudFormation template.
