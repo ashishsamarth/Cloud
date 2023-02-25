@@ -21,4 +21,4 @@ Benefits of CloudFormation:
 
 CloudFormation Template:
     a.  YAML or JSON template used to describe the endstate of infrastructure you are either provisioning or changing.
-    
+    b.  After creating the template, you upload it to CloudFormation using S3.
