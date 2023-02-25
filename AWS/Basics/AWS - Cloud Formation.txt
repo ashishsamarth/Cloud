@@ -15,3 +15,4 @@ Benefits of CloudFormation:
     a. Infrastructure is provisioned consistently, with fewer mistakes
     b. Less time and effort than configuring things manually
     c. You can version control and peer review your templates
+    d. Free to use (charged for what you create)
