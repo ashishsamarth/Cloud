@@ -18,3 +18,7 @@ Benefits of CloudFormation:
     d. Free to use (charged for what you create)
     e. Can be used to manage updates and dependencies
     f. Can be used to rollback and delete the entire stack as well.
+
+CloudFormation Template:
+    a.  YAML or JSON template used to describe the endstate of infrastructure you are either provisioning or changing.
+    
