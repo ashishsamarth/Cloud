@@ -17,3 +17,4 @@ Benefits of CloudFormation:
     c. You can version control and peer review your templates
     d. Free to use (charged for what you create)
     e. Can be used to manage updates and dependencies
+    f. Can be used to rollback and delete the entire stack as well.
