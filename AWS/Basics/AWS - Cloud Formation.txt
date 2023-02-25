@@ -8,3 +8,4 @@ CloudFormation is a service that allows you to
 
     Special Note:
     a. Resources are defined using a CloudFormation template.
+    b. CloudFormation interprets the template and makes the appropriate API calls to create the resources you have defined
