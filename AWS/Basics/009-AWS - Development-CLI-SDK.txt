@@ -69,8 +69,8 @@ s3: cp  :   The cp command simply copies the data to and from S3 buckets. It can
     *******************************************************************************************************************************************************
 
     SCN#03  :   Copy a directory (having multiple files) to a S3 Bucket in a sub-directory
-    Command :   s3 cp my_multi_upload s3://samarth-ashish-aws-developer-021223/my_multi_upload --recursive
-    Syntax  :   s3 cp <local_folder_name_to_be_uploaded> s3://<bucket_name>/<new_folder_name> --recursive
+    Command :   aws s3 cp my_multi_upload s3://samarth-ashish-aws-developer-021223/my_multi_upload --recursive
+    Syntax  :   aws s3 cp <local_folder_name_to_be_uploaded> s3://<bucket_name>/<new_folder_name> --recursive
 
     /*
     C:\Users\samarth\Downloads>aws s3 cp my_multi_upload s3://samarth-ashish-aws-developer-021223/my_multi_upload --recursive
@@ -722,7 +722,7 @@ Exponential Backoff:    Exponential backoff is an algorithm that uses feedback t
 
     *******************************************************************************************************************************************************
     SCN#01  :   When to use Exponential Backoff (any AWS service)
-    Response:   If you get 'ThrottlineException' intermittently then you should use Exponential BackOff.
+    Response:   If you get 'ThrottlingException' intermittently then you should use Exponential BackOff.
         If you are using AWS SDK, then the retry mechanism is already included in the AWS SDK API calls. However if you are using AWS API then you must 
         implement the exponential backoff
 
@@ -748,7 +748,7 @@ Consider the Following Scenario:
 
 An application deployed on an EC2 isntance is using environment variables with credentials from an IAM user to call the S3 API
 The IAM user has S3FullAccess permissions.
-The application only uses one S3 bucket, so according to best practives:
+The application only uses one S3 bucket, so according to best practices:
     a.  An IAM Role & EC2 instance profile was created for the EC2 instance
     b.  The role was assigned the minimum permissions to access that one S3 bucket
 
