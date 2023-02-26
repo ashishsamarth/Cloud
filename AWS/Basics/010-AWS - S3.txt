@@ -2,7 +2,7 @@
 AWS - S3 : SimpleStorageService
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-AWS S3: It advertised as the infinitely scaling storage, hence we do not define its size while provisioning it (unlink EBS or EFS). It allows the users to 
+AWS S3: Its advertised as the infinitely scaling storage, hence we do not define its size while provisioning it (unlink EBS or EFS). It allows the users to 
     store objects (files) in 'buckets' (directories).
     a.  Buckets MUST have a globally-unique-name
     b.  Buckets are defined at the regional level
@@ -212,9 +212,9 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
     Special Note: For both uploading and downloading the data, the client side data keys must be passed in to the header
 
     Q13: Explain Client Side Encryption?
-    A13: For client side encryption, the object is encryption before its being uploaded to the S3 bucket. In this encryption scheme, clients 
+    A13: For client side encryption, the object is encrypted before its being uploaded to the S3 bucket. In this encryption scheme, clients 
         MUST encrypt the object themselves before sending to S3, and also MUST decrypt data themselves when retrieving data from S3.
-        A client library, such as Amazon S3 encryption client can be used to encryption / decryption. The customer manages the keys and the 
+        A client library, such as Amazon S3 encryption client can be used for encryption / decryption. The customer manages the keys and the 
         encryption cycle.
         Here's the file:
 
@@ -229,11 +229,11 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
     |----------------------------------------------------------------|    
 
     Q14: Apart from the object encryption schemes, how else can we encrypt the objects?
-    A14: Rather than selecting the encryption scheme for each object while its being upload, we can also set a 'DEFAULT' encryption scheme 
+    A14: Rather than selecting the encryption scheme for each object while its being uploaded, we can also set a 'DEFAULT' encryption scheme 
         at the BUCKET Level, so that every time an object is being uploaded, it will have the default encryption scheme attached to it.
     
     Q15: Explain AWS - S3 Security?
-    A15: AWS S3 has two types of security
+    A15: AWS S3 has following types of security
         a.  User Based:     IAM Policies: Identify which api calls should be allowed for a specific user from IAM console.
         b.  Resource Based:
             1.  Bucket Policies:    Bucket wide rules from the S3 console, which allows cross account access.
@@ -373,7 +373,7 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
         Then the web-browser, requests an allowed method (for e.g. GET to Host2) and Host2 responds back with the resource
         
         Another Example:
-        We have two S3 buckets, which Static Website Hosting enabled, the first S3 bucket, only have the index.html and the error.html
+        We have two S3 buckets, with Static Website Hosting enabled, the first S3 bucket, only have the index.html and the error.html
         While the 2nd S3 bucket, has the assets. In this case, the web-browser will talk to the first S3 bucket, since it has the index.html.
         and then it will talk to the 2nd S3 bucket which has the assets that can be returned back.
         In this case, the 2nd S3 bucket is the Cross-Origin, and if the web-browser is to get the requested resource, the 'Cross-Origin' 
@@ -458,7 +458,7 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
         
         Objects with DELETE marker are not replicated by default, but can be enabled.
         Their is no 'Chaining of Replication'
-            : If bucket 1 has replication into bucket 2, which has replication ino bucket 3. then objects created in bucket 1 are not replicated to bucket 3
+            : If bucket 1 has replication into bucket 2, which has replication into bucket 3. then objects created in bucket 1 are not replicated to bucket 3
 
     Q22: How to enable S3 replication?
     A22: For S3 replication to be enabled, the pre-requisite it to have 'Versioning' Enabled on both the source bucket and the target bucket.
@@ -499,7 +499,7 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
         &X-Amz-SignedHeaders=host&X-Amz-Signature=f14608bbf3e1f9f8d215eb5b439b87e167b1055bcd7a45c13a33debd3db1be96
         */
 
-        S3 pre-signed urls ca be generated using CLI or SDK.
+        S3 pre-signed urls can be generated using CLI or SDK.
             For Downloads, it can be easily generated using the CLI
             For Uploads, it can be easily generated using the SDK
         
@@ -595,11 +595,9 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
 
     Q26: Explain S3 - KMS Limitation?
     A26: If you use SSE-KMS, you may be impacted by KMS Limits
-        Here's the explanation: When you upload ab object, S3 calls the 'GenerateDataKey' KMS API, when you download it, it call the Decrypt API. Thesse calls gets 
+        Here's the explanation: When you upload an object, S3 calls the 'GenerateDataKey' KMS API, when you download it, it call the Decrypt API. These calls gets 
         counted against the KMS quota per second (it can be 5500 or 10000 or 300000 requests per second based on the region). This may eventually limit the performance 
         if your S3 objects are in the high read / write application.
-
-        Note: As of today, you cannot request a quota increase for KMS
     
     Q27: How to enhance S3 performance?
     A27: These are the following ways to enhance S3 performance
@@ -607,14 +605,14 @@ AWS S3: It advertised as the infinitely scaling storage, hence we do not define 
             and are a MUST for files > 5GB. 'Parallelization' helps to speed up the transfer, and S3 is smart enough to rejoin these small parts and create the same file again.
 
         b.  S3 Transfer Acceleration: Suppose you want to make an object available in Australia, but you are in USA. So this mechanism allows you to upload the object 
-            using edge locations in USA (via public internet) and then AWS can upload the same object to S3 bucket in Austrailia using AWS private network. This process 
+            using edge locations in USA (via public internet) and then AWS can upload the same object to S3 bucket in Australia using AWS private network. This process 
             is called, S3-Transfer Acceleration
 
         c.  S3 Byte-Range Fetches: While the above two mechanism are good for upload, the following is better for downloads. When you want to download a big file from 
             S3 bucket, AWS runs something called as Parallelize GETs by requesting specific byte range. For e.g. if you install a docker image, which may be big, its starts 
             to download the image in multiple parts say for e.g. 10 files with each having a size of 10 mb each and it also shows the progress bar). These Parallelize GETs
             behave the same way and asks for multiple parts with each part for a specific range(0-10, 11-20, 21-30 etc). This mechanism is very resilient to failure and save 
-            a lot of time and bandwidth. This is alao very useful, if you only want the file / object header before the actual file, so in that case you can only request the 
+            a lot of time and bandwidth. This is also very useful, if you only want the file / object header before the actual file, so in that case you can only request the 
             header information (which may be first 50 bytes of the file), rather than downloading the entire file.
     
     Q28: Explain S3-Select / Glacier-Select?
