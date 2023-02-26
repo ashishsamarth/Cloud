@@ -2,8 +2,8 @@
 Amazon RDS (Relational Database Service)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 RDS stands for Relational Database Service.
-Its a managed DB service for DB use SQL as a query Language.
-It allows you to create databases in the cloud that are managed by AWS:
+Its a managed DB service for DB and uses SQL as a query Language.
+It allows you to create databases in the cloud that are managed by AWS, following DBs are supported:
     a.  Postgres
     b.  MySQL
     c.  MariaDB
@@ -11,7 +11,7 @@ It allows you to create databases in the cloud that are managed by AWS:
     e.  Microsoft SQL Server
     f.  Aurora (AWS Proprietry Database)
 
-Advantage over using RDS versus deploying DB on EC2
+Advantage of using RDS versus deploying DB on EC2
 RDS is a managed service
     a.  Automated Provisioning, OS patching
     b.  Continuous backup and restore to specific timestamp (Point in time restore)
@@ -29,7 +29,7 @@ RDS Backups:
     b.  Automated Backups:
         1.  Daily Full backup of the database (during the maintenance window)
         2.  Transaction Logs are backed-up by RDS every 5 minutes
-        3.  => ability to restore at any point in time (from oldest backup to 5 mins ago)
+        3.  Ability to restore at any point in time (from oldest backup to 5 mins ago)
         4.  7 Day retention (can be increased to 35 days)
     c.  DB Snapshots.
         1.  DB snapshots are manually triggered by the user
@@ -59,7 +59,7 @@ RDS: Storage Auto Scaling
         b.  Read Replicas can be created - Within AZ, or Across AZs or Across Regions.
         c.  Replication is ASYNC, so reads are eventually consistent
         d.  Replicas CAN be promoted to their own Database, and then they will follow their own lifecycle.
-        e.  Applications must update the connection string to leveragee read replicas.
+        e.  Applications must update the connection string to leverage read replicas.
 
         USECASE:
             Suppose you have a production database, that is operating under normal load. Now for some analytics or reporting tasks, you need access the 
@@ -97,7 +97,7 @@ RDS: Storage Auto Scaling
         Answer              : YES
     
     Q04: How to convert a RDS-Single AZ to RDS-Multi AZ?
-    A04: To conver a RDS-Single AZ to RDS-Multi AZ, we just need to modify the database and convert it.
+    A04: To convert a RDS-Single AZ to RDS-Multi AZ, we just need to modify the database and convert it.
         a.  Their is no downtime to convert RDS from single-AZ to multi-AZ, since we dont need to stop the DB.
         b.  When you convert a single-AZ to multi-AZ:
             1.  A snapshot is taken from the Master DB
@@ -142,7 +142,7 @@ RDS: Storage Auto Scaling
         --------------------                      --------------------                      -------------------
 
         If an un-authorized person accesses encrypted data but does not have the decryption key, the intruder must defeat the encryption to 
-        decipher the data. This process is significantly more complex and resource-consuming that accessing the unencrypted data one a HDD.
+        decipher the data. This process is significantly more complex and resource-consuming than accessing the unencrypted data on a HDD.
 
         In most cases, at rest encryption relies on symmetric cryptography. The same key encrypts and decrypts the data, unlike with assymetric 
         encryption in which one key scrambles data (public key) and the other deciphers file (private-key). Security teams typically choose 
