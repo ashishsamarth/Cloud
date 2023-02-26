@@ -23,14 +23,31 @@ IAM: Identity & Access Management
     h.  Integrates with many different AWS services
     j.  Supports PCI DSS Compliance, for any applications associated with the payment card industry.
 
+    IAM Guidelines & Best Practices
+    a.  Dont Use the root account except for AWS account setup
+    b.  One physical user = one AWS user
+    c.  Assign users to groups and assign permissions to group
+    d.  Create a strong password policy
+    e.  Use and enforce the use of MFA
+    f.  Create and use Roles for giving permissions for AWS services
+    g.  Use Access Keys for Programmatic Access (CLI / SDK)
+    h.  Audit permission of your account with the IAM credentials report
+    i.  Never share IAM users and Access keys.
 
-    IAM Terms to Know
 
-    a.  Users: End Users (think people).
-    b.  Groups: A collection of users under one set of permissions.
-    c.  Roles: Used to assign a set of permissions to AWS resources. For example, you might create a role that provides S3 access to an EC2 instance.
-    d.  Policies: A document that defines one (or more) permissions. Policies can be attached to either a User, a Group, or a Role. Once attached, a policy 
-            will grant to the assignee the permissions associated with that policy.
+    IAM Summary:
+    a.  USERS       :   Mapped to a physical user, has a password for AWS console   (think people).
+    b.  GROUPS      :   Contains Users only (A collection of users under one set of permissions.)
+    c.  POLICIES    :   A JSON document that outlines permissions for users or groups
+                        Policies can be attached to either a User, a Group, or a Role. Once attached, a policy will grant to the assignee the permissions 
+                        associated with that policy
+
+    d.  ROLES       :   For EC2 instances or AWS services   (Used to assign a set of permissions to AWS resources)
+    e.  SECURITY    :   MFA + Password Policy
+    f.  ACCESS KEYS :   Access AWS using the CLI or SDK
+    g.  Audit       :   IAM Credentials and IAM Access Advisor
+
+    Note:   Maximum Policies that can be associate with a USER Group is : 10
 
 
     Q01: When creating a USER, how many types of 'Access Types' can be provisioned?
@@ -47,7 +64,7 @@ IAM: Identity & Access Management
     
     Q03: What are tags in AWS?
     A03: Tags are way to organize and categorize resources in AWS.
-        Foe e.g.: Their are mulitple EC2 instances in your account, and you want to identify them based on Team names and/or Project Names to quickly 
+        For e.g.: Their are mulitple EC2 instances in your account, and you want to identify them based on Team names and/or Project Names to quickly 
         identify which EC2 instance is being used for what. Tagging also helps to identify the cost accumulated by the resources which is important for 
         Billing & Thresholds.
     
@@ -92,7 +109,7 @@ IAM: Identity & Access Management
     
     Q09: What is the advantage of using an MFA?
     A09: AWS recommends to protect the root and iam users by using MFA (multi-factor-authentication)
-        The main benefit of using an MFA is - Even if a password is stolen or hacked, the account will not be compromised.
+        The main benefit of using a MFA is - Even if a password is stolen or hacked, the account will not be compromised.
         Following are the supported devices for MFA in AWS:
         a.  Virtual MFA devices {e.g. Google Authenticator (works on 1 device at a time) or Authy(works on multiple devices at the same time)}
         b.  Universal 2nd Factor (U2F) security key (e.g.- Yubikey)
@@ -143,7 +160,7 @@ IAM: Identity & Access Management
         a.  IAM FullAccess  :   To be able to see the roles and perform actions on individual scope
         b.  IAM UserSSHKeys :   To be able to generate their own individual access keys
 
-        Once the iam user has these roles, then 'Security Crendentials' tabe under 'Users' will show up without any errors
+        Once the iam user has these roles, then 'Security Crendentials' tab under 'Users' will show up without any errors
         and the 'Create aceess key' option will be enabled.
     
     Q13: How to create an access key for an IAM user to be used with CLI or SDK?
@@ -177,7 +194,7 @@ IAM: Identity & Access Management
     Q15: What are IAM roles for services?
     A15: So far, we have dealt with a username accessed by a physical person to be able to perform certain checks or tasks. The next category is to 
     have applications talk to each other (similar to one microservice talking to another). For this to happen, the service which is trying to perform 
-    an action on another service must have the permission to do. This is managed by IAM roles for the service. 
+    an action on another service must have the permission to do so. This is managed by IAM roles for the service (or ServiceRoles). 
     Following are few examples:
         a.  EC2 Instance roles
         b.  Lambda Function roles
@@ -206,7 +223,7 @@ IAM: Identity & Access Management
     A17: Their are two security tools
         a.  IAM Credentials Report
             This is at the account-level
-            Its a report that lists all your account under and the status of their various credentials
+            Its a report that lists all accounts under your account(root) and the status of their various credentials
         
         b.  IAM Access Advisor
             This is at the user-level
@@ -247,35 +264,11 @@ IAM: Identity & Access Management
         a.  Navigate to the IAM dashboard by simply searching IAM on the search bar
         b.  On the IAM dashboard (Left vertical bar), look for 'Users'
         c.  Click on users and then click on 'Access Advisor' on the page.
-        d.  Access-Advisor tells you  - 'Which particular service was accessed when based on what policy'
+        d.  Access-Advisor tells you  - 'Which particular service was accessed when and based on what policy'
         e.g.
             Service         Policies Granting Permissions       Last Accessed
-            AmazonEC2       AmazonEC2FillAccess and 1 More      Today
+            AmazonEC2       AmazonEC2FullAccess and 1 More      Today
             AWS Cloudshell  AWSCloudShellFullAccess             Today
-
-
-    IAM Guidelines & Best Practices
-    a.  Dont Use the root account except for AWS account setup
-    b.  One physical user = one AWS user
-    c.  Assign users to groups and assign permissions to group
-    d.  Create a strong password policy
-    e.  Use and enforce the use of MFA
-    f.  Create and use Roles for giving permissions for AWS services
-    g.  Use Access Keys for Programmatic Access (CLI / SDK)
-    h.  Audit permission of your account with the IAM credentials report
-    i.  Never share IAM users and Access keys.
-
-
-    IAM Summary:
-    a.  USERS       :   Mapped to a physical user, has a password for AWS console
-    b.  GROUPS      :   Contains Users only
-    c.  POLICIES    :   JSON document that outlines permissions for users or groups
-    d.  ROLES       :   For EC2 instances or AWS services
-    e.  SECURITY    :   MFA + Password Policy
-    f.  ACCESS KEYS :   Access AWS using the CLI or SDK
-    g.  Audit       :   IAM Credentials and IAM Access Advisor
-
-    Note:   Maximum Policies that can be associate with a USER Group is : 10
 
     Q20: How many types of IAM policies are available in AWS?
     A20: Identity access management (IAM) is used to define user access permissions with in AWS.
