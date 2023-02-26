@@ -273,16 +273,17 @@ IAM: Identity & Access Management
     Q20: How many types of IAM policies are available in AWS?
     A20: Identity access management (IAM) is used to define user access permissions with in AWS.
         There are 3 different types of IAM policies available.
-        a.  Managed Policies
+        a.  Managed Policies (also called as AWS Managed Policies)
         b.  Customer Managed Policies
         c.  Inline Policies
 
     Q21: What are AWS Managed Policies?
-    A21: A Managed Policy is an IAM policy which is created and administered by AWS. AWS provided aMnaged Policies for common use cases based on job function 
+    A21: An AWS Managed Policy is an IAM policy which is created and administered by AWS. AWS provided managed Policies for common use cases based on job function 
         (e.g. AmazonDynamoDBFullAccess, AWSCodeCommitPowerUser, AmazonEC2ReadOnlyAccess, etc.)
         These AWS-provided policies allow you to assign appropriate permissions to your users, groups, and roles without having to write the policy yourself.
         A single Managed Policy can be attached to multiple users, groups, or roles within the same AWS account and across different accounts.
-        You cannot change the permissions defined in an AWS Managed Policy.
+        
+        Important Note: You cannot change the permissions defined in an AWS Managed Policy.
     
     Q22: What are Customer Managed Policies?
     A22: A Customer Managed Policy is a standalone policy that you create and administer inside your own AWS account. You can attach this policy to multiple users, 
@@ -300,7 +301,7 @@ IAM: Identity & Access Management
     
     Q24: What is Policy Simulator?
     A24: Policy Simulator is a web-interface (available at: https://policysim.aws.amazon.com) that allows you to test policy against specific service and Action
-        If you building your own inline policy, its always better to use the policy simulator to test your policy and make changes to get desired results.
+        If you are building your own inline policy, its always better to use the policy simulator to test your policy and make changes to get desired results.
 
         Another way to test a policy is via the CLI using the --dry-run flag
         a. --dry-run lets you test an action, it will fail if you do not have the correct permissions.
@@ -308,7 +309,7 @@ IAM: Identity & Access Management
 
 IAM Exam Tips:
 
-a.  IAM is universal; It does not apply to regions at this time.
+a.  IAM is Global; It does not apply to regions at this time.
 b.  A Root Account is simply the account created when first setting up an AWS account. It has complete Admin access and should not be used for day-to-day 
     activities.
 c.  When first created, new users have *NO permissions. Permissions must be explicitly given via a group or policy.
