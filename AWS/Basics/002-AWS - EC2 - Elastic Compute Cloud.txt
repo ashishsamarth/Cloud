@@ -1,7 +1,7 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 AWS-EC2: Elastic Compute Cloud
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-EC2 is the most popular offering of AWS's offering
+EC2 is the most popular offering of AWS's offerings
 EC2 = Elastic Compute Cloud is an IaaS (Infrastructure as a Service)
 
 It has the following capabilities
@@ -38,16 +38,17 @@ EC2 User Data
         a.  General Purpose (GP)
         b.  Compute Optimized
         c.  Memory Optimized
-        d.  Accelerated Computing
+        d.  Linux Accelerated Computing
         e.  Storage Optimized
-        f.  Instance Features
-        g.  Measuring Instance Performance
+        f.  Micro Instance
+
     Special Note: Site to compare all instances : https://www.ec2instances.info
+    Complete List : https://www.amazonaws.cn/en/ec2/instance-types/
     
     Q02: How to read the naming convention of an EC2 instance?
     A02: For example, the EC2 instance you are working with is m5.2xlarge, here's how to read it
-        a.  m:  Instance Class
-        b.  5:  Generation (AWS improves the generation over time)
+        a.  m:          Instance Class
+        b.  5:          Generation (AWS improves the generation over time)
         c.  2xlarge:    Size with in the instance class (more memory , more CPU)
     
     Q03: Explain the characteristics of EC2 Instance type: General Purpose
@@ -97,7 +98,7 @@ EC2 User Data
         a.  A single security group can be attached to multiple instances. Also, one instance can have many security groups attached to it.
         b.  A security group is locked to a region-and-VPC combination. A security group created in VPN01ABC in US-EAST-2 will not be available in a 
             different Region-VPC combination
-        c.  A security group resides 'outside' the EC2 instance, if the traffic is blocked, and EC2 instance will not even see it.
+        c.  A security group resides 'outside' the EC2 instance, if the traffic is blocked, the EC2 instance will not even see it.
         d.  It's good to maintain one separate security group for SSH Access
         e.  All inbound traffic is 'BLOCKED' by default
         f.  All outbound traffic is 'AUTHORIZED' by default
@@ -106,14 +107,14 @@ EC2 User Data
         a.  If your application is not accessible (TIME OUT), then its a 'security group' issue
         b.  If your application gives a 'connection refused' error, then its an application error or its not launched.
 
-    Q08: What is an security group referencing in AWS?
+    Q08: What is security group referencing in AWS?
     A08: Assume the following scenario:
         a.  You have an EC2 instance with Security Group A attached to it
         b.  This security group A basically authorizes inbound traffic which are part of security group B and C
         c.  Now if you have another EC2 instance which has security group B attached to it, then this will enable the 2nd EC2 instance to be able 
             to connect to the first EC2 instance on the specific port (allowed by the inbound rule in security group A)
         d.  Now if you have a third EC2 instance which has security group C attached to it, then this will enable the 3rd EC2 instance to be able 
-            to connect to the first ES2 instance on the specific port (allowed by the inbound rule in security group A)
+            to connect to the first EC2 instance on the specific port (allowed by the inbound rule in security group A)
         e.  This internal communication between EC2 instances is simply possible because the Security Group A authorized the inbound traffic from 
             security group B and C
     
@@ -135,14 +136,14 @@ EC2 User Data
         e.  Once the other users are removed, only the actual user will have access to the .ppk file.
         f.  This process is similar to chmod 400 filename in Mac or Linux.
     
-    Q11: What is EC2 Instane connect?
+    Q11: What is EC2 Instance connect?
     A11: Once the EC2 instance is created, 'Instance Connect' feature allows you to connect to this instance like a putty session on a 
         web-broswer. For an IAM user to be able to use 'Instance Connect' feature, the IAM user must have 'EC2InstanceConnect' policy 
         attached to the user either as an 'Inline Policy' or via a group, which the IAM user is a part of.
     
     Q12: Do you need to upload your .ppk file to connect to your EC2 instance when using 'Instance Connect'?
     A12: No, we do not need to upload our .ppk file to connect to our EC2 instance using 'Instance Connect'
-        AWS, creates a temporary .ppk file to connect to your EC2 instance, when the connection initiated via 'Instance Connect'
+        AWS, creates a temporary .ppk file to connect to your EC2 instance, when the connection is initiated via 'Instance Connect'
     
     Q13: What will happen, if you remove the 'inbound rule' for port 22 and try to connect to your EC2 instance, via 'Instance Connect'?
     A13: We will not be able to connect to our EC2 instance, via any method utilized SSH (Instance Connect, Putty, Command Promprt, Powershell).
@@ -173,7 +174,7 @@ EC2 User Data
         To use IAM roles for EC2 instance to run aws-cli commands, perform the following
         a.  Go to your EC2 dashboard and click on the instance name
         b.  On the bottom half section of the page, click on 'Security'
-        c.  Under the 'Security Details' section, you will 'IAM Role' but no permission policy attached to it.
+        c.  Under the 'Security Details' section, you will see 'IAM Role' but no permission policy attached to it.
         d.  Now on the top half of the page, you will see 'Actions'
         e.  Click on 'Actions' then, 'Security' then 'Modify IAM Role'
         f.  This will let you
