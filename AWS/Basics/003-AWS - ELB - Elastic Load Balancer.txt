@@ -32,7 +32,7 @@ ELB : Elastic Load Balancer
         c.  AWS provides only a few configuration knobs to the user.
     
     Special Notes:
-        1.  Its costs less set up your own load balancer but its lot of effort to set it up
+        1.  Its costs less to set up your own load balancer but its lot of effort to set it up
         2.  ELB is integrated with many AWS offerings / Services
     
     Q04: Why are Health Checks important?
@@ -54,7 +54,7 @@ ELB : Elastic Load Balancer
         Elastic Load Balancer can be set up as internal (private) ELB or external (public) ELB
     
     Q06: Explain Load Balancer Security Group?
-    A06: Following is the explaination
+    A06: Following is the explanation
 
                 (HTTPS/ HTTPS from anywhere)        (HTTP restricted to/from ELB)
         USERS   ----------------------------->  ELB ----------------------------->  EC2
@@ -77,12 +77,12 @@ ELB : Elastic Load Balancer
                 InstanceProtocol    :   HTTP
                 InstancePort        :   80
 
-        b.  The EC2 instance is only exposed to the load balancer and hence can accespt incoming traffic at
+        c.  The EC2 instance is only exposed to the load balancer and hence can accept incoming traffic at
             Port 80 over HTTP only from the LOAD BALANCER SECURITY GROUP
     
     Q07: What is a Classic Load Balancer(v1)?
     A07: Classic Load Balancer are generation 1 load balancers and support HTTP, HTTPS and TCP protocols.
-        TCP is a layer4, HTTP and HTTPS are layer7 protocols.
+        TCP is a layer4, while HTTP and HTTPS are layer7 protocols.
         a.  Health checks are TCP or HTTP based.
         b.  Classic LB provide you with a fixed hostname: e.g; : xxx.region.elb.amazonaws.com
     
@@ -121,7 +121,7 @@ ELB : Elastic Load Balancer
     A10: Application load balancers operate at layer 7 (HTTP)
         a.  Load Balancing to multiple HTTP applications across machines (called as Target Groups)
         b.  Load Balancing to multiple applications on the same machine (e.g. Containers)
-        c.  Support for HTT/2 and WebSocket
+        c.  Support for HTTP/2 and WebSocket
         d.  Supports redirects (from HTTP to HTTPS).
         e.  Supports routing based on path in URL (example.com/users & example.com/posts)
         f.  Supports routing based on hostname in URL (one.example.com & other.example.com)
@@ -237,7 +237,7 @@ ELB : Elastic Load Balancer
         d.  Supported protocols (TCP, TLS, UDP)
     
     Special Note:
-        1.  NlB has ONE STATIC IP per AZ, and supports assigning Elastic IP (Helpful for whitelisting specific IP)
+        1.  NLB has ONE STATIC IP per AZ, and supports assigning Elastic IP (Helpful for whitelisting specific IP)
         2.  NLBs are used for extreme performance, TCP or UDP traffic.
         3.  Not included in the Free-Tier
     
@@ -296,25 +296,25 @@ ELB : Elastic Load Balancer
         Even if the client is sending equal (50%) traffic to both the LBs, each LB will distribute even (10%) traffic each EC2 instance.
 
         Without Cross Zone load balacing:
-        With client sending equal(50%) traffic to both the LBs, LB1, will eventually end up 25% of traffic to each EC2 in AZ1, while LB2 
+        With client sending equal(50%) traffic to both the LBs, LB1, will eventually end up sending 25% of traffic to each EC2 in AZ1, while LB2 
         will send 6.25% traffic to each instance in AZ2
 
-        Special Note:  Cross Zone Load Balacing is Enabled on Disabled by default, depending on the type of the LB.
+        Special Note:  Cross Zone Load Balacing is Enabled or Disabled by default, depending on the type of the LB.
         a.  CLB:
             1.  If the CLB is created from the management console, 'Cross Zone Load Balancing' is enabled by default.
             2.  If the CLB is creted by 'CLI/API', 'Cross Zone Load Balancing' is disabled by default.
             3.  No Additional Charges are incurred between inter AZ data {when Cross Zone Load Balancing is enabled}
         
         b.  ALB:
-            1.  'Cross Zone Load Balacing' is always one and cannot be disabled.
+            1.  'Cross Zone Load Balacing' is always ON and cannot be disabled.
             2.  No Additional Charges are incurred between inter AZ data
         
         c.  NLB:
-            1.  'Cross Zone Load Balancing' is DISABLED be default, but can be 'Enabled'
+            1.  'Cross Zone Load Balancing' is DISABLED by default, but can be 'Enabled'
             2.  Additional charges are incurred for inter AZ data {when Cross Zone Load Balancing is enabled}
 
     Q17: Explain SSL/TLS?
-    A17: An SSL certificate allows the traffic betweeb your clients and your load balancer to be encrypted in transit (in-flight encryption)
+    A17: An SSL certificate allows the traffic between your clients and your load balancer to be encrypted in transit (in-flight encryption)
         a.  SSL refers to the 'Secure Socket Layer', used to encrypt connections.
         b.  TLS refers to Transport Layer security, which is a newer version.
         
@@ -340,7 +340,7 @@ ELB : Elastic Load Balancer
 
 
     Q18. What is SNI (Server Name Indication)?
-    A18: SNI (Server Name Indication) solves the problem of loading multiple SSL certificates onto one web server (to server multiple websites)
+    A18: SNI (Server Name Indication) solves the problem of loading multiple SSL certificates onto one web server (to serve multiple websites)
         Its a newer protocol and requires the client to indicate the hostname of the target server in the initial SSL handshake
         The server will then find the correct certificate, or return the default one.
 
