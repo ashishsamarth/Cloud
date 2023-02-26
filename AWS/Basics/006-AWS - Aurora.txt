@@ -3,9 +3,9 @@ AWS - Aurora
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 a.  Aurora is a proprietary technology from AWS.
-b.  Protgres and MySQL are both supported as Aurora DB (meaning drivers will work as if Aurora was a Postgres or MySQL DB)
+b.  Postgres and MySQL are both supported as Aurora DB (meaning drivers will work as if Aurora was a Postgres or MySQL DB)
 c.  Aurora is 'AWS cloud optimized' and claims 5x performance improvement over MySQL on RDS, over 3x performance over Postgres on RDS.
-d.  Aurora storage automatically grows in increments of 10 GB, up to 64 GB so as a sysops, you dont have to continuously monitor it.
+d.  Aurora storage automatically grows in increments of 10 GB, up to 64 GB, so as a sysops, you dont have to continuously monitor it.
 e.  Aurora can have 15 replicas while MySQL has 5, and the replication process is faster (10ms replication lag)
 f.  Failover in Aurora is instantaneous, and its also High Availability native.
 g.  Aurora costs more than RDS (20% more), but is way more efficient than MySQL or Postgres on RDS.
@@ -50,7 +50,7 @@ FEATURES OF AURORA:
     Q02: What is a 'Writer Endpoint' in Aurora?
     A02: Writer Endpoint is a DNS based url, which is the connection point from the CLIENT to MASTER DB in AURORA DB. The reason to have this DNS based 
         URL is, since AURORA can failover the Master DB to any of the other REPLICAS, this DNS based url automatically points to the 'CURRENT MASTER'
-         at any given point in time, and the client does not need to scrable for a new endpoint to connect to Aurora
+         at any given point in time, and the client does not need to scramble for a new endpoint to connect to Aurora
     
     Q03: What is a 'Reader Endpoint' in Aurora?
     A03: 'Reader Endpoint' is a DNS based url, which is the connection point from the CLIENT to READ REPLICAS in Aurora DB. The reason to have this 
@@ -99,7 +99,7 @@ FEATURES OF AURORA:
         b.  One Writer & Multiple Readers - Parallel Query: Improves the performance of analytic queries by pushing processing down to the Aurora
                                             Storage layer. This is a good option for hybrid transactional / Analytic workloads.
         
-        c.  Multiple Writers:   Supports multiple writer instances connected to the same storage volume. This isa good option, when continuous 
+        c.  Multiple Writers:   Supports multiple writer instances connected to the same storage volume. This is a good option, when continuous 
                                 Writer availability is required.
         
         d.  Serverless: You specify the minimum and maximum amount of resources needed, and Aurora scales the capacity based on database load.
