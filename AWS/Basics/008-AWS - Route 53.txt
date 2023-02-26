@@ -19,7 +19,7 @@ Route 53 can use:
 Features:
     a.  Load Balancing [Through DNS : Also called client load balancing]
     b.  Health Checks [limited]
-    c.  Routing Policy: [simple; failover; geolocation; latency; weighted, multi value]
+    c.  Routing Policy: [simple; failover; geolocation; latency; weighted; multi value]
 
 Cost:
     $0.50 per month per hosted zone
@@ -59,7 +59,7 @@ Cost:
 
     Q06: What is DNS records - TTL (Time to Live)?
     A06: When you look for a URL address based on a hostname, the browser talks to the DNS asking for the IP Address to connect to. Since this is a 'Hostname'
-         to 'IP' request, it eventualy 'A' record. When the DNS responds with the 'A' record, it sends the browser two items, the first is the 'IP' address 
+         to 'IP' request, its eventually 'A' record. When the DNS responds with the 'A' record, it sends the browser two items, the first is the 'IP' address 
          of the host and another parameter is 'TTL' (Time to Live), this TTL has an expiration value (in seconds/ mins/ hours / a day). This means, that the 
          browser can save the IP address in its cache for the TTL value. Now if another tab on the browser, looks for the same 'Hostname' it will not call the
          DNS, it will look inside its own cache first (if TTL has not expired) to get the 'IP'.
@@ -85,7 +85,7 @@ Cost:
             What is a Root Domain       :   'ashishsamarth.com' is an example.
         
         b.  ALIAS: Alias is used when you want to point an AWS resource
-            Consider and example where you want to point your hostname to an AWS resource 
+            Consider an example where you want to point your hostname to an AWS resource 
             ('apex.ashishsamarth.com' --> 'Ib1-1234.us-east-2.elb.amazonaws.com' )
 
             Advantage with ALIAS are: 
@@ -105,7 +105,7 @@ Cost:
     
     Q09: Explain Route 53: Weighted Routing Policy?
     A09: Weighted Routing Policy, controls the '%' of the requests that go to a specific endpoint. Consider the following example:
-        Suppose you have Route 53 and you have to created a weighted policy, to redirect traffic to 3 EC2 instances, but since all the EC2 instances are 
+        Suppose you have Route 53 and you have created a weighted policy, to redirect traffic to 3 EC2 instances, but since all the EC2 instances are 
         not of the same specification, you want to balance the routing based on their specifications.
             Higher specification instances gets more traffic, while lower specification instances gets less traffic. To deal with this scenario, 
         weighted routing policy can help to send 70% of traffic to the 1st EC2 instance, 20% traffic to 2nd EC2 instance and 10% traffic to 3rd EC2 
@@ -122,7 +122,7 @@ Cost:
         You have to set up 3 (1 for 70% and target EC2, another for 20% and target EC2 and so on) different 'A' records in Route 53 with Weighted Policy.
     
     Q10: Explain Route 53: Latency Routing Policy?
-    A10: Latency Routing Policy, is the one of the most useful routing policy, because ir re-directs the user to the server that has the least latency 
+    A10: Latency Routing Policy, is the one of the most useful routing policy, because it re-directs the user to the server that has the least latency 
         close to us. This policy is very helpful when, Latency of Users is a priority. 
 
         Special Note:
@@ -130,7 +130,7 @@ Cost:
             e.g.:   Users in Germany may be re-directed to the US Region (if thats the lowest latency)
     
     Q11: Explain HEALTH CHECKS in Route 53?
-    A11: HEALTH CHECK in Route 53 is similar to ELB, where if an instance is deemed unhealth, Route 53 will not send any traffic to that particular instance.
+    A11: HEALTH CHECK in Route 53 is similar to ELB, where if an instance is deemed unhealthy, Route 53 will not send any traffic to that particular instance.
         Following is the Frequency of HEALTH CHECKS in Route 53:
         a.  An instance is deemed UN-Healthy if it fails 'x' number of health checks in a row, by default x=3
         b.  An instance is deemed Healthy if it passes 'x' number of health checks in a row, by default x=3
@@ -170,7 +170,7 @@ Cost:
         Atlanta region and the remaining 1 will be routed to California region.
 
         Resources Can be:
-        1.  AWS resources (speficy the AWS region
+        1.  AWS resources (specify the AWS region)
         2.  Non-AWS resource (On-Premise DC: Specify Latitude and Longitude values)
     
     Q15: Explain Route 53: Multi Value Routing Policy?
