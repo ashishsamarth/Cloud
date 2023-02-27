@@ -12,7 +12,7 @@ AWS-EBS: Elastic Block Store
         c.  EBS volumes are bound to a specific availability zone, that means once created in a specific availability zone it cannot be utilized in 
             another zone
 
-        Free-Tier: 30 GB of free EBS storage of type (General Purpose SSD) or magnetic per month
+        Free-Tier: 30 GB of free EBS storage of type (General Purpose SSD or magnetic) per month
 
         Special Notes:
             1.  Its a network drive, i.e. Not a Physical Drive
@@ -137,7 +137,7 @@ AWS-EBS: Elastic Block Store
         b.  EC2 Instance Store lose their storage if they are stopped (ephemeral) {More like RAM}
         c.  This is good for Buffer / Cache or temporary content.
         d.  Risk of Data Loss, if the hardware fails
-        e.  Back and Replication are Your responsibility
+        e.  Back up and Replication are Your responsibility
         f.  The instances usually start with 'i' in the naming conventions (e.g. i3.large, i3en.metal, i3.metal, i3.8xlarge)
 
     Q10: Explain the types of EBS Volumes?
