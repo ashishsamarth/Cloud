@@ -40,4 +40,5 @@ This also provides the following
         to the edge location, the edge location will 'cache' the response based on the configuration and return the response to the clients.
         The next time another client makes the same request, the edge location will first look into the cache before forwarding the request to the Origin
 
-        ![](https://d2908q01vomqb2.cloudfront.net/5b384ce32d8cdef02bc3a139d4cac0a22bb029e8/2022/07/15/CF-S3-active-active-geo-proximity-architecture-1024x636.png)
+        Here's the image:
+        https://d2908q01vomqb2.cloudfront.net/5b384ce32d8cdef02bc3a139d4cac0a22bb029e8/2022/07/15/CF-S3-active-active-geo-proximity-architecture-1024x636.png
