@@ -40,4 +40,4 @@ This also provides the following
         to the edge location, the edge location will 'cache' the response based on the configuration and return the response to the clients.
         The next time another client makes the same request, the edge location will first look into the cache before forwarding the request to the Origin
 
-        [[https://github.com/ashishsamarth/Cloud/wiki|https://github.com/ashishsamarth/Cloud/wiki/CloudFront---S3-As-an-Origin]]
+        [[https://github.com/ashishsamarth/Cloud/wiki/CloudFront---S3-As-an-Origin.png|CloudFront---S3-As-an-Origin]]
