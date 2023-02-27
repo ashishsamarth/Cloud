@@ -4,7 +4,7 @@ AWS-EFS: Elastic File System
 
     Q01: What is EFS?
     A01: EFS is Elastic File System.
-        a.  Its a Managed FNS (Network File System) that can be mounted to many EC2 instances in the same region.
+        a.  Its a Managed NFS (Network File System) that can be mounted to many EC2 instances in the same region.
         b.  EFS works with EC2 instances in multi-AZ.
         c.  Highly available, scalable, expensive (3 times of a gp2)
         d.  Works with 'Pay-per-use' model
