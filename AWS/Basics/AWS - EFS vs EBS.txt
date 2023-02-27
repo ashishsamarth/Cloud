@@ -13,7 +13,7 @@ EBS Volumes:
         b.  Restore the snapshot to another AZ
         c.  EBS backups use IO and you shouldn't run them while your application is handling a lot of traffic
     
-    Root EBS volumes of instances gets terminated by default (Due to Delete on Termination Attribute), if the ECT instance is terminated
+    Root EBS volumes of instances gets terminated by default (Due to Delete on Termination Attribute), if the EC2 instance is terminated
 
 
 EFS
