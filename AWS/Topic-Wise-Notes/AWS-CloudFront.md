@@ -18,6 +18,7 @@ This basically allows the content to be read from all around the world, improves
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 Q01: What are different CloudFront: Origins?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 A01: Following is the list
         a.  S3 Bucket:  CloudFront in front of S3 bucket (very common pattern)
             1.  For distributing files and caching them at the edge
@@ -30,7 +31,7 @@ A01: Following is the list
             2.  EC2 instance
             3.  S3 website (* Must enable the S3 bucket as a static S3 Website)
             4.  Any HTTP backend you want {For e.g.: It can be any HTTP backend even from your own premise}
------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
     Q02: Explain how CloudFront works?
     A02: We have a bunch of edge locations all around the globe and they are connected to an origin (can be any origins mentioned above) and the clients wants
