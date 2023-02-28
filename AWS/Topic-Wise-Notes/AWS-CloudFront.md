@@ -16,7 +16,6 @@ Say we have an S3 bucket in Australia, and a user in USA wants to access it. So 
 
 This basically allows the content to be read from all around the world, improves a lot on the latency and reduces the load on your S3 bucket.
 
------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q01: What are different CloudFront: Origins?
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 A01: Following is the list
