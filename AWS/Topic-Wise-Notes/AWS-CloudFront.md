@@ -46,7 +46,7 @@ Here's the link for public ip addresses of all edge locations:
     https://d7uri8nf7uskq.cloudfront.net/tools/list-cloudfront-ips
 
 Here's the image for S3 as an Origin:
-![](https://d2908q01vomqb2.cloudfront.net/5b384ce32d8cdef02bc3a139d4cac0a22bb029e8/2022/07/15/CF-S3-active-active-geo-proximity-architecture-1024x636.png)
+![!](https://d2908q01vomqb2.cloudfront.net/5b384ce32d8cdef02bc3a139d4cac0a22bb029e8/2022/07/15/CF-S3-active-active-geo-proximity-architecture-1024x636.png)
     
 Here's the image for ALB or EC2 as an Origin
-![](https://d2908q01vomqb2.cloudfront.net/5b384ce32d8cdef02bc3a139d4cac0a22bb029e8/2017/12/19/Picture2.jpg)
+![!](https://d2908q01vomqb2.cloudfront.net/5b384ce32d8cdef02bc3a139d4cac0a22bb029e8/2017/12/19/Picture2.jpg)
