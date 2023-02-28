@@ -55,8 +55,10 @@ Here's the image for ALB or EC2 as an Origin
 Q03: Explain CloudFront Geo Restriction?
 ----------------------------------------------------------------------------------------------------------------------------------------
     CloudFront also allows you to restrict who can access your distribution
-        a.  Whitelist: Allow your users to access your content only if they are in one of the countries on a list of approved countries
-        b.  Blacklist: Prevent your users rrom accessing your content if they are in one of the countries on a blacklist of banned countries
+        a.  Whitelist: 
+            Allow your users to access your content only if they are in one of the countries on a list of approved countries
+        b.  Blacklist: 
+            Prevent your users rrom accessing your content if they are in one of the countries on a blacklist of banned countries
         
         The 'country' is determined using a 3rd party Geo-IP Database.
         Use-Case: CopyRight laws to control access to content
@@ -94,20 +96,24 @@ Q05: How to create a S3 Bucket with CloudFront in the front?
         2.  For 'Origin Path' you can keep it empty, if you do not have sub-folders inthe bucket
         3.  For 'Origin ID' you can keep it as is, or modify it as well
         4.  For 'Restrict Bucket' select 'Yes'  
-            Note: This is the most important step, since it will enable access to the S3 bucket contents only via the CloudFront URL for external users.
+            Note: This is the most important step, since it will enable access to the S3 bucket contents only via the CloudFront URL 
+            for external users.
         5.  For Origin Access Identity (OAI), Select 'Create New Identity' since we dont have one for now.
         6.  For 'Grant Read Permissions on Bucket' you can select either of the following and then provide permissions
             i.  Yes : Update Bucket Policy
             ii. No  : I, will update Permissions
         7.  For Viewer Protocol Policy, select 'Redirect HTTP to HTTPS' so that you only force SSL connections to the cloudfront.
-        8.  For Allowed HTTP methods: If you want to only have the user 'Read' then select 'GET, HEAD' else select either of the following options
+        8.  For Allowed HTTP methods: If you want to only have the user 'Read' then select 'GET, HEAD' else select either of the 
+            following options
             i.  GET, HEAD, OPTIONS
             ii. GET, HEAD, OPTIONS, PUT, POST, PATCH, DELETE
         9.  Their are TTL (Time to Live) options as well, to ensure, how much time do you want the users to be able to read the S3 object.
         10. Go ahead and click on 'Create Distribution'
         11. The Distribution can take about 10 minutes to be created.
-    h.  On the left vertical panel, you can see 'Origin Access Identity' under security, which is resposible for S3 bucket being accessed only be CloudFront.
-    i.  If you go back to the "Permissions" of the S3 bucket, you can see the Bucket Policy has been modified and should look like the following
+    h.  On the left vertical panel, you can see 'Origin Access Identity' under security, which is resposible for S3 bucket being accessed 
+        only be CloudFront.
+    i.  If you go back to the "Permissions" of the S3 bucket, you can see the Bucket Policy has been modified and should look like 
+        the following
 
         {
             "Version": "2008-10-17"
@@ -171,18 +177,18 @@ The behaviour of CloudFront Caching is different for both Static and Dynamic Req
 
 ----------------------------------------------------------------------------------------------------------------------------------------
     a.  For Static Request:
-        Since the content requested is static, after the first retrieval of the content from S3, the content is cached in CloudFront Edge Location.
-        And all next request for the content are served directly from CloudFront Edge Location, maximizing the Cache hits, and not going to S3 any further
-        untill TTL expires.
+        Since the content requested is static, after the first retrieval of the content from S3, the content is cached in CloudFront 
+        Edge Location.And all next request for the content are served directly from CloudFront Edge Location, maximizing the Cache hits, 
+        and not going to S3 any further untill TTL expires.
 
 ![!](../Assets/CloudFront-Caching-Static-Request-Handling.jpg)            
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
     b.  For Dynamic Content:
-        CloudFront Edge Location Cache and cache the data based on the request headers from the client, if the data requested by the client does not match 
-        the data in cache, only then CloudFront will call the ALB + EC2 origin. Once the data is returned back from the origin, this data will be cached until 
-        TTL expires.
+        CloudFront Edge Location Cache and cache the data based on the request headers from the client, if the data requested by the 
+        client does not match the data in cache, only then CloudFront will call the ALB + EC2 origin. Once the data is returned back 
+        from the origin, this data will be cached until TTL expires.
 
 ![!](../Assets/CloudFront-Caching-Dynamic-Request-Handling.PNG)
 
