@@ -68,8 +68,8 @@ Q05: How to verify if the DNS record created in Route 53, actually works?
         a.  If the record set created was of type 'A', it means the record set will have an IPV4 address.
             1.  Simply search for the host on the browser and check on browser console logs to see the resolving IP address
                 for e.g.: myfirstrecord.ashishsamarth.com
-        b.  Another way to verify is to perform an nslookup / dig for the same host via Linux / Mac Terminal, and the terminal should return the 
-            same ipv4 address.
+        b.  Another way to verify is to perform an nslookup / dig for the same host via Linux / Mac Terminal, and the terminal should 
+            return the same ipv4 address.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -94,8 +94,10 @@ Q07: What is the difference in CNAME vs ALIAS?
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
     Following are the details:
         a.  CNAME: CNAME is used when you want to point a hostname to any other hostname:
-            Consider an example where you are using some AWS resource (Load Balancer or Cloud Front), these resources expose an AWS hostname in the URL
-            'Ib1-1234.us-east-2.elb.amazonaws.com' and you want to point this to 'apex.ashishsamarth.com'. This is possible with a 'CNAME' record.
+            Consider an example where you are using some AWS resource (Load Balancer or Cloud Front), these resources expose an 
+            AWS hostname in the URL 'Ib1-1234.us-east-2.elb.amazonaws.com' and you want to point this to 'apex.ashishsamarth.com'. 
+            This is possible with a 'CNAME' record.
+            
             CNAME record ONLY works for a NON-ROOT-Domain.
 
             What is a Non-Root Domain   :  'apex.ashishsamarth.com' is an example
@@ -130,11 +132,13 @@ Suppose you have Route 53 and you have created a weighted policy, to redirect tr
 This is again impacted by the TTL, meaning if the first time the DNS responded back with the IP to the browser it received the IP address of 1st EC2 instances, now when the TTL expires, their is a 70% chance that the DNS will respond back with the IP address of the 1st EC2 instance, while 20% for 2nd and 10% for 3rd EC2 instance, so the browser will send the traffic in the same manner.
 
     Special Note:
-        1.  This routing policy is helpful to split traffic between two different regions alltogether depending on where the Target is located.
+        1.  This routing policy is helpful to split traffic between two different regions alltogether depending on where the 
+            Target is located.
         2.  'Weighted Routing Policy' supports 'HEALTH CHECKS'
         
     In Practicality:
-        You have to set up 3 (1 for 70% and target EC2, another for 20% and target EC2 and so on) different 'A' records in Route 53 with Weighted Policy.
+        You have to set up 3 (1 for 70% and target EC2, another for 20% and target EC2 and so on) different 'A' records in 
+        Route 53 with Weighted Policy.
 
 ![!](../Assets/Route53/Route53-WeightedRoutingPolicy.PNG)
 
@@ -154,7 +158,9 @@ Latency Routing Policy, is the one of the most useful routing policy, because it
 
 Q11: Explain HEALTH CHECKS in Route 53?
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-    HEALTH CHECK in Route 53 is similar to ELB, where if an instance is deemed unhealthy, Route 53 will not send any traffic to that particular instance.
+    HEALTH CHECK in Route 53 is similar to ELB, where if an instance is deemed unhealthy, Route 53 will not send any traffic to that 
+    particular instance.
+    
         Following is the Frequency of HEALTH CHECKS in Route 53:
         a.  An instance is deemed UN-Healthy if it fails 'x' number of health checks in a row, by default x=3
         b.  An instance is deemed Healthy if it passes 'x' number of health checks in a row, by default x=3
