@@ -17,7 +17,7 @@ Say we have an S3 bucket in Australia, and a user in USA wants to access it. So 
 This basically allows the content to be read from all around the world, improves a lot on the latency and reduces the load on your S3 bucket.
 
 Q01: What are different CloudFront: Origins?
------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------
     A01: Following is the list
         a.  S3 Bucket:  CloudFront in front of S3 bucket (very common pattern)
             1.  For distributing files and caching them at the edge
@@ -33,25 +33,19 @@ Q01: What are different CloudFront: Origins?
 
 
 Q02: Explain how CloudFront works?
------------------------------------------------------------------------------------------------------------------------------------------------------------
-    A02: We have a bunch of edge locations all around the globe and they are connected to an origin (can be any origins mentioned above) and the clients wants
-        to access our CloudFront distribution. For this the client will send a 'HTTP Request' (Their will be a URL with some query string parameters, some hearders) 
-        directly to CloudFront. The Cloud front will send this request with the headers to the origin (can be any origins mentioned above). The origin then responds 
-        to the edge location, the edge location will 'cache' the response based on the configuration and return the response to the clients.
-        The next time another client makes the same request, the edge location will first look into the cache before forwarding the request to the Origin
+-----------------------------------------------------------------------------------------------------------------------
+    A02: We have a bunch of edge locations all around the globe and they are connected to an origin (can be any origins mentioned above) and the clients wants to access our CloudFront distribution. For this the client will send a 'HTTP Request' (Their will be a URL with some query string parameters, some hearders) directly to CloudFront. The Cloud front will send this request with the headers to the origin (can be any origins mentioned above). The origin then responds to the edge location, the edge location will 'cache' the response based on the configuration and return the response to the clients. The next time another client makes the same request, the edge location will first look into the cache before forwarding the request to the Origin
 
-        Here's the image for S3 as an Origin:
+    Here's the image for S3 as an Origin:
         https://d2908q01vomqb2.cloudfront.net/5b384ce32d8cdef02bc3a139d4cac0a22bb029e8/2022/07/15/CF-S3-active-active-geo-proximity-architecture-1024x636.png
     
-        Here's the image for ALB or EC2 as an Origin
+    Here's the image for ALB or EC2 as an Origin
         https://d2908q01vomqb2.cloudfront.net/5b384ce32d8cdef02bc3a139d4cac0a22bb029e8/2017/12/19/Picture2.jpg
 
-        Special Note: 
-        1.  For EC2 as Origin: The EC2 instance MUST be public (and Allow Public IP of Edge locations and accept traffic as HTTP). This access should be managed by 
-        a security group, to manage all the public IP addresses of the Edge Locations.
+    Special Note: 
+        1.  For EC2 as Origin: The EC2 instance MUST be public (and Allow Public IP of Edge locations and accept traffic as HTTP). This access should be managed by a security group, to manage all the public IP addresses of the Edge Locations.
 
-        2.  For ALB as Origin: The EC2 instances behind / beneath the ALB can be private and should be listed as the target groups for the ALB. And in this case, the 
-        ALB must be public, so that the Edge locations can access the ALB
+        2.  For ALB as Origin: The EC2 instances behind / beneath the ALB can be private and should be listed as the target groups for the ALB. And in this case, the ALB must be public, so that the Edge locations can access the ALB
 
         Here's the link for public ip addresses of all edge locations:
         https://d7uri8nf7uskq.cloudfront.net/tools/list-cloudfront-ips
