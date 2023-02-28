@@ -1,5 +1,5 @@
-----------------------------------------------------------------------------------------------------------------------
 AWS - CloudFront
+----------------------------------------------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------------------------------------------
 AWS CloudFront is a globally-distributed network offered by Amazon Web Services, which securely transfers content such as software, SDKs, videos, etc., to the clients, with high transfer speed. Its a content delivery network, and improves read performance since content is cached at the edge locations.
