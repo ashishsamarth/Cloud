@@ -176,7 +176,7 @@ The behaviour of CloudFront Caching is different for both Static and Dynamic Req
         And all next request for the content are served directly from CloudFront Edge Location, maximizing the Cache hits, and not going to S3 any further
         untill TTL expires.
 
-![!](../Assets/CloudFront-Caching-Static-Request-Handling.PNG)            
+![!](../Assets/CloudFront-Caching-Static-Request-Handling.jpg)            
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
