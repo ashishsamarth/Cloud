@@ -143,12 +143,15 @@ Q06: What is CloudFront Caching?
         Consider the following scenario
 
         1.  Client makes a request to the CloudFront edge location to retrieve some data from the Origin
-        2.  If this is the first call to the CloudFront edge location and cache is empty, the edge location forwards the request to the origin
+        2.  If this is the first call to the CloudFront edge location and cache is empty, the edge location forwards the request 
+            to the origin
         3.  Once origin responds back to the request from the CloudFront Edge Location, the cache in Edge location will be updated.
         4.  The response will be Cached, for the duration equal to the TTL (Time to live)
-        5.  Now, if another client requests the same data (CloudFront identifies if its same or not, based on 'Headers / Session Cookes or QueryString), the 
-            data is served back to the client directly from the CloudFront Cache. The idea is to have the maximum hits to the cache rather than to the origin
-        6.  The Values for TTL can be from ZERO seconds to 1 YEAR, and can be control based on the 'Cache-Control' or 'Expires' header inthe client request.
+        5.  Now, if another client requests the same data (CloudFront identifies if its same or not, based on 'Headers / Session Cookes 
+            or QueryString), the data is served back to the client directly from the CloudFront Cache. The idea is to have the maximum 
+            hits to the cache rather than to the origin
+        6.  The Values for TTL can be from ZERO seconds to 1 YEAR, and can be control based on the 'Cache-Control' or 'Expires' header 
+            inthe client request.
         7.  Important Note: You can also invalidate a part of the cache, by using the 'CreateInvalidationAPI'
 
 ![!](../Assets/CloudFront-Caching.PNG)
@@ -157,33 +160,31 @@ Q06: What is CloudFront Caching?
 
 Q07: What is CloudFront Caching for Static Vs Dynamic Requests?
 ----------------------------------------------------------------------------------------------------------------------------------------
-    Lets first understand what is Static Vs Dynamic Requests
-        a.  Static Request: Is a request, where the data is requested from a single source for a particular item
-        b.  Dynamic Request: Is a request, where the data is request from a Cluster (ALB + EC2 instances)
+Lets first understand what is Static Vs Dynamic Requests
 
-        The behaviour of CloudFront Caching is different for both Static and Dynamic Requests:
+----------------------------------------------------------------------------------------------------------------------------------------        
+    a.  Static Request: Is a request, where the data is requested from a single source for a particular item
+    b.  Dynamic Request: Is a request, where the data is request from a Cluster (ALB + EC2 instances)
 
-                                    =====================                                                   Dynamic Content (REST, HTTP Server)
-                                    | CLOUD FRONT       |                                               |---------------------------|
-                 Dynamic Request    |                   | Cache Based on Correct Headers & Cookie       |                           |
-              |---------------------|---Edge Location---|---------------------------------------------->|  ALB + EC2                |
-              |                     |                   |                                               |                           |
-        ------|------               |                   |                                               |---------------------------|
-        |   USER    |               |                   |               
-        ------|------               |                   |
-              |                     |                   | Static Content
-              |---------------------|---Edge Location---|---------------------> { S3 Bucket}
-                  Static Request    |                   |
-                                    |===================|
-                  No Headers / Session Caching Rules
-                  Required for Masimizing Cache Hits                  
-        
-        a.  For Static Request:
-            Since the content requested is static, after the first retrieval of the content from S3, the content is cached in CloudFront Edge Location.
-            And all next request for the content are served directly from CloudFront Edge Location, maximizing the Cache hits, and not going to S3 any further
-            untill TTL expires.
-        
-        b.  For Dynamic Content:
-            CloudFront Edge Location Cache and cache the data based on the request headers from the client, if the data requested by the client does not match 
-            the data in cache, only then CloudFront will call the ALB + EC2 origin. Once the data is returned back from the origin, this data will be cached until 
-            TTL expires.
+----------------------------------------------------------------------------------------------------------------------------------------
+
+The behaviour of CloudFront Caching is different for both Static and Dynamic Requests:             
+
+----------------------------------------------------------------------------------------------------------------------------------------
+    a.  For Static Request:
+        Since the content requested is static, after the first retrieval of the content from S3, the content is cached in CloudFront Edge Location.
+        And all next request for the content are served directly from CloudFront Edge Location, maximizing the Cache hits, and not going to S3 any further
+        untill TTL expires.
+
+![!](../Assets/CloudFront-Caching-Static-Request-Handling.PNG)            
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+    b.  For Dynamic Content:
+        CloudFront Edge Location Cache and cache the data based on the request headers from the client, if the data requested by the client does not match 
+        the data in cache, only then CloudFront will call the ALB + EC2 origin. Once the data is returned back from the origin, this data will be cached until 
+        TTL expires.
+
+![!](../Assets/CloudFront-Caching-Dynamic-Request-Handling)
+
+----------------------------------------------------------------------------------------------------------------------------------------
