@@ -18,7 +18,7 @@ This basically allows the content to be read from all around the world, improves
 
 Q01: What are different CloudFront: Origins?
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-A01: Following is the list
+    A01: Following is the list
         a.  S3 Bucket:  CloudFront in front of S3 bucket (very common pattern)
             1.  For distributing files and caching them at the edge
             2.  Enhanced Security with CloudFront : Origin Access Identity
@@ -32,7 +32,8 @@ A01: Following is the list
             4.  Any HTTP backend you want {For e.g.: It can be any HTTP backend even from your own premise}
 
 
-    Q02: Explain how CloudFront works?
+Q02: Explain how CloudFront works?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
     A02: We have a bunch of edge locations all around the globe and they are connected to an origin (can be any origins mentioned above) and the clients wants
         to access our CloudFront distribution. For this the client will send a 'HTTP Request' (Their will be a URL with some query string parameters, some hearders) 
         directly to CloudFront. The Cloud front will send this request with the headers to the origin (can be any origins mentioned above). The origin then responds 
