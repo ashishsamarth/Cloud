@@ -2,8 +2,7 @@
 AWS - CloudFront
 ----------------------------------------------------------------------------------------------------------------------
 
-AWS CloudFront is a globally-distributed network offered by Amazon Web Services, which securely transfers content such as software, SDKs, videos, etc., to 
-the clients, with high transfer speed. Its a content delivery network, and improves read performance since content is cached at the edge locations.
+AWS CloudFront is a globally-distributed network offered by Amazon Web Services, which securely transfers content such as software, SDKs, videos, etc., to the clients, with high transfer speed. Its a content delivery network, and improves read performance since content is cached at the edge locations.
 This also provides the following
     a.  DDoS Protection
     b.  Integration with Shield
@@ -34,7 +33,9 @@ Q01: What are different CloudFront: Origins?
 
 Q02: Explain how CloudFront works?
 -----------------------------------------------------------------------------------------------------------------------
-    A02: We have a bunch of edge locations all around the globe and they are connected to an origin (can be any origins mentioned above) and the clients wants to access our CloudFront distribution. For this the client will send a 'HTTP Request' (Their will be a URL with some query string parameters, some hearders) directly to CloudFront. The Cloud front will send this request with the headers to the origin (can be any origins mentioned above). The origin then responds to the edge location, the edge location will 'cache' the response based on the configuration and return the response to the clients. The next time another client makes the same request, the edge location will first look into the cache before forwarding the request to the Origin
+    A02: We have a bunch of edge locations all around the globe and they are connected to an origin (can be any 
+    origins mentioned above) and the clients wants to access our CloudFront distribution. For this the client will
+     send a 'HTTP Request' (Their will be a URL with some query string parameters, some hearders) directly to CloudFront. The Cloud front will send this request with the headers to the origin (can be any origins mentioned above). The origin then responds to the edge location, the edge location will 'cache' the response based on the configuration and return the response to the clients. The next time another client makes the same request, the edge location will first look into the cache before forwarding the request to the Origin
 
     Here's the image for S3 as an Origin:
         https://d2908q01vomqb2.cloudfront.net/5b384ce32d8cdef02bc3a139d4cac0a22bb029e8/2022/07/15/CF-S3-active-active-geo-proximity-architecture-1024x636.png
