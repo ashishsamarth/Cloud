@@ -26,7 +26,6 @@ Things that IAM Provides
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 IAM Guidelines & Best Practices
-
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
     a.  Dont Use the root account except for AWS account setup
     b.  One physical user = one AWS user
@@ -39,8 +38,7 @@ IAM Guidelines & Best Practices
     i.  Never share IAM users and Access keys.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    IAM Summary:
-
+IAM Summary:
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
     a.  USERS       :   Mapped to a physical user, has a password for AWS console   (think people).
     b.  GROUPS      :   Contains Users only (A collection of users under one set of permissions.)
@@ -85,7 +83,6 @@ Q04: Once the user is created, how many ways can the user get login credentials?
 Their are two ways a user can get hold of login credentials
     a.  via the 'Download.csv'
     b.  'Send Email' : Which has the Email Login Instructions.
------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 Q05: How can you customize the url for specific user login, Once the user is created?
@@ -196,8 +193,8 @@ Q12: What are the minimum roles an IAM user must have to be able to generate the
     and the 'Create aceess key' option will be enabled.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
     
-    Q13: How to create an access key for an IAM user to be used with CLI or SDK?
-    A13: Once you have the required roles (IAM FullAccess and IAM UserSSHKeys),
+Q13: How to create an access key for an IAM user to be used with CLI or SDK?
+    Once you have the required roles (IAM FullAccess and IAM UserSSHKeys),
         a.  Click on the Top right of the aws management console on your username
         b.  Click on 'Security Credentials', it will take you to 'My Security Credentials' page
         c.  Scroll towards the bottom and look for 'Access Keys'
