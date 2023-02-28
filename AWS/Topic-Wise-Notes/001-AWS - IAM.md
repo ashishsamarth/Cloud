@@ -79,7 +79,9 @@ Tags are way to organize and categorize resources in AWS.
 For e.g.: Their are mulitple EC2 instances in your account, and you want to identify them based on Team names and/or Project Names to quickly identify which EC2 instance is being used for what. Tagging also helps to identify the cost accumulated by the resources which is important for Billing & Thresholds.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Q04: Once the user is created, how many ways can the user get login credentials?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 Their are two ways a user can get hold of login credentials
     a.  via the 'Download.csv'
     b.  'Send Email' : Which has the Email Login Instructions.
@@ -93,48 +95,59 @@ Q05: How can you customize the url for specific user login, Once the user is cre
         a.  If you dont have an alias - It will enable the link to 'Create' an alias
         b.  If you have an alias - It will allow to 'Edit' or 'Delete' an alias
 
-        Important Note: Since IAM is a Global Service, the alias that you create must be unique for entire IAM service across all regions.
-        You cannot create an alias if it already exists.
+    Important Note: 
+    Since IAM is a Global Service, the alias that you create must be unique for entire IAM service across all regions.
+    You cannot create an alias if it already exists.
 
-        e.g.:   https://samarth-aws.signin.aws.amazon.com/console
+    e.g.:   https://samarth-aws.signin.aws.amazon.com/console
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    Q06: What is the advantage of having an alias based url for login?
-    A06: Following are the advantages
-        a.  When you use an 'Alias' based url:
-            1.  Your 'Account ID or Alias' is already populated for you
-            2.  You can directly login as an IAM user, rather than selecting the radio button between 'root user' vs 'iam user'
-    
-    Q07: How can you identify if a user is an IAM User vs a ROOT user, just by looking at the management console?
-    A07: Once logged in, if you look at the top right of the screen where it shows the user
+Q06: What is the advantage of having an alias based url for login?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Following are the advantages
+    a.  When you use an 'Alias' based url:
+        1.  Your 'Account ID or Alias' is already populated for you
+        2.  You can directly login as an IAM user, rather than selecting the radio button between 'root user' vs 'iam user'
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q07: How can you identify if a user is an IAM User vs a ROOT user, just by looking at the management console?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Once logged in, if you look at the top right of the screen where it shows the user
         a.  An IAM user will have the '@' keyword in the name:
             e.g.    samarth-developer@samarth-aws OR samarth-developer@account-id
         b.  A root user will not have the '@' keyword in the name
-    
-    Q08: Explain IAM Password Policy?
-    A08: In AWS: You can set up a password policy to have
-            a.  set a minimum password length
-            b.  Require specific character types
-                1.  including uppercase letters
-                2.  including lowercase letters
-                3.  including numbers
-                4.  including non-alphanumeric characters
-            c.  Allow all IAM users to change their own passwords
-            d.  Require users to change their passwords after some time (password expiration)
-            e.  Prevent password re-use
-    
-    Q09: What is the advantage of using an MFA?
-    A09: AWS recommends to protect the root and iam users by using MFA (multi-factor-authentication)
-        The main benefit of using a MFA is - Even if a password is stolen or hacked, the account will not be compromised.
-        Following are the supported devices for MFA in AWS:
-        a.  Virtual MFA devices {e.g. Google Authenticator (works on 1 device at a time) or Authy(works on multiple devices at the same time)}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q08: Explain IAM Password Policy?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    In AWS: You can set up a password policy to have
+        a.  set a minimum password length
+        b.  Require specific character types
+            1.  including uppercase letters
+            2.  including lowercase letters
+            3.  including numbers
+            4.  including non-alphanumeric characters
+        c.  Allow all IAM users to change their own passwords
+        d.  Require users to change their passwords after some time (password expiration)
+        e.  Prevent password re-use
+----------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+Q09: What is the advantage of using an MFA?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    AWS recommends to protect the root and iam users by using MFA (multi-factor-authentication)
+    The main benefit of using a MFA is - Even if a password is stolen or hacked, the account will not be compromised.
+    Following are the supported devices for MFA in AWS:
+        a.  Virtual MFA devices {e.g. Google Authenticator (works on 1 device at a time) 
+            or Authy(works on multiple devices at the same time)}
         b.  Universal 2nd Factor (U2F) security key (e.g.- Yubikey)
         c.  Hardware Key fob MFA Device
             a.  For non-government cloud: Its a key fob provided by Gemalto (Thales)
             b.  For government cloud: Its a key fob provided by surepassid
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
     
-    Q10: How to set up a password policy?
-    A10: Following are the steps
+Q10: How to set up a password policy?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------    
+    Following are the steps
         a.  Login to the AWS management console (as a user having administrator access)
         b.  Navigate to IAM Dashboard
         c.  Under Access Management, look for 'Account Settings'
@@ -151,9 +164,11 @@ Q05: How can you customize the url for specific user login, Once the user is cre
             9.  Prevent Password reuse
         f.  All the above options are checkboxes, so you can select based on your organization's guidelines
         g.  Click on 'Save Changes'
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    Q11: How to add MFA to the root user?
-    A11: Once logged in as the root user
+Q11: How to add MFA to the root user?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------    
+    Once logged in as the root user
         a.  Click on the username on the top right
         b.  Under the options, click on 'My Security Credentials'
         c.  You will be navigated to a different page with the following options
@@ -170,14 +185,16 @@ Q05: How can you customize the url for specific user login, Once the user is cre
         e.  Select 'Virtual MFA Device'
             The following virtual devices are supported
             Authy, Duo Mobile, LastPass Authenticator, Microsoft Authenticator, Google Authenticator
-
-    Q12: What are the minimum roles an IAM user must have to be able to generate their individual access keys?
-    A12: Following are the mininum roles
+-----------------------------------------------------------------------------------------------------------------------------------------------------------            
+Q12: What are the minimum roles an IAM user must have to be able to generate their individual access keys?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Following are the mininum roles
         a.  IAM FullAccess  :   To be able to see the roles and perform actions on individual scope
         b.  IAM UserSSHKeys :   To be able to generate their own individual access keys
 
-        Once the iam user has these roles, then 'Security Crendentials' tab under 'Users' will show up without any errors
-        and the 'Create aceess key' option will be enabled.
+    Once the iam user has these roles, then 'Security Crendentials' tab under 'Users' will show up without any errors
+    and the 'Create aceess key' option will be enabled.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
     
     Q13: How to create an access key for an IAM user to be used with CLI or SDK?
     A13: Once you have the required roles (IAM FullAccess and IAM UserSSHKeys),
