@@ -33,7 +33,6 @@ Following is the list
         3.  S3 website (* Must enable the S3 bucket as a static S3 Website)
         4.  Any HTTP backend you want {For e.g.: It can be any HTTP backend even from your own premise}
 
-
 Q02: Explain how CloudFront works?
 ----------------------------------------------------------------------------------------------------------------------------------------
 We have a bunch of edge locations all around the globe and they are connected to an origin (can be any origins mentioned above) 
