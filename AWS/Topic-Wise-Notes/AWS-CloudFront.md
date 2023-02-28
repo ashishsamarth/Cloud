@@ -4,6 +4,7 @@ AWS - CloudFront
 -----------------------------------------------------------------------------------------------------------------------
 AWS CloudFront is a globally-distributed network offered by Amazon Web Services, which securely transfers content such as software, SDKs, videos, etc., to the clients, with high transfer speed. Its a content delivery network, and improves read performance since content is cached at the edge locations.
 This also provides the following
+
 -----------------------------------------------------------------------------------------------------------------------
     a.  DDoS Protection
     b.  Integration with Shield
@@ -15,7 +16,6 @@ Consider the following example:
 Say we have an S3 bucket in Australia, and a user in USA wants to access it. So the User in USA will access an edge location close to it (in USA) and then the edge location network will be trasmitted all the way to the S3 bucket in Australia via a 'Private Link' and the content will be cached.The idea of caching here is, if their are more users in USA who want the same content, then the cached content will be available to them very quickly and the content will be delivered to them directly from USA. Similarly a user in any other geography will have the same experience, since the content will be made available to the user(s) closest edge location.
 
 This basically allows the content to be read from all around the world, improves a lot on the latency and reduces the load on your S3 bucket.
------------------------------------------------------------------------------------------------------------------------
 
 Q01: What are different CloudFront: Origins?
 -----------------------------------------------------------------------------------------------------------------------
