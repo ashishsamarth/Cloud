@@ -102,7 +102,7 @@ Q06: What is the advantage of having an alias based url for login?
     Following are the advantages
     a.  When you use an 'Alias' based url:
         1.  Your 'Account ID or Alias' is already populated for you
-        2.  You can directly login as an IAM user, rather than selecting the radio button between 'root user' vs 'iam user'
+        2.  You can login as an IAM user, rather than selecting the radio button between 'root user' vs 'iam user'
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Q07: How can you identify if a user is an IAM User vs a ROOT user, just by looking at the management console?
@@ -198,15 +198,24 @@ Q13: How to create an access key for an IAM user to be used with CLI or SDK?
         b.  Click on 'Security Credentials', it will take you to 'My Security Credentials' page
         c.  Scroll towards the bottom and look for 'Access Keys'
         d.  click on 'Create Access Keys', it will display the following options (radio buttons)
-            1.  Command Line Interface (CLI)    :   {You plan to use this access key to enable the AWS CLI to access your account}
-            2.  Local code  :   {You plan to use this access key to enable application code in a local development environment to access your AWS account}
-            3.  Application running on an AWS compute service   :   {You plan to use this access key to enable application code running on an AWS compute 
+            1.  Command Line Interface (CLI)    :   
+                {You plan to use this access key to enable the AWS CLI to access your account}
+
+            2.  Local code  :   
+                {You plan to use this access key to enable application code in a local development environment to access your AWS account}
+
+            3.  Application running on an AWS compute service   :   
+                {You plan to use this access key to enable application code running on an AWS compute 
                 service like Amazon EC2, Amazon ECS, Amazon Lambda to access your account}
-            4.  Third Party service :   {You plan to use this access key to enable access for a third party application or service that monitors or 
-                manages your AWS}
-            5.  Application running outside AWS :   {You plan to use this access key to enable an application running on an on-premise host, or to 
-                use a local AWS client or third party aws plugin}
-            6.  Other:  {Youyuse case is not listed here.}    
+
+            4.  Third Party service :   
+                {You plan to use this access key to enable access for a third party application or service that monitors or manages your AWS}
+
+            5.  Application running outside AWS :   
+            {You plan to use this access key to enable an application running on an on-premise host, or to use a local AWS client or third party aws plugin}
+
+            6.  Other:  {Youyuse case is not listed here.} 
+            
         e.  With selection of any option, AWS will provide a potential recommendation.
         f.  Their is an optional step to create a tag to understand what this key will be used for.
         g.  On the 'Retrieve access keys' page: You will see an option to download the access keys via a 'csv' file and also, save it from the GUI
@@ -218,13 +227,14 @@ Q13: How to create an access key for an IAM user to be used with CLI or SDK?
 
 Q14: What are the minimum policies to have on the role or the user to be able to access AWS Cloud Shell?
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-    Their is only one permission which must be assigned to the role or the user to have them able to access AWS Cloud Shell
+    Their is only one permission which must be assigned to the role or user to have them able to access AWS Cloud Shell
         The policy name is - AWS CloudShellFullAccess
         Once the policy is attached to the user or the role, the cloud shell will work for the user.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Q15: What are IAM roles for services?
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
+
 So far, we have dealt with a username accessed by a physical person to be able to perform certain checks or tasks. The next category is to 
 have applications talk to each other (similar to one microservice talking to another). For this to happen, the service which is trying to perform 
 an action on another service must have the permission to do so. This is managed by IAM roles for the service (or ServiceRoles).
@@ -337,17 +347,20 @@ Q22: What are Customer Managed Policies?
 A Customer Managed Policy is a standalone policy that you create and administer inside your own AWS account. You can attach this policy to multiple users, 
 groups, and roles; but only within your own account.
 In order to create a Customer Managed Policy, you can copy an existing AWS Managed Policy and customize it to fit the requirements of your organization. Recommended for use cases where the existing AWS Managed Policies don't meet the needs of your environment.
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Q23: What are inline policies?
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 An Inline Policy is an IAM policy which is actually embedded within the user, group, or role to which it applies. There is a strict 1:1 relationship between the entity and the policy.When you delete the user, group, or role in which the Inline policy is embedded, the policy will also be deleted
 In most cases, AWS recommends using Managed Policies over Inline Policies. Inline Policies are useful when you want to be sure that the permissions in a policy are not inadvertently assigned to any other user, group, or role than the one for which they're intended (i.e. you are creating a policy that must only ever be attached to a single user, group, or role).
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
     
 Q24: What is Policy Simulator?
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 Policy Simulator is a web-interface (available at: https://policysim.aws.amazon.com) that allows you to test policy against specific service and Action. If you are building your own inline policy, its always better to use the policy simulator to test your policy and make changes to get desired results.
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
     Another way to test a policy is via the CLI using the --dry-run flag
         a. --dry-run lets you test an action, it will fail if you do not have the correct permissions.
@@ -366,16 +379,17 @@ e.  You can only view the Access Key ID & Secret Access key once. If you lose th
 f.  Always setup *Multifactor Authentication (MFA) on your root account.
 g.  You can create and customize your own password rotation policies.
 
-Policy Document example
-{
-    "Version": "2012-10-17",
-    "Statement":
-    [
-        {
-            "Effect": "Allow",
-            "Action": "*",
-            "Resource": "*"
-        }
-    ]
-}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Policy Document example
+    {
+        "Version": "2012-10-17",
+        "Statement":
+        [
+            {
+                "Effect": "Allow",
+                "Action": "*",
+                "Resource": "*"
+            }
+        ]
+    }
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
