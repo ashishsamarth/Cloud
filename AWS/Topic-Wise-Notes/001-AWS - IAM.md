@@ -82,6 +82,7 @@ Q04: Once the user is created, how many ways can the user get login credentials?
 Their are two ways a user can get hold of login credentials
     a.  via the 'Download.csv'
     b.  'Send Email' : Which has the Email Login Instructions.
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Q05: How can you customize the url for specific user login, Once the user is created?
@@ -202,23 +203,27 @@ Q13: How to create an access key for an IAM user to be used with CLI or SDK?
                 {You plan to use this access key to enable the AWS CLI to access your account}
 
             2.  Local code  :   
-                {You plan to use this access key to enable application code in a local development environment to access your AWS account}
+                {You plan to use this access key to enable application code in a local development environment to 
+                access your AWS account}
 
             3.  Application running on an AWS compute service   :   
                 {You plan to use this access key to enable application code running on an AWS compute 
                 service like Amazon EC2, Amazon ECS, Amazon Lambda to access your account}
 
             4.  Third Party service :   
-                {You plan to use this access key to enable access for a third party application or service that monitors or manages your AWS}
+                {You plan to use this access key to enable access for a third party application or service that 
+                monitors or manages your AWS}
 
             5.  Application running outside AWS :   
-            {You plan to use this access key to enable an application running on an on-premise host, or to use a local AWS client or third party aws plugin}
+                {You plan to use this access key to enable an application running on an on-premise host, or to use a 
+                local AWS client or third party aws plugin}
 
             6.  Other:  {Youyuse case is not listed here.} 
-            
+
         e.  With selection of any option, AWS will provide a potential recommendation.
         f.  Their is an optional step to create a tag to understand what this key will be used for.
-        g.  On the 'Retrieve access keys' page: You will see an option to download the access keys via a 'csv' file and also, save it from the GUI
+        g.  On the 'Retrieve access keys' page: You will see an option to download the access keys via a 'csv' file 
+            and also, save it from the GUI
         h.  Click on 'Done' and you will be navigated back to the 'User page'
         i.  Under the 'Access Keys' section, you will see the key with the tag and statu as 'Active'
         j.  If you wish to generate a new access keys, you can do that, but only one access key can be active at one time.
@@ -238,6 +243,7 @@ Q15: What are IAM roles for services?
 So far, we have dealt with a username accessed by a physical person to be able to perform certain checks or tasks. The next category is to 
 have applications talk to each other (similar to one microservice talking to another). For this to happen, the service which is trying to perform 
 an action on another service must have the permission to do so. This is managed by IAM roles for the service (or ServiceRoles).
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------- 
     Following are few examples:
         a.  EC2 Instance roles
@@ -255,11 +261,23 @@ Q16: How to create an IAM role for a service?
             2.  AWS ServiceRoleForTrustedAdvisor
         d.  Click on 'Create Role'
         e.  Next Page will have a header 'Select Trusted Entity' with the following options (radio buttons)
-            1.  AWS Service         :   {Allows AWS Services like EC2, Lambda or others to perform actions in this account}
-            2.  AWS Account         :   {Allows entities in other AWS accounts belonging to you or a 3rd party to perform actions in this account}
-            3.  Web Identity        :   {Allows users federated by the external web identity provider to assumer this role to perform actions in this account}
-            4.  SAML 2.0 Federation :   {Allows users federated with SAML 2.0 from a corporate directory to perform actions in this account}
-            5.  Custom Trust Policy :   {Create a custom trust policy to enable others to perform actions in this account}
+            1.  AWS Service         
+            :   {Allows AWS Services like EC2, Lambda or others to perform actions in this account}
+
+            2.  AWS Account        
+            :   {Allows entities in other AWS accounts belonging to you or a 3rd party to perform actions in this account}
+
+            3.  Web Identity        
+            :   {Allows users federated by the external web identity provider to assumer this role to perform actions 
+                in this account}
+
+            4.  SAML 2.0 Federation 
+            :   {Allows users federated with SAML 2.0 from a corporate directory to perform 
+                actions in this account}
+
+            5.  Custom Trust Policy 
+            :   {Create a custom trust policy to enable others to perform actions in this account}
+
         f.  For ease of understanding, lets create an 'AWS Service' role for an EC2 instance to read data in IAM
         g.  On the 'Add Permissions' page for this new role, search and select 'IAMReadOnlyAccess'
         h.  On the next page, provide a role name and click next
@@ -369,15 +387,18 @@ Policy Simulator is a web-interface (available at: https://policysim.aws.amazon.
 
 IAM Exam Tips:
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-a.  IAM is Global; It does not apply to regions at this time.
-b.  A Root Account is simply the account created when first setting up an AWS account. It has complete Admin access and should not be used for day-to-day 
-    activities.
-c.  When first created, new users have *NO permissions. Permissions must be explicitly given via a group or policy.
-d.  New users are asssigned Access Key ID & Secret Access Keys when first created. These are not the same as a password and cannot be used to login to the 
-    AWS Console; instead, they are used to access AWS via the APIs and Command Line.
-e.  You can only view the Access Key ID & Secret Access key once. If you lose them, you must regenerate them. Save them in a secure location.
-f.  Always setup *Multifactor Authentication (MFA) on your root account.
-g.  You can create and customize your own password rotation policies.
+    a.  IAM is Global; It does not apply to regions at this time.
+    b.  A Root Account is simply the account created when first setting up an AWS account. 
+        It has complete Admin access and should not be used for day-to-day activities.
+    c.  When first created, new users have *NO permissions. Permissions must be explicitly 
+        given via a group or policy.
+    d.  New users are asssigned Access Key ID & Secret Access Keys when first created. 
+        These are not the same as a password and cannot be used to login to the 
+        AWS Console; instead, they are used to access AWS via the APIs and Command Line.
+    e.  You can only view the Access Key ID & Secret Access key once. If you lose them, 
+        you must regenerate them. Save them in a secure location.
+    f.  Always setup *Multifactor Authentication (MFA) on your root account.
+    g.  You can create and customize your own password rotation policies.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
     Policy Document example
