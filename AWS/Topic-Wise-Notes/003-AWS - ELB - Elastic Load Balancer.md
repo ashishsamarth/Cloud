@@ -193,8 +193,8 @@ Q11: How to create a Application Load Balancer?
             6.  On the 'AWS global accelerator, do noting.
         e.  On the 'Configure Security Settings'
             Since we used HTTP port instead of HTTPS: AWS will show a security warning.
-            Now, you can either create a new security group that will accept traffic from 'Anywhere' to ALB-port 80 
-            with HTTP protocol. OR, if you already have one, you can use it. Make a note, which security group was configured.
+            Now, you can either create a new security group that will accept traffic from 'Anywhere' to ALB-port 80 with 
+            HTTP protocol. OR, if you already have one, you can use it. Make a note, which security group was configured.
         f.  On the 'Configure Routing' page
             1.  Target Group:   New Target Group
             2.  Name        :   Provide a target group name
@@ -202,7 +202,8 @@ Q11: How to create a Application Load Balancer?
                             :   Valid values are 'Instance', 'IP' , 'Lambda Function' (Radio Button Selection)
             4.  Protocol    :   HTTP
             5.  Port        :   80
-            6.  Protocol Ver:   HTTP1 {Send requests to targets using HTTP/1.1; supported when the request is HTTP/1.1 or 1.2}
+            6.  Protocol Ver:   HTTP1 {Send requests to targets using HTTP/1.1; supported when the request 
+                                is HTTP/1.1 or 1.2}
                                 Valid values are: HTTP2 and gRPC
             7.  healthchecks:
                             protocol: HTTP
@@ -228,6 +229,7 @@ Q11: How to create a Application Load Balancer?
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Q12: How to add a new target group to an existing ALB?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
     Following are the steps
         a.  Login to the EC2 Dashboard
         b.  In the left side vertical menu, under 'Load Balancing' click 'Target Groups'
@@ -418,13 +420,13 @@ Q18. What is SNI (Server Name Indication)?
 
 Q19: What is Connection Draining in CLB or Deregistration Delay in ALB/NLB?
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-    'Connection Draining in CLB' or 'Deregistration Delay in ALB/NLB' refers to the 'Time to complete "In-flight requests", 
-    while the instance is de-registering or unhealthy.
+    'Connection Draining in CLB' or 'Deregistration Delay in ALB/NLB' refers to the 'Time to complete 
+    "In-flight requests", while the instance is de-registering or unhealthy.
 
         While this phenomena happens:
         a.  ELB will stop sending new requests to the instances that is 'de-registering'
-        b.  The default configuration to handling existing requests while the instance is 'de-registering' is 300 seconds, 
-            but can be between 1s to 1HR
+        b.  The default configuration to handling existing requests while the instance is 'de-registering' 
+            is 300 seconds, but can be between 1s to 1HR
         c.  This configuration can be disbaled as well.
         d.  This number should be configured based on your application behaviour.
 
