@@ -82,10 +82,9 @@ Q04: Once the user is created, how many ways can the user get login credentials?
 Their are two ways a user can get hold of login credentials
     a.  via the 'Download.csv'
     b.  'Send Email' : Which has the Email Login Instructions.
-
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-Q05: How can you customize the url for specific user login, Once the user is created?
 
+Q05: How can you customize the url for specific user login, Once the user is created?
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
     Login to the AWS console --> Go to IAM Dashboard --> on the top right under 'AWS Account' --> Look for 'Account Alias'
         a.  If you dont have an alias - It will enable the link to 'Create' an alias
@@ -193,6 +192,7 @@ Q12: What are the minimum roles an IAM user must have to be able to generate the
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
     
 Q13: How to create an access key for an IAM user to be used with CLI or SDK?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
     Once you have the required roles (IAM FullAccess and IAM UserSSHKeys),
         a.  Click on the Top right of the aws management console on your username
         b.  Click on 'Security Credentials', it will take you to 'My Security Credentials' page
@@ -213,24 +213,31 @@ Q13: How to create an access key for an IAM user to be used with CLI or SDK?
         h.  Click on 'Done' and you will be navigated back to the 'User page'
         i.  Under the 'Access Keys' section, you will see the key with the tag and statu as 'Active'
         j.  If you wish to generate a new access keys, you can do that, but only one access key can be active at one time.
-        k,  Their is an option to delete the keys, if you feel the need to do so.
-    
-    Q14: What are the minimum policies to have on the role or the user to be able to access AWS Cloud Shell?
-    A14: Their is only one permission which must be assigned to the role or the user to have them able to access AWS Cloud Shell
-         The policy name is - AWS CloudShellFullAccess
-         Once the policy is attached to the user or the role, the cloud shell will work for the user.
+        k.  Their is an option to delete the keys, if you feel the need to do so.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    Q15: What are IAM roles for services?
-    A15: So far, we have dealt with a username accessed by a physical person to be able to perform certain checks or tasks. The next category is to 
-    have applications talk to each other (similar to one microservice talking to another). For this to happen, the service which is trying to perform 
-    an action on another service must have the permission to do so. This is managed by IAM roles for the service (or ServiceRoles). 
+Q14: What are the minimum policies to have on the role or the user to be able to access AWS Cloud Shell?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Their is only one permission which must be assigned to the role or the user to have them able to access AWS Cloud Shell
+        The policy name is - AWS CloudShellFullAccess
+        Once the policy is attached to the user or the role, the cloud shell will work for the user.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q15: What are IAM roles for services?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+So far, we have dealt with a username accessed by a physical person to be able to perform certain checks or tasks. The next category is to 
+have applications talk to each other (similar to one microservice talking to another). For this to happen, the service which is trying to perform 
+an action on another service must have the permission to do so. This is managed by IAM roles for the service (or ServiceRoles).
+----------------------------------------------------------------------------------------------------------------------------------------------------------- 
     Following are few examples:
         a.  EC2 Instance roles
         b.  Lambda Function roles
         c.  Roles for CloudFormation
-    
-    Q16: How to create an IAM role for a service?
-    A16: Login to the AWS management console with a User who has administrative access.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q16: How to create an IAM role for a service?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Login to the AWS management console with a User who has administrative access.
         a.  Navigate to the IAM dashboard by simply searching IAM on the search bar
         b.  From IAM dashboard, navigate to 'Roles' under 'Access Management'
         c.  If this is the first time you are trying to create a role, you will see following roles pre-existing
@@ -247,9 +254,11 @@ Q13: How to create an access key for an IAM user to be used with CLI or SDK?
         g.  On the 'Add Permissions' page for this new role, search and select 'IAMReadOnlyAccess'
         h.  On the next page, provide a role name and click next
         i.  Once the role is created, it will show up on the 'Roles' page
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    Q17: What are IAM security tools?
-    A17: Their are two security tools
+Q17: What are IAM security tools?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Their are two security tools
         a.  IAM Credentials Report
             This is at the account-level
             Its a report that lists all accounts under your account(root) and the status of their various credentials
@@ -258,9 +267,11 @@ Q13: How to create an access key for an IAM user to be used with CLI or SDK?
             This is at the user-level
             Access Advisor shows the service permissions granted to a user and when those services where last accessed
             This information can be utilized to revise the policies and implement 'principle of least privilege'
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    Q18: How to generate a IAM Credentials Report?
-    A18: Login to the AWS management console with a User who has administrative access.
+Q18: How to generate a IAM Credentials Report?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Login to the AWS management console with a User who has administrative access.
         a.  Navigate to the IAM dashboard by simply searching IAM on the search bar
         b.  On the IAM dashboard (Left vertical bar), look for 'Credentials Report' under 'Access Report'
         c.  Click on 'Crendentials Report' and then 'Download credentials report'
@@ -287,9 +298,11 @@ Q13: How to create an access key for an IAM user to be used with CLI or SDK?
             20. cert_1_last_rotated
             21. cert_2_active
             22. cert_2_last_rotated
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    Q19: How to navigate to Access-Advisor?
-    A18:  Login to the AWS management console with an IAM user
+Q19: How to navigate to Access-Advisor?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Login to the AWS management console with an IAM user
         a.  Navigate to the IAM dashboard by simply searching IAM on the search bar
         b.  On the IAM dashboard (Left vertical bar), look for 'Users'
         c.  Click on users and then click on 'Access Advisor' on the page.
@@ -298,46 +311,51 @@ Q13: How to create an access key for an IAM user to be used with CLI or SDK?
             Service         Policies Granting Permissions       Last Accessed
             AmazonEC2       AmazonEC2FullAccess and 1 More      Today
             AWS Cloudshell  AWSCloudShellFullAccess             Today
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    Q20: How many types of IAM policies are available in AWS?
-    A20: Identity access management (IAM) is used to define user access permissions with in AWS.
+Q20: How many types of IAM policies are available in AWS?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Identity access management (IAM) is used to define user access permissions with in AWS.
         There are 3 different types of IAM policies available.
         a.  Managed Policies (also called as AWS Managed Policies)
         b.  Customer Managed Policies
         c.  Inline Policies
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    Q21: What are AWS Managed Policies?
-    A21: An AWS Managed Policy is an IAM policy which is created and administered by AWS. AWS provided managed Policies for common use cases based on job function 
-        (e.g. AmazonDynamoDBFullAccess, AWSCodeCommitPowerUser, AmazonEC2ReadOnlyAccess, etc.)
-        These AWS-provided policies allow you to assign appropriate permissions to your users, groups, and roles without having to write the policy yourself.
-        A single Managed Policy can be attached to multiple users, groups, or roles within the same AWS account and across different accounts.
+Q21: What are AWS Managed Policies?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+An AWS Managed Policy is an IAM policy which is created and administered by AWS. AWS provided managed Policies for common use cases based on job function 
+(e.g. AmazonDynamoDBFullAccess, AWSCodeCommitPowerUser, AmazonEC2ReadOnlyAccess, etc.)
+These AWS-provided policies allow you to assign appropriate permissions to your users, groups, and roles without having to write the policy yourself.
+A single Managed Policy can be attached to multiple users, groups, or roles within the same AWS account and across different accounts.
         
-        Important Note: You cannot change the permissions defined in an AWS Managed Policy.
-    
-    Q22: What are Customer Managed Policies?
-    A22: A Customer Managed Policy is a standalone policy that you create and administer inside your own AWS account. You can attach this policy to multiple users, 
-        groups, and roles; but only within your own account.
-        In order to create a Customer Managed Policy, you can copy an existing AWS Managed Policy and customize it to fit the requirements of your organization.
-        Recommended for use cases where the existing AWS Managed Policies don't meet the needs of your environment.
+Important Note: You cannot change the permissions defined in an AWS Managed Policy.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    Q23: What are inline policies?
-    A23: An Inline Policy is an IAM policy which is actually embedded within the user, group, or role to which it applies. There is a strict 1:1 
-        relationship between the entity and the policy.When you delete the user, group, or role in which the Inline policy is embedded, the policy 
-        will also be deleted
-        In most cases, AWS recommends using Managed Policies over Inline Policies.
-        Inline Policies are useful when you want to be sure that the permissions in a policy are not inadvertently assigned to any other user, 
-        group, or role than the one for which they're intended (i.e. you are creating a policy that must only ever be attached to a single user, group, or role).
-    
-    Q24: What is Policy Simulator?
-    A24: Policy Simulator is a web-interface (available at: https://policysim.aws.amazon.com) that allows you to test policy against specific service and Action
-        If you are building your own inline policy, its always better to use the policy simulator to test your policy and make changes to get desired results.
+Q22: What are Customer Managed Policies?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+A Customer Managed Policy is a standalone policy that you create and administer inside your own AWS account. You can attach this policy to multiple users, 
+groups, and roles; but only within your own account.
+In order to create a Customer Managed Policy, you can copy an existing AWS Managed Policy and customize it to fit the requirements of your organization. Recommended for use cases where the existing AWS Managed Policies don't meet the needs of your environment.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-        Another way to test a policy is via the CLI using the --dry-run flag
+Q23: What are inline policies?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+An Inline Policy is an IAM policy which is actually embedded within the user, group, or role to which it applies. There is a strict 1:1 relationship between the entity and the policy.When you delete the user, group, or role in which the Inline policy is embedded, the policy will also be deleted
+In most cases, AWS recommends using Managed Policies over Inline Policies. Inline Policies are useful when you want to be sure that the permissions in a policy are not inadvertently assigned to any other user, group, or role than the one for which they're intended (i.e. you are creating a policy that must only ever be attached to a single user, group, or role).
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    
+Q24: What is Policy Simulator?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Policy Simulator is a web-interface (available at: https://policysim.aws.amazon.com) that allows you to test policy against specific service and Action. If you are building your own inline policy, its always better to use the policy simulator to test your policy and make changes to get desired results.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Another way to test a policy is via the CLI using the --dry-run flag
         a. --dry-run lets you test an action, it will fail if you do not have the correct permissions.
         b.  It will error out, if the operation can be executed successfully [Request would have succeeded, but DryRun flag is set]
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 IAM Exam Tips:
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 a.  IAM is Global; It does not apply to regions at this time.
 b.  A Root Account is simply the account created when first setting up an AWS account. It has complete Admin access and should not be used for day-to-day 
     activities.
@@ -360,3 +378,4 @@ Policy Document example
         }
     ]
 }
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
