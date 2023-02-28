@@ -88,10 +88,11 @@ Amazon RDS Read Replication is a feature on Amazon RDS that allows you to create
     
 Q02: Explain associated costs for RDS Read Replicas - Across the network?
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-    Usually for AWS managed services, their is no network cost when the data travels from One AZ to another, however their are exceptions.
-        a.  For RDS Read Replicas: If your RDS DB and RDS Read Replica are in the same region (may or may not be in different AZ), then no
-            replication charges will be incurred.
-        b.  For RDS Read Replicas: If you RDS DB and RDS Read Replica are in different regions, then replication charges will be incurred.
+    Usually for AWS managed services, there is no network cost when data travels from One AZ to another, however there are exceptions.
+        a.  For RDS Read Replicas: If your RDS DB and RDS Read Replica are in the same region 
+            (may or may not be in different AZ), then no replication charges will be incurred.
+        b.  For RDS Read Replicas: If you RDS DB and RDS Read Replica are in different regions, 
+            then replication charges will be incurred.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
     
