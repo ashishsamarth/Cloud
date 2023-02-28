@@ -79,9 +79,9 @@ For e.g.: Their are mulitple EC2 instances in your account, and you want to iden
 
 Q04: Once the user is created, how many ways can the user get login credentials?
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-Their are two ways a user can get hold of login credentials
-    a.  via the 'Download.csv'
-    b.  'Send Email' : Which has the Email Login Instructions.
+    Their are two ways a user can get hold of login credentials
+        a.  via the 'Download.csv'
+        b.  'Send Email' : Which has the Email Login Instructions.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -357,7 +357,8 @@ An AWS Managed Policy is an IAM policy which is created and administered by AWS.
 These AWS-provided policies allow you to assign appropriate permissions to your users, groups, and roles without having to write the policy yourself.
 A single Managed Policy can be attached to multiple users, groups, or roles within the same AWS account and across different accounts.
         
-Important Note: You cannot change the permissions defined in an AWS Managed Policy.
+    Important Note: You cannot change the permissions defined in an AWS Managed Policy.
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Q22: What are Customer Managed Policies?
@@ -413,4 +414,4 @@ IAM Exam Tips:
             }
         ]
     }
------------------------------------------------------------------------------------------------------------------------------------------------------------
+
