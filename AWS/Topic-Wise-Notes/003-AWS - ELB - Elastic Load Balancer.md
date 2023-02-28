@@ -81,8 +81,8 @@ Q06: Explain Load Balancer Security Group?
                 PortRange   :   80
                 Source      :   Custom: 0.0.0.0/0 (Anywhere)
 
-        b.  Now the load balancer needs to forward the incoming traffic to the EC2 instance, so we will need another security group
-            That will be used to forward the traffic to EC2
+        b.  Now the load balancer needs to forward the incoming traffic to the EC2 instance, so we will need another 
+            security group. That will be used to forward the traffic to EC2
                 LoadBalancerProtocol:   HTTP
                 LoadBalancerPort    :   80
                 InstanceProtocol    :   HTTP
@@ -104,12 +104,13 @@ Q07: What is a Classic Load Balancer(v1)?
     
 Q08: How to create a CLASSIC load Balancer?
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-    For creation of CLASSIC load balancer, we will need atleast 2 EC2 instance to be able to see if CLB is forwarding traffic correctly
+    For creation of CLASSIC load balancer, we will need atleast 2 EC2 instance to be able to see if CLB is forwarding 
+    traffic correctly
         a.  Login to the EC2 Dashboard
         b.  Under 'Network & Security' click on 'Security' and create a new 'security-group' with inbound rule to allow 
             http at port 80 from anywhere
         c.  Create two new EC2 instances and select this newly created security as their security group.
-        d.  In the left side vertical menu, under 'Load Balancing' click on 'Load Balancers' then click on 'Create Load Balancer'
+        d.  In the left side vertical menu, under 'Load Balancing' click on 'Load Balancers' --> 'Create Load Balancer'
         e.  select 'Classic Load Balancer' and click on create.
         f.  on the 'Define Load Balancer': Provide a Name to the Load Balancer in the default VPC.
             1. LoadBalancerProtocol:   HTTP
@@ -154,7 +155,8 @@ Q10: What is an Application Load Balancer(v2)?
     
         Special Note: 
             a.  ALBs are great fit for microservices & container-based applications (e.g; Docker & Amazon ECS), 
-                because these have a port mapping feature to redirect to a dynamic port in ECS (Elastic Container Service).
+                because these have a port mapping feature to redirect to a dynamic port in ECS 
+                (Elastic Container Service).
             b.  ALBs also provide a fixed hostname like Classic LBs (XXX.region.elb.amazonaws.com)
             c.  The application servers dont see the IP of the client directly, rather the true information of the 
                 clients are in the headers
@@ -175,13 +177,14 @@ Q11: How to create a Application Load Balancer?
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
     Following are the steps:
         a.  Login to the EC2 Dashboard
-        b.  In the left side vertical menu, under 'Load Balancing' click on 'Load Balancers' then click on 'Create Load Balancer'
+        b.  In the left side vertical menu, under 'Load Balancing' click on 'Load Balancers' --> 'Create Load Balancer'
         c.  select 'Application Load Balancer' and click on create.
         d.  On the 'Configure Load Balancer' - Basic configuration
             1.  Provide a name for the application load balancer
             2.  Scheme :    Internet-Facing
             3.  IP Address Type: IPv4
-            4.  Listeners : A listener is a process that checks for connection requests, using the protocol and port that is configured
+            4.  Listeners : A listener is a process that checks for connection requests, using the protocol and 
+                port that is configured
                 i.  Load Balancer Protocol: HTTP
                 ii. Load Balancer Port: 80
             5.  For Availability Zone:
@@ -190,8 +193,8 @@ Q11: How to create a Application Load Balancer?
             6.  On the 'AWS global accelerator, do noting.
         e.  On the 'Configure Security Settings'
             Since we used HTTP port instead of HTTPS: AWS will show a security warning.
-            Now, you can either create a new security group that will accept traffic from 'Anywhere' to ALB-port 80 with HTTP protocol.
-            OR, if you already have one, you can use it. Make a note, which security group was configured.
+            Now, you can either create a new security group that will accept traffic from 'Anywhere' to ALB-port 80 
+            with HTTP protocol. OR, if you already have one, you can use it. Make a note, which security group was configured.
         f.  On the 'Configure Routing' page
             1.  Target Group:   New Target Group
             2.  Name        :   Provide a target group name
@@ -213,11 +216,11 @@ Q11: How to create a Application Load Balancer?
                 vi. Success Codes       :   200
         g.  On the 'Register Targets'
             Whatever number of instances that you select will be added to one target group.
-            For e.g.: If you have 3 instances and you selected only 2, then these 2 instances will be part for the first target group
-            The 3rd instance can be added to the ALB later on, as another target group.
+            For e.g.: If you have 3 instances and you selected only 2, then these 2 instances will be part for the 
+            first target group. The 3rd instance can be added to the ALB later on, as another target group.
 
-            This is one of the important upgraded features of ALB, and then you can route traffic to these target groups based on a 
-            variety or parameters in the routing rules.
+            This is one of the important upgraded features of ALB, and then you can route traffic to these target groups 
+            based on a variety or parameters in the routing rules.
         h.  Once the targets are registered, click on create and 'ALB' will be created.
         i.  Now navigate to the 'Load Balancer' on the left vertical menu and look for your newly created ALB.
         j.  Under ALB - 'Description' look for 'DNS Name': This is the url that be used to access the ALB from anywhere.
@@ -236,7 +239,8 @@ Q12: How to add a new target group to an existing ALB?
                             :   Valid values are 'Instance', 'IP' , 'Lambda Function' (Radio Button Selection)
             4.  Protocol    :   HTTP
             5.  Port        :   80
-            6.  Protocol Ver:   HTTP1 {Send requests to targets using HTTP/1.1; supported when the request is HTTP/1.1 or 1.2}
+            6.  Protocol Ver:   HTTP1 {Send requests to targets using HTTP/1.1; supported when the request 
+                                is HTTP/1.1 or 1.2}
                                 Valid values are: HTTP2 and gRPC
             7.  healthchecks:
                             protocol: HTTP
@@ -281,7 +285,7 @@ Q14: How to create a Network Load Balancer?
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
     Following are the steps
         a.  Login to the EC2 Dashboard
-        b.  In the left side vertical menu, under 'Load Balancing' click on 'Load Balancers' then click on 'Create Load Balancer'
+        b.  In the left side vertical menu, under 'Load Balancing' click on 'Load Balancers' --> 'Create Load Balancer'
         c.  select 'Network Load Balancer' and click on create.
         d.  Under 'Basic Configuration'
             1.  Provide a name for your 'Load Balancer'
@@ -313,7 +317,8 @@ Q14: How to create a Network Load Balancer?
 
 Q15: What is Load Balancer Stickiness?
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-    Load Balancer stickiness is the mechanism that ensures the same client is always redirected to the same instances behind LB
+    Load Balancer stickiness is the mechanism that ensures the same client is always redirected to the same instances 
+    behind LB
         This options works on both the CLB and ALB.
         This mechanism is implemented with the help of 'cookie' which has an expiration date that you can control.
         Enabling stickiness may bring imbalance to the load over the backend EC2 instances.
@@ -323,8 +328,8 @@ Q15: What is Load Balancer Stickiness?
             1.  Stickiness for CLB: Can be enabled at the CLB level
             2.  Stickiness for ALB: Can be enabled at the Target Group level.
         
-        Once you enable the stickiness, you have to provide the duration for the stickiness after which stickiness will expire
-        The minimum value is 1 second while the maxixum value is 7 days.
+        Once you enable the stickiness, you have to provide the duration for the stickiness after which stickiness 
+        will expire. The minimum value is 1 second while the maxixum value is 7 days.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
     
@@ -336,11 +341,12 @@ Q16: What is cross-zone load balancing?
         So, over all we have 10 EC2 instances with two different LBs, this is a highly imbalanced situation for traffic.
 
         With Cross Zone Load balancing:
-        Even if the client is sending equal (50%) traffic to both the LBs, each LB will distribute even (10%) traffic each EC2 instance.
+        Even if the client is sending equal (50%) traffic to both the LBs, each LB will distribute even (10%) traffic 
+        each EC2 instance.
 
         Without Cross Zone load balacing:
-        With client sending equal(50%) traffic to both the LBs, LB1, will eventually end up sending 25% of traffic to each EC2 in AZ1, while LB2 
-        will send 6.25% traffic to each instance in AZ2
+        With client sending equal(50%) traffic to both the LBs, LB1, will eventually end up sending 25% of traffic 
+        to each EC2 in AZ1, while LB2 will send 6.25% traffic to each instance in AZ2
 
         Special Note:  Cross Zone Load Balacing is Enabled or Disabled by default, depending on the type of the LB.
         a.  CLB:
@@ -360,7 +366,8 @@ Q16: What is cross-zone load balancing?
 
 Q17: Explain SSL/TLS?
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-    An SSL certificate allows the traffic between your clients and your load balancer to be encrypted in transit (in-flight encryption)
+    An SSL certificate allows the traffic between your clients and your load balancer to be encrypted in transit 
+    (in-flight encryption)
         a.  SSL refers to the 'Secure Socket Layer', used to encrypt connections.
         b.  TLS refers to Transport Layer security, which is a newer version.
         
@@ -388,9 +395,10 @@ Q17: Explain SSL/TLS?
 
 Q18. What is SNI (Server Name Indication)?
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-    SNI (Server Name Indication) solves the problem of loading multiple SSL certificates onto one web server (to serve multiple websites)
-        Its a newer protocol and requires the client to indicate the hostname of the target server in the initial SSL handshake
-        The server will then find the correct certificate, or return the default one.
+    SNI (Server Name Indication) solves the problem of loading multiple SSL certificates onto one web server 
+    (to serve multiple websites)
+    Its a newer protocol and requires the client to indicate the hostname of the target server in the initial 
+    SSL handshake. The server will then find the correct certificate, or return the default one.
 
         Special Note: SNI only works with ALB, NLB and CloudFront.
         Does NOT work with CLB.
@@ -415,7 +423,8 @@ Q19: What is Connection Draining in CLB or Deregistration Delay in ALB/NLB?
 
         While this phenomena happens:
         a.  ELB will stop sending new requests to the instances that is 'de-registering'
-        b.  The default configuration to handling existing requests while the instance is 'de-registering' is 300 seconds, but can be between 1s to 1HR
+        b.  The default configuration to handling existing requests while the instance is 'de-registering' is 300 seconds, 
+            but can be between 1s to 1HR
         c.  This configuration can be disbaled as well.
         d.  This number should be configured based on your application behaviour.
 
