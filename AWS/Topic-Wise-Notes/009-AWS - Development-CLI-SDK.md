@@ -623,13 +623,14 @@ usually, if we configure AWS CLI on local machine we run the following
 
     aws configure
 
-Then we have to provide
-    a.  AWS Access Key ID
-    b.  AWS Secret Access Key
-    c.  Default region name
-    d.  Default output format
+    Then we have to provide
+        a.  AWS Access Key ID
+        b.  AWS Secret Access Key
+        c.  Default region name
+        d.  Default output format
 
 When this is done, it CREATES two files having the following data with [default entries]
+
     File#1: Credentials
     Content:
         [default]
@@ -646,13 +647,14 @@ configure this account (using a profile, so that the profile is loaded everytime
 
     aws configure --profile <whatever-you-want-to-name-this-profile>
 
-Then we have to provide
-    a.  AWS Access Key ID
-    b.  AWS Secret Access Key
-    c.  Default region name
-    d.  Default output format
+    Then we have to provide
+        a.  AWS Access Key ID
+        b.  AWS Secret Access Key
+        c.  Default region name
+        d.  Default output format
 
 When this is done, it MODIFIES two files having the following data with [default entries] with additional data for the new profile
+
     File#1: Credentials
     Content:
         [default]
@@ -670,8 +672,10 @@ When this is done, it MODIFIES two files having the following data with [default
         region = <some_value>
     
 Practical Usage:
+
     a.  If you run 'aws s3 ls' ; this will run against the [default] profile and list the S3 buckets in that default profile
-    b.  If you run 'aws s3 ls --profile <whatever-you-want-to-name-this-profile> ; this will run against the <whatever-you-want-to-name-this-profile> profile
+    b.  If you run 'aws s3 ls --profile <whatever-you-want-to-name-this-profile> ; this will run against the 
+        <whatever-you-want-to-name-this-profile> profile
 
 This way you can run any command, against the default profile or a specific profile
 
@@ -696,29 +700,33 @@ aws sts get-session-token --serial-number arn-of-the-mfa-device --token-code cod
 AWS :   LIMITS (Quotas)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 API Rate LIMITS
+
     a.  DescribeInstance API for EC2 has a limit of 100 calls per seconds
     b.  GetObject on S3 has a limit of 5500 GET per second per samplePrefix
     c.  For intermittent errors: Implement Exponential BackOff
     d.  For consistent errors: Request an API throttling limit increase
 
 Service Quota (Service Limits)
+
     a.  Running On-Demand standard Instance: 1152 VCPUs
 
-Exponential Backoff:    Exponential backoff is an algorithm that uses feedback to multiplicatively decrease the rate of some process, in order to gradually find 
-                        an acceptable rate. These algorithms find usage in a wide range of systems and processes, with radio networks and computer networks being 
-                        particularly notable
+Exponential Backoff:
 
-                        For e.g.: If you are running an API call against an api and it responds back with a 5XX response code.
-                        Then instead of try every second, which will quickly hit the API limit on AWS, with every retry you double the time to wait
-                        1st Retry:  After 2 seconds
-                        2nd Retry:  After 4 seconds
-                        3rd Retry:  After 8 seconds
-                        4th Retry:  After 16 seconds
-                        5th Retry:  After 32 seconds
+    Exponential backoff is an algorithm that uses feedback to multiplicatively decrease the rate of some process, in order to 
+    gradually find an acceptable rate. These algorithms find usage in a wide range of systems and processes, with radio networks 
+    and computer networks being particularly notable
 
-                        So that
-                        a.  You are not bombarding the API even when its not responding
-                        b.  Managing the API rate limit in a better way to not exhaut the limit, and eventually asking AWS to increase the access limit
+        For e.g.: If you are running an API call against an api and it responds back with a 5XX response code.
+        Then instead of try every second, which will quickly hit the API limit on AWS, with every retry you double the time to wait
+            1st Retry:  After 2 seconds
+            2nd Retry:  After 4 seconds
+            3rd Retry:  After 8 seconds
+            4th Retry:  After 16 seconds
+            5th Retry:  After 32 seconds
+
+        So that
+            a.  You are not bombarding the API even when its not responding
+            b.  Managing the API rate limit in a better way to not exhaut the limit, and eventually asking AWS to increase the access limit
 
     *******************************************************************************************************************************************************
     SCN#01  :   When to use Exponential Backoff (any AWS service)
@@ -727,21 +735,22 @@ Exponential Backoff:    Exponential backoff is an algorithm that uses feedback t
         implement the exponential backoff
 
     Exam Question   :   Which type of errors should you retry for an exponential backoff?
-    Answer          :   Retries must be only implemented for 5xx errors and Throttling. You SHOULD not use retry or exponential back on of 4xx client errors
+    Answer          :   Retries must be only implemented for 5xx errors and Throttling. You SHOULD not use retry or exponential back 
+                        on of 4xx client errors
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 AWS :   CLI Credentials Provider Chain
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Following is the priority order for CLI to look for Credentials
-1st priority    :   Command Line options            :   --region; --output; --profile
-2nd priority    :   Environment Variables           :   AWS_ACCESS_KEY; AWS_SECRET_KEY; AWS_SESSION_TOKEN
-3rd priority    :   CLI credentials file            :   ~/.aws/credentials : on Linux & Mac
-                                                        C:\Users\user\.aws\credentials  :   on Windows
-4th priority    :   CLI configuration file          :   ~/.aws/config   :   on Linix & Mac
-                                                        C:\Users\USERNAME\.aws\config   :   on Windows
-5th priority    :   Container Credentials           :   For ECS tasks
-6th priority    :   Instance Profile Credentials    :   For EC2 Instance Profiles
+    Following is the priority order for CLI to look for Credentials
+    1st priority    :   Command Line options            :   --region; --output; --profile
+    2nd priority    :   Environment Variables           :   AWS_ACCESS_KEY; AWS_SECRET_KEY; AWS_SESSION_TOKEN
+    3rd priority    :   CLI credentials file            :   ~/.aws/credentials : on Linux & Mac
+                                                            C:\Users\user\.aws\credentials  :   on Windows
+    4th priority    :   CLI configuration file          :   ~/.aws/config   :   on Linix & Mac
+                                                            C:\Users\USERNAME\.aws\config   :   on Windows
+    5th priority    :   Container Credentials           :   For ECS tasks
+    6th priority    :   Instance Profile Credentials    :   For EC2 Instance Profiles
 
 
 Consider the Following Scenario:
@@ -749,22 +758,24 @@ Consider the Following Scenario:
 An application deployed on an EC2 isntance is using environment variables with credentials from an IAM user to call the S3 API
 The IAM user has S3FullAccess permissions.
 The application only uses one S3 bucket, so according to best practices:
+
     a.  An IAM Role & EC2 instance profile was created for the EC2 instance
     b.  The role was assigned the minimum permissions to access that one S3 bucket
 
 Question:   The IAM instance profile was assigned to the EC2 instance, but it still had access to all S3 buckets, Why?
-Answer  :   This happened because, the credentials chain is still giving priorities to the environment variables. To deal with this scenario, you have to 
-    unset the environment variables, and then the IAM instance profile will become the only active priority in the credentials chain and the issue will be fixed
+    This happened because, the credentials chain is still giving priorities to the environment variables. To deal with this 
+    scenario, you have to unset the environment variables, and then the IAM instance profile will become the only active priority 
+    in the credentials chain and the issue will be fixed
 
 
-BEST Practices:
-    a.  Never store your credentials in the code
-    b.  Credentials must be inherited from the credentials chain
-    c.  Use IAM roles as much as possible
-        1.  EC2 roles for EC2 instances
-        2.  ECS roles for ECS tasks
-        3.  Lambda roles for lambda functions
-    d.  If working outside of AWS, use environment variables / named profiles
+    BEST Practices:
+        a.  Never store your credentials in the code
+        b.  Credentials must be inherited from the credentials chain
+        c.  Use IAM roles as much as possible
+            1.  EC2 roles for EC2 instances
+            2.  ECS roles for ECS tasks
+            3.  Lambda roles for lambda functions
+        d.  If working outside of AWS, use environment variables / named profiles
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 AWS : Signing API Requests
@@ -778,5 +789,6 @@ Note: Some requests to S3 dont need to be signed
 You should sign an AWS HTTP request using Signature V4 (SigV4)
 
 SigV4 Request Examples:
-a.  Using HTTP header option (Visible under browser network logs or postman console etc)
-b.  Query String option (e.g.: S3 pre-signed URLs)
+
+    a.  Using HTTP header option (Visible under browser network logs or postman console etc)
+    b.  Query String option (e.g.: S3 pre-signed URLs)
