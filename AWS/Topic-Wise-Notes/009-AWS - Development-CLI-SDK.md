@@ -735,7 +735,7 @@ Exponential Backoff:
             a.  You are not bombarding the API even when its not responding
             b.  Managing the API rate limit in a better way to not exhaust the limit
 
-    *******************************************************************************************************************************************************
+    ************************************************************************************************************************************
     SCN#01  :   When to use Exponential Backoff (any AWS service)
     Response:   If you get 'ThrottlingException' intermittently then you should use Exponential BackOff.
         If you are using AWS SDK, then the retry mechanism is already included in the AWS SDK API calls. However if you are using AWS API 
@@ -770,9 +770,10 @@ The application only uses one S3 bucket, so according to best practices:
     b.  The role was assigned the minimum permissions to access that one S3 bucket
 
 Question:   The IAM instance profile was assigned to the EC2 instance, but it still had access to all S3 buckets, Why?
+
     This happened because, the credentials chain is still giving priorities to the environment variables. To deal with this 
-    scenario, you have to unset the environment variables, and then the IAM instance profile will become the only active priority 
-    in the credentials chain and the issue will be fixed
+    scenario, you have to unset the environment variables, and then the IAM instance profile will become the only active 
+    priority in the credentials chain and the issue will be fixed
 
 
     BEST Practices:
