@@ -19,7 +19,7 @@ s3: ls  :   The ls command is used to list the buckets or the contents of the bu
     C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls
     2023-02-12 18:59:47 samarth-ashish-aws-developer-021223
     */
-    *******************************************************************************************************************************************************
+    ***********************************************************************************************************************************
 
     SCN#02  :   List all the files inside a S3 bucket
     Command :   aws s3 ls s3://samarth-ashish-aws-developer-021223
@@ -29,7 +29,7 @@ s3: ls  :   The ls command is used to list the buckets or the contents of the bu
     C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls s3://samarth-ashish-aws-developer-021223
     2023-02-14 20:46:49          6 Test-File.txt.txt
     */
-    *******************************************************************************************************************************************************
+    ***********************************************************************************************************************************
 
     SCN#03  :   List the contents of child directory in a S3 Bucket
     Command :   aws s3 ls s3://samarth-ashish-aws-developer-021223/my_multi_upload/
@@ -41,10 +41,11 @@ s3: ls  :   The ls command is used to list the buckets or the contents of the bu
     2023-02-15 06:32:41          1 1.txt
     2023-02-15 06:32:41          1 2.txt
     2023-02-15 06:32:41          1 3.txt
-    */    
+    */
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-s3: cp  :   The cp command simply copies the data to and from S3 buckets. It can be used to copy files from local to S3, from S3 to local, and between 
-            two S3 buckets. There are a lot of other parameters that you can supply with the commands.
+s3: cp  :   The cp command simply copies the data to and from S3 buckets. It can be used to copy files from local to S3, 
+            from S3 to local, and between two S3 buckets. There are a lot of other parameters that you can supply with the commands.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     SCN#01  :   Copy a single file from local directory to S3 bucket
     command :   aws s3 cp Test-File.txt s3://samarth-ashish-aws-developer-021223
@@ -54,7 +55,7 @@ s3: cp  :   The cp command simply copies the data to and from S3 buckets. It can
     C:\Users\samarth\Downloads\aws s3 cp Test-File.txt.txt s3://samarth-ashish-aws-developer-021223
     2023-02-14 20:46:49          6 Test-File.txt.txt
     */
-    *******************************************************************************************************************************************************
+    ***********************************************************************************************************************************
 
     SCN#02  :   Copy all files from local directory to S3 bucket
     Command :   aws s3 cp . s3://samarth-ashish-aws-developer-021223 --recursive
@@ -66,7 +67,7 @@ s3: cp  :   The cp command simply copies the data to and from S3 buckets. It can
     upload: .\1.txt to s3://samarth-ashish-aws-developer-021223/1.txt
     upload: .\2.txt to s3://samarth-ashish-aws-developer-021223/2.txt
     */
-    *******************************************************************************************************************************************************
+    ***********************************************************************************************************************************
 
     SCN#03  :   Copy a directory (having multiple files) to a S3 Bucket in a sub-directory
     Command :   aws s3 cp my_multi_upload s3://samarth-ashish-aws-developer-021223/my_multi_upload --recursive
@@ -78,11 +79,11 @@ s3: cp  :   The cp command simply copies the data to and from S3 buckets. It can
     upload: my_multi_upload\1.txt to s3://samarth-ashish-aws-developer-021223/my_multi_upload/1.txt
     upload: my_multi_upload\2.txt to s3://samarth-ashish-aws-developer-021223/my_multi_upload/2.txt 
     */
-    *******************************************************************************************************************************************************
+    ***********************************************************************************************************************************
 
     SCN#04  :   Copy a single file from local directory to S3 bucket - IA (infrequent Access)
     Command :   aws s3 cp file_name.txt s3://bucket_name/file_name_2.txt --storage-class STANDARD_IA 
-    *******************************************************************************************************************************************************
+    ***********************************************************************************************************************************
 
     SCN#05  :   Copy data between s3 buckets
     Command :   aws s3 cp s3://samarth-ashish-aws-developer-021223/5.txt s3://samarth-ashish-aws-developer-021523
@@ -114,16 +115,16 @@ s3: cp  :   The cp command simply copies the data to and from S3 buckets. It can
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-s3: mv  :   The mv command simply moves the data to and from S3 buckets. Just like the cp command, mv command is used to move data from local to S3, S3 to local, 
-            or between two S3 buckets.
-            The only difference between the mv and the cp command is that when using the mv command the file is deleted from the source. AWS moves this file to 
-            the destination. There are a lot of options that you can specify with the command
+s3: mv  :   The mv command simply moves the data to and from S3 buckets. Just like the cp command, mv command is used to move data 
+            from local to S3, S3 to local, or between two S3 buckets.
+            The only difference between the mv and the cp command is that when using the mv command the file is deleted from the source. 
+            AWS moves this file to the destination. There are a lot of options that you can specify with the command
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     SCN#01  :   Move a specific file from local storage to s3 bucket
     Command :   aws s3 mv 3.txt s3://samarth-ashish-aws-developer-021223/
     Syntax  :   aws s3 mv <local_file_name> s3://<bucket_name>/
-    Note    :   The difference between 'cp' and 'mv' is: mv will delete the file from the source and place it in s3 bucket, while cp does not delete the 
-                file from the source
+    Note    :   The difference between 'cp' and 'mv' is: mv will delete the file from the source and place it in s3 bucket, while cp 
+                does not delete the file from the source
 
     /*
     C:\Users\samarth\Downloads\my_multi_upload>dir
@@ -164,7 +165,7 @@ s3: mv  :   The mv command simply moves the data to and from S3 buckets. Just li
 
     C:\Users\samarth\Downloads\my_multi_upload>
     */
-    *******************************************************************************************************************************************************
+    ***********************************************************************************************************************************
 
     SCN#02  :   Move a specific file from s3 bucket to local storage
     Command :   aws s3 mv s3://samarth-ashish-aws-developer-021223/3.txt 5.txt
@@ -212,7 +213,7 @@ s3: mv  :   The mv command simply moves the data to and from S3 buckets. Just li
 
     C:\Users\samarth\Downloads\my_multi_upload>
     */
-    *******************************************************************************************************************************************************
+    ***********************************************************************************************************************************
 
     SCN#03  :   Move a specific file from one S3 bucket to another s3 bucket
     Command :   aws s3 mv s3://samarth-ashish-aws-developer-021223/2.txt s3://samarth-ashish-aws-developer-021523
@@ -234,7 +235,9 @@ s3: mv  :   The mv command simply moves the data to and from S3 buckets. Just li
     2023-02-15 07:11:37          1 5.txt
 
     C:\Users\samarth\Downloads\my_multi_upload>
-    C:\Users\samarth\Downloads\my_multi_upload>aws s3 mv s3://samarth-ashish-aws-developer-021223/2.txt s3://samarth-ashish-aws-developer-021523
+    C:\Users\samarth\Downloads\my_multi_upload>
+    aws s3 mv s3://samarth-ashish-aws-developer-021223/2.txt s3://samarth-ashish-aws-developer-021523
+    
     move: s3://samarth-ashish-aws-developer-021223/2.txt to s3://samarth-ashish-aws-developer-021523/2.txt
 
     C:\Users\samarth\Downloads\my_multi_upload>
@@ -248,7 +251,7 @@ s3: mv  :   The mv command simply moves the data to and from S3 buckets. Just li
 
     C:\Users\samarth\Downloads\my_multi_upload>
     */
-    *******************************************************************************************************************************************************
+    ***********************************************************************************************************************************
 
     SCN#04  :   Move a specific file from local to s3 bucket -IA (Infrequent Access)
     Command :   aws s3 mv file_name.txt s3://bucket_name/file_name_2.txt --storage-class STANDARD_IA 
@@ -265,7 +268,7 @@ s3: rm  :   The rm command is simply used to delete the objects in S3 buckets.
     C:\Users\samarth\Downloads\my_multi_upload>aws s3 rm s3://samarth-ashish-aws-developer-021223/Test-File.txt.txt
     delete: s3://samarth-ashish-aws-developer-021223/Test-File.txt.txt
     */
-    *******************************************************************************************************************************************************
+    ***********************************************************************************************************************************
 
     SCN#02  :   Remove all files from the S3 bucket
     Command :   aws s3 rm s3://samarth-ashish-aws-developer-021223/ --recursive
@@ -277,7 +280,7 @@ s3: rm  :   The rm command is simply used to delete the objects in S3 buckets.
     delete: s3://samarth-ashish-aws-developer-021223/2.txt
     delete: s3://samarth-ashish-aws-developer-021223/3.txt
     */
-    *******************************************************************************************************************************************************
+    ***********************************************************************************************************************************
 
     SCN#03  :   Remove specific files from the S3 bucket
     Command :   aws s3 rm s3://samarth-ashish-aws-developer-021223/ --recursive --exclude "3.txt"
@@ -316,7 +319,7 @@ s3: rm  :   The rm command is simply used to delete the objects in S3 buckets.
     C:\Users\samarth\Downloads\my_multi_upload>aws s3 ls s3://samarth-ashish-aws-developer-021223
     2023-02-14 21:22:52          1 3.txt
     */
-    *******************************************************************************************************************************************************
+    ***********************************************************************************************************************************
 
     SCN#04  :   Empty a S3 bucket
     Command :   aws s3 rm s3://samarth-ashish-aws-developer-021223 --recursive
@@ -336,7 +339,7 @@ s3: rm  :   The rm command is simply used to delete the objects in S3 buckets.
 
     C:\Users\samarth\Downloads\my_multi_upload>
     */
-    *******************************************************************************************************************************************************
+    ***********************************************************************************************************************************
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 s3: mb  :   The mb command is simply used to create new S3 buckets. This is a fairly simple command but to create new buckets, the name of the new bucket 
             should be unique across all the S3 buckets
@@ -390,12 +393,13 @@ s3: rb  :   The rb command is simply used to delete S3 buckets
     */
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-s3: sync    :   The sync command copies and updates files from the source to the destination just like the cp command. It is important that we understand 
-                the difference between the cp and the sync command. When you use cp it copies data from source to destination even if the data already exists 
-                in the destination.
-                It will also not delete files from the destination if they are deleted from the source. However, sync looks at the destination before copying 
-                your data and only copies the new and updated files. The sync command is similar to committing and pushing changes to a remote branch in git. 
-                The sync command offers a lot of options to customize the command. 
+s3: sync    :   The sync command copies and updates files from the source to the destination just like the cp command. 
+                It is important that we understand the difference between the cp and the sync command. When you use cp 
+                it copies data from source to destination even if the data already exists in the destination.
+                It will also not delete files from the destination if they are deleted from the source. However, sync looks 
+                at the destination before copying your data and only copies the new and updated files. The sync command is 
+                similar to committing and pushing changes to a remote branch in git. The sync command offers a lot of 
+                options to customize the command. 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     SCN#01  :   Sync files between two s3 buckets
     Command :   aws s3 sync s3://samarth-ashish-aws-developer-021223 s3://samarth-ashish-aws-developer-021523
@@ -434,8 +438,8 @@ s3: sync    :   The sync command copies and updates files from the source to the
     */ 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-s3: presign :   The presign command generates a pre-signed URL for a key in the S3 bucket. You can use this command to generate URLs that can be used by 
-                others to access a file in the specified S3 bucket key.
+s3: presign :   The presign command generates a pre-signed URL for a key in the S3 bucket. You can use this command to generate URLs 
+                that can be used by others to access a file in the specified S3 bucket key.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     SCN#01  :   Generate a pre-signed url
     Command :   aws s3 presign s3://bucket_name/samplePrefix/file_name.png --expires-in 3600
@@ -459,7 +463,8 @@ s3: website:    The website command is used to configure the S3 static website h
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 s3: MFA-Delete:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    MFA [Multi Factor Authentication] forces user to generate a code on a device (usually a mobile phone or hardware) before doing import operations on S3
+    MFA [Multi Factor Authentication] forces user to generate a code on a device (usually a mobile phone or hardware) before doing 
+    import operations on S3
 
     To use MFA-Delete, enable versioning on the S3 bucket
     You will need MFA to
@@ -471,7 +476,8 @@ s3: MFA-Delete:
         b.  listing deleted versions
     
     Only the bucket owner (root account) can enable / disable MFA-Delete
-    MFA-Delete currently can only be enabled using the CLI, and the pre-requisite it to have MFA Device configured on your account (under IAM)
+    MFA-Delete currently can only be enabled using the CLI, and the pre-requisite it to have MFA Device configured on your 
+    account (under IAM)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 STS - CLI
@@ -509,37 +515,38 @@ Note: You can retrieve the IAM role name from the metadata, but you cannot retri
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 EC2 :   Metadata    :   Check all available options via meta-data api
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-[ec2-user@ip-172-31-62-238 ~]$ curl http://169.254.169.254/latest/meta-data/
-ami-id
-ami-launch-index
-ami-manifest-path
-block-device-mapping/
-events/
-hibernation/
-hostname
-iam/
-identity-credentials/
-instance-action
-instance-id
-instance-life-cycle
-instance-type
-local-hostname
-local-ipv4
-mac
-managed-ssh-keys/
-metrics/
-network/
-placement/
-profile
-public-hostname
-public-ipv4
-public-keys/
-reservation-id
-security-groups
-services/
-system[ec2-user@ip-172-31-62-238 ~]$
 
-    *******************************************************************************************************************************************************
+    [ec2-user@ip-172-31-62-238 ~]$ curl http://169.254.169.254/latest/meta-data/
+    ami-id
+    ami-launch-index
+    ami-manifest-path
+    block-device-mapping/
+    events/
+    hibernation/
+    hostname
+    iam/
+    identity-credentials/
+    instance-action
+    instance-id
+    instance-life-cycle
+    instance-type
+    local-hostname
+    local-ipv4
+    mac
+    managed-ssh-keys/
+    metrics/
+    network/
+    placement/
+    profile
+    public-hostname
+    public-ipv4
+    public-keys/
+    reservation-id
+    security-groups
+    services/
+    system[ec2-user@ip-172-31-62-238 ~]$
+
+    ***********************************************************************************************************************************
     SCN#01  :   Get Hostname for the EC2 Instance using the metadata service
     Command :   curl http://169.254.169.254/latest/meta-data/hostname; echo -e "\n"
     Syntax  :   curl <meta-data-url>/<api_name> ; echo <new-line-character>
@@ -549,7 +556,7 @@ system[ec2-user@ip-172-31-62-238 ~]$
     ip-172-31-62-238.ec2.internal
     */
 
-    *******************************************************************************************************************************************************
+    ***********************************************************************************************************************************
     SCN#02  :   Get Security-Groups for the EC2 Instance using the metadata service
     Command :   curl http://169.254.169.254/latest/meta-data/security-groups; echo -e "\n"
     Syntax  :   curl <meta-data-url>/<api_name> ; echo <new-line-character>
@@ -562,7 +569,7 @@ system[ec2-user@ip-172-31-62-238 ~]$
 
     The output indicates, that this particular EC2 instance, has two security groups attached to it.
 
-    *******************************************************************************************************************************************************
+    ***********************************************************************************************************************************
     SCN#03  :   Get Instance-Type for the EC2 Instance using the metadata service
     Command :   curl http://169.254.169.254/latest/meta-data/instance-type; echo -e "\n"
     Syntax  :   curl <meta-data-url>/<api_name> ; echo <new-line-character>
@@ -572,7 +579,7 @@ system[ec2-user@ip-172-31-62-238 ~]$
     t2.micro
     */
 
-    *******************************************************************************************************************************************************
+    ***********************************************************************************************************************************
     SCN#04  :   Get IAM permissions details for the EC2 Instance using the metadata service
     Command :   curl http://169.254.169.254/latest/meta-data/iam/info; echo -e "\n"
     Syntax  :   curl <meta-data-url>/<api_name> ; echo <new-line-character>
@@ -595,7 +602,7 @@ system[ec2-user@ip-172-31-62-238 ~]$
     IAM-Role-EC2-Full-Access
     */
 
-    *******************************************************************************************************************************************************
+    ***********************************************************************************************************************************
     SCN#05  :   Get Private IP address of the EC2 instance using the metadata service
     Command :   curl http://169.254.169.254/latest/meta-data/local-ipv4; echo -e "\n"
     Syntax  :   curl <meta-data-url>/<api_name> ; echo <new-line-character>
@@ -605,7 +612,7 @@ system[ec2-user@ip-172-31-62-238 ~]$
     172.31.62.238
     */
 
-    *******************************************************************************************************************************************************
+    ***********************************************************************************************************************************
     SCN#06  :   Get Instance-Id of the EC2 instance using the metadata service
     Command :   curl http://169.254.169.254/latest/meta-data/instance-id; echo -e "\n"   
     Syntax  :   curl <meta-data-url>/<api_name> ; echo <new-line-character>
@@ -726,13 +733,13 @@ Exponential Backoff:
 
         So that
             a.  You are not bombarding the API even when its not responding
-            b.  Managing the API rate limit in a better way to not exhaut the limit, and eventually asking AWS to increase the access limit
+            b.  Managing the API rate limit in a better way to not exhaust the limit
 
     *******************************************************************************************************************************************************
     SCN#01  :   When to use Exponential Backoff (any AWS service)
     Response:   If you get 'ThrottlingException' intermittently then you should use Exponential BackOff.
-        If you are using AWS SDK, then the retry mechanism is already included in the AWS SDK API calls. However if you are using AWS API then you must 
-        implement the exponential backoff
+        If you are using AWS SDK, then the retry mechanism is already included in the AWS SDK API calls. However if you are using AWS API 
+        then you must implement the exponential backoff
 
     Exam Question   :   Which type of errors should you retry for an exponential backoff?
     Answer          :   Retries must be only implemented for 5xx errors and Throttling. You SHOULD not use retry or exponential back 
