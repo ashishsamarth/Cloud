@@ -46,10 +46,10 @@ Here's the link for public ip addresses of all edge locations:
     https://d7uri8nf7uskq.cloudfront.net/tools/list-cloudfront-ips
 
 Here's the image for S3 as an Origin:
-![!](../Assets/CloudFront-origin-as-S3.PNG)
+![!](../Assets/CloudFront/CloudFront-origin-as-S3.PNG)
     
 Here's the image for ALB or EC2 as an Origin
-![!](../Assets/CloudFront-origin-as-ALB-EC2.PNG)
+![!](../Assets/CloudFront/CloudFront-origin-as-ALB-EC2.PNG)
 
 
 Q03: Explain CloudFront Geo Restriction?
@@ -72,7 +72,6 @@ Q04: How is CloudFront different than S3 Cross Region Replication?
             1.  It uses a global edge network
             2.  Files are cached using a TTL (TTL is configurable)
             3.  Great for static content that must be available 'EVERYWHERE'
-
 
         b.  S3-CRR
             1.  CRR MUST be set up for each region you want replication to happen
@@ -159,7 +158,7 @@ Q06: What is CloudFront Caching?
             inthe client request.
         7.  Important Note: You can also invalidate a part of the cache, by using the 'CreateInvalidationAPI'
 
-![!](../Assets/CloudFront-Caching.PNG)
+![!](../Assets/CloudFront/CloudFront-Caching.PNG)
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -181,7 +180,7 @@ The behaviour of CloudFront Caching is different for both Static and Dynamic Req
         Edge Location.And all next request for the content are served directly from CloudFront Edge Location, maximizing the Cache hits, 
         and not going to S3 any further untill TTL expires.
 
-![!](../Assets/CloudFront-Caching-Static-Request-Handling.jpg)            
+![!](../Assets/CloudFront/CloudFront-Caching-Static-Request-Handling.jpg)            
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -190,6 +189,6 @@ The behaviour of CloudFront Caching is different for both Static and Dynamic Req
         client does not match the data in cache, only then CloudFront will call the ALB + EC2 origin. Once the data is returned back 
         from the origin, this data will be cached until TTL expires.
 
-![!](../Assets/CloudFront-Caching-Dynamic-Request-Handling.PNG)
+![!](../Assets/CloudFront/CloudFront-Caching-Dynamic-Request-Handling.PNG)
 
 ----------------------------------------------------------------------------------------------------------------------------------------
