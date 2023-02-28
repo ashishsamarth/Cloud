@@ -12,7 +12,6 @@ It also indicates that all the users that are created in a particular AWS accoun
 IAM allows you to manage users and their level of access to the AWS Console. It is important to understand IAM and how it works, both for the exam and for administrating a company's AWS account in real life.
 
 Things that IAM Provides
-
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
     a.  Centralized control of your AWS account
     b.  Shared Access to your AWS account
