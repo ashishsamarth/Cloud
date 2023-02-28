@@ -45,9 +45,8 @@ IAM Guidelines & Best Practices
     a.  USERS       :   Mapped to a physical user, has a password for AWS console   (think people).
     b.  GROUPS      :   Contains Users only (A collection of users under one set of permissions.)
     c.  POLICIES    :   A JSON document that outlines permissions for users or groups
-                        Policies can be attached to either a User, a Group, or a Role. Once attached, a policy will grant to the assignee the permissions 
-                        associated with that policy
-
+                        Policies can be attached to either a User, a Group, or a Role. 
+                        Once attached, a policy will grant to the assignee the permissions associated with that policy
     d.  ROLES       :   For EC2 instances or AWS services   (Used to assign a set of permissions to AWS resources)
     e.  SECURITY    :   MFA + Password Policy
     f.  ACCESS KEYS :   Access AWS using the CLI or SDK
@@ -57,31 +56,40 @@ IAM Guidelines & Best Practices
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Q01: When creating a USER, how many types of 'Access Types' can be provisioned?
-----------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
     Their are two types of 'Access Types' that can be utilized
-        a.  Programmatic Access: 
-            This allows the user to use AWS API, CLI, SDK & Other development tools to be utilized via an access Key ID & secret access key
-        b.  AWS Management Console Access: 
-            This allows the user to use the (GUI) management console access.
-----------------------------------------------------------------------------------------------------------------------------------------
+    a.  Programmatic Access: 
+        This allows the user to use AWS API, CLI, SDK & Other development tools to be utilized via an access Key ID 
+        & secret access key
+    b.  AWS Management Console Access: 
+        This allows the user to use the (GUI) management console access.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
     
-    Q02. When creating a USER, is it necessary to Create a Group?
-    A02: No, Its not necesary to create a Group while creating a USER. However, as a best practice its recommended to have even a single user to be 
-        mapped to group.Since over a period of time, the number of users may grow and it will be easier to manage permissions using groups and policies.
-    
-    Q03: What are tags in AWS?
-    A03: Tags are way to organize and categorize resources in AWS.
-        For e.g.: Their are mulitple EC2 instances in your account, and you want to identify them based on Team names and/or Project Names to quickly 
-        identify which EC2 instance is being used for what. Tagging also helps to identify the cost accumulated by the resources which is important for 
-        Billing & Thresholds.
-    
-    Q04: Once the user is created, how many ways can the user get login credentials?
-    A04: Their are two ways a user can get hold of login credentials
-        a.  via the 'Download.csv'
-        b.  'Send Email' : Which has the Email Login Instructions.
+Q02. When creating a USER, is it necessary to Create a Group?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+No, Its not necesary to create a Group while creating a USER. However, as a best practice its recommended to have even a single user to be 
+mapped to group.Since over a period of time, the number of users may grow and it will be easier to manage permissions using groups and policies.
 
-    Q05: How can you customize the url for specific user login, Once the user is created?
-    A05: Login to the AWS console --> Go to IAM Dashboard --> on the top right under 'AWS Account' --> Look for 'Account Alias'
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q03: What are tags in AWS?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Tags are way to organize and categorize resources in AWS.
+
+For e.g.: Their are mulitple EC2 instances in your account, and you want to identify them based on Team names and/or Project Names to quickly identify which EC2 instance is being used for what. Tagging also helps to identify the cost accumulated by the resources which is important for Billing & Thresholds.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q04: Once the user is created, how many ways can the user get login credentials?
+Their are two ways a user can get hold of login credentials
+    a.  via the 'Download.csv'
+    b.  'Send Email' : Which has the Email Login Instructions.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q05: How can you customize the url for specific user login, Once the user is created?
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Login to the AWS console --> Go to IAM Dashboard --> on the top right under 'AWS Account' --> Look for 'Account Alias'
         a.  If you dont have an alias - It will enable the link to 'Create' an alias
         b.  If you have an alias - It will allow to 'Edit' or 'Delete' an alias
 
@@ -89,7 +97,8 @@ Q01: When creating a USER, how many types of 'Access Types' can be provisioned?
         You cannot create an alias if it already exists.
 
         e.g.:   https://samarth-aws.signin.aws.amazon.com/console
-    
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
     Q06: What is the advantage of having an alias based url for login?
     A06: Following are the advantages
         a.  When you use an 'Alias' based url:
