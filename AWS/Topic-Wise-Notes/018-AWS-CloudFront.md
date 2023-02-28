@@ -185,6 +185,6 @@ The behaviour of CloudFront Caching is different for both Static and Dynamic Req
         the data in cache, only then CloudFront will call the ALB + EC2 origin. Once the data is returned back from the origin, this data will be cached until 
         TTL expires.
 
-![!](../Assets/CloudFront-Caching-Dynamic-Request-Handling)
+![!](../Assets/CloudFront-Caching-Dynamic-Request-Handling.PNG)
 
 ----------------------------------------------------------------------------------------------------------------------------------------
