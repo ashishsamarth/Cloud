@@ -341,8 +341,8 @@ s3: rm  :   The rm command is simply used to delete the objects in S3 buckets.
     */
     ***********************************************************************************************************************************
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-s3: mb  :   The mb command is simply used to create new S3 buckets. This is a fairly simple command but to create new buckets, the name of the new bucket 
-            should be unique across all the S3 buckets
+s3: mb  :   The mb command is simply used to create new S3 buckets. This is a fairly simple command but to create new buckets, 
+            the name of the new bucket should be unique across all the S3 buckets
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     SCN#01  :   Create a new bucket in S3
     Command :   aws s3 mb s3://samarth-ashish-aws-developer-021523
@@ -376,7 +376,8 @@ s3: rb  :   The rb command is simply used to delete S3 buckets
 
     C:\Users\samarth\Downloads\my_multi_upload>
     C:\Users\samarth\Downloads\my_multi_upload>aws s3 rb s3://samarth-ashish-aws-developer-021523
-    remove_bucket failed: s3://samarth-ashish-aws-developer-021523 An error occurred (BucketNotEmpty) when calling the DeleteBucket operation: The bucket you tried to delete is not empty
+    remove_bucket failed: s3://samarth-ashish-aws-developer-021523 An error occurred (BucketNotEmpty) when calling the DeleteBucket operation: 
+                        The bucket you tried to delete is not empty
 
     C:\Users\samarth\Downloads\my_multi_upload>
     C:\Users\samarth\Downloads\my_multi_upload>aws s3 rb s3://samarth-ashish-aws-developer-021523 --force
@@ -421,7 +422,9 @@ s3: sync    :   The sync command copies and updates files from the source to the
     2023-02-15 07:14:19          1 2.txt
     2023-02-15 07:11:37          1 5.txt
 
-    C:\Users\samarth\Downloads\my_multi_upload>aws s3 sync s3://samarth-ashish-aws-developer-021223 s3://samarth-ashish-aws-developer-021523
+    C:\Users\samarth\Downloads\my_multi_upload>aws 
+    s3 sync s3://samarth-ashish-aws-developer-021223 s3://samarth-ashish-aws-developer-021523
+    
     copy: s3://samarth-ashish-aws-developer-021223/1.txt to s3://samarth-ashish-aws-developer-021523/1.txt
 
     C:\Users\samarth\Downloads\my_multi_upload>
