@@ -56,3 +56,4 @@ This also provides the following
         Here's the link for public ip addresses of all edge locations:
         https://d7uri8nf7uskq.cloudfront.net/tools/list-cloudfront-ips
 
+        [[https://d2908q01vomqb2.cloudfront.net/5b384ce32d8cdef02bc3a139d4cac0a22bb029e8/2017/12/19/Picture2.jpg|alt=octocat]]
