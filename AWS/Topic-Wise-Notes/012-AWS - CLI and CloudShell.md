@@ -62,8 +62,8 @@ Q02: How to configure AWS CLI on windows?
             }
             C:\Users\samarth>
         
-    Important Note: AWS-CLI is just another method of accessing the data, the data shows will always be same across management console
-     and CLI
+    Important Note: AWS-CLI is just another method of accessing the data, the data shows will always be same across 
+                    management console and CLI
     
     For e.g.:- If we go ahead and remove the policy 'IAM FullAccess' from the group 'AWS-Developer', which IAM user 
     'Samarth-Developer' is a part of, And then execute the same command (aws iam list-users) from windows command prompt, 
