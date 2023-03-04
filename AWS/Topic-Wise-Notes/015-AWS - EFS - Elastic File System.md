@@ -122,7 +122,8 @@ Q05: How to attach an EFS to multiple EC2 instance in the same region but in dif
         p.  Once package is installed on the EC2 instances, come back to EFS dashboard and click on the File System that was created
         q.  On the top right you will see an option to 'Attach'
         r.  Use the 'Mount via DNS' option and run the command indicated as - 'sudo mount -t efs -o tls fs-0c621fafa80c68ea6:/ efs'
-        s.  In the above command, 'tls' is for encryption and 'fs-0c621fafa80c68ea6' is the filesystem ID. and efs at the end is the mount point name.
+        s.  In the above command, 'tls' is for encryption and 'fs-0c621fafa80c68ea6' is the filesystem ID. and efs at the end is the 
+            mount point name.
         t.  If everything was done correctly, the EFS will be mounted on 'efs' directory as the mount point on EC2 instances.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
