@@ -54,6 +54,7 @@ The mininum policy required to be able to read data from EFS is :- AmazonElastic
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 Q04: How to create an EFS (Elastic File System)?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
     Following are the steps:
         a.  On the AWS management console, search for EFS
         b.  Once navigated to the EFS console, click on 'Create File System'
