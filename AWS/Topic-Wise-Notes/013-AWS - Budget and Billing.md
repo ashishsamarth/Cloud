@@ -31,7 +31,6 @@ Q01: Can an IAM user access the Billing and Cost Management Dashboard by default
 Q02: How to create a Budget?
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
     Login to the management console as an Administrative / root user
------------------------------------------------------------------------------------------------------------------------------------------------------------
         a.  On the top right click on Login name and then click on 'Billing Dashboard'
         b.  On the left vertical menu (side bar), click on 'Budgets' under 'Cost Management'
         c.  On the 'Budgets' page, click on 'Create a Budget'
