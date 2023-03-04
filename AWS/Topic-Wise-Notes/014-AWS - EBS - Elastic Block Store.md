@@ -221,9 +221,11 @@ Q13: Explain the characteristics of HDD EBS volume?
         There are two types of HDD EBS Volumes
         1.  st1: These are throughput optimized HDDs, good for Big Data, Data Warehouses and Log processing workloads.
         2.  sc1: These are cold HHDs, and good for infrequently (archival) accessed data, and has the lowest cost of all.
-    
-    Q14: What is EBS Multi-Attach?
-    A14: Multi-Attach is a functionality that allows you to "attach one EBS volume to multiple EC2 instances in the SAME AZ."
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------    
+Q14: What is EBS Multi-Attach?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Multi-Attach is a functionality that allows you to "attach one EBS volume to multiple EC2 instances in the SAME AZ."
         This functionality is only available for EBS volumes from the io1/io2 family
         Note:
             1.  Each EC2 instance attached to such an EBS volume has full read and write permissions to the volume
@@ -232,3 +234,5 @@ Q13: Explain the characteristics of HDD EBS volume?
             1.  Applications using this functionality must be able to manage concurrent write operations to the same volume
             2.  Applications using this functionality muse you a filesystem that's cluster aware.
         This functionality will allow the applications to achieve higher application availability in clustered Linux applications.
+
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------
