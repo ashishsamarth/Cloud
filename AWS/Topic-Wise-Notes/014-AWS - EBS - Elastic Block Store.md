@@ -132,9 +132,9 @@ Now this modified AMI can be used to launch new instance, with the pre-packaged 
         h.  The image will be created successfully.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-
-    Q08: How to Launch a new EC2 instance based on 'Created AMI'?
-    A08: Once you have successfully created your own modified AMI image, the image should show up under 'Images' in EC2 dashboard
+Q08: How to Launch a new EC2 instance based on 'Created AMI'?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Once you have successfully created your own modified AMI image, the image should show up under 'Images' in EC2 dashboard
         {Left Vertical Menu}
         a.  On the EC2 dashboard, click on Launch Instances.
         b.  On the next step 'Choose an Amazon Machine Image (AMI), click on 'My AMIs' on the left vertical menu
@@ -144,8 +144,10 @@ Now this modified AMI can be used to launch new instance, with the pre-packaged 
         f.  Review the launch instance and then click on 'Launch Instance'
     This is how you launch an EC2 instance based on the 'Created AMI'
 
-    Q09: What is an EC2 Instance Store?
-    A09: EBS volumes are network drives with good, but 'Limited' Performance.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q09: What is an EC2 Instance Store?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    EBS volumes are network drives with good, but 'Limited' Performance.
         If you need a 'High-Performance hardware disk' use EC2 Instance Store
 
         EC2 Instance Store has the following characteristics.
@@ -156,8 +158,10 @@ Now this modified AMI can be used to launch new instance, with the pre-packaged 
         e.  Back up and Replication are Your responsibility
         f.  The instances usually start with 'i' in the naming conventions (e.g. i3.large, i3en.metal, i3.metal, i3.8xlarge)
 
-    Q10: Explain the types of EBS Volumes?
-    A10: There are total 6 types of EBS volumes for now, following are the categories.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q10: Explain the types of EBS Volumes?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    There are total 6 types of EBS volumes for now, following are the categories.
         a.  gp2 / gp3 (SSD) : General purpose SSD volumes that balance price and performance for a variety of workloads
         b.  io1/ io2 (SSD)  : Highest performance SSD volume for mission-critical low-latency or high-throughput workloads
         c.  st1 (HDD)   : Low Cost HDD volume designed for frequently accessed, throughput-intensive workloads.
@@ -171,6 +175,7 @@ Now this modified AMI can be used to launch new instance, with the pre-packaged 
 
     Special Note: For EC2 instance, only gp2/gp3 and io1/io2 EBS volumes can be used for boot volumes.
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
     Q11: Explain the characteristics of General Purpose SSD EBS volume?
     A11: General Purpose SSDs are
         a.  Cost Effective Storage, Low-latency
