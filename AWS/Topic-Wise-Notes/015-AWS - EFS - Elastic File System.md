@@ -114,7 +114,8 @@ Q05: How to attach an EFS to multiple EC2 instance in the same region but in dif
         h.  You should have an EFS file system created.
         i.  Click on the EFS filesystem and navigate to 'Network'
         j.  Under 'Network' you MUST have 'Mount targets' 'CREATED'. Unless the status created, its not going to work
-        k.  if the 'Mount Targets' are not created, check if you have done the correct selection of 'Security Groups' (i.e. 'EC2-to-EFS' SG)
+        k.  if the 'Mount Targets' are not created, check if you have done the correct selection of 'Security Groups' 
+            (i.e. 'EC2-to-EFS' SG)
         l.  Once the Mount Targets are created, go ahead and connect to your EC2 instances using the pem/ppk file via SSH
         m.  On each of the instances, create a directory 'efs' this is the directory which we will use as the mount point of EFS.
         n.  Before, we can mount the EFS to 'efs' directory, we need to install the NFS utils packaged
