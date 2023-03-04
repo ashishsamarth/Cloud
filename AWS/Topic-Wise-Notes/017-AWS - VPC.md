@@ -117,9 +117,9 @@ A virtual private cloud (VPC) is a logically isolated, virtual network within a 
 
     Benefits of VPC Peering:
         
-    a.  Improve security:	VPC peering comes with the major benefit of improving security by enabling private connectivity between two or more 
-            VPC networks, isolating traffic from public Internet. Because your traffic never leaves the cloud provider’s network, you reduce a whole 
-            class of risks for your stack.
+    a.  Improve security:	VPC peering comes with the major benefit of improving security by enabling private connectivity between 
+        two or more VPC networks, isolating traffic from public Internet. Because your traffic never leaves the cloud provider’s network, 
+        you reduce a whole class of risks for your stack.
 
     b.  Save money on network costs:	With VPC peering, you save on network transit costs and benefit from improved network latency. Because 
         peering traffic does not leave your cloud provider’s network, that reduces public IP latency. And since peered networks use internal IPs to 
