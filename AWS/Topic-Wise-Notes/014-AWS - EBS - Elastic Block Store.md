@@ -5,13 +5,15 @@ AWS-EBS: Elastic Block Store
 Q01: What's an EBS volume?
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
     An EBS volume is a NETWORK Drive (like a network usb stick) that you can attach to your instance while they run.
-        It allows the instances to persist data, even after their termination, which means, if take a snapshot of the volume before the instance was 
-        terminated. You can utilize the snapshot to retain the data and a new EBS volume can be used on a new EC2 instances with the old data.
+        It allows the instances to persist data, even after their termination, which means, if take a snapshot of the volume before the 
+        instance was terminated. You can utilize the snapshot to retain the data and a new EBS volume can be used on a new EC2 instances 
+        with the old data.
+        
         a.  EBS volumes can be mounted to only one instance at a time (CCP-Level), and one instance can have multiple EBS volumes to it.
             There is an 'multi-attach' functionality for EBS volumes, but that is more advanced
         b.  When an EC2 instance is created, an EBS volume is attached to it, for the boot.
-        c.  EBS volumes are bound to a specific availability zone, that means once created in a specific availability zone it cannot be utilized in 
-            another zone
+        c.  EBS volumes are bound to a specific availability zone, that means once created in a specific availability zone it cannot be 
+            utilized in another zone
 
         Free-Tier: 30 GB of free EBS storage of type (General Purpose SSD or magnetic) per month
 
@@ -31,12 +33,13 @@ Q01: What's an EBS volume?
         https://devopscube.com/mount-ebs-volume-ec2-instance/
 
         EBS - Delete on Termination attribute
-            1.  The volume type = Root, attached to the EC2 instance has an attribute 'Delete On Termination' which is 'Checked' by default.
-                : Which means, when the instance is terminated the 'root' volume will be deleted.
-                This attribute is modifiable, and if you want, you can preserve the root volume.
-            2.  The volume type = EBS, attached as an EBS volume to the EC2 instance, also has the attribute 'Delete On Termination' which is NOT 
-                'Checked' by default. And as mentioned earlier, this attribute is modifiable.
-                : Which means, when the instance is terminated the 'EBS' volume will not be deleted.
+            1.  The volume type = Root, attached to the EC2 instance has an attribute 'Delete On Termination' which is 'Checked' 
+                by default.
+                    : Which means, when the instance is terminated the 'root' volume will be deleted.
+                    This attribute is modifiable, and if you want, you can preserve the root volume.
+            2.  The volume type = EBS, attached as an EBS volume to the EC2 instance, also has the attribute 'Delete On Termination' 
+                which is NOT 'Checked' by default. And as mentioned earlier, this attribute is modifiable.
+                    : Which means, when the instance is terminated the 'EBS' volume will not be deleted.
 
             : This attribute can be controlled by the AWS console / AWS CLI.
         
