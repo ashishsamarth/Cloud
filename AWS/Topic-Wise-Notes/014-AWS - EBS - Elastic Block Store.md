@@ -49,9 +49,8 @@ Q02: What is EBS Snapshots?
         c.  Copy snapshots across AZ or Region.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-    
-    Q03: How to create a snapshot?
-    A03. Login to the EC2 dashboard and then follow these steps:
+Q03: How to create a snapshot?
+    Login to the EC2 dashboard and then follow these steps:
         a.  On the left side vertical menu, look for 'Elastic Block Store'
         b.  Under 'Elastic Block Store' click on 'Volume'
         c.  On the new page that opens, you will see the EBS volumes that are created / attached to the EC2 instance.
@@ -64,8 +63,9 @@ Q02: What is EBS Snapshots?
 
 
         Special Note: Snapshots are created in 'Regions', so these can be copied to 'Another Region' or 'Another AZ in the same region'
-    
-    Q04: How to copy a snapshot to another region
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q04: How to copy a snapshot to another region
     A04: Login to the EC2 dashboard and then follow these steps:
         a.  On the left side vertical menu, look for 'Elastic Block Store'
         b.  Under 'Elastic Block Store' click on 'Snapshots'
