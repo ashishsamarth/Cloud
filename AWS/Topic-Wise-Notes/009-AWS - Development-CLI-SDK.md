@@ -117,8 +117,8 @@ s3: cp  :   The cp command simply copies the data to and from S3 buckets. It can
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 s3: mv  :   The mv command simply moves the data to and from S3 buckets. Just like the cp command, mv command is used to move data 
             from local to S3, S3 to local, or between two S3 buckets.
-            The only difference between the mv and the cp command is that when using the mv command the file is deleted from the source. 
-            AWS moves this file to the destination. There are a lot of options that you can specify with the command
+            The only difference between the mv and the cp command is that when using the mv command the file is deleted from the 
+            source. AWS moves this file to the destination. There are a lot of options that you can specify with the command
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     SCN#01  :   Move a specific file from local storage to s3 bucket
     Command :   aws s3 mv 3.txt s3://samarth-ashish-aws-developer-021223/
