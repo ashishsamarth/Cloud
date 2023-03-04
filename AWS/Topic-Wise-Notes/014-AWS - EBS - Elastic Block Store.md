@@ -176,8 +176,9 @@ Q10: Explain the types of EBS Volumes?
     Special Note: For EC2 instance, only gp2/gp3 and io1/io2 EBS volumes can be used for boot volumes.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-    Q11: Explain the characteristics of General Purpose SSD EBS volume?
-    A11: General Purpose SSDs are
+Q11: Explain the characteristics of General Purpose SSD EBS volume?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    General Purpose SSDs are
         a.  Cost Effective Storage, Low-latency
         b.  Used for : System boot volumes, Virtual Desktops, Development and Test environments.
         c.  Size is between: 1GB - 16TB
@@ -190,9 +191,11 @@ Q10: Explain the types of EBS Volumes?
             1.  Small gp2 volumes can burst IOPS to 3000
             2.  Size of the volume and IOPS are linked, max IOPS is 16000
             3.  IOPS per GB, means at 5334 GB we are at the max IOPS.
-    
-    Q12: Explain the characteristics of Provisioned IOPS EBS Volume?
-    A12: Provisioned IOPS SSDs are good for
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------    
+Q12: Explain the characteristics of Provisioned IOPS EBS Volume?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Provisioned IOPS SSDs are good for
         a.  Critical Business applications with sustained IOPS performance
         b.  OR Applications that need more than 16000 IOPS
         c.  Great for database workloads (sensitive to storage performance and consistency)
@@ -207,9 +210,11 @@ Q10: Explain the types of EBS Volumes?
             1.  Size range is 4GB to 64TB
             2.  Sub-Millisecond latency
             3.  Max PIOPS: 256000 with an IOPS:GB ratio of 1000:1
-    
-    Q13: Explain the characteristics of HDD EBS volume?
-    A13: HDD EBS Volumes
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q13: Explain the characteristics of HDD EBS volume?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    HDD EBS Volumes
         a. Cannot be a boot volume
         b. Size ranges between 125MB to 16TB
         
