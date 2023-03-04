@@ -2,8 +2,8 @@
 AWS-EBS: Elastic Block Store
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    Q01: What's an EBS volume?
-    A01: An EBS volume is a NETWORK Drive (like a network usb stick) that you can attach to your instance while they run.
+Q01: What's an EBS volume?
+    An EBS volume is a NETWORK Drive (like a network usb stick) that you can attach to your instance while they run.
         It allows the instances to persist data, even after their termination, which means, if take a snapshot of the volume before the instance was 
         terminated. You can utilize the snapshot to retain the data and a new EBS volume can be used on a new EC2 instances with the old data.
         a.  EBS volumes can be mounted to only one instance at a time (CCP-Level), and one instance can have multiple EBS volumes to it.
@@ -40,7 +40,9 @@ AWS-EBS: Elastic Block Store
             : This attribute can be controlled by the AWS console / AWS CLI.
         
         USECASE: How to preserve the root volume when instance is terminated.
-    
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
     Q02: What is EBS Snapshots?
     A02: EBS Snapshots are used to
         a.  Make a backup (snapshot) of your EBS volume at a point in time
