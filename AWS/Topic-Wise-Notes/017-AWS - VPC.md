@@ -122,9 +122,10 @@ A virtual private cloud (VPC) is a logically isolated, virtual network within a 
         networks, isolating traffic from public Internet. Because your traffic never leaves the cloud provider’s network, you reduce 
         a whole class of risks for your stack.
 
-    b.  Save money on network costs: With VPC peering, you save on network transit costs and benefit from improved network latency. Because 
-        peering traffic does not leave your cloud provider’s network, that reduces public IP latency. And since peered networks use internal IPs to 
-        communicate, transferring data over the cloud provider’s network is cheaper than over the public Internet.
+    b.  Save money on network costs: 
+        With VPC peering, you save on network transit costs and benefit from improved network latency. Because peering traffic does
+         not leave your cloud provider’s network, that reduces public IP latency. And since peered networks use internal IPs to communicate, 
+         transferring data over the cloud provider’s network is cheaper than over the public Internet.
 
     c.  Get more flexibility for services that don’t need to connect to the Internet:	Another reason to use VPC peering is when your instances 
         do not require a public IP address or a network address translation (NAT) configuration to the public Internet. This can be desirable for 
