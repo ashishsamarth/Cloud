@@ -5,36 +5,7 @@ VPC can have multiple subnets. A Subnet allows you to partition your network ins
 When an AWS account is created for you, it will only have 'Public Subnets' it will not have any 'Private Subnets'. Also, you will have one Default VPC per 
 region that is available to you, so essentially 'AZs' with in the region will have the same VPC.
 
-
-
-                            INTERNET
-                              ^
-                              |
-                              |
-        ----------------------|-----------------------------------
-        | VPC          INTERNET GATEWAY------^                   |
-        |   __________________|______________|_______________    |
-        |   |                 |              |               |   |
-        |   |   **************|**************|***********    |   |
-        |   |   |      NETWORK| ACL          |          |    |   |
-        |   |   |   ~~~~~~~~~~V~~~~~~~~~~~~~~|~~~~~~    |    |   |
-        |   |   |   |   EC2 Instance        NAT     |   |    |   |
-        |   |   |   ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~   |    |   |
-        |   |   |    Public Subnet           |          |    |   |
-        |   |   *****************************|***********    |   |
-        |   |                                |               |   |
-        |   |                                |               |   |
-        |   |   *****************************|*******        |   |
-        |   |   |   ~~~~~~~~~~~~~~~~~~~~     |      |        |   |
-        |   |   |   |   EC2 Instance <-|------      |        |   |
-        |   |   |   ~~~~~~~~~~~~~~~~~~~~            |        |   |
-        |   |   |     Private Subnet                |        |   |
-        |   |   *************************************        |   |
-        |   |     AVAILABILITY ZONE A                        |   |
-        |   |________________________________________________|   |
-        |                                                        |
-        |                                                        |
-        ----------------------------------------------------------
+![!](../Assets/VPC/VPC-AWS.PNG)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 Q01: What are the teo types of subnets?
