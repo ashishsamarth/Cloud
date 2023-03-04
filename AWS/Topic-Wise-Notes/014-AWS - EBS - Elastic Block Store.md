@@ -65,7 +65,8 @@ Q03: How to create a snapshot?
         i.  Now click on 'Snapshots' under 'Elastic Block Store', and you will see the newly created snapshot
 
 
-        Special Note: Snapshots are created in 'Regions', so these can be copied to 'Another Region' or 'Another AZ in the same region'
+        Special Note: Snapshots are created in 'Regions', so these can be copied to 'Another Region' or 
+        'Another AZ in the same region'
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 Q04: How to copy a snapshot to another region
@@ -80,6 +81,7 @@ Q04: How to copy a snapshot to another region
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 Q05: How to create a volume based on a snapshot from one region to another.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
     Login to the EC2 dashboard and then follow these steps:
         a.  On the left side vertical menu, look for 'Elastic Block Store'
         b.  Under 'Elastic Block Store' click on 'Snapshots'
@@ -97,8 +99,9 @@ Q05: How to create a volume based on a snapshot from one region to another.
         This is how you take a snapshot and copy the data from one AZ to Another AZ in the same region.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-    Q06: What is an AMI?
-    A06: AMI is Amazon Machine Image
+Q06: What is an AMI?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    AMI is Amazon Machine Image
         a.  AMIs are a customization of an EC2 instance.
             1.  You add your own software, configuration, OS, monitoring etc.
             2.  Faster Boot / Configuration time because all of your software is pre-packaged
@@ -107,13 +110,15 @@ Q05: How to create a volume based on a snapshot from one region to another.
             1.  A public AMI: Provided by AWS
             2.  Your Own AMI: You make and maintain them yourself.
             3.  AWS Marketplace AMI: An AMI someone else made (and potentially sells)
-    
-    Q07: How to create an AMI from an EC2 Instance?
-    A07: Start an EC2 instance with any specific AMI, then customize it (add JDK, Tomcat, DB etc) and then stop the instance.
-        Then we will build the AMI from this image (This will also create EBS snapshots, since attached EBS will be a part of the AMI)
-        Now this modified AMI can be used to launch new instance, with the pre-packaged software.
 
-        Following are the steps:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q07: How to create an AMI from an EC2 Instance?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Start an EC2 instance with any specific AMI, then customize it (add JDK, Tomcat, DB etc) and then stop the instance.
+Then we will build the AMI from this image (This will also create EBS snapshots, since attached EBS will be a part of the AMI)
+Now this modified AMI can be used to launch new instance, with the pre-packaged software.
+
+    Following are the steps:
         a.  Assuming you have done all the required changes to the current EC2 instance
         b.  Right click on the running 'EC2' instance and then click on 'Image and Templates'
         c.  Then click on 'Create Image'
@@ -125,6 +130,8 @@ Q05: How to create a volume based on a snapshot from one region to another.
             2.  Tag image and snapshots separately
         g.  Click on 'Create Image' on this page.
         h.  The image will be created successfully.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
     Q08: How to Launch a new EC2 instance based on 'Created AMI'?
     A08: Once you have successfully created your own modified AMI image, the image should show up under 'Images' in EC2 dashboard
