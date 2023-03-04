@@ -135,7 +135,8 @@ A virtual private cloud (VPC) is a logically isolated, virtual network within a 
     Special Note:
     a.  For each VPCs which is connecting to one another must not have overlapping CIDR (IP Ranges)
     b.  VPC Peering connection is not transitive (must be established for each VPC that need to communicate with one other). 
-    Meaning, if their are three VPCs A,B and C, and you have VPC peering only between A<-->B and A<-->C, then 'B' and 'C' cannot talk to each other 
+        Meaning, if their are three VPCs A,B and C, and you have VPC peering only between A<-->B and A<-->C, then 'B' and 'C' cannot 
+        talk to each other 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------    
 Q08: What are VPC Endpoints?
