@@ -126,8 +126,8 @@ Now this modified AMI can be used to launch new instance, with the pre-packaged 
         b.  Right click on the running 'EC2' instance and then click on 'Image and Templates'
         c.  Then click on 'Create Image'
         d.  Provide a name to the image
-        e.  You will notice, the image creation has automatically selected the EBS volume used to boot this current EC2 instance, with the 
-            attribute (Delete on Termination) enabled.
+        e.  You will notice, the image creation has automatically selected the EBS volume used to boot this current EC2 instance, 
+            with the attribute (Delete on Termination) enabled.
         f.  There are two following options for tags {Radio Buttons}
             1.  Tag image and snapshots together
             2.  Tag image and snapshots separately
