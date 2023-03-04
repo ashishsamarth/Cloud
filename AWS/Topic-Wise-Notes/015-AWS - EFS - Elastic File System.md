@@ -1,9 +1,9 @@
------------------------------------------------------------------------------------------------------------------------------------------------------------
 AWS-EFS: Elastic File System
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    Q01: What is EFS?
-    A01: EFS is Elastic File System.
+Q01: What is EFS?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    EFS is Elastic File System.
         a.  Its a Managed NFS (Network File System) that can be mounted to many EC2 instances in the same region.
         b.  EFS works with EC2 instances in multi-AZ.
         c.  Highly available, scalable, expensive (3 times of a gp2)
@@ -42,14 +42,19 @@ AWS-EFS: Elastic File System
             a.  Standard: For frequently accessed file
             b.  Infrequent Access (EFS-IA): This has a lower price to store, but has a Cost to retrieve the file.
     
-    Q02: What is the minimum IAM permission policy that must me attached either to the group or the user to be able to create an EFS?
-    A02: The mininum IAM policy required to be able to create an EFS is :- AmazonElasticFileSystemClientFullAccess.
-    
-    Q03: What is the minimum IAM permission policy that must be attached either to the group or the user to be able to read data from EFS?
-    A03: The mininum policy required to be able to read data from EFS is :- AmazonElasticFileSystemReadOnlyAccess.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q02: What is the minimum IAM permission policy that must me attached either to the group or the user to be able to create an EFS?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+The mininum IAM policy required to be able to create an EFS is :- AmazonElasticFileSystemClientFullAccess.
 
-    Q04: How to create an EFS (Elastic File System)?
-    A04: Following are the steps:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q03: What is the minimum IAM permission policy that must be attached either to the group or the user to be able to read data from EFS?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+The mininum policy required to be able to read data from EFS is :- AmazonElasticFileSystemReadOnlyAccess.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q04: How to create an EFS (Elastic File System)?
+    Following are the steps:
         a.  On the AWS management console, search for EFS
         b.  Once navigated to the EFS console, click on 'Create File System'
         c.  On the 'Create File System' dialog, Click 'Customize'
@@ -80,13 +85,14 @@ AWS-EFS: Elastic File System
                 The default security groups are also selected, and can be MODIFIED. However a security group must be defined for each AZ
                 where this particular EFS will be available and accessed.
 
-
         f.  File system policy is optional
         g.  Next page is 'Review and Create'
         h.  Click on Create and the EFS file system will be created.
 
-    Q05: How to attach an EFS to multiple EC2 instance in the same region but in different AZs?
-    A05: Following are the steps:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q05: How to attach an EFS to multiple EC2 instance in the same region but in different AZs?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Following are the steps:
         a.  On the AWS management console, search for EC2.
         b.  Once navigated to EC2 dashboard, on the left vertical menu, click on security groups under Network Security
         c.  Create a new security group 'EC2-to-EFS'
@@ -117,3 +123,5 @@ AWS-EFS: Elastic File System
         r.  Use the 'Mount via DNS' option and run the command indicated as - 'sudo mount -t efs -o tls fs-0c621fafa80c68ea6:/ efs'
         s.  In the above command, 'tls' is for encryption and 'fs-0c621fafa80c68ea6' is the filesystem ID. and efs at the end is the mount point name.
         t.  If everything was done correctly, the EFS will be mounted on 'efs' directory as the mount point on EC2 instances.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
