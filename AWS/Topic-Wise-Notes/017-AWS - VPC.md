@@ -1,4 +1,3 @@
------------------------------------------------------------------------------------------------------------------------------------------------------------
 AWS - VPC
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 VPC is private network to deploy your resources. Its a regional resource and a logical construct.
@@ -37,20 +36,22 @@ region that is available to you, so essentially 'AZs' with in the region will ha
         |                                                        |
         ----------------------------------------------------------
 
-
-
-
-    Q01: What are the teo types of subnets?
-    A01: Following are the types of subnets
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q01: What are the teo types of subnets?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Following are the types of subnets
         a.  Public Subnet:  This is a subnet which is accesible from the internet
         b.  Private Subnet: This is a subnet which is NOT accessible from the internet
-    
-    Q02: Which component is used to define access to the internet and between the subnets?
-    A02: To define access to the internet and between the subnets, we use Route Tables
 
-    Q03: How does a resource deployed under the public subnet accesses the internet?
-    A03: Since the 'Public Subnet' is connected to the internet via an 'Internet Gateway', the resource deployed in this subnet is able to access the 
-        Internet
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q02: Which component is used to define access to the internet and between the subnets?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+To define access to the internet and between the subnets, we use Route Tables
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q03: How does a resource deployed under the public subnet accesses the internet?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Since the 'Public Subnet' is connected to the internet via an 'Internet Gateway', the resource deployed in this subnet is able to access the Internet
     
     Q04: How does a resource deployed under the private subnet accesses the internet?
     A04: The 'Private Subnet' does not connect to the internet or the internet gateway directly thats why its called Private due to the isoliation for 
