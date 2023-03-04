@@ -37,12 +37,14 @@ Q02: How to create a Budget?
         d.  Their are two budget set up types, 'Use a template (simplified)' and 'Customize (advanced)'
         e.  Select 'Use a Template (simplified)'
         f.  Their are multiple templates, namely (Radio Buttons)
-            1.  'Zero spend budget':    {Create a budget that notified you once your spending exceeds $0.01 which is above the AWS free tier limits}
-            2.  'Monthly Cost Budget':  {Create a monthly budget that notified you if you exceed, or are forecasted to exceed, the budget amount}
-            3.  'Daily Savings Plans Coverage budget':  {Create a coverage budget for your savings plans that notifies you when you fall below the 
-                defined target}
-            4.  'Daily reservation utilization budget': {Create a utilization budget for your reservations that notifies you when you fall below the 
-                defined target}
+            1.  'Zero spend budget':    {Create a budget that notified you once your spending exceeds $0.01 which is above the AWS free 
+                                        tier limits}
+            2.  'Monthly Cost Budget':  {Create a monthly budget that notified you if you exceed, or are forecasted to exceed, the budget 
+                                        amount}
+            3.  'Daily Savings Plans Coverage budget':  {Create a coverage budget for your savings plans that notifies you when you fall 
+                                                        below the defined target}
+            4.  'Daily reservation utilization budget': {Create a utilization budget for your reservations that notifies you when you 
+                                                        fall below the defined target}
         g.  Click on 'Monthly Cost Budget'
         h.  Provide the following values
             1.  Budget Name
