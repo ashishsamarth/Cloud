@@ -52,15 +52,17 @@ To define access to the internet and between the subnets, we use Route Tables
 Q03: How does a resource deployed under the public subnet accesses the internet?
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 Since the 'Public Subnet' is connected to the internet via an 'Internet Gateway', the resource deployed in this subnet is able to access the Internet
-    
-    Q04: How does a resource deployed under the private subnet accesses the internet?
-    A04: The 'Private Subnet' does not connect to the internet or the internet gateway directly thats why its called Private due to the isoliation for 
-        security features. However resource deployed in this subnet may need occasional public internet access for software upgrades or security patches.
-        To handle this isolation, we deploy a 'NAT' in the public subnet, and this NAT will be able to access the internet via the 'Internet Gateway'.
-        Once the NAT is able to connect to the Internet Gateway, we can connect this NAT (placed in public subnet) to the resources placed in the 
-        'Private Subnet' and then these resources can access the internet, even being inthe private subnet.
 
-        Special Note: NAT Gateways are AWS-Managed, while NAT instances are SELF-Managed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q04: How does a resource deployed under the private subnet accesses the internet?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+The 'Private Subnet' does not connect to the internet or the internet gateway directly thats why its called Private due to the isoliation for security features. However resource deployed in this subnet may need occasional public internet access for software upgrades or security patches.
+
+To handle this isolation, we deploy a 'NAT' in the public subnet, and this NAT will be able to access the internet via the 'Internet Gateway'.Once the NAT is able to connect to the Internet Gateway, we can connect this NAT (placed in public subnet) to the resources placed in the 'Private Subnet' and then these resources can access the internet, even being inthe private subnet.
+
+Special Note: NAT Gateways are AWS-Managed, while NAT instances are SELF-Managed
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
     
     Q05: Explain Network ACL & Security groups
     A05: NACL: 
