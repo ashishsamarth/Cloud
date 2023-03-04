@@ -42,12 +42,13 @@ Q01: What's an EBS volume?
         USECASE: How to preserve the root volume when instance is terminated.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-
-    Q02: What is EBS Snapshots?
-    A02: EBS Snapshots are used to
+Q02: What is EBS Snapshots?
+    EBS Snapshots are used to
         a.  Make a backup (snapshot) of your EBS volume at a point in time
         b.  Not necessary to detach a volume to do snapshot, but recommended
         c.  Copy snapshots across AZ or Region.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
     
     Q03: How to create a snapshot?
     A03. Login to the EC2 dashboard and then follow these steps:
