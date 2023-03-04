@@ -3,6 +3,7 @@ AWS-EBS: Elastic Block Store
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Q01: What's an EBS volume?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
     An EBS volume is a NETWORK Drive (like a network usb stick) that you can attach to your instance while they run.
         It allows the instances to persist data, even after their termination, which means, if take a snapshot of the volume before the instance was 
         terminated. You can utilize the snapshot to retain the data and a new EBS volume can be used on a new EC2 instances with the old data.
@@ -43,6 +44,7 @@ Q01: What's an EBS volume?
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 Q02: What is EBS Snapshots?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
     EBS Snapshots are used to
         a.  Make a backup (snapshot) of your EBS volume at a point in time
         b.  Not necessary to detach a volume to do snapshot, but recommended
@@ -50,6 +52,7 @@ Q02: What is EBS Snapshots?
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 Q03: How to create a snapshot?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
     Login to the EC2 dashboard and then follow these steps:
         a.  On the left side vertical menu, look for 'Elastic Block Store'
         b.  Under 'Elastic Block Store' click on 'Volume'
@@ -66,16 +69,18 @@ Q03: How to create a snapshot?
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 Q04: How to copy a snapshot to another region
-    A04: Login to the EC2 dashboard and then follow these steps:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Login to the EC2 dashboard and then follow these steps:
         a.  On the left side vertical menu, look for 'Elastic Block Store'
         b.  Under 'Elastic Block Store' click on 'Snapshots'
         c.  Assuming you have a snapshot created earlier (which will be listed in this window)
         d.  Click on 'Actions' menu, then click on 'Copy'
         e.  On the 'Copy Snapshot' window, select the 'Destination Region' and provide/select the description and click copy.
         f.  The snapshot will then be copied to the destination region.
-    
-    Q05: How to create a volume based on a snapshot from one region to another.
-    A05: Login to the EC2 dashboard and then follow these steps:
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q05: How to create a volume based on a snapshot from one region to another.
+    Login to the EC2 dashboard and then follow these steps:
         a.  On the left side vertical menu, look for 'Elastic Block Store'
         b.  Under 'Elastic Block Store' click on 'Snapshots'
         c.  Assuming you have a snapshot created earlier (which will be listed in this window)
@@ -91,6 +96,7 @@ Q04: How to copy a snapshot to another region
 
         This is how you take a snapshot and copy the data from one AZ to Another AZ in the same region.
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
     Q06: What is an AMI?
     A06: AMI is Amazon Machine Image
         a.  AMIs are a customization of an EC2 instance.
