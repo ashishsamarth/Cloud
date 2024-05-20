@@ -23,3 +23,33 @@ Which of the following workload types does the following belong to?
     Answer : a. Computer Vision
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
+Which of the following is not a principle when it comes to responsible AI?
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    a. Reliability
+    b. Fairness
+    c. Detection
+
+    Answer : c. Detection
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+You are developing a machine learning model. You need to follow the principles of responsible AI. You have to ensure that dataset fed into the model does not discriminate on the basis of gender. Which of the following principle needs to be adhered here?
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    a. Privacy & Security
+    b. Reliability & Safety
+    c. Fairness
+    d. Inclusiveness
+
+    Answer : c. Fairness
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+You are developing a machine learning model. You need to follow the principles of responsible AI. You discover the dataset that is being used to train the model has some missing values. Which of the following principle being broken when using this data set?
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    a. Privacy & Security
+    b. Reliability & Safety
+    c. Fairness
+    d. Inclusiveness
+
+    Answer : b. Reliability & Safety
+-----------------------------------------------------------------------------------------------------------------------------------------------------------    
