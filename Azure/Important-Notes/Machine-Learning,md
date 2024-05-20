@@ -1,0 +1,22 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Machine Learning
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    Example where Machine learning is used
+
+    a. Fraud Detection
+
+    Q#1 - Is the user making a valid transaction    : Boolean Response [Yes / No]
+    Q#2 - What is the amount of the transaction
+    Q#3 - Where is the transaction being carried out from?
+    Q#4 - Does the user normally carry out transactions from this location?
+    Q#5 - To what is the transaction being made out to ?
+    Q#6 - Is this type of transaction normally carried out by the user ?
+
+    b. Image Detection
+
+    Providing the AI solution with an Image and evaluate the solution(s) ability to 'recognize objects'
+
+    c. Anomaly Detection
+
+    In the field to medicine, trying to determine if a patient is going to develop a heart disease in the future based on medical history
