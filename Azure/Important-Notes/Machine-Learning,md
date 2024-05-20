@@ -20,3 +20,18 @@ Machine Learning
     c. Anomaly Detection
 
     In the field to medicine, trying to determine if a patient is going to develop a heart disease in the future based on medical history
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Machine Learning Model
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Step#1 - You feed existing / historical data [Which is labelled and has outcomes] into a Machine Learning Algorithm
+    Step#2 - The Machine Learning Algorithm tires to find patterns in the data Set
+    Step#3 - Machine learning model algorithm will create a model that can predict an outcome
+    Step#4 - Test the ML model, to evaluate its accuracy, since end of the day its a prediction
+
+    Key Considerations:
+    a. Data should be relevant to the problem being solved.
+    b. Their should be enough data points to help develop the model
+    c. Data should be free of errors
