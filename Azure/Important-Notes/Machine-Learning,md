@@ -29,9 +29,12 @@ Machine Learning Model
     Step#1 - You feed existing / historical data [Which is labelled and has outcomes] into a Machine Learning Algorithm
     Step#2 - The Machine Learning Algorithm tires to find patterns in the data Set
     Step#3 - Machine learning model algorithm will create a model that can predict an outcome
-    Step#4 - Test the ML model, to evaluate its accuracy, since end of the day its a prediction
+    Step#4 - The outcome you wish to determine is called the 'Label'
+    Step#5 - Test the ML model, to evaluate its accuracy, since end of the day its a prediction
 
     Key Considerations:
     a. Data should be relevant to the problem being solved.
     b. Their should be enough data points to help develop the model
     c. Data should be free of errors
+    d. The data provide should have features to be evaluated, and only required cleaned & structured dataset to be used
+    e. The data used to train & test the model should following the 70% to 30% ratio
