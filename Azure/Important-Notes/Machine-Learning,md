@@ -38,6 +38,7 @@
     b. Their should be enough data points to help develop the model
     c. Data should be free of errors
     d. The data provide should have features to be evaluated, and only required cleaned & structured dataset to be used
+<<<<<<< HEAD
     e. The data used to train & test the model should following the 70% to 30% ratio
 
 
@@ -48,3 +49,6 @@
     Types of ML Algorithms
     
     a. Binary and Multi-Classification
+=======
+    e. The data used to train & test the model should following the 70% to 30% ratio
+>>>>>>> 68f7e671ea4e5778e27af24768deaad5b14d0849
