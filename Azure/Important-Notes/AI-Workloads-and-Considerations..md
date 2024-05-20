@@ -7,4 +7,4 @@ AI Workloads and Considerations
     c. Anaomaly detection Workloads
     d. Natural Processing Workloads
     e. Computer Vision Workloads
-    f. Conersation AI Workloads
+    f. Conversational AI Workloads
