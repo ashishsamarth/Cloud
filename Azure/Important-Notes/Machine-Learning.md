@@ -104,3 +104,12 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------------------- 
 Feed the data --> Clean the data [Deal with missing values] --> Split the data (70% [Train] /30% [Test]) --> Train your model --> Score the model --> Evaluate the model
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Outputs of Classification Model
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------   
+    Accuracy    : This measures the goodness of a classfication model
+    Precision   : This measues the proportion of the true results over the positive results
+    Recall      : This is the fraction of the total amount of relevant cases that were actually retrieved
+    F1 Score    : This is weighted average of the precision vs  the recall. The ideal F1 score is 1
+    AUC         : This is the area under the curve that shows the true positives and the false positives
+-----------------------------------------------------------------------------------------------------------------------------------------------------------    
