@@ -42,7 +42,7 @@
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-    Machine Learning Classifications
+    Machine Learning Classifications : Used to devide or classify the data
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------    
 
@@ -98,3 +98,9 @@
 
                                 Example : You are designing an autonomous car, and you want to ensure that it's obeying the law and keeping people safe. As the 
                                 car gains experience and a history of reinforcement, it learns how to stay in its lane, go the speed limit and brake for pedestrians
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Machine Learning Pipeline Flow
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------- 
+Feed the data --> Clean the data [Deal with missing values] --> Split the data (70% [Train] /30% [Test]) --> Train your model --> Score the model --> Evaluate the model
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
