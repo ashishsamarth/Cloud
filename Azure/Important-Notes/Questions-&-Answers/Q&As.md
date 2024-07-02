@@ -65,3 +65,18 @@ What is confusion matrix?
     False Negatives     |   True Negatives
     -----------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------------    
+What is Accuracy in results?
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Accuracy teslls us how often the classifier is right in predicting the results.
+    In terms of mathematical formulat it looks like the following
+
+    (True Positives + True Negatives) / (True Positives + True Negatives + False Positives + False Negatives)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+What is Precision in results?
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Precision tells us to what extent does the model accurately predict the results
+    In terms of mathematical formulat it looks like the following
+
+    (True Positives) / (True Positives + False Positives)
