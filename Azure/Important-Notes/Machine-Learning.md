@@ -90,4 +90,11 @@
 
                                 Example: You provide customer data, and want yo create segments of customer who like similar products. The data you provided 
                                 isn't labeled and the labels in the outcomes are generated based on the similarities that were discovered between data points
-                                
+
+
+    c. Reinforcement Learning : This technique uses algorithms that learn from outcomes and decides which action to take next. After each action, the algorithm 
+                                receives feedback that helps it to determine where the choice it made was correct, neutral or incorrect. Its a good technique to 
+                                use for automated systems that have to make a lot o small decisions without human guidance.
+
+                                Example : You are designing an autonomous car, and you want to ensure that it's obeying the law and keeping people safe. As the 
+                                car gains experience and a history of reinforcement, it learns how to stay in its lane, go the speed limit and brake for pedestrians
