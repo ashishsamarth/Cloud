@@ -112,4 +112,13 @@ Feed the data --> Clean the data [Deal with missing values] --> Split the data (
     Recall      : This is the fraction of the total amount of relevant cases that were actually retrieved
     F1 Score    : This is weighted average of the precision vs  the recall. The ideal F1 score is 1
     AUC         : This is the area under the curve that shows the true positives and the false positives
------------------------------------------------------------------------------------------------------------------------------------------------------------    
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Outputs of Classification Model
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Mean Absolute Error             : This s used to measure how close the predictions are to the outcomes, its ideal to have a low score
+    Root Mean Squared Error         : This helps to summarize the error in the model
+    Relative absolute Error         : This is the absolute difference between the expected and the actual values
+    Relative square Error           : This is used to normalize the total squated error of the actual values
+    Coefficient of determination    : This is used to represent the predictive power of the model between 0 and 1
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
