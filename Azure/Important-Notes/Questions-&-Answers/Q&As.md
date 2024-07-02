@@ -53,3 +53,15 @@ You are developing a machine learning model. You need to follow the principles o
 
     Answer : b. Reliability & Safety
 -----------------------------------------------------------------------------------------------------------------------------------------------------------    
+What is confusion matrix?
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Confusion matrix indicates the difference between what the Machine Learning Model actually predicted vs what it was supposed to predict.
+    For a binary classification is looks like the following
+
+    -----------------------------------------
+    True Positives      |   False Positive
+    -----------------------------------------
+    False Negatives     |   True Negatives
+    -----------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------    
