@@ -72,4 +72,16 @@
     e. Clustering Algorithms
         - Here Similarity of data points are taken into account [What kind of food do customers like to order]
     
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Machine Learning Techniques
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------   
+    Types of ML Techniques
+
+    a. Supervised Learning  :   In this technique, the algoithms make predictions based on a set of labeled examples that you provide. This technique is useful
+                                when you know, what the outcome should look like
+
+                                Example: You provide a dataset that includes city populations by the year for the past 100 years, and you want to know what the population
+                                of a specific city will be, four years from now. The outcome uses labels that are already exist in the data set: Population, City & Year
+                                
+    b. Un-Supervised Learning
