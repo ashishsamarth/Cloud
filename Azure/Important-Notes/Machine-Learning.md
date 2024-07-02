@@ -46,8 +46,10 @@
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------    
 
-    a.  Binary-Classification
-    b.  Multi-Classification
+    a.  Binary-Classification   : This classification results in Binary labels  [Yes / No]
+                                    Mathematical Formula : y = f(x)
+                                    Example : y is the salary, x is the age and 'f' is the model you are trying to create
+    b.  Multi-Classification    :
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
     Machine Learning Algorithms
