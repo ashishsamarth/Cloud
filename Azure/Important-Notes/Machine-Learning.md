@@ -1,0 +1,71 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Machine Learning
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    Example where Machine learning is used
+
+    a. Fraud Detection
+
+    Q#1 - Is the user making a valid transaction    : Boolean Response [Yes / No]
+    Q#2 - What is the amount of the transaction
+    Q#3 - Where is the transaction being carried out from?
+    Q#4 - Does the user normally carry out transactions from this location?
+    Q#5 - To what is the transaction being made out to ?
+    Q#6 - Is this type of transaction normally carried out by the user ?
+
+    b. Image Detection
+
+    Providing the AI solution with an Image and evaluate the solution(s) ability to 'recognize objects'
+
+    c. Anomaly Detection
+
+    In the field to medicine, trying to determine if a patient is going to develop a heart disease in the future based on medical history
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Machine Learning Model
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    
+    Step#1 - You feed existing / historical data [Which is labelled and has outcomes] into a Machine Learning Algorithm
+    Step#2 - The Machine Learning Algorithm tries to find patterns in the data Set
+    Step#3 - Machine learning model algorithm will create a model that can predict an outcome
+    Step#4 - The outcome you wish to determine is called the 'Label'
+    Step#5 - Test the ML model, to evaluate its accuracy, since end of the day its a prediction
+
+    Key Considerations:
+    a. Data should be relevant to the problem being solved.
+    b. Their should be enough data points to help develop the model
+    c. Data should be free of errors
+    d. The data provide should have features to be evaluated, and only required cleaned & structured dataset to be used
+    e. The data used to train & test the model should following the 70% to 30% ratio
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Machine Learning Classifications
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------    
+
+    a.  Binary-Classification
+    b.  Multi-Classification
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Machine Learning Algorithms
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------    
+    Types of ML Algorithms
+    
+    a. Linear based Algorithms
+    b. Regression based Algorithms
+        - Predict the number of Web Orders for next few days, based on last 4 weeks of data
+
+    c. Anomaly Detection Algorithms
+        - Identify data points that fall outside the defined parameters for what is defined as normal
+    
+    d. Time Series Algorithms
+        - Identify how values changes over time, then you can predict the value for the future [e.g Hotel booking prices]
+    
+    e. Clustering Algorithms
+        - Here Similarity of data points are taken into account [What kind of food do customers like to order]
+    
+
