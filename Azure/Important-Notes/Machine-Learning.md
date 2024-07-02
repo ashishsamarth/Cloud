@@ -46,11 +46,11 @@
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------    
 
-    a.  Binary-Classification   :   This classification results in Binary labels  [Yes / No]
+    a.  Two-Class / Binary-Classification   :   This classification results in Binary labels  [Yes / No]
                                     Mathematical Formula : y = f(x)
                                     Example : y is the salary, x is the age and 'f' is the model you are trying to create
 
-    b.  Multi-Classification    :   This classifiation results in a multi label
+    b.  Multi-Class / Multi-Classification    :   This classifiation results in a multi label
                                     Example: Based on the historical data for a passenger, which ticket class the customer would most probably buy.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -61,7 +61,7 @@
     
     a. Linear based Algorithms
     b. Regression based Algorithms
-        - Predict the number of Web Orders for next few days, based on last 4 weeks of data
+        - Predict the number of Web Orders for next few days [Forecasting], based on last 4 weeks of data
 
     c. Anomaly Detection Algorithms
         - Identify data points that fall outside the defined parameters for what is defined as normal
