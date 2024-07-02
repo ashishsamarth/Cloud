@@ -15,7 +15,7 @@ Guiding Principles for Responsible AI
     -----------------------------------------------------------------------------------------------------------------------------------------------------------   
 
     e. Inclusiveness : When you are utilizing some dataset to build an ML solution, then you must ensure to include all potential aspects and variations in the dataset. The idea is to NOT have any bias in the AI / ML solution, and the AI solution is able to cater to majority scenarios, its utilized for.
-    ------------------------------------------
-    -----------------------------------------------------------------------------------------------------------------         
+    -----------------------------------------------------------------------------------------------------------------------------------------------------------
+    
     f. Fairness : When building an AI solution, apart of being 'Inclusive' to everybody, another important principle is to be 'Fair' [During Implementation] to everybody
     -----------------------------------------------------------------------------------------------------------------------------------------------------------       
