@@ -81,7 +81,13 @@
     a. Supervised Learning  :   In this technique, the algoithms make predictions based on a set of labeled examples that you provide. This technique is useful
                                 when you know, what the outcome should look like
 
-                                Example: You provide a dataset that includes city populations by the year for the past 100 years, and you want to know what the population
-                                of a specific city will be, four years from now. The outcome uses labels that are already exist in the data set: Population, City & Year
+                                Example: You provide a dataset that includes city populations by the year for the past 100 years, and you want to know what the 
+                                population of a specific city will be, four years from now. The outcome uses labels that are already exist in the data set: 
+                                Population, City & Year
+
+    b. Un-Supervised Learning : In this technique, the data points aren't labeled, the algorithm labels them for you by organizing the data or describing its 
+                                structure. This technique is useful, when you don't know what the outcome should look like.
+
+                                Example: You provide customer data, and want yo create segments of customer who like similar products. The data you provided 
+                                isn't labeled and the labels in the outcomes are generated based on the similarities that were discovered between data points
                                 
-    b. Un-Supervised Learning
