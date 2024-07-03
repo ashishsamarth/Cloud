@@ -1,7 +1,7 @@
------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
     Machine Learning
 
------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
 
     Example where Machine learning is used
 
@@ -20,12 +20,13 @@
 
     c. Anomaly Detection
 
-    In the field to medicine, trying to determine if a patient is going to develop a heart disease in the future based on medical history
+    In the field to medicine, trying to determine if a patient is going to develop a heart disease in the future based on 
+    medical history
 
------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
     Machine Learning Model
 
------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
     
     Step#1 - You feed existing / historical data [Which is labelled and has outcomes] into a Machine Learning Algorithm
     Step#2 - The Machine Learning Algorithm tries to find patterns in the data Set
@@ -41,25 +42,28 @@
     e. The data used to train & test the model should following the 70% to 30% ratio
 
 
------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
     Machine Learning Classifications : Used to devide or classify the data
 
------------------------------------------------------------------------------------------------------------------------------------------------------------    
+--------------------------------------------------------------------------------------------------------------------------    
 
-    a.  Two-Class / Binary-Classification   :   This classification results in Binary labels  [Yes / No]
-                                    Mathematical Formula : y = f(x)
-                                    Example : y is the salary, x is the age and 'f' is the model you are trying to create
+    a.  Two-Class / Binary-Classification   
+        :   This classification results in Binary labels  [Yes / No]
+            Mathematical Formula : y = f(x)
+            Example : y is the salary, x is the age and 'f' is the model you are trying to create
 
-    b.  Multi-Class / Multi-Classification    :   This classifiation results in a multi label
-                                    Example: Based on the historical data for a passenger, which ticket class the customer would most probably buy.
+    b.  Multi-Class / Multi-Classification    
+        :   This classifiation results in a multi label
+            Example: Based on the historical data for a passenger, which ticket class the customer would most probably buy.
 
------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
     Machine Learning Algorithms
 
------------------------------------------------------------------------------------------------------------------------------------------------------------    
+--------------------------------------------------------------------------------------------------------------------------    
     Types of ML Algorithms
     
     a. Linear based Algorithms
+
     b. Regression based Algorithms
         - Predict the number of Web Orders for next few days [Forecasting], based on last 4 weeks of data
 
@@ -72,53 +76,64 @@
     e. Clustering Algorithms
         - Here Similarity of data points are taken into account [What kind of food do customers like to order]
     
------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
     Machine Learning Techniques
 
------------------------------------------------------------------------------------------------------------------------------------------------------------   
+--------------------------------------------------------------------------------------------------------------------------   
     Types of ML Techniques
 
-    a. Supervised Learning  :   In this technique, the algoithms make predictions based on a set of labeled examples that you provide. This technique is useful
-                                when you know, what the outcome should look like
+    a. Supervised Learning  :   
+        In this technique, the algoithms make predictions based on a set of labeled examples that you provide. This technique 
+        is useful when you know, what the outcome should look like
 
-                                Example: You provide a dataset that includes city populations by the year for the past 100 years, and you want to know what the 
-                                population of a specific city will be, four years from now. The outcome uses labels that are already exist in the data set: 
-                                Population, City & Year
+        Example: You provide a dataset that includes city populations by the year for the past 100 years, and you want to know 
+        what the population of a specific city will be, four years from now. The outcome uses labels that are already exist 
+        in the data set: 
+            Population, City & Year
 
-    b. Un-Supervised Learning : In this technique, the data points aren't labeled, the algorithm labels them for you by organizing the data or describing its 
-                                structure. This technique is useful, when you don't know what the outcome should look like.
+    b. Un-Supervised Learning : 
+        In this technique, the data points aren't labeled, the algorithm labels them for you by organizing the data or 
+        describing its structure. This technique is useful, when you don't know what the outcome should look like.
 
-                                Example: You provide customer data, and want yo create segments of customer who like similar products. The data you provided 
-                                isn't labeled and the labels in the outcomes are generated based on the similarities that were discovered between data points
+        Example: You provide customer data, and want yo create segments of customer who like similar products. The data you 
+        provided isn't labeled and the labels in the outcomes are generated based on the similarities that were discovered 
+        between data points
 
 
-    c. Reinforcement Learning : This technique uses algorithms that learn from outcomes and decides which action to take next. After each action, the algorithm 
-                                receives feedback that helps it to determine where the choice it made was correct, neutral or incorrect. Its a good technique to 
-                                use for automated systems that have to make a lot o small decisions without human guidance.
+    c. Reinforcement Learning : 
+        This technique uses algorithms that learn from outcomes and decides which action to take next. After each action, the 
+        algorithm receives feedback that helps it to determine where the choice it made was correct, neutral or incorrect. Its a 
+        good technique to use for automated systems that have to make a lot o small decisions without human guidance.
 
-                                Example : You are designing an autonomous car, and you want to ensure that it's obeying the law and keeping people safe. As the 
-                                car gains experience and a history of reinforcement, it learns how to stay in its lane, go the speed limit and brake for pedestrians
------------------------------------------------------------------------------------------------------------------------------------------------------------
+        Example : You are designing an autonomous car, and you want to ensure that it's obeying the law and keeping people safe. 
+        As the car gains experience and a history of reinforcement, it learns how to stay in its lane, go the speed limit and 
+        brake for pedestrians
+--------------------------------------------------------------------------------------------------------------------------
     Machine Learning Pipeline Flow
 
------------------------------------------------------------------------------------------------------------------------------------------------------------ 
-Feed the data --> Clean the data [Deal with missing values] --> Split the data (70% [Train] /30% [Test]) --> Train your model --> Score the model --> Evaluate the model
------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------- 
+    Feed the data --> 
+        Clean the data [Deal with missing values] --> 
+            Split the data (70% [Train] /30% [Test]) --> 
+                Train your model --> Score the model --> 
+                    Evaluate the model
+--------------------------------------------------------------------------------------------------------------------------
     Outputs of Classification Model
 
------------------------------------------------------------------------------------------------------------------------------------------------------------   
+--------------------------------------------------------------------------------------------------------------------------   
     Accuracy    : This measures the goodness of a classfication model
     Precision   : This measues the proportion of the true results over the positive results
     Recall      : This is the fraction of the total amount of relevant cases that were actually retrieved
     F1 Score    : This is weighted average of the precision vs  the recall. The ideal F1 score is 1
     AUC         : This is the area under the curve that shows the true positives and the false positives
------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
     Outputs of Classification Model
 
------------------------------------------------------------------------------------------------------------------------------------------------------------
-    Mean Absolute Error             : This s used to measure how close the predictions are to the outcomes, its ideal to have a low score
+--------------------------------------------------------------------------------------------------------------------------
+    Mean Absolute Error             : This s used to measure how close the predictions are to the outcomes, its ideal to 
+                                      have a low score
     Root Mean Squared Error         : This helps to summarize the error in the model
     Relative absolute Error         : This is the absolute difference between the expected and the actual values
     Relative square Error           : This is used to normalize the total squated error of the actual values
     Coefficient of determination    : This is used to represent the predictive power of the model between 0 and 1
------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
