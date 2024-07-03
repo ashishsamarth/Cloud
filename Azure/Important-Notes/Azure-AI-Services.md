@@ -14,3 +14,11 @@
      - oci-apim-subscription-key 
      - content-type : application/octect-stream
      - reqest type  : binary
+
+2. Natural Languauge Processing : Allows
+    Key Phrase Extraction   : Look for specific key words
+    Entity Recognition      : Has the ability to read text ad then categorize them {Name, Phone # etc}
+    Sentiment Analysis      : Has the ability to read text and understand the content and relay if its positive / negative 
+    Translation             : Has the ability to translate text / speech from one language to another
+    Speed Recognition       : Has the ability to listen to speech and generate content
+    Speech Synthesis        : Has the ability to generate speech
