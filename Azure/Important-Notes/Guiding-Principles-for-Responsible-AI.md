@@ -17,9 +17,9 @@ Guiding Principles for Responsible AI
     -------------------------------------------------------------------------------------------------------------------------- 
 
     d. Transparency : When you are building an AI solution, it shouldn't be the case that only a handful people understand the 
-        AI solution and whats its meant to be used for. The entire team working / supporting that AI solution should understand 
-        the input / output / specifications / dataset / Algorithms, so that their is complete transparency around the AI 
-        solution
+        AI solution and whats its meant to be used for. The entire team working / supporting that AI solution should 
+        understand the input / output / specifications / dataset / Algorithms, so that their is complete transparency around 
+        the AI solution
     --------------------------------------------------------------------------------------------------------------------------   
 
     e. Inclusiveness : When you are utilizing some dataset to build an ML solution, then you must ensure to include all 
