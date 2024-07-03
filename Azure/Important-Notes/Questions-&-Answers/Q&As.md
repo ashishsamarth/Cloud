@@ -96,7 +96,7 @@ What is Feature Engineering?
     This process attempts to create additional relevant features from the existing raw features in the data, and to 
     increase predictive power to the learning algorithm.
     Example : Split the data horizontally to create additional columns / features to add more calrity for the machine 
-    learning algorithm.    Follwed by selecting (also called as feature selection) only the necesary columns and reduce the 
+    learning algorithm. Follwed by selecting (also called as feature selection) only the necesary columns and reduce the 
     noise for the ML model
 --------------------------------------------------------------------------------------------------------------------------
 Your team needs to use Machine Learning to forecast the house prices for the coming year based on historical data. Would 
