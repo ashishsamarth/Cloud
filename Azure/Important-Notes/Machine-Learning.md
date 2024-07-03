@@ -83,12 +83,12 @@
     Types of ML Techniques
 
     a. Supervised Learning  :   
-        In this technique, the algoithms make predictions based on a set of labeled examples that you provide. This technique 
-        is useful when you know, what the outcome should look like
+        In this technique, the algoithms make predictions based on a set of labeled examples that you provide. This 
+        technique is useful when you know, what the outcome should look like
 
-        Example: You provide a dataset that includes city populations by the year for the past 100 years, and you want to know 
-        what the population of a specific city will be, four years from now. The outcome uses labels that are already exist 
-        in the data set: 
+        Example: You provide a dataset that includes city populations by the year for the past 100 years, and you want to 
+        know what the population of a specific city will be, four years from now. The outcome uses labels that are already 
+        exist in the data set: 
             Population, City & Year
 
     b. Un-Supervised Learning : 
@@ -101,13 +101,14 @@
 
 
     c. Reinforcement Learning : 
-        This technique uses algorithms that learn from outcomes and decides which action to take next. After each action, the 
-        algorithm receives feedback that helps it to determine where the choice it made was correct, neutral or incorrect. Its a 
-        good technique to use for automated systems that have to make a lot o small decisions without human guidance.
+        This technique uses algorithms that learn from outcomes and decides which action to take next. After each action, 
+        the algorithm receives feedback that helps it to determine where the choice it made was correct, neutral or 
+        incorrect. Its a good technique to use for automated systems that have to make a lot o small decisions without 
+        human guidance.
 
-        Example : You are designing an autonomous car, and you want to ensure that it's obeying the law and keeping people safe. 
-        As the car gains experience and a history of reinforcement, it learns how to stay in its lane, go the speed limit and 
-        brake for pedestrians
+        Example : You are designing an autonomous car, and you want to ensure that it's obeying the law and keeping people 
+        safe. As the car gains experience and a history of reinforcement, it learns how to stay in its lane, go the speed 
+        limit and brake for pedestrians
 --------------------------------------------------------------------------------------------------------------------------
     Machine Learning Pipeline Flow
 
