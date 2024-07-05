@@ -528,4 +528,96 @@ Which of the following would you use to call the endpoint? Choose 2 answers from
 
 Overall explanation
 You will call the endpoint via the REST endpoint. And you will also make use of the authentication key.  
---------------------------------------------------------------------------------------------------------------------------  
+--------------------------------------------------------------------------------------------------------------------------
+Your team currently has a trained model in Azure Machine Learning. They now want to deploy the model via the use of a 
+real-time inference pipeline. Which of the following service is used to deploy the endpoint so that it can consumed by 
+users and applications?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Virtual machine scale set
+    b. Azure Batch
+    c. Azure Kubernetes
+    d. Azure Container Groups
+
+    Answer: c. Azure Kubernetes
+
+Overall explanation
+Azure Kubernetes is used to host the endpoint.
+--------------------------------------------------------------------------------------------------------------------------
+Your team needs to build a machine learning pipeline to train, and a model based on Adult Census Income Binary 
+classification data.
+
+![GitHub Image](/Azure/Assets/Q&As/Pipeline-Components.png)
+
+![GitHub Image](/Azure/Assets/Q&As/Pipeline-Components-Question.png)
+
+You need to add the right components to the pipeline. Which of the following would go into Slot 1?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Train Model
+    b. Split Model
+    c. Score Model
+    d. Split Data
+
+    Answer: d. Split Data
+
+Overall explanation
+Here we first need to split the data.
+--------------------------------------------------------------------------------------------------------------------------
+Your team needs to build a machine learning pipeline to train, and a model based on Adult Census Income Binary classification data.
+
+![GitHub Image](/Azure/Assets/Q&As/Pipeline-Components.png)
+
+![GitHub Image](/Azure/Assets/Q&As/Pipeline-Components-Question.png)
+
+You need to add the right components to the pipeline. Which of the following would go into Slot 2?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Train Model
+    b. Split Model
+    c. Score Model
+    d. Split Data
+
+    Answer: a. Train Model
+
+Overall explanation
+Here we need to train the model.
+--------------------------------------------------------------------------------------------------------------------------
+Your team needs to build a machine learning pipeline to train, and a model based on Adult Census Income Binary 
+classification data.
+
+![GitHub Image](/Azure/Assets/Q&As/Pipeline-Components.png)
+
+![GitHub Image](/Azure/Assets/Q&As/Pipeline-Components-Question.png)
+
+You need to add the right components to the pipeline. Which of the following would go into Slot 3?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Train Model
+    b. Split Model
+    c. Score Model
+    d. Split Data
+
+    Answer: c. Score Model
+
+Overall explanation
+Here we need to score the model.
+--------------------------------------------------------------------------------------------------------------------------
+Your team needs to build an application. The application will be used to read text to users who have reduced vision. Which 
+of the following service can be used for this requirement?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Azure AI Language - Key phrase extraction
+    b. Azure Bot service
+    c. Azure AI Speech Service
+    d. Azure AI Vision - Object detection
+
+    Answer: c. Azure AI Speech Service
+
+Overall explanation
+You can use the Text-to-Speech service to convert text to human-like synthesized speech.
+For more information on the Speech service, one can visit the below URL
+
+https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview
+    
+--------------------------------------------------------------------------------------------------------------------------
