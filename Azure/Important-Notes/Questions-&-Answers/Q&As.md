@@ -236,3 +236,66 @@ Which of the following service can be used to what a person thinks about a parti
 
     Answer: c. Azure AI Languauge - Sentimanet Analysis
 --------------------------------------------------------------------------------------------------------------------------
+You are planning on using the Azure Speech service. Can you use the Azure Speech Service to enable real-time 
+speech-to-speech translation?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Yes
+    b. No
+
+    Answer: a. Yes
+--------------------------------------------------------------------------------------------------------------------------
+You are planning on using the Azure Translator service. Can you use the service to translate documents?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Yes
+    b. No
+
+    Answer: a. Yes
+--------------------------------------------------------------------------------------------------------------------------
+You are planning on using the Question Answering solution available in Azure AI Language. Can you import existing 
+questions from an Excel sheet?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Yes
+    b. No
+
+    Answer: a. Yes
+--------------------------------------------------------------------------------------------------------------------------
+Your team needs to develop several systems. One system needs to understand whether reviews are positive or negative. 
+Which of the following type of workload does this come under?
+
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Natural Language Processing
+    b. Computer Vision
+    c. Conversational AI
+
+    Answer: a. Natural Language Processing
+--------------------------------------------------------------------------------------------------------------------------
+Which of the following module is used in Azure Machine Learning Designer to split a dataset into a training and validation 
+data set?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Normalize Data
+    b. Split Data
+    c. Join Data
+
+    Answer: b. Split Data
+--------------------------------------------------------------------------------------------------------------------------    
+Your team is planning on using the Azure Machine Learning Designer. Can you drag a dataset onto the designer?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Yes
+    b. No
+
+    Answer: b. No
+--------------------------------------------------------------------------------------------------------------------------
+Your team is planning on using the Azure Machine Learning Designer. Can you drag a component onto the designer?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Yes
+    b. No
+
+    Answer: a. Yes
+--------------------------------------------------------------------------------------------------------------------------
