@@ -1547,8 +1547,7 @@ Q: Can you use the Face API to return face attributes such as headPose and occlu
 
     Answer: a. Yes
 
-Overall explanation
-Yes, this is possible.
+Overall explanation : Yes, this is possible.
 
 API link - https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236    
 
