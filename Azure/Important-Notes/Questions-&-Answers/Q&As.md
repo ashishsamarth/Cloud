@@ -657,3 +657,342 @@ For more information on the Speech service, one can visit the below URL
 https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview
 
 --------------------------------------------------------------------------------------------------------------------------
+Your development is planning on setting up a bot instance with the use of the Azure Bot service. Can the team communicate 
+with the bot via Slack?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Yes
+    b. No
+
+    Answer: a. Yes
+
+Overall explanation
+There are many ways to communicate with the bot. One of them is via Slack
+For more information on connecting via Slack, one can visit the URL
+
+https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-slack?view=azure-bot-service-4.0
+
+--------------------------------------------------------------------------------------------------------------------------
+Which of the following service allows you to host your own knowledge base?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Azure AI Translator
+    b. Azure AI Vision Service
+    c. Azure AI Language Service
+    d. Azure AI Custom Vision
+
+    Answer: c. Azure AI Language Service
+
+Overall explanation
+You can use the question and answer feature with the Azure AI Language service
+For more information on this service, one can visit the URL
+
+https://learn.microsoft.com/en-us/azure/ai-services/language-service/question-answering/overview
+
+--------------------------------------------------------------------------------------------------------------------------    
+Which of the following are types of content can you import in the question and answer service in Azure AI Language 
+service? Choose 2 answers from the options given below
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Excel Documents
+    b. Data Stored in Azure SQL Database
+    c. TSV Files
+    d. Files in XML Format
+
+Overall explanation
+The QnA Maker service does not support getting data from an Azure SQL database.
+For more information on the QnA Maker service data sources, one can visit the URL
+
+https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/concepts/data-sources-and-content
+
+--------------------------------------------------------------------------------------------------------------------------
+Your company is planning on building an ecommerce application. As part of the application, a module will be developed 
+which would provide an interactive interface for automatically answering questions asked by the user. 
+Which of the following type of module is being developed here as part of the application?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. A Forecasting module
+    b. A Text Analytics Module
+    c. A conversational AI module
+
+    Answer: c. A conversational AI module
+
+Overall explanation
+Here the module depicts a conversational AI module which will converse with the user and try to answer their questions. 
+
+--------------------------------------------------------------------------------------------------------------------------
+Your team has just conducted a Machine Learning experiment. The below chart is the result of the experiment
+
+![GitHub Image](/Azure/Assets/Q&As/Machine-Learning-Experiment.jpg)
+
+Which of the following type of model is the chart being used to evaluate?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Classification
+    b. Regression
+    c. Clustering
+
+    Answer: Regression
+
+Overall explanation
+When using charts which show cases the predicted vs true chart, this normally means that you are working with 
+Regression-based algorithms.
+
+--------------------------------------------------------------------------------------------------------------------------
+Your team has just finished using the Computer Vison service. Below are the results
+
+![GitHub Image](/Azure/Assets/Q&As/computer-vision-object-detection.jpg)
+
+Which of the following Computer Vision type was used here?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Object Detection
+    b. Semantic Segmentation
+    c. Optical Character Recognition
+    d. Image classification
+
+    Answer: a. Object Detection
+
+Overall explanation
+Here Computer Vision is being used to detect the different objects along with their confidence level.
+
+--------------------------------------------------------------------------------------------------------------------------
+Which of the following is an example of conversational AI?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. IoT devices sending telemetry data to Azure.
+    b. An automated automotive line used in car manufacturing
+    c. An ecommerce web site that helps to answer a user’s questions via the use of a knowledgebase
+
+    Answer:  c. An ecommerce web site that helps to answer a user’s questions via the use of a knowledgebase
+
+Overall explanation
+The ability to answer the user’s question based on an automated system via the use of a knowledge base is an example of 
+conversational AI.    
+
+--------------------------------------------------------------------------------------------------------------------------
+Your team is planning on making use of the Azure AI Language service. Can you use the service to extract phrases from text?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Yes
+    b. No
+
+    Answer: a. Yes
+
+Overall explanation
+You can do this with the Key phrase extraction feature of the Azure AI Language service.
+For more information on the service, one can visit the below URL
+
+https://learn.microsoft.com/en-us/azure/ai-services/language-service/key-phrase-extraction/overview
+
+--------------------------------------------------------------------------------------------------------------------------
+Your team is planning on making use of the Azure AI Language service. Can you use the service to detect text language?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Yes
+    b. No
+
+    Answer: a. Yes
+
+Overall explanation
+You can do this with the Language detection feature of the Azure AI Language service.
+For more information on the service, one can visit the below URL
+
+https://learn.microsoft.com/en-us/azure/ai-services/language-service/language-detection/overview    
+
+--------------------------------------------------------------------------------------------------------------------------
+Your development is planning on setting up a bot instance with the use of the Azure Bot service. Can the team communicate 
+with the bot via Microsoft teams?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Yes
+    b. No
+
+    Answer: a. Yes
+
+Overall explanation
+There are many ways to communicate with the bot. One of them is via Microsoft Teams
+For more information on connecting via Microsoft Teams, one can visit the URL
+
+https://docs.microsoft.com/en-us/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0
+
+--------------------------------------------------------------------------------------------------------------------------
+Your team is developing an application. Users would upload videos via the application. You have to ensure that closed 
+caption is generated for the videos. Which of the following service can be used for this requirement?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Azure AI Language - Key phrase extraction
+    b. Azure Bot service
+    c. Azure AI Speech Service
+    d. Azure AI Vision - Object detection
+
+    Answer: c. Azure AI Speech Service
+
+Overall explanation
+You can use the Speech-to-Text service to transcribe the audio from the video files into text.
+For more information on the Speech service, one can visit the below URL
+
+https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview
+
+--------------------------------------------------------------------------------------------------------------------------
+Your team is developing an application. It’s an ecommerce application. Part of the application allows users to raise 
+support issues via the application. You need to add built-in intelligence to the support system that includes the following
+
+1) Being able to look at key phrases in the text that the user has added when raising the support issue.
+2) Understand how urgent the issue is based on the text that the user has added when raising the support issue.
+
+
+Which of the following feature of the Azure AI Language service can you use for the requirement?
+“Being able to look at key phrases in the text that the user has added when raising the support issue.”
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Sentiment Analysis
+    b. Key phrase extraction
+    c. Language detection
+    d. Named Entity recognition
+
+    Answer: b. Key phrase extraction
+
+Overall explanation
+For extracting key phrases, you can use the Key phrase extraction feature in the Azure AI Language service
+For more information on the service, one can visit the below URL
+
+https://learn.microsoft.com/en-us/azure/ai-services/language-service/key-phrase-extraction/overview
+
+--------------------------------------------------------------------------------------------------------------------------
+Your team is developing an application. It’s an ecommerce application. Part of the application allows users to raise 
+support issues via the application. You need to add built-in intelligence to the support system that includes the following
+
+1) Being able to look at key phrases in the text that the user has added when raising the support issue.
+2) Understand how urgent the issue is based on the text that the user has added when raising the support issue.
+
+
+Which of the following feature of the Azure AI Language service can you use for the requirement?
+“Understand how urgent the issue is based on the text that the user has added when raising the support issue.”
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Sentiment Analysis
+    b. Key phrase extraction
+    c. Language detection
+    d. Named Entity recognition
+
+    Answer: a. Sentiment Analysis
+
+Overall explanation
+You can use Sentiment Analysis to understand the user’s sentiment based on the text added when the support issue was raised.
+For more information on the service, one can visit the below URL
+
+https://learn.microsoft.com/en-us/azure/ai-services/language-service/sentiment-opinion-mining/overview?tabs=prebuilt   
+
+--------------------------------------------------------------------------------------------------------------------------
+Your team is planning on using the Face service. Which of the following feature of the face service can be used for the 
+below requirement?
+
+“Match a face to set of faces”
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Verification
+    b. Find Similar
+    c. Identification
+    d. Group
+
+    Answer: c. Identification
+
+Overall explanation
+You can use the Identification feature for this requirement
+For more information on the Face service, one can visit the below URL
+
+https://docs.microsoft.com/en-us/azure/cognitive-services/face/overview    
+
+--------------------------------------------------------------------------------------------------------------------------
+Your team is planning on using the Face service. Which of the following feature of the face service can be used for the 
+below requirement?
+
+“Do these two faces belong to the same person”
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Verification
+    b. Find Similar
+    c. Identification
+    d. Group
+
+    Answer: a. Verification
+
+Overall explanation
+You can use the Verification feature for this requirement
+For more information on the Face service, one can visit the below URL
+
+https://docs.microsoft.com/en-us/azure/cognitive-services/face/overview    
+
+--------------------------------------------------------------------------------------------------------------------------
+Your team is planning on using the Face service. Which of the following feature of the face service can be used for the 
+below requirement?
+
+“Do a matching between a target face and a set of candidate faces”
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Verification
+    b. Find Similar
+    c. Identification
+    d. Group
+
+    Answer: b. Find Similar
+
+Overall explanation
+You can use the Find Similar feature for this requirement
+For more information on the Face service, one can visit the below URL
+
+https://docs.microsoft.com/en-us/azure/cognitive-services/face/overview    
+
+--------------------------------------------------------------------------------------------------------------------------
+Your team is planning on using the AutoML solution in Azure Machine Learning. Can you use the Python language in 
+Automated Machine Learning?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Yes
+    b. No
+
+    Answer: a. Yes
+
+Overall explanation
+The Python SDK is available with Automated Machine Learning
+For more information on Automated Machine Learning, one can visit the below URL
+
+https://docs.microsoft.com/en-us/azure/machine-learning/concept-automated-ml
+
+--------------------------------------------------------------------------------------------------------------------------
+Your team is planning on using the AutoML solution in Azure Machine Learning. Do you need to have prior coding experience 
+to work with AutoML?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Yes
+    b. No
+
+    Answer: b. No
+
+Overall explanation
+There is also an experience of AutoML for users who don’t have any prior coding experience.
+For more information on Automated Machine Learning, one can visit the below URL
+
+https://docs.microsoft.com/en-us/azure/machine-learning/concept-automated-ml
+
+--------------------------------------------------------------------------------------------------------------------------
+Your team needs to train a model. Here the requirement is to find out what would be the cost of a three-bedroom house in 
+the coming year. Which of the following type of Machine Learning algorithm needs to be used here?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Anomaly Detection
+    b. Regression
+    c. Time Series
+    d. Classification
+    e. Clustering
+
+    Answer: Regression
+
+Overall explanation
+This is an example of a Regression algorithm
+This example is taken from the below documentation link on the different types of machine learning algorithms
+
+https://azure.microsoft.com/en-us/overview/machine-learning-algorithms    
+
+--------------------------------------------------------------------------------------------------------------------------
