@@ -44,6 +44,7 @@ adhered here?
     d. Inclusiveness
 
     Answer : c. Fairness
+
 --------------------------------------------------------------------------------------------------------------------------
 You are developing a machine learning model. You need to follow the principles of responsible AI. You discover the dataset 
 that is being used to train the model has some missing values. Which of the following principle being broken when using 
@@ -56,6 +57,7 @@ this data set?
     d. Inclusiveness
 
     Answer : b. Reliability & Safety
+
 --------------------------------------------------------------------------------------------------------------------------    
 What is confusion matrix?
 
@@ -68,6 +70,7 @@ What is confusion matrix?
     -----------------------------------------
     False Negatives     |   True Negatives
     -----------------------------------------
+
 --------------------------------------------------------------------------------------------------------------------------    
 What is Accuracy in results?
 
@@ -76,6 +79,7 @@ What is Accuracy in results?
     In terms of mathematical formulat it looks like the following
 
     (True Positives + True Negatives) / (True Positives + True Negatives + False Positives + False Negatives)
+
 --------------------------------------------------------------------------------------------------------------------------
 What is Precision in results?
 
@@ -84,6 +88,7 @@ What is Precision in results?
     In terms of mathematical formulat it looks like the following
 
     (True Positives) / (True Positives + False Positives)
+
 --------------------------------------------------------------------------------------------------------------------------
 What are Metrics for Regression Models?
 
@@ -98,6 +103,7 @@ What is Feature Engineering?
     Example : Split the data horizontally to create additional columns / features to add more calrity for the machine 
     learning algorithm. Follwed by selecting (also called as feature selection) only the necesary columns and reduce the 
     noise for the ML model
+
 --------------------------------------------------------------------------------------------------------------------------
 Your team needs to use Machine Learning to forecast the house prices for the coming year based on historical data. Would 
 you use a classification algorithm for this requirement?
@@ -107,6 +113,7 @@ you use a classification algorithm for this requirement?
     b. No
 
     Answer : b. No
+
 --------------------------------------------------------------------------------------------------------------------------    
 Microsoft has infused the capability in some of its products to detect suspicious sign-in attempts. Here is Microsoft 
 probably making use of Anomaly detection algorithms to implement this feature?
@@ -116,6 +123,7 @@ probably making use of Anomaly detection algorithms to implement this feature?
     b. No
 
     Answer : a. Yes
+
 -------------------------------------------------------------------------------------------------------------------------- 
 Your team needs to use Machine Learning to train a model based on a classification algorithm. They have a finalized dataset 
 that contains 3000 rows of information. They are planning on using the entire dataset to train the model. Can they use the 
@@ -126,6 +134,7 @@ same dataset to evaluate the model?
     b. No
 
     Answer : b. No
+
 -------------------------------------------------------------------------------------------------------------------------- 
 A team has completed the training and evaluation of a model
 The team is happy with the accuracy result of 0.872 and is using this as the final measure to decide that this model is the 
@@ -142,6 +151,7 @@ AUC         : 0.927
     b. No
 
     Answer : b. No [All results factors should be considered before selection of the model]
+
 -------------------------------------------------------------------------------------------------------------------------- 
 Your team is planning on building a model in Azure Machine Learning by using a regression algorithm. They currently have a 
 dataset that is not labelled. Can they use this to train the model?
@@ -151,6 +161,7 @@ dataset that is not labelled. Can they use this to train the model?
     b. No
 
     Answer : b. No [To train the model, you need to have a labelled dataset]
+
 -------------------------------------------------------------------------------------------------------------------------- 
 Which of the following in Azure Machine Learning allows you to easily drag and drop components and data assets to build and 
 train models?
@@ -162,6 +173,7 @@ train models?
     d. Environments
 
     Answer : c. Designer
+
 --------------------------------------------------------------------------------------------------------------------------
 Which of the following type of algorithm falls into the unsupervised mode of Machine Learning?
 
@@ -171,6 +183,7 @@ Which of the following type of algorithm falls into the unsupervised mode of Mac
     c. Clustering
 
     Answer: c. Clustering [Clustering algorithms falls into the category of unsupervised Machine Learning.]
+
 --------------------------------------------------------------------------------------------------------------------------    
 Which of the following feature in the Azure Face service can be used to answer the question
 
@@ -182,6 +195,7 @@ Which of the following feature in the Azure Face service can be used to answer t
     c. Comparision
 
     Answer: b. Verification
+    
 --------------------------------------------------------------------------------------------------------------------------
 You are planning on creating a Custom Vision project based on the Classification project type. Can you choose Multilabel 
 as the classification type?
@@ -191,6 +205,7 @@ as the classification type?
     b. No
 
     Answer: a. Yes
+
 --------------------------------------------------------------------------------------------------------------------------    
 You are planning on creating a Custom Vision project based on the Object Detection project type. Can you choose Multilabel 
 as the classification type?
@@ -200,6 +215,7 @@ as the classification type?
     b. No
 
     Answer: b. No
+
 --------------------------------------------------------------------------------------------------------------------------    
 Can you use the Form Recognizer service to extract the details from an existing invoice?
 
@@ -208,6 +224,7 @@ Can you use the Form Recognizer service to extract the details from an existing 
     b. No
 
     Answer: a. Yes
+
 --------------------------------------------------------------------------------------------------------------------------
 Which of the following service can be used to detect objects in an image?
 
@@ -217,6 +234,7 @@ Which of the following service can be used to detect objects in an image?
     c. Azure AI Vision - Image Analysis
 
     Answer: c. Azure AI Vision - Image Analysis
+
 --------------------------------------------------------------------------------------------------------------------------
 Which of the following service can be used to extract main topics from a given phrase?
 
@@ -226,6 +244,7 @@ Which of the following service can be used to extract main topics from a given p
     c. Azure AI Languauge - Sentimanet Analysis
 
     Answer: b. Azure AI Languauge - Key Phase Extraction
+
 --------------------------------------------------------------------------------------------------------------------------
 Which of the following service can be used to what a person thinks about a particular topic?
 
@@ -235,6 +254,7 @@ Which of the following service can be used to what a person thinks about a parti
     c. Azure AI Languauge - Sentimanet Analysis
 
     Answer: c. Azure AI Languauge - Sentimanet Analysis
+
 --------------------------------------------------------------------------------------------------------------------------
 You are planning on using the Azure Speech service. Can you use the Azure Speech Service to enable real-time 
 speech-to-speech translation?
@@ -244,6 +264,7 @@ speech-to-speech translation?
     b. No
 
     Answer: a. Yes
+
 --------------------------------------------------------------------------------------------------------------------------
 You are planning on using the Azure Translator service. Can you use the service to translate documents?
 
@@ -252,6 +273,7 @@ You are planning on using the Azure Translator service. Can you use the service 
     b. No
 
     Answer: a. Yes
+
 --------------------------------------------------------------------------------------------------------------------------
 You are planning on using the Question Answering solution available in Azure AI Language. Can you import existing 
 questions from an Excel sheet?
@@ -261,6 +283,7 @@ questions from an Excel sheet?
     b. No
 
     Answer: a. Yes
+
 --------------------------------------------------------------------------------------------------------------------------
 Your team needs to develop several systems. One system needs to understand whether reviews are positive or negative. 
 Which of the following type of workload does this come under?
@@ -272,7 +295,6 @@ Which of the following type of workload does this come under?
     c. Conversational AI
 
     Answer: a. Natural Language Processing
-<<<<<<< HEAD
 
 Overall explanation
 This is an example of Natural Language processing
@@ -280,8 +302,7 @@ This is an example of Natural Language processing
 For more information on an example of Natural Language processing, one can visit the below URL
 
 https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics    
-=======
->>>>>>> 75aebc603b321a1d3068033d0f93569a0bdb91b4
+
 --------------------------------------------------------------------------------------------------------------------------
 Which of the following module is used in Azure Machine Learning Designer to split a dataset into a training and validation 
 data set?
@@ -292,14 +313,12 @@ data set?
     c. Join Data
 
     Answer: b. Split Data
-<<<<<<< HEAD
 
 This can be done with the Split Data module
 For more information on the Split Data module, one can visit the below URL
 
 https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-module-reference/split-data
-=======
->>>>>>> 75aebc603b321a1d3068033d0f93569a0bdb91b4
+
 --------------------------------------------------------------------------------------------------------------------------    
 Your team is planning on using the Azure Machine Learning Designer. Can you drag a dataset onto the designer?
 
@@ -307,13 +326,13 @@ Your team is planning on using the Azure Machine Learning Designer. Can you drag
     a. Yes
     b. No
 
-<<<<<<< HEAD
     Answer: a. Yes
 
 You can drag and drop datasets and modules onto the canvas.
 For more information on the Machine Learning Designer, one can visit the below URL
 
 https://docs.microsoft.com/en-us/azure/machine-learning/concept-designer
+
 --------------------------------------------------------------------------------------------------------------------------
 Your team is planning on using the Azure Machine Learning Designer. Can you drag a component onto the designer?
 
@@ -328,6 +347,7 @@ You can drag and drop datasets and components onto the canvas.
 For more information on the Machine Learning Designer, one can visit the below URL
 
 https://docs.microsoft.com/en-us/azure/machine-learning/concept-designer    
+
 --------------------------------------------------------------------------------------------------------------------------
 Your team is planning on using the Azure Machine Learning Designer. Can you drag a pipeline onto the designer?
 
@@ -342,6 +362,7 @@ You can drag and drop datasets and modules onto the canvas.
 For more information on the Machine Learning Designer, one can visit the below URL
 
 https://docs.microsoft.com/en-us/azure/machine-learning/concept-designer
+
 --------------------------------------------------------------------------------------------------------------------------
 Your team is planning on using the Azure AI Vision service. They would use it to analyze a set of images. Which of the 
 following feature helps to identify an object and also get the bounding coordinates of the object?
@@ -359,6 +380,7 @@ You can use the Object detection feature for this requirement
 For more information on the Object Detection feature, one can visit the below URL
 
 https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-image-analysis?tabs=4-0    
+
 --------------------------------------------------------------------------------------------------------------------------
 Your team is planning on using the Azure AI Vision service. They would use it to analyze a set of images. Which of the 
 following feature helps to extract printed and handwritten text from images?
@@ -375,6 +397,7 @@ You can use the Optical character recognizer feature for this requirement
 For more information on the Optical character recognition feature, one can visit the below URL
 
 https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-ocr    
+
 --------------------------------------------------------------------------------------------------------------------------
 Which of the following are Microsoft principles of responsible AI? Choose 3 answers from the options given below
 
@@ -400,6 +423,7 @@ The six principles are
 For more information on Responsible AI, one can visit the below URL
 
 https://www.microsoft.com/en-us/ai/responsible-ai
+
 --------------------------------------------------------------------------------------------------------------------------
 Your team needs to develop several systems. One system needs the capability to determine whether images contain a set of 
 objects. Which of the following type of workload does this come under?
@@ -416,6 +440,7 @@ Here we can use Computer Vision to get a set of objects from an image.
 For more information on the Computer Vision service, one can visit the below URL
 
 https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/overview
+
 --------------------------------------------------------------------------------------------------------------------------
 Your team needs to develop several systems. One system needs to have an automated chat facility which can answer user’s 
 questions. Which of the following type of workload does this come under?
@@ -432,6 +457,7 @@ This is an example of Conversational AI
 For more information on an example of Conversational AI , one can visit the below URL
 
 https://azure.microsoft.com/en-us/services/bot-services/
+
 --------------------------------------------------------------------------------------------------------------------------
 Your team needs to train a model. Here the requirement is to find out which type of computer models always have failures. 
 Which of the following type of Machine Learning algorithm needs to be used here?
@@ -450,6 +476,7 @@ This is an example of a Clustering algorithm
 This example is taken from the below documentation link on the different types of machine learning algorithms
 
 https://azure.microsoft.com/en-us/overview/machine-learning-algorithms    
+
 --------------------------------------------------------------------------------------------------------------------------
 Which of the following is the process of creating new features from raw data?
 
@@ -463,7 +490,8 @@ Overall explanation
 This is called Feature engineering
 For more information on Feature Engineering, one can visit the below URL
 
-https://docs.microsoft.com/en-us/azure/architecture/data-science-process/create-features    
+https://docs.microsoft.com/en-us/azure/architecture/data-science-process/create-features   
+
 --------------------------------------------------------------------------------------------------------------------------
 Which of the following is the process of selecting a key subset of features?
 
@@ -478,6 +506,7 @@ This is called Feature selection
 For more information on Feature Engineering, one can visit the below URL
 
 https://docs.microsoft.com/en-us/azure/architecture/data-science-process/create-features
+
 --------------------------------------------------------------------------------------------------------------------------
 Which of the following metrics can be used to evaluate a classification model? Choose 2 answers from the options given 
 below
@@ -495,6 +524,7 @@ You can use the metrics of Recall and AUC to evaluate a classification model
 For more information on evaluating models, one can visit the below URL
 
 https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-module-reference/evaluate-model
+
 --------------------------------------------------------------------------------------------------------------------------
 Which of the following metrics can be used to evaluate a regression model? Choose 2 answers from the options given below
 
@@ -511,6 +541,7 @@ You can use the metrics of Mean absolute error and Root mean squared error to ev
 For more information on evaluating models, one can visit the below URL
 
 https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-module-reference/evaluate-model    
+
 --------------------------------------------------------------------------------------------------------------------------
 Your team has deployed an endpoint within Azure Machine Learning.
 
@@ -528,6 +559,7 @@ Which of the following would you use to call the endpoint? Choose 2 answers from
 
 Overall explanation
 You will call the endpoint via the REST endpoint. And you will also make use of the authentication key.  
+
 --------------------------------------------------------------------------------------------------------------------------
 Your team currently has a trained model in Azure Machine Learning. They now want to deploy the model via the use of a 
 real-time inference pipeline. Which of the following service is used to deploy the endpoint so that it can consumed by 
@@ -543,6 +575,7 @@ users and applications?
 
 Overall explanation
 Azure Kubernetes is used to host the endpoint.
+
 --------------------------------------------------------------------------------------------------------------------------
 Your team needs to build a machine learning pipeline to train, and a model based on Adult Census Income Binary 
 classification data.
@@ -563,6 +596,7 @@ You need to add the right components to the pipeline. Which of the following wou
 
 Overall explanation
 Here we first need to split the data.
+
 --------------------------------------------------------------------------------------------------------------------------
 Your team needs to build a machine learning pipeline to train, and a model based on Adult Census Income Binary classification data.
 
@@ -582,6 +616,7 @@ You need to add the right components to the pipeline. Which of the following wou
 
 Overall explanation
 Here we need to train the model.
+
 --------------------------------------------------------------------------------------------------------------------------
 Your team needs to build a machine learning pipeline to train, and a model based on Adult Census Income Binary 
 classification data.
@@ -602,6 +637,7 @@ You need to add the right components to the pipeline. Which of the following wou
 
 Overall explanation
 Here we need to score the model.
+
 --------------------------------------------------------------------------------------------------------------------------
 Your team needs to build an application. The application will be used to read text to users who have reduced vision. Which 
 of the following service can be used for this requirement?
@@ -619,5 +655,5 @@ You can use the Text-to-Speech service to convert text to human-like synthesized
 For more information on the Speech service, one can visit the below URL
 
 https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview
-    
+
 --------------------------------------------------------------------------------------------------------------------------
