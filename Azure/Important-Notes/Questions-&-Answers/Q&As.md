@@ -495,7 +495,20 @@ You can use the metrics of Recall and AUC to evaluate a classification model
 For more information on evaluating models, one can visit the below URL
 
 https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-module-reference/evaluate-model
-=======
-    Answer: b. No
->>>>>>> 75aebc603b321a1d3068033d0f93569a0bdb91b4
+--------------------------------------------------------------------------------------------------------------------------
+Which of the following metrics can be used to evaluate a regression model? Choose 2 answers from the options given below
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Recall
+    b. AUC
+    c. Mean absolute error
+    d. Root mean squared error
+
+    Answer: c. Mean absolute error, d. Root mean squared error
+
+Overall explanation
+You can use the metrics of Mean absolute error and Root mean squared error to evaluate a classification model
+For more information on evaluating models, one can visit the below URL
+
+https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-module-reference/evaluate-model    
 --------------------------------------------------------------------------------------------------------------------------
