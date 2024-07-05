@@ -296,7 +296,8 @@ Which of the following type of workload does this come under?
 
     Answer: a. Natural Language Processing
 
-Overall explanation
+Overall explanation :
+
 This is an example of Natural Language processing
 
 For more information on an example of Natural Language processing, one can visit the below URL
@@ -342,7 +343,8 @@ Your team is planning on using the Azure Machine Learning Designer. Can you drag
 
     Answer: a. Yes
 
-Overall explanation
+Overall explanation :
+
 You can drag and drop datasets and components onto the canvas.
 For more information on the Machine Learning Designer, one can visit the below URL
 
@@ -357,7 +359,8 @@ Your team is planning on using the Azure Machine Learning Designer. Can you drag
 
     Answer: b. No
 
-Overall explanation
+Overall explanation :
+
 You can drag and drop datasets and modules onto the canvas.
 For more information on the Machine Learning Designer, one can visit the below URL
 
@@ -374,7 +377,8 @@ following feature helps to identify an object and also get the bounding coordina
 
     Answer: b. Object detection
 
-Overall explanation
+Overall explanation :
+
 You can use the Object detection feature for this requirement
 
 For more information on the Object Detection feature, one can visit the below URL
@@ -392,7 +396,8 @@ following feature helps to extract printed and handwritten text from images?
 
     Answer: c. Optical character recognizer
 
-Overall explanation
+Overall explanation :
+
 You can use the Optical character recognizer feature for this requirement
 For more information on the Optical character recognition feature, one can visit the below URL
 
@@ -410,7 +415,8 @@ Which of the following are Microsoft principles of responsible AI? Choose 3 answ
 
     Answer:  a. Privacy and Security, c. Fairness, d. Transparency
 
-Overall explanation
+Overall explanation :
+
 The six principles are
 
 1. Fairness
@@ -435,7 +441,8 @@ objects. Which of the following type of workload does this come under?
 
     Answer: b. Computer Vision
 
-Overall explanation
+Overall explanation :
+
 Here we can use Computer Vision to get a set of objects from an image.
 For more information on the Computer Vision service, one can visit the below URL
 
@@ -452,7 +459,8 @@ questions. Which of the following type of workload does this come under?
 
     Answer: c. Conversational AI
 
-Overall explanation
+Overall explanation :
+
 This is an example of Conversational AI
 For more information on an example of Conversational AI , one can visit the below URL
 
@@ -471,7 +479,8 @@ Which of the following type of Machine Learning algorithm needs to be used here?
 
     Answer: e. Clustering
 
-Overall explanation
+Overall explanation :
+
 This is an example of a Clustering algorithm
 This example is taken from the below documentation link on the different types of machine learning algorithms
 
@@ -486,7 +495,8 @@ Which of the following is the process of creating new features from raw data?
 
     Answer: a. Feature Engineering
 
-Overall explanation
+Overall explanation :
+
 This is called Feature engineering
 For more information on Feature Engineering, one can visit the below URL
 
@@ -501,7 +511,8 @@ Which of the following is the process of selecting a key subset of features?
 
     Answer: b. Feature Selection
 
-Overall explanation
+Overall explanation :
+
 This is called Feature selection
 For more information on Feature Engineering, one can visit the below URL
 
@@ -519,7 +530,8 @@ below
 
     Answer: a. Recall, b. AUC
 
-Overall explanation
+Overall explanation :
+
 You can use the metrics of Recall and AUC to evaluate a classification model
 For more information on evaluating models, one can visit the below URL
 
@@ -536,7 +548,8 @@ Which of the following metrics can be used to evaluate a regression model? Choos
 
     Answer: c. Mean absolute error, d. Root mean squared error
 
-Overall explanation
+Overall explanation :
+
 You can use the metrics of Mean absolute error and Root mean squared error to evaluate a classification model
 For more information on evaluating models, one can visit the below URL
 
@@ -557,7 +570,8 @@ Which of the following would you use to call the endpoint? Choose 2 answers from
 
     Answer: b. A REST endpoint, d. An Authentication Key
 
-Overall explanation
+Overall explanation :
+
 You will call the endpoint via the REST endpoint. And you will also make use of the authentication key.  
 
 --------------------------------------------------------------------------------------------------------------------------
@@ -573,7 +587,8 @@ users and applications?
 
     Answer: c. Azure Kubernetes
 
-Overall explanation
+Overall explanation :
+
 Azure Kubernetes is used to host the endpoint.
 
 --------------------------------------------------------------------------------------------------------------------------
@@ -594,7 +609,8 @@ You need to add the right components to the pipeline. Which of the following wou
 
     Answer: d. Split Data
 
-Overall explanation
+Overall explanation :
+
 Here we first need to split the data.
 
 --------------------------------------------------------------------------------------------------------------------------
@@ -614,7 +630,8 @@ You need to add the right components to the pipeline. Which of the following wou
 
     Answer: a. Train Model
 
-Overall explanation
+Overall explanation :
+
 Here we need to train the model.
 
 --------------------------------------------------------------------------------------------------------------------------
@@ -635,7 +652,8 @@ You need to add the right components to the pipeline. Which of the following wou
 
     Answer: c. Score Model
 
-Overall explanation
+Overall explanation :
+
 Here we need to score the model.
 
 --------------------------------------------------------------------------------------------------------------------------
@@ -650,7 +668,8 @@ of the following service can be used for this requirement?
 
     Answer: c. Azure AI Speech Service
 
-Overall explanation
+Overall explanation :
+
 You can use the Text-to-Speech service to convert text to human-like synthesized speech.
 For more information on the Speech service, one can visit the below URL
 
@@ -666,7 +685,8 @@ with the bot via Slack?
 
     Answer: a. Yes
 
-Overall explanation
+Overall explanation :
+
 There are many ways to communicate with the bot. One of them is via Slack
 For more information on connecting via Slack, one can visit the URL
 
@@ -683,7 +703,8 @@ Which of the following service allows you to host your own knowledge base?
 
     Answer: c. Azure AI Language Service
 
-Overall explanation
+Overall explanation :
+
 You can use the question and answer feature with the Azure AI Language service
 For more information on this service, one can visit the URL
 
@@ -699,7 +720,8 @@ service? Choose 2 answers from the options given below
     c. TSV Files
     d. Files in XML Format
 
-Overall explanation
+Overall explanation :
+
 The QnA Maker service does not support getting data from an Azure SQL database.
 For more information on the QnA Maker service data sources, one can visit the URL
 
@@ -717,7 +739,8 @@ Which of the following type of module is being developed here as part of the app
 
     Answer: c. A conversational AI module
 
-Overall explanation
+Overall explanation :
+
 Here the module depicts a conversational AI module which will converse with the user and try to answer their questions. 
 
 --------------------------------------------------------------------------------------------------------------------------
@@ -734,7 +757,8 @@ Which of the following type of model is the chart being used to evaluate?
 
     Answer: Regression
 
-Overall explanation
+Overall explanation :
+
 When using charts which show cases the predicted vs true chart, this normally means that you are working with 
 Regression-based algorithms.
 
@@ -753,7 +777,8 @@ Which of the following Computer Vision type was used here?
 
     Answer: a. Object Detection
 
-Overall explanation
+Overall explanation :
+
 Here Computer Vision is being used to detect the different objects along with their confidence level.
 
 --------------------------------------------------------------------------------------------------------------------------
@@ -766,7 +791,8 @@ Which of the following is an example of conversational AI?
 
     Answer:  c. An ecommerce web site that helps to answer a user’s questions via the use of a knowledgebase
 
-Overall explanation
+Overall explanation :
+
 The ability to answer the user’s question based on an automated system via the use of a knowledge base is an example of 
 conversational AI.    
 
@@ -779,7 +805,8 @@ Your team is planning on making use of the Azure AI Language service. Can you us
 
     Answer: a. Yes
 
-Overall explanation
+Overall explanation :
+
 You can do this with the Key phrase extraction feature of the Azure AI Language service.
 For more information on the service, one can visit the below URL
 
@@ -794,7 +821,8 @@ Your team is planning on making use of the Azure AI Language service. Can you us
 
     Answer: a. Yes
 
-Overall explanation
+Overall explanation :
+
 You can do this with the Language detection feature of the Azure AI Language service.
 For more information on the service, one can visit the below URL
 
@@ -810,7 +838,8 @@ with the bot via Microsoft teams?
 
     Answer: a. Yes
 
-Overall explanation
+Overall explanation :
+
 There are many ways to communicate with the bot. One of them is via Microsoft Teams
 For more information on connecting via Microsoft Teams, one can visit the URL
 
@@ -828,7 +857,8 @@ caption is generated for the videos. Which of the following service can be used 
 
     Answer: c. Azure AI Speech Service
 
-Overall explanation
+Overall explanation :
+
 You can use the Speech-to-Text service to transcribe the audio from the video files into text.
 For more information on the Speech service, one can visit the below URL
 
@@ -853,7 +883,8 @@ Which of the following feature of the Azure AI Language service can you use for 
 
     Answer: b. Key phrase extraction
 
-Overall explanation
+Overall explanation :
+
 For extracting key phrases, you can use the Key phrase extraction feature in the Azure AI Language service
 For more information on the service, one can visit the below URL
 
@@ -878,7 +909,8 @@ Which of the following feature of the Azure AI Language service can you use for 
 
     Answer: a. Sentiment Analysis
 
-Overall explanation
+Overall explanation :
+
 You can use Sentiment Analysis to understand the user’s sentiment based on the text added when the support issue was raised.
 For more information on the service, one can visit the below URL
 
@@ -898,7 +930,8 @@ below requirement?
 
     Answer: c. Identification
 
-Overall explanation
+Overall explanation :
+
 You can use the Identification feature for this requirement
 For more information on the Face service, one can visit the below URL
 
@@ -918,7 +951,8 @@ below requirement?
 
     Answer: a. Verification
 
-Overall explanation
+Overall explanation :
+
 You can use the Verification feature for this requirement
 For more information on the Face service, one can visit the below URL
 
@@ -938,7 +972,8 @@ below requirement?
 
     Answer: b. Find Similar
 
-Overall explanation
+Overall explanation :
+
 You can use the Find Similar feature for this requirement
 For more information on the Face service, one can visit the below URL
 
@@ -954,7 +989,8 @@ Automated Machine Learning?
 
     Answer: a. Yes
 
-Overall explanation
+Overall explanation :
+
 The Python SDK is available with Automated Machine Learning
 For more information on Automated Machine Learning, one can visit the below URL
 
@@ -970,7 +1006,8 @@ to work with AutoML?
 
     Answer: b. No
 
-Overall explanation
+Overall explanation :
+
 There is also an experience of AutoML for users who don’t have any prior coding experience.
 For more information on Automated Machine Learning, one can visit the below URL
 
@@ -989,7 +1026,8 @@ the coming year. Which of the following type of Machine Learning algorithm needs
 
     Answer: Regression
 
-Overall explanation
+Overall explanation :
+
 This is an example of a Regression algorithm
 This example is taken from the below documentation link on the different types of machine learning algorithms
 
