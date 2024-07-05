@@ -512,3 +512,20 @@ For more information on evaluating models, one can visit the below URL
 
 https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-module-reference/evaluate-model    
 --------------------------------------------------------------------------------------------------------------------------
+Your team has deployed an endpoint within Azure Machine Learning.
+
+![GitHub Image](/Azure/Assets/Q&As/Which-is-an-endpoint.png)
+
+Which of the following would you use to call the endpoint? Choose 2 answers from the options given below
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. an API endpoint
+    b. A REST endpoint
+    c. An Authentication Token
+    d. An Authentication Key
+
+    Answer: b. A REST endpoint, d. An Authentication Key
+
+Overall explanation
+You will call the endpoint via the REST endpoint. And you will also make use of the authentication key.  
+--------------------------------------------------------------------------------------------------------------------------  
