@@ -22,3 +22,4 @@
     Translation             : Has the ability to translate text / speech from one language to another
     Speed Recognition       : Has the ability to listen to speech and generate content
     Speech Synthesis        : Has the ability to generate speech
+    Question Answer Service : Has the ability to connect to a chat bot and respond like a customer care agent.

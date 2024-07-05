@@ -272,6 +272,13 @@ Which of the following type of workload does this come under?
     c. Conversational AI
 
     Answer: a. Natural Language Processing
+
+Overall explanation
+This is an example of Natural Language processing
+
+For more information on an example of Natural Language processing, one can visit the below URL
+
+https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics    
 --------------------------------------------------------------------------------------------------------------------------
 Which of the following module is used in Azure Machine Learning Designer to split a dataset into a training and validation 
 data set?
@@ -282,6 +289,11 @@ data set?
     c. Join Data
 
     Answer: b. Split Data
+
+This can be done with the Split Data module
+For more information on the Split Data module, one can visit the below URL
+
+https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-module-reference/split-data
 --------------------------------------------------------------------------------------------------------------------------    
 Your team is planning on using the Azure Machine Learning Designer. Can you drag a dataset onto the designer?
 
@@ -289,7 +301,12 @@ Your team is planning on using the Azure Machine Learning Designer. Can you drag
     a. Yes
     b. No
 
-    Answer: b. No
+    Answer: a. Yes
+
+You can drag and drop datasets and modules onto the canvas.
+For more information on the Machine Learning Designer, one can visit the below URL
+
+https://docs.microsoft.com/en-us/azure/machine-learning/concept-designer
 --------------------------------------------------------------------------------------------------------------------------
 Your team is planning on using the Azure Machine Learning Designer. Can you drag a component onto the designer?
 
@@ -298,4 +315,177 @@ Your team is planning on using the Azure Machine Learning Designer. Can you drag
     b. No
 
     Answer: a. Yes
+
+Overall explanation
+You can drag and drop datasets and components onto the canvas.
+For more information on the Machine Learning Designer, one can visit the below URL
+
+https://docs.microsoft.com/en-us/azure/machine-learning/concept-designer    
+--------------------------------------------------------------------------------------------------------------------------
+Your team is planning on using the Azure Machine Learning Designer. Can you drag a pipeline onto the designer?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Yes
+    b. No
+
+    Answer: b. No
+
+Overall explanation
+You can drag and drop datasets and modules onto the canvas.
+For more information on the Machine Learning Designer, one can visit the below URL
+
+https://docs.microsoft.com/en-us/azure/machine-learning/concept-designer
+--------------------------------------------------------------------------------------------------------------------------
+Your team is planning on using the Azure AI Vision service. They would use it to analyze a set of images. Which of the 
+following feature helps to identify an object and also get the bounding coordinates of the object?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Face detection
+    b. Object detection
+    c. Optical character recognizer
+
+    Answer: b. Object detection
+
+Overall explanation
+You can use the Object detection feature for this requirement
+
+For more information on the Object Detection feature, one can visit the below URL
+
+https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-image-analysis?tabs=4-0    
+--------------------------------------------------------------------------------------------------------------------------
+Your team is planning on using the Azure AI Vision service. They would use it to analyze a set of images. Which of the 
+following feature helps to extract printed and handwritten text from images?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Face detection
+    b. Object detection
+    c. Optical character recognizer
+
+    Answer: c. Optical character recognizer
+
+Overall explanation
+You can use the Optical character recognizer feature for this requirement
+For more information on the Optical character recognition feature, one can visit the below URL
+
+https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-ocr    
+--------------------------------------------------------------------------------------------------------------------------
+Which of the following are Microsoft principles of responsible AI? Choose 3 answers from the options given below
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Privacy and Security
+    b. Opacity
+    c. Fairness
+    d. Transparency
+    e. Exclusiveness
+
+    Answer:  a. Privacy and Security, c. Fairness, d. Transparency
+
+Overall explanation
+The six principles are
+
+1. Fairness
+2. Reliability & Safety
+3. Privacy & Security
+4. Inclusiveness
+5. Transparency
+6. Accountability
+
+For more information on Responsible AI, one can visit the below URL
+
+https://www.microsoft.com/en-us/ai/responsible-ai
+--------------------------------------------------------------------------------------------------------------------------
+Your team needs to develop several systems. One system needs the capability to determine whether images contain a set of 
+objects. Which of the following type of workload does this come under?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Natural Language Processing
+    b. Computer Vision
+    c. Conversational AI
+
+    Answer: b. Computer Vision
+
+Overall explanation
+Here we can use Computer Vision to get a set of objects from an image.
+For more information on the Computer Vision service, one can visit the below URL
+
+https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/overview
+--------------------------------------------------------------------------------------------------------------------------
+Your team needs to develop several systems. One system needs to have an automated chat facility which can answer user’s 
+questions. Which of the following type of workload does this come under?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Natural Language Processing
+    b. Computer Vision
+    c. Conversational AI
+
+    Answer: c. Conversational AI
+
+Overall explanation
+This is an example of Conversational AI
+For more information on an example of Conversational AI , one can visit the below URL
+
+https://azure.microsoft.com/en-us/services/bot-services/
+--------------------------------------------------------------------------------------------------------------------------
+Your team needs to train a model. Here the requirement is to find out which type of computer models always have failures. 
+Which of the following type of Machine Learning algorithm needs to be used here?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Anomaly detection
+    b. Regression
+    c. Time Series
+    d. Classification
+    e. Clustering
+
+    Answer: e. Clustering
+
+Overall explanation
+This is an example of a Clustering algorithm
+This example is taken from the below documentation link on the different types of machine learning algorithms
+
+https://azure.microsoft.com/en-us/overview/machine-learning-algorithms    
+--------------------------------------------------------------------------------------------------------------------------
+Which of the following is the process of creating new features from raw data?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Feature Engineering
+    b. Feature Selection
+
+    Answer: a. Feature Engineering
+
+Overall explanation
+This is called Feature engineering
+For more information on Feature Engineering, one can visit the below URL
+
+https://docs.microsoft.com/en-us/azure/architecture/data-science-process/create-features    
+--------------------------------------------------------------------------------------------------------------------------
+Which of the following is the process of selecting a key subset of features?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Feature Engineering
+    b. Feature Selection
+
+    Answer: b. Feature Selection
+
+Overall explanation
+This is called Feature selection
+For more information on Feature Engineering, one can visit the below URL
+
+https://docs.microsoft.com/en-us/azure/architecture/data-science-process/create-features
+--------------------------------------------------------------------------------------------------------------------------
+Which of the following metrics can be used to evaluate a classification model? Choose 2 answers from the options given 
+below
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Recall
+    b. AUC
+    c. Mean absolute error
+    d. Root mean squared error
+
+    Answer: a. Recall, b. AUC
+
+Overall explanation
+You can use the metrics of Recall and AUC to evaluate a classification model
+For more information on evaluating models, one can visit the below URL
+
+https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-module-reference/evaluate-model
 --------------------------------------------------------------------------------------------------------------------------
