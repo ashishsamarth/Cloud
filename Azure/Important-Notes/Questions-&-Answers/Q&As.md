@@ -272,6 +272,7 @@ Which of the following type of workload does this come under?
     c. Conversational AI
 
     Answer: a. Natural Language Processing
+<<<<<<< HEAD
 
 Overall explanation
 This is an example of Natural Language processing
@@ -279,6 +280,8 @@ This is an example of Natural Language processing
 For more information on an example of Natural Language processing, one can visit the below URL
 
 https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics    
+=======
+>>>>>>> 75aebc603b321a1d3068033d0f93569a0bdb91b4
 --------------------------------------------------------------------------------------------------------------------------
 Which of the following module is used in Azure Machine Learning Designer to split a dataset into a training and validation 
 data set?
@@ -289,11 +292,14 @@ data set?
     c. Join Data
 
     Answer: b. Split Data
+<<<<<<< HEAD
 
 This can be done with the Split Data module
 For more information on the Split Data module, one can visit the below URL
 
 https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-module-reference/split-data
+=======
+>>>>>>> 75aebc603b321a1d3068033d0f93569a0bdb91b4
 --------------------------------------------------------------------------------------------------------------------------    
 Your team is planning on using the Azure Machine Learning Designer. Can you drag a dataset onto the designer?
 
@@ -301,6 +307,7 @@ Your team is planning on using the Azure Machine Learning Designer. Can you drag
     a. Yes
     b. No
 
+<<<<<<< HEAD
     Answer: a. Yes
 
 You can drag and drop datasets and modules onto the canvas.
@@ -488,4 +495,7 @@ You can use the metrics of Recall and AUC to evaluate a classification model
 For more information on evaluating models, one can visit the below URL
 
 https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-module-reference/evaluate-model
+=======
+    Answer: b. No
+>>>>>>> 75aebc603b321a1d3068033d0f93569a0bdb91b4
 --------------------------------------------------------------------------------------------------------------------------
