@@ -217,4 +217,13 @@ Which of the following service can be used to detect objects in an image?
     c. Azure AI Vision - Image Analysis
 
     Answer: c. Azure AI Vision - Image Analysis
---------------------------------------------------------------------------------------------------------------------------    
+--------------------------------------------------------------------------------------------------------------------------
+Which of the following service can be used to extract main topics from a given phrase?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Azure AI Languauge - Question Answering
+    b. Azure AI Languauge - Key Phase Extraction
+    c. Azure AI Languauge - Sentimanet Analysis
+
+    Answer: b. Azure AI Languauge - Key Phase Extraction
+--------------------------------------------------------------------------------------------------------------------------
