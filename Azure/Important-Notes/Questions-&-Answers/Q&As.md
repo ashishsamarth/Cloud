@@ -227,3 +227,12 @@ Which of the following service can be used to extract main topics from a given p
 
     Answer: b. Azure AI Languauge - Key Phase Extraction
 --------------------------------------------------------------------------------------------------------------------------
+Which of the following service can be used to what a person thinks about a particular topic?
+
+--------------------------------------------------------------------------------------------------------------------------
+    a. Azure AI Languauge - Question Answering
+    b. Azure AI Languauge - Key Phase Extraction
+    c. Azure AI Languauge - Sentimanet Analysis
+
+    Answer: c. Azure AI Languauge - Sentimanet Analysis
+--------------------------------------------------------------------------------------------------------------------------
