@@ -1595,3 +1595,89 @@ Answer: Reliability & Safety requires the rigorous testing of an AI-based system
 that it works as expected and to eliminate potential risk to human life.
 
 --------------------------------------------------------------------------------------------------------------------------
+Q. Which machine learning type should you use to determine if a social media post has positive or negative sentiment?
+
+--------------------------------------------------------------------------------------------------------------------------
+Answer: The classification machine learning model is used to predict mutually exclusive categories. Classification 
+involves learning using labels to classify data. Two-class classification algorithms can provide an either/or answer 
+such as a social media post having a positive or negative sentiment.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q. Which type of machine learning groups unlabeled data using similarities in the data?
+
+--------------------------------------------------------------------------------------------------------------------------
+Answer: The clustering machine learning model analyzes unlabeled data to find similarities in data points and groups them 
+together into clusters. The clustering algorithm segments data into multiple groups based on similarities in the data
+
+--------------------------------------------------------------------------------------------------------------------------
+Q. Which two datasets do you split your data into when building a machine learning model?
+
+--------------------------------------------------------------------------------------------------------------------------
+Answer: The dataset is split into a training dataset and a testing dataset. The testing dataset is often referred to as the 
+validation dataset.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q. Which metrics can you use to evaluate a regression machine learning model?
+
+--------------------------------------------------------------------------------------------------------------------------
+Answer: Root mean squared error (RMSE) is used to evaluate regression models. RMSE is a measure of the dif ference between 
+predictions and actual values. The closer RMSE is to 0, the better the model is performing. You can also use Coefficient 
+of Determination.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q. Which metrics can you use to evaluate a classification machine learning model?
+
+--------------------------------------------------------------------------------------------------------------------------
+Answer: Precision is a measure of the correct positive results. Precision is the number of true positives divided by the 
+sum of the number of true positives and false positives. Precision is scored between 0 and 1, with closer to 1 being better 
+. You can also use Accuracy and F-Score.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q. Which compute tar get should you use for development of machine learning models?
+
+--------------------------------------------------------------------------------------------------------------------------
+Answer: A compute instance is a configured development environment for machine learning.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q. What is used to increase the predictive power of a machine learning model?
+
+--------------------------------------------------------------------------------------------------------------------------
+Answer: Feature engineering is the process of creating new features from raw data to increase the predictive power of the 
+machine learning model.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q. What should you do to prevent your model from being biased by one feature?
+
+--------------------------------------------------------------------------------------------------------------------------
+Answer: Normalization is the method that adjusts the values in numeric columns so that all numeric values are on a common 
+scale, normally between 0 and 1. A dataset that has values using different scales can bias the model toward that feature.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q. What should you do to enable a trained machine learning model to be measured for accuracy?
+
+--------------------------------------------------------------------------------------------------------------------------
+Answer: Y ou should score the model. After a model has been trained, the model should be evaluated using a different set 
+of data. Scoring applies the validation dataset to the trained model to generate predictions that can be evaluated using 
+metrics that measure the accuracy of the predictions.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q. What should you do after training your model prior to deploying your model as a web service?
+
+--------------------------------------------------------------------------------------------------------------------------
+Answer: After training your model, you need to create an inference pipeline that performs the same steps for new data 
+input, not the sample data used in training.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q. You use Automated ML to find the best model for your data. Which option should you use to interpret and provide 
+transparency for the model selected?
+
+--------------------------------------------------------------------------------------------------------------------------
+Answer: Explain best model generates an explanation for the model that was identified as the best model.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q. which two types of datasets can you register and use to train Automatic Machine Learning (AutoML) models?
+
+--------------------------------------------------------------------------------------------------------------------------
+Answer: File and tabular datasets can be used in Azure Machine Learning training workflows.
+
+--------------------------------------------------------------------------------------------------------------------------
