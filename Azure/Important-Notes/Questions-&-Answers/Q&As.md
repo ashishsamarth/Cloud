@@ -1552,3 +1552,46 @@ Overall explanation : Yes, this is possible.
 API link - https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236    
 
 --------------------------------------------------------------------------------------------------------------------------
+Q. Which AI workload should you use for the customer support department?
+
+--------------------------------------------------------------------------------------------------------------------------
+Answer: Conversational AI will allow simple inquiries to be handled by an automated bot. You can create a chatbot for your 
+website, create an assistant for customer service agents, and even enable a bot in a mobile app
+
+--------------------------------------------------------------------------------------------------------------------------
+Q. Which principle of Responsible AI should you employ to gain the trust of users in your bot?
+
+--------------------------------------------------------------------------------------------------------------------------
+Answer: Transparency is the principle that AI-based solutions should be understandable. Users should be aware of the 
+purpose of the AI-based system, how it operates, and its scope and limitations. A chatbot should clearly tell the user 
+that it is a bot and what it can and cannot do.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q. Which AI workload should you use to analyze the images for skin conditions?
+
+--------------------------------------------------------------------------------------------------------------------------
+Answer: Computer vision allows you to analyze images. You can train computer vision with existing images to classify 
+images to determine the type of skin complaint
+
+--------------------------------------------------------------------------------------------------------------------------
+Q. How can you address the storage requirements for the images?
+
+--------------------------------------------------------------------------------------------------------------------------
+Answer: You can run AI in the app on the mobile device. The image will not need to be stored and will not leave the device.
+ You will instead store the results of the classification along with other symptom data and discard the image.
+ 
+--------------------------------------------------------------------------------------------------------------------------
+Q.  Which AI workload could identify adverse reactions to a drug treatment?
+
+--------------------------------------------------------------------------------------------------------------------------
+Answer: Anomaly detection can detect adverse reactions. It can detect where there is a change in trends and can detect 
+unusual readings.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q. Which principle of Responsible AI requires rigorous testing of your AI-based app?
+
+--------------------------------------------------------------------------------------------------------------------------
+Answer: Reliability & Safety requires the rigorous testing of an AI-based system’s functionality and deployment to ensure 
+that it works as expected and to eliminate potential risk to human life.
+
+--------------------------------------------------------------------------------------------------------------------------
