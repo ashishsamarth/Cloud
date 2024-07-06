@@ -41,6 +41,15 @@
     d. The data provide should have features to be evaluated, and only required cleaned & structured dataset to be used
     e. The data used to train & test the model should following the 70% to 30% ratio
 
+--------------------------------------------------------------------------------------------------------------------------
+    Machine Learning Model Types
+
+--------------------------------------------------------------------------------------------------------------------------
+
+    Anomaly Detection   :  Finds unusual occurrences.
+    Classification      :   Classifies images or predicts between several categories.
+    Clustering (including K-Means Clustering)   :   Discovers structures.
+    Regression          :   Predicts values
 
 --------------------------------------------------------------------------------------------------------------------------
     Machine Learning Classifications : Used to devide or classify the data
@@ -84,7 +93,8 @@
 
     a. Supervised Learning  :   
         In this technique, the algoithms make predictions based on a set of labeled examples that you provide. This 
-        technique is useful when you know, what the outcome should look like
+        technique is useful when you know, what the outcome should look like.
+        You use supervised learning where you already have existing data that contains both the features and the label.
 
         Example: You provide a dataset that includes city populations by the year for the past 100 years, and you want to 
         know what the population of a specific city will be, four years from now. The outcome uses labels that are already 
@@ -94,6 +104,8 @@
     b. Un-Supervised Learning : 
         In this technique, the data points aren't labeled, the algorithm labels them for you by organizing the data or 
         describing its structure. This technique is useful, when you don't know what the outcome should look like.
+        You use unsupervised learning where you are trying to discover something about your data that you do not already 
+        know.
 
         Example: You provide customer data, and want yo create segments of customer who like similar products. The data you 
         provided isn't labeled and the labels in the outcomes are generated based on the similarities that were discovered 
@@ -104,7 +116,8 @@
         This technique uses algorithms that learn from outcomes and decides which action to take next. After each action, 
         the algorithm receives feedback that helps it to determine where the choice it made was correct, neutral or 
         incorrect. Its a good technique to use for automated systems that have to make a lot o small decisions without 
-        human guidance.
+        human guidance. Reinforcement learning is used, for example, in building a model to play chess and is commonly 
+        used in robotics.
 
         Example : You are designing an autonomous car, and you want to ensure that it's obeying the law and keeping people 
         safe. As the car gains experience and a history of reinforcement, it learns how to stay in its lane, go the speed 
@@ -119,6 +132,25 @@
                 Train your model --> Score the model --> 
                     Evaluate the model
 --------------------------------------------------------------------------------------------------------------------------
+    Describe Classification Model
+
+-------------------------------------------------------------------------------------------------------------------------- 
+    Classification machine learning models are used to predict mutually exclusive categories, or classes. Classification 
+    involves learning using labels to classify data and is an example of supervised machine learning.
+    Classification is used to make predictions where we do not require continuous values but need distinct categories, 
+    such as Pass or Fail
+
+    ![GitHub Image](/Azure/Assets/Machine-Learning/Dataset-Classification.JPG)
+
+    Using the above data, we could build and train a classification model to use the hours studied to predict whether a 
+    student passes the exam or not. Using this data, a simple two-class model will likely predict that studying for less 
+    than 18 hours will fail and 18 hours or more will pass.
+
+    In a classification model, we are interested where the model gets it wrong. For student L, the model predicts a pass, 
+    but the actual result was a fail—this is a false positive. 
+    Student E actually passed, but the model predicted that the student will fail—this is a false negative
+    
+--------------------------------------------------------------------------------------------------------------------------
     Outputs of Classification Model
 
 --------------------------------------------------------------------------------------------------------------------------   
@@ -127,8 +159,9 @@
     Recall      : This is the fraction of the total amount of relevant cases that were actually retrieved
     F1 Score    : This is weighted average of the precision vs  the recall. The ideal F1 score is 1
     AUC         : This is the area under the curve that shows the true positives and the false positives
+
 --------------------------------------------------------------------------------------------------------------------------
-    Outputs of Classification Model
+    Outputs of Regression Model
 
 --------------------------------------------------------------------------------------------------------------------------
     Mean Absolute Error             : This s used to measure how close the predictions are to the outcomes, its ideal to 
@@ -137,4 +170,5 @@
     Relative absolute Error         : This is the absolute difference between the expected and the actual values
     Relative square Error           : This is used to normalize the total squated error of the actual values
     Coefficient of determination    : This is used to represent the predictive power of the model between 0 and 1
+
 --------------------------------------------------------------------------------------------------------------------------
