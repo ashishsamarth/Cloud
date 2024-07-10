@@ -1,6 +1,5 @@
 --------------------------------------------------------------------------------------------------------------------------
     Machine Learning
-
 --------------------------------------------------------------------------------------------------------------------------
 
     Example where Machine learning is used
@@ -25,7 +24,6 @@
 
 --------------------------------------------------------------------------------------------------------------------------
     Machine Learning Model
-
 --------------------------------------------------------------------------------------------------------------------------
     
     ![GitHub Image](/Azure/Assets/Machine-Learning/Machine-Learning-Flow.JPG)
@@ -45,7 +43,6 @@
 
 --------------------------------------------------------------------------------------------------------------------------
     Machine Learning Model Types
-
 --------------------------------------------------------------------------------------------------------------------------
 
     Anomaly Detection   :  Finds unusual occurrences.
@@ -55,7 +52,6 @@
 
 --------------------------------------------------------------------------------------------------------------------------
     Machine Learning Classifications : Used to devide or classify the data
-
 --------------------------------------------------------------------------------------------------------------------------    
 
     a.  Two-Class / Binary-Classification   
@@ -69,7 +65,6 @@
 
 --------------------------------------------------------------------------------------------------------------------------
     Machine Learning Algorithms
-
 --------------------------------------------------------------------------------------------------------------------------    
     Types of ML Algorithms
     
@@ -89,7 +84,6 @@
     
 --------------------------------------------------------------------------------------------------------------------------
     Machine Learning Techniques
-
 --------------------------------------------------------------------------------------------------------------------------   
     Types of ML Techniques
 
@@ -130,16 +124,15 @@
         limit and brake for pedestrians
 --------------------------------------------------------------------------------------------------------------------------
     Machine Learning Pipeline Flow
-
 -------------------------------------------------------------------------------------------------------------------------- 
     Feed the data --> 
         Clean the data [Deal with missing values] --> 
             Split the data (70% [Train] /30% [Test]) --> 
                 Train your model --> Score the model --> 
                     Evaluate the model
+
 --------------------------------------------------------------------------------------------------------------------------
     Describe Classification Model
-
 -------------------------------------------------------------------------------------------------------------------------- 
     Classification machine learning models are used to predict mutually exclusive categories, or classes. Classification 
     involves learning using labels to classify data and is an example of supervised machine learning.
@@ -158,7 +151,6 @@
 
 --------------------------------------------------------------------------------------------------------------------------
     Outputs of Classification Model
-
 --------------------------------------------------------------------------------------------------------------------------   
     Accuracy    : This measures the goodness of a classfication model
     Precision   : This measues the proportion of the true results over the positive results
@@ -168,7 +160,6 @@
 
 --------------------------------------------------------------------------------------------------------------------------
     Outputs of Regression Model
-
 --------------------------------------------------------------------------------------------------------------------------
     Mean Absolute Error             : This s used to measure how close the predictions are to the outcomes, its ideal to 
                                       have a low score
@@ -179,7 +170,6 @@
 
 --------------------------------------------------------------------------------------------------------------------------
     Describe Clustering Model
-
 -------------------------------------------------------------------------------------------------------------------------- 
     Clustering machine models learn by discovering similarities, patterns, and relationships in the data without the data 
     being labeled. Clustering is an example of unsupervised learning where the model attempts to discover structure from 
@@ -202,7 +192,6 @@
 
 --------------------------------------------------------------------------------------------------------------------------
     Identify Labels
-
 -------------------------------------------------------------------------------------------------------------------------- 
     If you are using supervised training—for example, a regression or a classification model—then you need to select the 
     label(s) from your dataset.
@@ -216,7 +205,6 @@
 
 --------------------------------------------------------------------------------------------------------------------------
     Feature selection
-
 --------------------------------------------------------------------------------------------------------------------------
     A feature is a column in your dataset. You use features to train the model to predict the outcome. Features are used 
     to train the model to fit the label.
@@ -239,7 +227,6 @@
 
 --------------------------------------------------------------------------------------------------------------------------
     Feature engineering
-
 --------------------------------------------------------------------------------------------------------------------------    
     Feature engineering is the process of creating new features from raw data to increase the predictive power of the 
     machine learning model. Engineered features capture additional information that is not available in the original 
@@ -258,7 +245,6 @@
 
 --------------------------------------------------------------------------------------------------------------------------
     Bias
-
 --------------------------------------------------------------------------------------------------------------------------      
     Bias in machine learning is the impact of erroneous assumptions that our model makes about our data. Machine learning 
     models depend on the quality, objectivity, and quantity of data used to train it. 
@@ -281,7 +267,6 @@
 
 --------------------------------------------------------------------------------------------------------------------------
     Normalization
-
 --------------------------------------------------------------------------------------------------------------------------   
     A common cause of bias in a model is caused by data in numeric features having different ranges of values. Machine 
     learning algorithms tend to be influenced by the size of values, so if one feature ranges in values between 1 and 10 
@@ -291,7 +276,6 @@
 
 --------------------------------------------------------------------------------------------------------------------------
     Evaluation
-
 --------------------------------------------------------------------------------------------------------------------------   
 
     Evaluation  is the process of measuring the accuracy of a trained model. A set of metrics is used to measure how 
@@ -301,7 +285,6 @@
 
 --------------------------------------------------------------------------------------------------------------------------
     Describe Model Deployment & Management
-
 --------------------------------------------------------------------------------------------------------------------------       
     Azure Machine Learning allows you to create and manage versions of your model and then choose which version of a model 
     to deploy so that applications can use the model to make predictions.
@@ -336,7 +319,6 @@
 
 --------------------------------------------------------------------------------------------------------------------------    
     Describe Azure Automated Machine Learning
-
 --------------------------------------------------------------------------------------------------------------------------  
 
     Azure Automated Machine Learning (AutoML) finds the best algorithm for the dataset. A number of iterations are run to 
@@ -357,7 +339,6 @@
 
 --------------------------------------------------------------------------------------------------------------------------    
 Describe Azure Machine Learning Designer
-
 --------------------------------------------------------------------------------------------------------------------------    
 
     Azure Machine Learning designer is a visual drag-and-drop tool for creating machine learning pipelines. Azure Machine 
