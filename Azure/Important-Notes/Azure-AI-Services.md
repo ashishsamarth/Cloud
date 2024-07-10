@@ -98,4 +98,164 @@ Cognitive Services are a family of AI services and APIs that you can use to buil
     Allows you to utilize the Bing search engine to search millions of webpages for images, news, product, and company 
     information. These services have been moved from Cognitive Services to a separate service, Bing W eb Search.
 
---------------------------------------------------------------------------------------------------------------------------    
+--------------------------------------------------------------------------------------------------------------------------
+Identify endpoints and keys
+--------------------------------------------------------------------------------------------------------------------------
+
+When you provision an Azure AI services service resource in your Azure subscription, you are defining an endpoint through 
+which the service can be consumed by an application.
+
+To consume the service through the endpoint, applications require the following information:
+
+**The endpoint URI** -  This is the HTTP address at which the REST interface for the service can be accessed. Most
+     AI services software development kits (SDKs) use the endpoint URI to initiate a connection to the endpoint.
+    
+**A subscription key** - Access to the endpoint is restricted based on a subscription key. Client applications must provide 
+a valid key to consume the service. When you provision an AI services resource, two keys are created - applications can use 
+either key. You can also regenerate the keys as required to control access to your resource.
+
+**The resource location** - When you provision a resource in Azure, you generally assign it to a location, which 
+determines the Azure data center in which the resource is defined. While most SDKs use the endpoint URI to connect to the 
+service, some require the location.
+
+--------------------------------------------------------------------------------------------------------------------------
+Use a REST API
+--------------------------------------------------------------------------------------------------------------------------
+Azure AI services provide REST application programming interfaces (APIs) that client applications can use to consume 
+services. In most cases, service functions can be called by submitting data in JSON format over an HTTP request, which may 
+be a POST, PUT, or GET request depending on the specific function being called. The results of the function are returned 
+to the client as an HTTP response, often with JSON contents that encapsulate the output data from the function.
+
+![Github Image](/Azure/Assets/AI-Related-Terms/Azure-REST-API.PNG)
+
+The use of REST interfaces with an HTTP endpoint means that any programming language or tool capable of submitting and 
+receiving JSON over HTTP can be used to consume AI services. You can use common programming languages such as Microsoft C#
+, Python, and JavaScript; as well as utilities such as Postman and cURL, which can be useful for testing.
+
+--------------------------------------------------------------------------------------------------------------------------
+Use a SDK
+--------------------------------------------------------------------------------------------------------------------------
+You can develop an application that uses Azure AI services using REST interfaces, but it's easier to build more complex 
+solutions by using native libraries for the programming language in which you're developing the application.
+
+![Github Image](/Azure/Assets/AI-Related-Terms/Azure-SDK.PNG)
+
+Software development kits (SDKs) for common programming languages abstract the REST interfaces for most AI services. SDK 
+availability varies by individual AI services, but for most services there's an SDK for languages such as:
+
+- Microsoft C# (.NET Core)
+- Python
+- JavaScript (Node.js)
+- Go
+- Java
+
+Each SDK includes packages that you can install in order to use service-specific libraries in your code, and online 
+documentation to help you determine the appropriate classes, methods, and parameters used to work with the service.
+
+--------------------------------------------------------------------------------------------------------------------------
+Azure Authentication
+--------------------------------------------------------------------------------------------------------------------------
+By default, access to Azure AI services resources is restricted by using subscription keys. Management of access to these 
+keys is a primary consideration for security
+
+**Regenerate Keys**
+You should regenerate keys regularly to protect against the risk of keys being shared with or accessed by unauthorized users. 
+You can regenerate keys using the Azure portal, or 
+using the az cognitiveservices account keys regenerate Azure command-line interface (CLI) command
+
+Each AI service is provided with two keys, enabling you to regenerate keys without service interruption. To accomplish this:
+
+    a. If you're using both keys in production, change your code so that only one key is in use. 
+    For example, configure all production applications to use key 1.
+    b. Regenerate key 2.
+    c. Switch all production applications to use the newly regenerated key 2.
+    d. Regenerate key 1
+    e. Finally, update your production code to use the new key 1.
+
+For example, to regenerate keys in the Azure portal, you can do the following:
+
+    a. In the Azure portal, go to your resource's Keys and Endpoint pane.
+    b. Then select Regenerate Key1 or select Regenerate Key2, depending on which one you want to regenerate at the time.
+
+
+**Protect keys with Azure Key Vault**
+Azure Key Vault is an Azure service in which you can securely store secrets (such as passwords and keys). Access to 
+the key vault is granted to security principals, which you can think of user identities that are authenticated using 
+Microsoft Entra ID. Administrators can assign a security principal to an application (in which case it is known as a 
+service principal) to define a managed identity for the application. 
+The application can then use this identity to access the key vault and retrieve a secret to which it has access. Controlling 
+access to the secret in this way minimizes the risk of it being compromised by being hard-coded in an application or saved 
+in a configuration file.
+
+You can store the subscription keys for an AI services resource in Azure Key Vault, and assign a managed identity to 
+client applications that need to use the service. The applications can then retrieve the key as needed from the key 
+vault, without risk of exposing it to unauthorized users.
+
+![Github Image](/Azure/Assets/AI-Related-Terms/Azure-Authentication-Protect-Keys-In-Azure-Key-Vault.PNG)
+
+**Token Based Authentication**
+When using the REST interface, some AI services support (or even require) token-based authentication. In these cases, 
+the subscription key is presented in an initial request to obtain an authentication token, which has a valid period of 
+10 minutes. Subsequent requests must present the token to validate that the caller has been authenticated.
+
+Note: When using an SDK, the calls to obtain and present a token are handled for you by the SDK.
+
+
+**Microsoft Entra ID authentication**
+Azure AI services supports Microsoft Entra ID authentication, enabling you to grant access to specific service principals
+ or managed identities for apps and services running in Azure.There are different ways you can authenticate against 
+ Azure AI services using Microsoft Entra ID, including:
+
+ -Authenticate using service principals
+    -Create a custom subdomain
+    You can create a custom subdomain in different ways including through the Azure portal, Azure CLI, or PowerShell.
+    For example: You can create a subdomain using PowerShell in the Azure Cloud Shell. To do this, you select your 
+    subscription using the following command:
+
+    Powershell: Set-AzContext -SubscriptionName <Your-Subscription-Name>
+    Powershell: $account = New-AzCognitiveServicesAccount -ResourceGroupName <your-resource-group-name> 
+                -name <your-account-name> -Type <your-account-type> -SkuName <your-sku-type> -Location <your-region> 
+                -CustomSubdomainName <your-unique-subdomain-name>
+    
+    -Assign a role to a service principal
+    You've created an Azure AI resource that is linked with a custom subdomain. Next, you assign a role to a service 
+    principal.To start, you'll need to register an application. To do this, you run the following command:
+
+    Powershell: $SecureStringPassword = ConvertTo-SecureString -String <your-password> -AsPlainText -Force
+    Powershell: $app = New-AzureADApplication -DisplayName <your-app-display-name> -IdentifierUris <your-app-uris> 
+                -PasswordCredentials $SecureStringPassword
+    
+    This creates the application resource.
+
+    Then you use the New-AzADServicePrincipal command to create a service principal and provide your application's ID:
+
+    Powershell: New-AzADServicePrincipal -ApplicationId <app-id>
+
+    Finally, you assign the Cognitive Services Users role to your service principal by running:
+
+    Powershell: New-AzRoleAssignment -ObjectId <your-service-principal-object-id> -Scope <account-id> 
+                -RoleDefinitionName "Cognitive Services User"
+
+
+ -Authenticate using managed identities
+    Managed identities come in two types:
+    - **System-assigned managed identity** : A managed identity is created and linked to a specific resource, such as a 
+    virtual machine that needs to access Azure AI services. When the resource is deleted, the identity is deleted as well.
+
+    - **User-assigned managed identity** : The managed identity is created to be useable by multiple resources instead 
+    of being tied to one. It exists independently of any single resource.
+
+--------------------------------------------------------------------------------------------------------------------------
+Implement network security
+--------------------------------------------------------------------------------------------------------------------------
+**Apply network access restrictions**
+By default, Azure AI services are accessible from all networks. Some individual AI services resources (such as Azure AI 
+Face service, Azure AI Vision, and others) can be configured to restrict access to specific network addresses - either 
+public Internet addresses or addresses on virtual networks.
+
+![Github Image](/Azure/Assets/AI-Related-Terms/Azure-Network-Restrictions.PNG)
+
+With network restrictions enabled, a client trying to connect from an IP address that isn't allowed will receive an Access 
+Denied error.
+
+--------------------------------------------------------------------------------------------------------------------------
