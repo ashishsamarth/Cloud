@@ -1681,3 +1681,34 @@ Q. which two types of datasets can you register and use to train Automatic Machi
 Answer: File and tabular datasets can be used in Azure Machine Learning training workflows.
 
 --------------------------------------------------------------------------------------------------------------------------
+Q. Which of the following best describes the predictions made by a machine learning model?
+    a.  Absolutely correct values based on conditional logic.
+    b.  Randomly selected values with an equal chance of selection.
+    c.  Probabilistic values based on correlations found in training data.
+--------------------------------------------------------------------------------------------------------------------------
+Answer:  c.  Probabilistic values based on correlations found in training data.
+
+Explanation: Machine learning models are trained using historic data, and rely on algorithms that find statistical 
+relationships in the data. Predictions are generally based on probability; and while models are often extremely accurate, 
+predictions are based on a confidence score that indicates a level of probability.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q. 	A data scientist has used Azure Machine Learning to train a machine learning model. How can you use the model in your 
+application? 
+    a.  Use Azure Machine Learning to publish the model as a web service.
+    b.  Export the model as an Azure AI service.
+    c.  You must build your application using the Azure Machine Learning designer.
+--------------------------------------------------------------------------------------------------------------------------
+Answer:   a.  Use Azure Machine Learning to publish the model as a web service.
+
+Explanation: You can use Azure Machine Learning to publish a trained model as a web service, and consume it from applications 
+through its REST interface.
+
+--------------------------------------------------------------------------------------------------------------------------  
+Q.  You want to index a collection of text documents, and search them from a mobile application. Which service should you 
+use to create the index? 
+    a.  The Azure AI service
+    b.  Azure AI Search
+    c.  Azure OpenAI Service
+--------------------------------------------------------------------------------------------------------------------------
+Answer: b.  Azure AI Search    
