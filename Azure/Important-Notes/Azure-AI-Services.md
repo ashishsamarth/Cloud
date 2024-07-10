@@ -59,12 +59,12 @@ Cognitive Services are a family of AI services and APIs that you can use to buil
  - Web search
 
  **Decision Group**: 
-    - Anomaly Detector : Quickly identify potential problems by detecting unusual data points or trends in time-series data. 
-    - Metrics Advisor : Built on Anomaly Detector , this service identifies the key areas for root cause analysis. Metrics 
+    -Anomaly Detector : Quickly identify potential problems by detecting unusual data points or trends in time-series data. 
+    -Metrics Advisor : Built on Anomaly Detector , this service identifies the key areas for root cause analysis. Metrics 
         Advisor helps focus on fixing issues rather than monitoring.
-    - Content Moderator : Detect potentially of fensive or undesirable text, image, and video content. Content Moderator 
+    -Content Moderator : Detect potentially of fensive or undesirable text, image, and video content. Content Moderator 
         provides a review tool, where a human can validate flagged content and improve the sensitivity of moderation.
-     - Personalizer : Creates a personalized experience for a user based on his/her behavior . This could be content shown 
+    -Personalizer : Creates a personalized experience for a user based on his/her behavior . This could be content shown 
         on a website or providing a dif ferent layout. Personalizer is an example of reinforcement learning.
 
 **Languauge Group**:
