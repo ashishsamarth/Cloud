@@ -15,6 +15,7 @@ Azure AI Services
      - content-type : application/octect-stream
      - reqest type  : binary
 
+
 2. Natural Languauge Processing : Allows
     - Key Phrase Extraction   : Look for specific key words
     - Entity Recognition      : Has the ability to read text ad then categorize them {Name, Phone # etc}
