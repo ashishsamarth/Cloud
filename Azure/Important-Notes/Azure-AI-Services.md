@@ -59,25 +59,25 @@ Cognitive Services are a family of AI services and APIs that you can use to buil
  - Web search
 
  **Decision Group**: 
-    -Anomaly Detector : Quickly identify potential problems by detecting unusual data points or trends in time-series data. 
-    -Metrics Advisor : Built on Anomaly Detector , this service identifies the key areas for root cause analysis. Metrics 
-        Advisor helps focus on fixing issues rather than monitoring.
-    -Content Moderator : Detect potentially of fensive or undesirable text, image, and video content. Content Moderator 
-        provides a review tool, where a human can validate flagged content and improve the sensitivity of moderation.
-    -Personalizer : Creates a personalized experience for a user based on his/her behavior . This could be content shown 
-        on a website or providing a dif ferent layout. Personalizer is an example of reinforcement learning.
+- Anomaly Detector  : Quickly identify potential problems by detecting unusual data points or trends in time-series data. 
+- Metrics Advisor   : Built on Anomaly Detector , this service identifies the key areas for root cause analysis. Metrics 
+                        Advisor helps focus on fixing issues rather than monitoring.
+- Content Moderator : Detect potentially of fensive or undesirable text, image, and video content. Content Moderator provides 
+                        a review tool, where a human can validate flagged content and improve the sensitivity of moderation.
+- Personalizer      : Creates a personalized experience for a user based on his/her behavior . This could be content shown 
+                        on a website or providing a dif ferent layout. Personalizer is an example of reinforcement learning.
 
 **Languauge Group**:
-    - Immersive Reader : Helps readers of all ages and abilities to comprehend text using audio and visual cues. Immersive 
-        Reader can be used to improve literacy .
-    - Language Understanding : Builds natural language understanding into apps, bots, and IoT devices. Language Understanding 
-        interprets the intent and extracts key information from supplied text.
-    - QnA Maker : Creates a conversational question and answer layer on your existing F AQ and company information.
-    - Text Analytics : Discovers insights from textual data. T ext Analytics is one of the most used Cognitive Services. 
-        You can detect the sentiment of sentences or whole paragraphs. Y ou can extract key phrases from a piece of text, 
-        and extract entities such as people, places, and things from a piece of text. T ext Analytics supports a wide range 
-        of languages.
-     - Translator : Detects and translates text in real-time or in batch across more than 90 languages.
+- Immersive Reader          : Helps readers of all ages and abilities to comprehend text using audio and visual cues. 
+                                Immersive Reader can be used to improve literacy .
+- Language Understanding    : Builds natural language understanding into apps, bots, and IoT devices. Language Understanding 
+                                interprets the intent and extracts key information from supplied text.
+- QnA Maker                 : Creates a conversational question and answer layer on your existing F AQ and company information.
+- Text Analytics            : Discovers insights from textual data. T ext Analytics is one of the most used Cognitive Services. 
+                                You can detect the sentiment of sentences or whole paragraphs. You can extract key phrases 
+                                from a piece of text, and extract entities such as people, places, and things from a piece 
+                                of text. Text Analytics supports a wide range of languages.
+- Translator                : Detects and translates text in real-time or in batch across more than 90 languages.
 
 **Speech Group**:
     - Speech to Text : Transcribes audio into readable, searchable text in real-time or from audio files. 
