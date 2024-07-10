@@ -56,6 +56,7 @@ Q-006: What is confusion matrix?
 --------------------------------------------------------------------------------------------------------------------------
 Confusion matrix indicates the difference between what the Machine Learning Model actually predicted vs what it was 
 supposed to predict. For a binary classification is looks like the following
+    
     -----------------------------------------
     True Positives      |   False Positive
     -----------------------------------------
