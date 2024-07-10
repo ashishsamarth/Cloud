@@ -131,7 +131,6 @@ Answer : b. No
 
 -------------------------------------------------------------------------------------------------------------------------- 
 Q-014: A team has completed the training and evaluation of a model
-
 The team is happy with the accuracy result of 0.872 and is using this as the final measure to decide that this model is the 
 right one to choose. Is this the correct approach when evaluating the results?
 
@@ -268,7 +267,6 @@ Answer: a. Yes
 --------------------------------------------------------------------------------------------------------------------------
 Q-028: Your team needs to develop several systems. One system needs to understand whether reviews are positive or 
 negative. Which of the following type of workload does this come under?
-
 --------------------------------------------------------------------------------------------------------------------------
 a. Natural Language Processing
 b. Computer Vision
@@ -499,9 +497,7 @@ https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-module-referen
 
 --------------------------------------------------------------------------------------------------------------------------
 Q-043: Your team has deployed an endpoint within Azure Machine Learning.
-
 ![GitHub Image](/Azure/Assets/Q&As/Which-is-an-endpoint.png)
-
 Which of the following would you use to call the endpoint? Choose 2 answers from the options given below
 --------------------------------------------------------------------------------------------------------------------------
 a. an API endpoint
@@ -531,11 +527,8 @@ Overall explanation : Azure Kubernetes is used to host the endpoint.
 --------------------------------------------------------------------------------------------------------------------------
 Q-045: Your team needs to build a machine learning pipeline to train, and a model based on Adult Census Income Binary 
 classification data.
-
 ![GitHub Image](/Azure/Assets/Q&As/Pipeline-Components.png)
-
 ![GitHub Image](/Azure/Assets/Q&As/Pipeline-Components-Question.png)
-
 You need to add the right components to the pipeline. Which of the following would go into Slot 1?
 --------------------------------------------------------------------------------------------------------------------------
 a. Train Model
@@ -550,11 +543,8 @@ Overall explanation : Here we first need to split the data.
 --------------------------------------------------------------------------------------------------------------------------
 Q-046: Your team needs to build a machine learning pipeline to train, and a model based on Adult Census Income Binary 
 classification data.
-
 ![GitHub Image](/Azure/Assets/Q&As/Pipeline-Components.png)
-
 ![GitHub Image](/Azure/Assets/Q&As/Pipeline-Components-Question.png)
-
 You need to add the right components to the pipeline. Which of the following would go into Slot 2?
 
 --------------------------------------------------------------------------------------------------------------------------
@@ -570,11 +560,8 @@ Overall explanation : Here we need to train the model.
 --------------------------------------------------------------------------------------------------------------------------
 Q-047: Your team needs to build a machine learning pipeline to train, and a model based on Adult Census Income Binary 
 classification data.
-
 ![GitHub Image](/Azure/Assets/Q&As/Pipeline-Components.png)
-
 ![GitHub Image](/Azure/Assets/Q&As/Pipeline-Components-Question.png)
-
 You need to add the right components to the pipeline. Which of the following would go into Slot 3?
 --------------------------------------------------------------------------------------------------------------------------
 a. Train Model
@@ -661,9 +648,7 @@ answer their questions.
 
 --------------------------------------------------------------------------------------------------------------------------
 Q-053: Your team has just conducted a Machine Learning experiment. The below chart is the result of the experiment
-
 ![GitHub Image](/Azure/Assets/Q&As/Machine-Learning-Experiment.jpg)
-
 Which of the following type of model is the chart being used to evaluate?
 --------------------------------------------------------------------------------------------------------------------------
 a. Classification
@@ -677,9 +662,7 @@ working with Regression-based algorithms.
 
 --------------------------------------------------------------------------------------------------------------------------
 Q-054: Your team has just finished using the Computer Vison service. Below are the results
-
 ![GitHub Image](/Azure/Assets/Q&As/computer-vision-object-detection.jpg)
-
 Which of the following Computer Vision type was used here?
 --------------------------------------------------------------------------------------------------------------------------
 a. Object Detection
@@ -765,11 +748,8 @@ https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview
 Q-060: Your team is developing an application. It’s an ecommerce application. Part of the application allows users to 
 raise support issues via the application. You need to add built-in intelligence to the support system that includes the 
 following
-
 1) Being able to look at key phrases in the text that the user has added when raising the support issue.
 2) Understand how urgent the issue is based on the text that the user has added when raising the support issue.
-
-
 Which of the following feature of the Azure AI Language service can you use for the requirement?
 “Being able to look at key phrases in the text that the user has added when raising the support issue.”
 --------------------------------------------------------------------------------------------------------------------------
@@ -788,11 +768,8 @@ https://learn.microsoft.com/en-us/azure/ai-services/language-service/key-phrase-
 --------------------------------------------------------------------------------------------------------------------------
 Q-061: Your team is developing an application. It’s an ecommerce application. Part of the application allows users to raise 
 support issues via the application. You need to add built-in intelligence to the support system that includes the following
-
 1) Being able to look at key phrases in the text that the user has added when raising the support issue.
 2) Understand how urgent the issue is based on the text that the user has added when raising the support issue.
-
-
 Which of the following feature of the Azure AI Language service can you use for the requirement?
 “Understand how urgent the issue is based on the text that the user has added when raising the support issue.”
 --------------------------------------------------------------------------------------------------------------------------
@@ -810,7 +787,6 @@ https://learn.microsoft.com/en-us/azure/ai-services/language-service/sentiment-o
 --------------------------------------------------------------------------------------------------------------------------
 Q-062: Your team is planning on using the Face service. Which of the following feature of the face service can be used for 
 the below requirement?
-
 “Match a face to set of faces”
 --------------------------------------------------------------------------------------------------------------------------
 a. Verification
@@ -828,7 +804,6 @@ https://docs.microsoft.com/en-us/azure/cognitive-services/face/overview
 --------------------------------------------------------------------------------------------------------------------------
 Q-063: Your team is planning on using the Face service. Which of the following feature of the face service can be used for 
 the below requirement?
-
 “Do these two faces belong to the same person”
 --------------------------------------------------------------------------------------------------------------------------
 a. Verification
@@ -845,7 +820,6 @@ https://docs.microsoft.com/en-us/azure/cognitive-services/face/overview
 --------------------------------------------------------------------------------------------------------------------------
 Q-064: Your team is planning on using the Face service. Which of the following feature of the face service can be used for 
 the below requirement?
-
 “Do a matching between a target face and a set of candidate faces”
 --------------------------------------------------------------------------------------------------------------------------
 a. Verification
@@ -1021,7 +995,6 @@ https://learn.microsoft.com/en-us/azure/ai-services/language-service/language-de
 --------------------------------------------------------------------------------------------------------------------------
 Q-076: Your company needs to process large amounts of documents. From the document text, key elements such as people 
 names , locations and dates need to be extracted.
-
 Which of the following feature of the Azure AI Language service can you use for the requirement?
 --------------------------------------------------------------------------------------------------------------------------
 a. Sentiment Analysis
@@ -1040,7 +1013,6 @@ https://learn.microsoft.com/en-us/azure/ai-services/language-service/named-entit
 Q-077: Q: Your company has just launched a new ecommerce website where users can buy various products. Users are allowed 
 to leave a review for each purchase. Your team needs to have an automated system to understand whether the user has a left 
 a positive or negative review.
-
 You also need to monitor the reviews for any sort of profanity. Would this analysis of the reviews come under the context 
 of natural language processing?
 --------------------------------------------------------------------------------------------------------------------------
@@ -1148,7 +1120,6 @@ https://learn.microsoft.com/en-us/azure/ai-services/language-service/question-an
 Q-085: Your company has just launched a new ecommerce website where users can buy various products. Users are allowed to 
 leave a review for each purchase. Your team needs to have an automated system to understand whether the user has a left a 
 positive or negative review.
-
 Which of the following feature of the Azure AI Language service can you use for the requirement?
 --------------------------------------------------------------------------------------------------------------------------
 a. Sentiment Analysis
@@ -1253,7 +1224,7 @@ This example is taken from the below documentation link on the different types o
 https://azure.microsoft.com/en-us/overview/machine-learning-algorithms 
    
 --------------------------------------------------------------------------------------------------------------------------
-Q-100: Your team is designing an AI system. Here they want to ensure that they provide customers with the required 
+Q-092: Your team is designing an AI system. Here they want to ensure that they provide customers with the required 
 information and controls on what data is collected and how the data is stored. Which of the following Microsoft principle 
 of AI does this come under?
 --------------------------------------------------------------------------------------------------------------------------
@@ -1272,7 +1243,7 @@ For more information on Responsible AI, one can visit the below URL
 https://www.microsoft.com/en-us/ai/responsible-ai
     
 --------------------------------------------------------------------------------------------------------------------------
-Q-101: Your team is planning on using the Computer Vision service. Can you use the service to detect faces from images?
+Q-093: Your team is planning on using the Computer Vision service. Can you use the service to detect faces from images?
 --------------------------------------------------------------------------------------------------------------------------
 a. Yes
 b. No
@@ -1285,7 +1256,7 @@ For more information on the Computer Vision service, one can visit the below URL
 https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/overview    
 
 --------------------------------------------------------------------------------------------------------------------------
-Q-102: Your team is designing an AI system. Here they want to ensure that the AI system is tested thoroughly before it can 
+Q-094: Your team is designing an AI system. Here they want to ensure that the AI system is tested thoroughly before it can 
 be used. Which of the following Microsoft principle of AI does this come under?
 --------------------------------------------------------------------------------------------------------------------------
 a. Fairness
@@ -1303,7 +1274,7 @@ For more information on Responsible AI, one can visit the below URL
 https://www.microsoft.com/en-us/ai/responsible-ai    
 
 --------------------------------------------------------------------------------------------------------------------------
-Q-103: Your team is planning on working with the Azure Machine Learning service. They need to set up the required compute 
+Q-095: Your team is planning on working with the Azure Machine Learning service. They need to set up the required compute 
 target environments. Which of the following is the Azure Machine Learning compute clusters used for?
 --------------------------------------------------------------------------------------------------------------------------
 a. Real-time inference
@@ -1317,7 +1288,7 @@ For more information on Azure Machine Learning compute targets, one can visit th
 https://docs.microsoft.com/en-us/azure/machine-learning/concept-compute-target
     
 --------------------------------------------------------------------------------------------------------------------------
-Q-104: Your team is planning on working with the Azure Machine Learning service. They need to set up the required compute 
+Q-096: Your team is planning on working with the Azure Machine Learning service. They need to set up the required compute 
 target environments. Which of the following is the Azure Kubernetes Service target environment used for?
 --------------------------------------------------------------------------------------------------------------------------
 a. Real-time inference
@@ -1331,7 +1302,7 @@ For more information on Azure Machine Learning compute targets, one can visit th
 https://docs.microsoft.com/en-us/azure/machine-learning/concept-compute-target
 
 --------------------------------------------------------------------------------------------------------------------------
-Q-105: Your team is planning on using the Machine Learning Designer. The team is working on a pipeline. Does the designer 
+Q-097: Your team is planning on using the Machine Learning Designer. The team is working on a pipeline. Does the designer 
 save your progress in the pipeline as you are editing it?
 --------------------------------------------------------------------------------------------------------------------------
 a. Yes
@@ -1345,7 +1316,7 @@ For more information on the Machine Learning Designer, one can visit the below U
 https://docs.microsoft.com/en-us/azure/machine-learning/concept-designer
     
 --------------------------------------------------------------------------------------------------------------------------
-Q-106: Your team is planning on using the Machine Learning Designer. Is the Machine Learning Designer a drag-and-drop 
+Q-098: Your team is planning on using the Machine Learning Designer. Is the Machine Learning Designer a drag-and-drop 
 interface that can be used to train and deploy models in Azure Machine Learning?
 --------------------------------------------------------------------------------------------------------------------------
 a. Yes
@@ -1359,10 +1330,8 @@ For more information on the Machine Learning Designer, one can visit the below U
 https://docs.microsoft.com/en-us/azure/machine-learning/concept-designer
     
 --------------------------------------------------------------------------------------------------------------------------
-Q-107: Your team currently has the following data set
-
+Q-099: Your team currently has the following data set
 ![GitHub Images](/Azure/Assets/Q&As/Dataset.jpg)
-
 You have to train a model that will predict the Course Category Sales.
 Which of the following would “Course Category Sales
 --------------------------------------------------------------------------------------------------------------------------
@@ -1374,10 +1343,8 @@ Answer: b. A Label
 Overall explanation: This is what you want to predict. Hence this will be a label.
     
 --------------------------------------------------------------------------------------------------------------------------
-Q-108: Your team currently has the following data set
-
+Q-100: Your team currently has the following data set
 ![GitHub Images](/Azure/Assets/Q&As/Dataset.jpg)
-
 You have to train a model that will predict the Course Category Sales.
 Which of the following would “Number of courses” be in this case?
 --------------------------------------------------------------------------------------------------------------------------
@@ -1390,7 +1357,7 @@ Overall explanation : Here you can use the attribute of “Number of courses” 
 this can be a feature.    
 
 --------------------------------------------------------------------------------------------------------------------------
-Q-109: Your team needs to build an object detection model. Here they want to use their own images to train the model. 
+Q-101: Your team needs to build an object detection model. Here they want to use their own images to train the model. 
 Which of the following service can be used for this requirement?
 --------------------------------------------------------------------------------------------------------------------------
 a. Face API
@@ -1405,7 +1372,7 @@ For more information on the Custom Vision service, one can visit the below URL
 https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/overview
 
 --------------------------------------------------------------------------------------------------------------------------
-Q-110: Which of the following can be accomplished with the use of the Computer Vision service? Choose 2 answers from the 
+Q-102: Which of the following can be accomplished with the use of the Computer Vision service? Choose 2 answers from the 
 options given below
 --------------------------------------------------------------------------------------------------------------------------
 a. Extract text from images
@@ -1421,7 +1388,7 @@ For more information on the Computer Vision service, one can visit the below URL
 https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/overview 
    
 --------------------------------------------------------------------------------------------------------------------------
-Q-111: Your team need to create a machine learning model that will be used to predict numeric values based on input data. 
+Q-103: Your team need to create a machine learning model that will be used to predict numeric values based on input data. 
 Which of the following algorithm type should they use for this requirement?
 --------------------------------------------------------------------------------------------------------------------------
 a. Regression 
@@ -1434,7 +1401,7 @@ Answer: a. Regression
 Overall explanation : Here you will use the Regression-based algorithm.
 
 --------------------------------------------------------------------------------------------------------------------------
-Q-112: You are planning on using the Custom Vision service. Do you need to provide your own images to train the model in 
+Q-104: You are planning on using the Custom Vision service. Do you need to provide your own images to train the model in 
 Custom Vision?
 --------------------------------------------------------------------------------------------------------------------------
 a. Yes
@@ -1446,7 +1413,7 @@ Overall explanation : Yes, when you create a project in the Custom Vision servic
 train the model.
 
 --------------------------------------------------------------------------------------------------------------------------
-Q-113: Can you use the Face API to return face attributes such as headPose and occlusion?
+Q-105: Can you use the Face API to return face attributes such as headPose and occlusion?
 --------------------------------------------------------------------------------------------------------------------------
 a. Yes
 b. No
@@ -1459,116 +1426,116 @@ API link:
  https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236
     
 --------------------------------------------------------------------------------------------------------------------------
-Q-114: Which AI workload should you use for the customer support department?
+Q-106: Which AI workload should you use for the customer support department?
 --------------------------------------------------------------------------------------------------------------------------
 Answer: Conversational AI will allow simple inquiries to be handled by an automated bot. You can create a chatbot for your 
 website, create an assistant for customer service agents, and even enable a bot in a mobile app
 
 --------------------------------------------------------------------------------------------------------------------------
-Q-115: Which principle of Responsible AI should you employ to gain the trust of users in your bot?
+Q-107: Which principle of Responsible AI should you employ to gain the trust of users in your bot?
 --------------------------------------------------------------------------------------------------------------------------
 Answer: Transparency is the principle that AI-based solutions should be understandable. Users should be aware of the 
 purpose of the AI-based system, how it operates, and its scope and limitations. A chatbot should clearly tell the user 
 that it is a bot and what it can and cannot do.
 
 --------------------------------------------------------------------------------------------------------------------------
-Q-116: Which AI workload should you use to analyze the images for skin conditions?
+Q-108: Which AI workload should you use to analyze the images for skin conditions?
 --------------------------------------------------------------------------------------------------------------------------
 Answer: Computer vision allows you to analyze images. You can train computer vision with existing images to classify 
 images to determine the type of skin complaint
 
 --------------------------------------------------------------------------------------------------------------------------
-Q-117: How can you address the storage requirements for the images?
+Q-108: How can you address the storage requirements for the images?
 --------------------------------------------------------------------------------------------------------------------------
 Answer: You can run AI in the app on the mobile device. The image will not need to be stored and will not leave the device.
  You will instead store the results of the classification along with other symptom data and discard the image.
  
 --------------------------------------------------------------------------------------------------------------------------
-Q-118:  Which AI workload could identify adverse reactions to a drug treatment?
+Q-109:  Which AI workload could identify adverse reactions to a drug treatment?
 --------------------------------------------------------------------------------------------------------------------------
 Answer: Anomaly detection can detect adverse reactions. It can detect where there is a change in trends and can detect 
 unusual readings.
 --------------------------------------------------------------------------------------------------------------------------
-Q-119: Which principle of Responsible AI requires rigorous testing of your AI-based app?
+Q-110: Which principle of Responsible AI requires rigorous testing of your AI-based app?
 --------------------------------------------------------------------------------------------------------------------------
 Answer: Reliability & Safety requires the rigorous testing of an AI-based system’s functionality and deployment to ensure 
 that it works as expected and to eliminate potential risk to human life.
 
 --------------------------------------------------------------------------------------------------------------------------
-Q-120: Which machine learning type should you use to determine if a social media post has positive or negative sentiment?
+Q-111: Which machine learning type should you use to determine if a social media post has positive or negative sentiment?
 --------------------------------------------------------------------------------------------------------------------------
 Answer: The classification machine learning model is used to predict mutually exclusive categories. Classification 
 involves learning using labels to classify data. Two-class classification algorithms can provide an either/or answer 
 such as a social media post having a positive or negative sentiment.
 
 --------------------------------------------------------------------------------------------------------------------------
-Q-121: Which type of machine learning groups unlabeled data using similarities in the data?
+Q-112: Which type of machine learning groups unlabeled data using similarities in the data?
 --------------------------------------------------------------------------------------------------------------------------
 Answer: The clustering machine learning model analyzes unlabeled data to find similarities in data points and groups them 
 together into clusters. The clustering algorithm segments data into multiple groups based on similarities in the data
 
 --------------------------------------------------------------------------------------------------------------------------
-Q-122: Which two datasets do you split your data into when building a machine learning model?
+Q-113: Which two datasets do you split your data into when building a machine learning model?
 --------------------------------------------------------------------------------------------------------------------------
 Answer: The dataset is split into a training dataset and a testing dataset. The testing dataset is often referred to as the 
 validation dataset.
 --------------------------------------------------------------------------------------------------------------------------
-Q-123: Which metrics can you use to evaluate a regression machine learning model?
+Q-114: Which metrics can you use to evaluate a regression machine learning model?
 --------------------------------------------------------------------------------------------------------------------------
 Answer: Root mean squared error (RMSE) is used to evaluate regression models. RMSE is a measure of the dif ference between 
 predictions and actual values. The closer RMSE is to 0, the better the model is performing. You can also use Coefficient 
 of Determination.
 
 --------------------------------------------------------------------------------------------------------------------------
-Q-124: Which metrics can you use to evaluate a classification machine learning model?
+Q-115: Which metrics can you use to evaluate a classification machine learning model?
 --------------------------------------------------------------------------------------------------------------------------
 Answer: Precision is a measure of the correct positive results. Precision is the number of true positives divided by the 
 sum of the number of true positives and false positives. Precision is scored between 0 and 1, with closer to 1 being 
 better.You can also use Accuracy and F-Score.
 
 --------------------------------------------------------------------------------------------------------------------------
-Q-125: Which compute tar get should you use for development of machine learning models?
+Q-116: Which compute tar get should you use for development of machine learning models?
 --------------------------------------------------------------------------------------------------------------------------
 Answer: A compute instance is a configured development environment for machine learning.
 
 --------------------------------------------------------------------------------------------------------------------------
-Q-126:  What is used to increase the predictive power of a machine learning model?
+Q-117:  What is used to increase the predictive power of a machine learning model?
 --------------------------------------------------------------------------------------------------------------------------
 Answer: Feature engineering is the process of creating new features from raw data to increase the predictive power of the 
 machine learning model.
 
 --------------------------------------------------------------------------------------------------------------------------
-Q-127: What should you do to prevent your model from being biased by one feature?
+Q-118: What should you do to prevent your model from being biased by one feature?
 --------------------------------------------------------------------------------------------------------------------------
 Answer: Normalization is the method that adjusts the values in numeric columns so that all numeric values are on a common 
 scale, normally between 0 and 1. A dataset that has values using different scales can bias the model toward that feature.
 
 --------------------------------------------------------------------------------------------------------------------------
-Q-128: What should you do to enable a trained machine learning model to be measured for accuracy?
+Q-119: What should you do to enable a trained machine learning model to be measured for accuracy?
 --------------------------------------------------------------------------------------------------------------------------
 Answer: Y ou should score the model. After a model has been trained, the model should be evaluated using a different set 
 of data. Scoring applies the validation dataset to the trained model to generate predictions that can be evaluated using 
 metrics that measure the accuracy of the predictions.
 
 --------------------------------------------------------------------------------------------------------------------------
-Q-129: What should you do after training your model prior to deploying your model as a web service?
+Q-120: What should you do after training your model prior to deploying your model as a web service?
 --------------------------------------------------------------------------------------------------------------------------
 Answer: After training your model, you need to create an inference pipeline that performs the same steps for new data 
 input, not the sample data used in training.
 
 --------------------------------------------------------------------------------------------------------------------------
-Q-130: You use Automated ML to find the best model for your data. Which option should you use to interpret and provide 
+Q-121: You use Automated ML to find the best model for your data. Which option should you use to interpret and provide 
 transparency for the model selected?
 --------------------------------------------------------------------------------------------------------------------------
 Answer: Explain best model generates an explanation for the model that was identified as the best model.
 
 --------------------------------------------------------------------------------------------------------------------------
-Q-135: which two types of datasets can you register and use to train Automatic Machine Learning (AutoML) models?
+Q-122: which two types of datasets can you register and use to train Automatic Machine Learning (AutoML) models?
 --------------------------------------------------------------------------------------------------------------------------
 Answer: File and tabular datasets can be used in Azure Machine Learning training workflows.
 
 --------------------------------------------------------------------------------------------------------------------------
-Q-136: Which of the following best describes the predictions made by a machine learning model?
+Q-123: Which of the following best describes the predictions made by a machine learning model?
 --------------------------------------------------------------------------------------------------------------------------
 a.  Absolutely correct values based on conditional logic.
 b.  Randomly selected values with an equal chance of selection.
@@ -1581,7 +1548,7 @@ relationships in the data. Predictions are generally based on probability; and w
 predictions are based on a confidence score that indicates a level of probability.
 
 --------------------------------------------------------------------------------------------------------------------------
-Q-137:	A data scientist has used Azure Machine Learning to train a machine learning model. How can you use the model in 
+Q-124:	A data scientist has used Azure Machine Learning to train a machine learning model. How can you use the model in 
 your application? 
 --------------------------------------------------------------------------------------------------------------------------
 a.  Use Azure Machine Learning to publish the model as a web service.
@@ -1594,7 +1561,7 @@ Explanation: You can use Azure Machine Learning to publish a trained model as a 
 applications through its REST interface.
 
 --------------------------------------------------------------------------------------------------------------------------  
-Q-138: You want to index a collection of text documents, and search them from a mobile application. Which service should 
+Q-125: You want to index a collection of text documents, and search them from a mobile application. Which service should 
 you use to create the index? 
 --------------------------------------------------------------------------------------------------------------------------
 a.  The Azure AI service
