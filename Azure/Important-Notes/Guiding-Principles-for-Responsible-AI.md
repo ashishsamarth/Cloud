@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------------------------------------------------
 Guiding Principles for Responsible AI
 --------------------------------------------------------------------------------------------------------------------------
-Accountability : Whatever solution you have built as an AI solution, is not the final deciding factor. As a human being you 
+**Accountability** : Whatever solution you have built as an AI solution, is not the final deciding factor. As a human being you 
 are accountable for the solution that you have created.
 People should be accountable for AI systems. Although many AI systems seem to operate autonomously, ultimately it's the 
 responsibility of the developers who trained and validated the models they use, and defined the logic that bases decisions 
@@ -11,7 +11,7 @@ To help meet this goal, designers and developers of AI-based solution should wor
 organizational principles that ensure the solution meets ethical and legal standards that are clearly defined.
 
 --------------------------------------------------------------------------------------------------------------------------
-Reliability & Safety : Lets say you built a crucial solution for a health care provider, to perform certain diagnosis, as 
+**Reliability & Safety** : Lets say you built a crucial solution for a health care provider, to perform certain diagnosis, as 
 a solution creator you need to ensure, that the solution that you have built is reliable (performs everytime) and aligns 
 with the safety standards of the target ecosystem.
 
@@ -25,7 +25,7 @@ account the probabilistic nature of machine learning models, and apply appropria
 scores for predictions. 
 
 --------------------------------------------------------------------------------------------------------------------------       
-Privacy & Security: Usually AI / ML works with a lot of data which is very likely to have sensitive data. As a AI solution 
+**Privacy & Security**: Usually AI / ML works with a lot of data which is very likely to have sensitive data. As a AI solution 
 we should align with the Privacy & security of that data. The machine learning models on which AI systems are based rely on 
 large volumes of data, which may contain personal details that must be kept private. Even after models are trained and the 
 system is in production, they use new data to make predictions or take action that may be subject to privacy or security 
@@ -34,7 +34,7 @@ concerns; so appropriate safeguards to protect data and customer content must be
 For e.g. Credit Card Anomaly detection & Alerting for PCI-DSS
 
 --------------------------------------------------------------------------------------------------------------------------
-Transparency : When you are building an AI solution, it shouldn't be the case that only a handful people understand the AI 
+**Transparency** : When you are building an AI solution, it shouldn't be the case that only a handful people understand the AI 
 solution and whats its meant to be used for. The entire team working / supporting that AI solution should understand the 
 input / output / specifications / dataset / Algorithms, so that their is complete transparency around the AI solution.
 AI systems should be understandable. Users should be made fully aware of the purpose of the system, how it works, and what 
@@ -47,7 +47,7 @@ predictions.When an AI application relies on personal data, such as a facial rec
 to recognize them; you should make it clear to the user how their data is used and retained, and who has access to it.
 
 --------------------------------------------------------------------------------------------------------------------------
-Inclusiveness : When you are utilizing some dataset to build an ML solution, then you must ensure to include all potential 
+**Inclusivenes** : When you are utilizing some dataset to build an ML solution, then you must ensure to include all potential 
 aspects and variations in the dataset. The idea is to NOT have any bias in the AI / ML solution, and the AI solution is 
 able to cater to majority scenarios, its utilized for.
 AI systems should empower everyone and engage people. AI should bring benefits to all parts of society, regardless of 
@@ -56,7 +56,7 @@ One way to optimize for inclusiveness is to ensure that the design, development,
 input from as diverse a group of people as possible.
 
 --------------------------------------------------------------------------------------------------------------------------    
-Fairness : When building an AI solution, apart of being 'Inclusive' to everybody, another important principle is to be 'Fair' 
+**Fairness** : When building an AI solution, apart of being 'Inclusive' to everybody, another important principle is to be 'Fair' 
 [During Implementation] to everybody
 For example: Suppose you create a machine learning model to support a loan approval application for a bank. The model should 
 make predictions of whether or not the loan should be approved without incorporating any bias based on gender, ethnicity, 
