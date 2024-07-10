@@ -61,41 +61,40 @@ Cognitive Services are a family of AI services and APIs that you can use to buil
  **Decision Group**: 
 - Anomaly Detector  : Quickly identify potential problems by detecting unusual data points or trends in time-series data. 
 - Metrics Advisor   : Built on Anomaly Detector , this service identifies the key areas for root cause analysis. Metrics 
-                        Advisor helps focus on fixing issues rather than monitoring.
+Advisor helps focus on fixing issues rather than monitoring.
 - Content Moderator : Detect potentially of fensive or undesirable text, image, and video content. Content Moderator provides 
-                        a review tool, where a human can validate flagged content and improve the sensitivity of moderation.
+a review tool, where a human can validate flagged content and improve the sensitivity of moderation.
 - Personalizer      : Creates a personalized experience for a user based on his/her behavior . This could be content shown 
-                        on a website or providing a dif ferent layout. Personalizer is an example of reinforcement learning.
+on a website or providing a dif ferent layout. Personalizer is an example of reinforcement learning.
 
 **Languauge Group**:
-- Immersive Reader          : Helps readers of all ages and abilities to comprehend text using audio and visual cues. 
-                                Immersive Reader can be used to improve literacy .
-- Language Understanding    : Builds natural language understanding into apps, bots, and IoT devices. Language Understanding 
-                                interprets the intent and extracts key information from supplied text.
-- QnA Maker                 : Creates a conversational question and answer layer on your existing F AQ and company information.
-- Text Analytics            : Discovers insights from textual data. T ext Analytics is one of the most used Cognitive Services. 
-                                You can detect the sentiment of sentences or whole paragraphs. You can extract key phrases 
-                                from a piece of text, and extract entities such as people, places, and things from a piece 
-                                of text. Text Analytics supports a wide range of languages.
-- Translator                : Detects and translates text in real-time or in batch across more than 90 languages.
+- Immersive Reader : Helps readers of all ages and abilities to comprehend text using audio and visual cues. 
+Immersive Reader can be used to improve literacy .
+- Language Understanding : Builds natural language understanding into apps, bots, and IoT devices. Language Understanding 
+interprets the intent and extracts key information from supplied text.
+- QnA Maker : Creates a conversational question and answer layer on your existing F AQ and company information.
+- Text Analytics : Discovers insights from textual data. T ext Analytics is one of the most used Cognitive Services. 
+You can detect the sentiment of sentences or whole paragraphs. You can extract key phrases from a piece of text, and extract 
+entities such as people, places, and things from a piece of text. Text Analytics supports a wide range of languages.
+- Translator : Detects and translates text in real-time or in batch across more than 90 languages.
 
 **Speech Group**:
-    - Speech to Text : Transcribes audio into readable, searchable text in real-time or from audio files. 
-    - Text to Speech : Synthesizes text into lifelike speech. 
-    - Speech Translation : Converts audio into text and translates into another language in real-time. Speech Translation 
+- Speech to Text : Transcribes audio into readable, searchable text in real-time or from audio files. 
+- Text to Speech : Synthesizes text into lifelike speech. 
+- Speech Translation : Converts audio into text and translates into another language in real-time. Speech Translation 
     utilizes the Translator services. 
-    - Speaker Recognition : Identifies people from the voices in an audio clip.
+- Speaker Recognition : Identifies people from the voices in an audio clip.
 
 **Vision Group**:
-    - Computer Vision service : Analyzes content in images and video and extracts details from the images. 
-    - Custom Vision : Trains computer vision with your own set of images that meets your business requirements. 
-    - Face : Detects faces in images and describes their features and emotions. Face can also recognize and verify people 
-        from images. 
-    - Form Recognizer : Extracts text, key-value pairs, and tables from documents. 
-    - Video Analyzer for Media : Analyzes the visual and audio channels of a video and indexes its content.
+- Computer Vision service : Analyzes content in images and video and extracts details from the images. 
+- Custom Vision : Trains computer vision with your own set of images that meets your business requirements. 
+- Face : Detects faces in images and describes their features and emotions. Face can also recognize and verify people 
+ from images. 
+- Form Recognizer : Extracts text, key-value pairs, and tables from documents. 
+- Video Analyzer for Media : Analyzes the visual and audio channels of a video and indexes its content.
 
 **Web Search**:
-    Allows you to utilize the Bing search engine to search millions of webpages for images, news, product, and company 
+Allows you to utilize the Bing search engine to search millions of webpages for images, news, product, and company 
     information. These services have been moved from Cognitive Services to a separate service, Bing W eb Search.
 
 --------------------------------------------------------------------------------------------------------------------------
