@@ -1619,3 +1619,32 @@ c. In Access control, add your Microsoft Entra ID user account to a role.
 Answer: b. In Networking properties, add your client IP address to the Firewall allowed list.
 
 --------------------------------------------------------------------------------------------------------------------------
+Q-131: How should you collect telemetry for your Azure AI Services resource for later analysis? 
+--------------------------------------------------------------------------------------------------------------------------
+a. Create an alert.
+b. Configure diagnostic settings.
+c. Create a dashboard.
+
+Answer: b. Configure diagnostic settings.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q-132: You are defining an alert that notifies you when a key regeneration event is recorded in the activity log for your 
+Azure AI Services resource. What should you do? 
+
+a. Specify a Scope of Activity Log.
+b. Specify an Action that uses an Azure Logic App to read the activity log.
+c. Specify a Condition with a Signal Type of Activity Log.
+
+Answer: c. Specify a Condition with a Signal Type of Activity Log.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q-134: You are viewing a metric for your Azure AI Services resource in a chart. You want to combine the chart with 
+visualizations of other resources and data. What should you do? 
+--------------------------------------------------------------------------------------------------------------------------
+a. Add the chart to a dashboard
+b. Share the chart
+c. Clone the chart
+
+Answer: a. Add the chart to a dashboard
+
+--------------------------------------------------------------------------------------------------------------------------
