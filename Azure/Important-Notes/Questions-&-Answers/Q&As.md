@@ -10,7 +10,6 @@ Answer : c. Anomaly Detection
 	
 --------------------------------------------------------------------------------------------------------------------------
 Q-002: Which of the following workload types does the following belong to?
-
 "Find out if the image contains a person"
 --------------------------------------------------------------------------------------------------------------------------
 a. Computer Vision
