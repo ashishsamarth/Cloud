@@ -7,7 +7,6 @@
 
 --------------------------------------------------------------------------------------------------------------------------
 What is Datascience
-
 --------------------------------------------------------------------------------------------------------------------------
 Data science is a discipline that focuses on the processing and analysis of data; applying statistical techniques to 
 uncover and visualize relationships and patterns in the data, and defining experimental models that help explore those 
@@ -24,7 +23,6 @@ human population with the need for conservation of the endangered wildlife.
 
 --------------------------------------------------------------------------------------------------------------------------
 What is Machine Learning
-
 --------------------------------------------------------------------------------------------------------------------------
 Machine learning is a subset of data science that deals with the training and validation of predictive models. Typically, 
 a data scientist prepares the data and then uses it to train a model based on an algorithm that exploits the relationships 
@@ -39,7 +37,6 @@ in the local area and assess their likely impact on the local wildlife.
 
 --------------------------------------------------------------------------------------------------------------------------
 What is Artificial intelligence
-
 --------------------------------------------------------------------------------------------------------------------------
 Artificial intelligence usually (but not always) builds on machine learning to create software that emulates one or more 
 characteristics of human intelligence.
