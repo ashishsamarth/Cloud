@@ -1,6 +1,11 @@
 --------------------------------------------------------------------------------------------------------------------------
 Azure AI Services
 --------------------------------------------------------------------------------------------------------------------------
+Azure AI services are cloud-based services that encapsulate AI capabilities. Rather than a single product, you should 
+think of AI services as a set of individual services that you can use as building blocks to compose sophisticated, 
+intelligent applications.
+
+![Github Image](/Azure/Assets/AI-Related-Terms/Azure-AI-Services.PNG)
 
 1. **Vision Studio** : Allows to process images and return information
     - Image Analysis (Object detection / Person detection) : Used to extract features from images like objects / Coordiantes
