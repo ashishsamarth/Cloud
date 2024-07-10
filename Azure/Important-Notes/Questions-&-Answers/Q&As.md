@@ -1648,3 +1648,34 @@ c. Clone the chart
 Answer: a. Add the chart to a dashboard
 
 --------------------------------------------------------------------------------------------------------------------------
+Q-135: 	You plan to use an Azure AI services container in a local Docker host. Which of the following statements is true? 
+--------------------------------------------------------------------------------------------------------------------------
+a. Client applications must pass a subscription key to the Azure resource endpoint before using the container.
+b. The container must be able to connect to the Azure resource endpoint to send usage data for billing.
+c. All data passed from the client application to the container is forwarded to the Azure resource endpoint.
+
+Answer: b. The container must be able to connect to the Azure resource endpoint to send usage data for billing.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q-136: Which of the following parameters must you specify when deploying an Azure AI services container image? 
+--------------------------------------------------------------------------------------------------------------------------
+a. EULA
+b. ResourceGroup
+c. SubscriptionName
+
+Answer: a. EULA
+
+Explanation: You must specify a EULA parameter with the value "yes" to explicitly accept the license agreement.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q-137: You plan to use the language detection functionality of Azure AI Language in a container. Which container image 
+should you deploy? 
+--------------------------------------------------------------------------------------------------------------------------
+a. mcr.microsoft.com/azure-ai-services/textanalytics
+b. mcr.microsoft.com/azure-ai-services
+c. mcr.microsoft.com/azure-ai-services/textanalytics/language
+
+Answer: c. mcr.microsoft.com/azure-ai-services/textanalytics/language
+
+--------------------------------------------------------------------------------------------------------------------------
+
