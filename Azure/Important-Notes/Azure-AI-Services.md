@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------------------------------------------------
-    Azure AI Services
-
+Azure AI Services
 --------------------------------------------------------------------------------------------------------------------------
+
 1. Vision Studio : Allows to process images and return information
     - Image Analysis (Object detection / Person detection) : Used to extract features from images like objects / Coordiantes
     - Optical Character Recognition : Extract text from images
