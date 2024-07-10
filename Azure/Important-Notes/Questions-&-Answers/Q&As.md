@@ -1571,3 +1571,51 @@ c.  Azure OpenAI Service
 Answer: b.  Azure AI Search    
 
 --------------------------------------------------------------------------------------------------------------------------
+Q-126: How are client applications typically granted access to an Azure AI Services endpoint? 
+--------------------------------------------------------------------------------------------------------------------------
+a. The application must specify a valid subscription key for the Azure Resource.
+b. The user of the application must enter a username and password associated with the Azure Subscription
+c. Access to Azure AI Services is granted to anonymous users by default
+
+Answer: a. The application must specify a valid subscription key for the Azure Resource.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q-127: In which format are message exchanged between a cliet app and an Azure AI Services resource when using a REST API?
+--------------------------------------------------------------------------------------------------------------------------
+a. XML
+b. JSON
+c. HTML
+
+Answer: b. JSON
+
+--------------------------------------------------------------------------------------------------------------------------
+Q-128: You need to regenerate the primary subscription key for an Azure AI Services resource that an app uses. What 
+should you do first to minimize service interruption for the app? 
+--------------------------------------------------------------------------------------------------------------------------
+a. Switch the app to use the secondary key
+b. Change the resource endpoint
+c. Enable a firewall
+
+Answer: a. Switch the app to use the secondary key
+
+--------------------------------------------------------------------------------------------------------------------------
+Q-129: You want to store the subscription keys for an Azure AI Services resource securely, so that authorized apps can 
+retrieve them when needed. What kind of Azure resource should you provision. 
+--------------------------------------------------------------------------------------------------------------------------
+a. Azure Storage
+b. Azure Key Vault
+c. Azure App Service
+
+Answer: b. Azure Key Vault
+
+--------------------------------------------------------------------------------------------------------------------------
+Q-130: When running code on your computer that connects to Azure AI Services, you receive an error that access is denied 
+due to Virtual Network/Firewall rules. What configuration do you need to set in the Azure AI Services instance? 
+--------------------------------------------------------------------------------------------------------------------------
+a. In the Networking properties, configure Selected Networks and Private Endpoints.
+b. In Networking properties, add your client IP address to the Firewall allowed list.
+c. In Access control, add your Microsoft Entra ID user account to a role.
+
+Answer: b. In Networking properties, add your client IP address to the Firewall allowed list.
+
+--------------------------------------------------------------------------------------------------------------------------
