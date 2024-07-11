@@ -220,31 +220,20 @@ Azure AI services supports Microsoft Entra ID authentication, enabling you to gr
     You've created an Azure AI resource that is linked with a custom subdomain. Next, you assign a role to a service 
     principal.To start, you'll need to register an application. To do this, you run the following command:
 
-    Powershell: 
-```
-    $SecureStringPassword = ConvertTo-SecureString -String <your-password> -AsPlainText -Force
-```
-
-    Powershell: 
-```
-    $app = New-AzureADApplication -DisplayName <your-app-display-name> -IdentifierUris <your-app-uris> 
+    Powershell: $SecureStringPassword = ConvertTo-SecureString -String <your-password> -AsPlainText -Force
+    Powershell: $app = New-AzureADApplication -DisplayName <your-app-display-name> -IdentifierUris <your-app-uris> 
                 -PasswordCredentials $SecureStringPassword
-```    
+
     This creates the application resource.
 
     Then you use the New-AzADServicePrincipal command to create a service principal and provide your application's ID:
 
-    Powershell: 
-```
-    New-AzADServicePrincipal -ApplicationId <app-id>
-```
+    Powershell: New-AzADServicePrincipal -ApplicationId <app-id>
+
     Finally, you assign the Cognitive Services Users role to your service principal by running:
 
-    Powershell: 
-```
-    New-AzRoleAssignment -ObjectId <your-service-principal-object-id> -Scope <account-id> 
+    Powershell: New-AzRoleAssignment -ObjectId <your-service-principal-object-id> -Scope <account-id> 
                 -RoleDefinitionName "Cognitive Services User"
-```            
 
 
  -Authenticate using managed identities
