@@ -1798,3 +1798,21 @@ Answer: c. Use the Document Intelligence API.
 Explanation: The Document Intelligence API can be used to process PDF formatted files.
 
 --------------------------------------------------------------------------------------------------------------------------
+Q-150: 	You want Azure Video Indexer to analyze a video. What must you do first? 
+--------------------------------------------------------------------------------------------------------------------------
+a. Use the Azure AI Vision service to extract key frames from the video.
+b. Upload the video to Azure Video Indexer and index it.
+c. Store the video file in an Azure blob store container.
+
+Answer: b. Upload the video to Azure Video Indexer and index it.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q-151: You want Azure Video Indexer to recognize brands in videos recorded from conference calls. What should you do? 
+--------------------------------------------------------------------------------------------------------------------------
+a. Edit the Brands model to show brands suggested by Bing, and add any new brands you want to detect.
+b. Edit the conference call videos to include a caption of each brand seen on their first appearance.
+c. Embed the Azure Video Indexer widgets in a custom web site that has all the brand images stored for reference.
+
+Answer: a. Edit the Brands model to show brands suggested by Bing, and add any new brands you want to detect.
+
+--------------------------------------------------------------------------------------------------------------------------
