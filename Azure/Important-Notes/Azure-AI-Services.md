@@ -339,3 +339,66 @@ After your Azure AI services container is deployed, applications consume the con
  authentication solution and apply network security restrictions as appropriate for your specific application scenario.
 
 --------------------------------------------------------------------------------------------------------------------------
+Detect, analyze, and recognize faces 
+--------------------------------------------------------------------------------------------------------------------------
+There are two Azure AI services that you can use to build solutions that detect faces or people in images.
+
+**Azure AI Vision service**: This service enables you to detect people in an image, as well as returning a bounding box 
+for its location
+
+**Face service**: This service offers more comprehensive facial analysis capabilities than the Azure AI Vision service, 
+including:
+- Face detection (with bounding box).
+- Comprehensive facial feature analysis (including head pose, presence of spectacles, blur, facial landmarks, occlusion 
+and others).
+- Face comparison and verification.
+- Facial recognition.
+
+--------------------------------------------------------------------------------------------------------------------------
+Azure AI Vision
+--------------------------------------------------------------------------------------------------------------------------
+Azure AI provides two different features that read text from documents and images, one in the Azure AI Vision Service, the 
+other in Azure AI Document Intelligence. There is overlap in what each service provides, however each is optimized for 
+results depending on what the input is.
+
+**Image Analysis Optical character recognition (OCR)**: 
+- Use this feature for general, unstructured documents with smaller amount of text, or images that contain text.
+- Results are returned immediately (synchronous) from a single API call.
+- Has functionality for analyzing images past extracting text, including object detection, describing or categorizing an 
+image, generating smart-cropped thumbnails and more.
+- Examples include: street signs, handwritten notes, and store signs.
+
+**Document Intelligence**:
+- Use this service to read small to large volumes of text from images and PDF documents.
+- This service uses context and structure of the document to improve accuracy.
+- The initial function call returns an asynchronous operation ID, which must be used in a subsequent call to retrieve the 
+results.
+- Examples include: receipts, articles, and invoices.
+
+You can access both technologies via the REST API or a client library. In this module, we'll focus on the OCR feature in 
+Image Analysis
+
+--------------------------------------------------------------------------------------------------------------------------
+Read API
+--------------------------------------------------------------------------------------------------------------------------
+To use the Read OCR feature, call the ImageAnalysis function (REST API or equivalent SDK method), passing the image URL or 
+binary data, and optionally specifying a gender neutral caption or the language the text is written in (with a default 
+value of en for English).
+
+To make an OCR request to ImageAnalysis, specify the visual feature as READ.
+
+**Python**:
+    result = client.analyze(
+        image_url=<image_to_analyze>,
+        visual_features=[VisualFeatures.READ]
+    )
+
+If using the REST API, specify the feature as read.
+    https://<endpoint>/computervision/imageanalysis:analyze?features=read&...
+
+The results of the Read OCR function are returned synchronously, either as JSON or the language specific object of a 
+similar structure. These results are broken down in blocks (with the current service only using one block), then lines,
+ and then words. Additionally, the text values are included at both the line and word levels, making it easier to read 
+ entire lines of text if you don't need to extract text at the individual word level.    
+
+--------------------------------------------------------------------------------------------------------------------------
