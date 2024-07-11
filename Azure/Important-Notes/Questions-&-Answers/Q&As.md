@@ -1700,4 +1700,101 @@ Explanation: The Azure AI Vision service is designed to help you extract informa
 functionalities
 
 --------------------------------------------------------------------------------------------------------------------------
+Q-140: How many images per class do you need to train a custom image classification model with Azure AI Vision? 
+--------------------------------------------------------------------------------------------------------------------------
+a. At least 10
+b. About 3-5
+c. About 8
 
+Answer: b. About 3-5
+Explanation: You need about 3-5 images per class to train a custom image classification model with Azure AI Vision.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q-141: How can you access your custom image classification model after training it with Azure AI Vision? 
+--------------------------------------------------------------------------------------------------------------------------
+a. Through APIs or Vision Studio
+b. Only through APIs
+c. Only in the browser
+
+Answer: a. Through APIs or Vision Studio
+
+--------------------------------------------------------------------------------------------------------------------------
+Q-142: What are the two types of custom models that you can train with Azure AI Vision? 
+--------------------------------------------------------------------------------------------------------------------------
+a. Image Segmentation and image enhancement
+b. Image Classification and object detection
+c. Image captioning and image generation
+
+Answer: b. Image Classification and object detection
+
+--------------------------------------------------------------------------------------------------------------------------
+Q-143: Which of the following facial attributes can the Azure AI Vision service predict? 
+--------------------------------------------------------------------------------------------------------------------------
+a. Location
+b. Type of eye-glasses
+c. Occlusion
+
+Answer: a. Location
+
+--------------------------------------------------------------------------------------------------------------------------
+Q-144: You need to create a facial recognition solution to identify named employees. Which service should you use? 
+--------------------------------------------------------------------------------------------------------------------------
+a. Azure AI Vision
+b. Azure AI Custom Vision
+c. Face
+
+Answer: c. Face
+
+--------------------------------------------------------------------------------------------------------------------------
+Q-145: You need to verify that the person in a photo taken at hospital reception is the same person in a photo taken at a 
+ward entrance 10 minutes later. What should you do? 
+--------------------------------------------------------------------------------------------------------------------------
+a. Create a People Group and add a person for every hospital visitor with multiple photographs to train a model.
+b. Verify the face in the ward photo by comparing it to the detected face ID from the reception photo.
+c. Compare the Age, head pose, and hair color for the faces in the reception and ward photo's.
+
+Answer: b. Verify the face in the ward photo by comparing it to the detected face ID from the reception photo.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q-146: Which API would be best for this scenario? You need to read a large number of files with high accuracy. The text is 
+short sections of handwritten text, some in English and some of it is in multiple languages. 
+--------------------------------------------------------------------------------------------------------------------------
+a. A custom Language API
+b. Document Intelligence API
+c. Image Analysis API
+
+Answer: c. Image Analysis API
+Explanation: The Image Analysis service OCR feature is best suited for short sections of handwritten text.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q-147: Which API would be best for this scenario? You need to read a large amount of structured text and multiple 
+languages.
+--------------------------------------------------------------------------------------------------------------------------
+a. A custom Language API
+b. Document Intelligence API
+c. Image Analysis API
+
+Answer: b. Document Intelligence API
+Explanation: Document Intelligence is the best choice for large amounts of structured text and multiple languages
+
+--------------------------------------------------------------------------------------------------------------------------
+Q-148: 	What levels of division are the OCR results returned? 
+--------------------------------------------------------------------------------------------------------------------------
+a. Only total content and pages of text.
+b. Blocks, words and lines of text.
+c. Total content, image tags, pages, words and lines of text.
+
+Answer: b. Blocks, words and lines of text.
+Explanation: Results contain blocks, words and lines, as well as bounding boxes for each word and line.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q-149: You've scanned a letter into PDF format and need to extract the text it contains. What should you do? 
+--------------------------------------------------------------------------------------------------------------------------
+a. Use the Azure AI Custom Vision service
+b. Use the Image Analysis API of the Azure AI Vision service.
+c. Use the Document Intelligence API.
+
+Answer: c. Use the Document Intelligence API.
+Explanation: The Document Intelligence API can be used to process PDF formatted files.
+
+--------------------------------------------------------------------------------------------------------------------------
