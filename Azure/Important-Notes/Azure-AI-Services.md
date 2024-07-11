@@ -388,13 +388,17 @@ value of en for English).
 To make an OCR request to ImageAnalysis, specify the visual feature as READ.
 
 **Python**:
+```
     result = client.analyze(
         image_url=<image_to_analyze>,
         visual_features=[VisualFeatures.READ]
     )
 
+```
 If using the REST API, specify the feature as read.
+```
     https://<endpoint>/computervision/imageanalysis:analyze?features=read&...
+```    
 
 The results of the Read OCR function are returned synchronously, either as JSON or the language specific object of a 
 similar structure. These results are broken down in blocks (with the current service only using one block), then lines,
