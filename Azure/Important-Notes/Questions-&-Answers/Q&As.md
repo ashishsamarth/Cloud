@@ -1678,4 +1678,26 @@ c. mcr.microsoft.com/azure-ai-services/textanalytics/language
 Answer: c. mcr.microsoft.com/azure-ai-services/textanalytics/language
 
 --------------------------------------------------------------------------------------------------------------------------
+Q-138: You want to use the Azure AI Vision Analyze Image function to generate an appropriate caption for an image. Which 
+visual feature should you specify? 
+--------------------------------------------------------------------------------------------------------------------------
+a. Tags
+b. Description
+c. Categories
+
+Answer: Description
+Explanation: To generate a caption, include the description visual feature in your analysis
+
+--------------------------------------------------------------------------------------------------------------------------
+Q-139: What is the purpose of the Azure AI Vision service? 
+--------------------------------------------------------------------------------------------------------------------------
+a. To provide functionality for audio transcription
+b. To extract information from images
+c. To detect the presence and location of specific sounds within an audio file
+
+Answe: b. To extract information from images
+Explanation: The Azure AI Vision service is designed to help you extract information from images through various 
+functionalities
+
+--------------------------------------------------------------------------------------------------------------------------
 
