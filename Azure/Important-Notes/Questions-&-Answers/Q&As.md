@@ -1816,3 +1816,23 @@ c. Embed the Azure Video Indexer widgets in a custom web site that has all the b
 Answer: a. Edit the Brands model to show brands suggested by Bing, and add any new brands you want to detect.
 
 --------------------------------------------------------------------------------------------------------------------------
+Q-152: How should you create an application that monitors the comments on your company's web site and flags any negative 
+posts? 
+--------------------------------------------------------------------------------------------------------------------------
+a. Use the Azure AI Language service to extract key phrases.
+b. Use the Azure AI Language service to perform sentiment analysis of the comments.
+c. Use the Azure AI Language service to extract named entities from the comments.
+
+Answer: b. Use the Azure AI Language service to perform sentiment analysis of the comments.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q-153: You are analyzing text that contains the word "Paris". How might you determine if this word refers to the French 
+city or the character in Homer's "The Iliad"? 
+--------------------------------------------------------------------------------------------------------------------------
+a. Use the Azure AI Language service to extract key phrases.
+b. Use the Azure AI Language service to detect the language of the text.
+c. Use the Azure AI Language service to extract linked entities.
+
+Answer: c. Use the Azure AI Language service to extract linked entities.
+
+--------------------------------------------------------------------------------------------------------------------------
