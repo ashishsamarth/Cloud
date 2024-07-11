@@ -232,8 +232,11 @@ Azure AI services supports Microsoft Entra ID authentication, enabling you to gr
 
     Finally, you assign the Cognitive Services Users role to your service principal by running:
 
-    Powershell: New-AzRoleAssignment -ObjectId <your-service-principal-object-id> -Scope <account-id> 
+    Powershell: 
+    ```
+    New-AzRoleAssignment -ObjectId <your-service-principal-object-id> -Scope <account-id> 
                 -RoleDefinitionName "Cognitive Services User"
+    ```            
 
 
  -Authenticate using managed identities
