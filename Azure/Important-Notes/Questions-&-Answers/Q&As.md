@@ -1836,3 +1836,30 @@ c. Use the Azure AI Language service to extract linked entities.
 Answer: c. Use the Azure AI Language service to extract linked entities.
 
 --------------------------------------------------------------------------------------------------------------------------
+Q-154: You want to create a knowledge base from an existing FAQ document. What should you do? 
+--------------------------------------------------------------------------------------------------------------------------
+a. Create an empty knowledge base and manually enter the FAQ questions and answers.
+b. Create a new knowledge base, importing the existing FAQ document.
+c. Create a new knowledge base, selecting only the Professional chit-chat source.
+
+Answer: b. Create a new knowledge base, importing the existing FAQ document.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q-155: 	How can you add a multi-turn context for a question in an existing knowledge base? 
+--------------------------------------------------------------------------------------------------------------------------
+a. Add synonyms to the knowledge base.
+b. Add alternative phrasing to the question.
+c. Add a follow-up prompt to the question.
+
+Answer: c. Add a follow-up prompt to the question.
+
+--------------------------------------------------------------------------------------------------------------------------
+Q-156: How can you enable users to use your knowledge base through email? 
+--------------------------------------------------------------------------------------------------------------------------
+a. Add Friendly Chit-chat to the knowledge base.
+b. Enable Active Learning for the knowledge base and include the user's email address as the userId parameter in responses.
+c. Create a bot based on your knowledge base and configure an email channel.
+
+Answer: c. Create a bot based on your knowledge base and configure an email channel.
+
+--------------------------------------------------------------------------------------------------------------------------
