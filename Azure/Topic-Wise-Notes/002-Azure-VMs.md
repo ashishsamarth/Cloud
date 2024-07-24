@@ -26,21 +26,28 @@ Their are multiple ways to create a VM
 Here's an example of creating a VM using the Azure CLI.
 
 a.  First, we have to find all the Ubuntu images that are available using the vm image list option:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
     az vm image list --all --offer Ubuntu --all
 b. Next, we need to find the Azure regions where we want to deploy. We can use account list-locations for this. You can choose a region that is closest to you
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
     az account list-locations --output table
 
 This can also be written as 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
     az account list-locations -o table
 
 c. Once we've done this, we can either create a new resource group or use an existing one to associate this VM with. Let us create a new resource group called IACRG using the group create option, as shown here:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
     az group create --name 'IACRG' --location 'eastus'
 
 This can also be written as 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
     az group create -n 'IACRG' -l 'eastus'
 
 d. Finally, lets create the VM using the information from preceeding commands
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
     az vm create --resource-group 'IACRG' --name 'sampleVM' --image 'UbuntuLTS' --admin-username '<your username>' --admin-password '<your password>' --location 'eastus'
 
 This can also be written as
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
     az vm create --resource-group 'IACRG' --n 'sampleVM' -image 'UbuntuLTS' --admin-username '<your username>' --admin-password '<your password>' -l 'eastus'
