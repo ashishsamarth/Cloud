@@ -4,7 +4,7 @@ Azure-Storage
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 **Azure Blob Storage**: Blob storage is the most common storage type in Azure. It can be used to store unstructured data such as videos, audio, metadata, log files, text, and binary. It is a highly scalable and very cost-effective storage solution. It  provides support for tiered storage, so the data can be stored at different tiers based on their access pattern and usage frequency. Highly used data can be kept at hot tiers, the not-so-used data in cold tiers, and historical data can be archived. The data in Blob storage can be easily accessed via REST endpoints, as well as client libraries available in a wide set of languages, such as .NET, Java, Python, Ruby, PHP, Node.js, and more.
 
-You can access your blob storage at: https://<storage-account>.blob.core.windows.net
+You can access your blob storage at: https://**storage-account**.blob.core.windows.net
 
 **Azure Data lake Gen 2**: Azure Data Lake Gen2 or Azure Data Lake Storage Gen 2 (ADLS Gen2) is a superset of Blob storage that is optimized for big data analytics. ADLS Gen2 is the preferred option for data lake solutions in Azure.
 It provides hierarchical namespace support on top of Blob storage which basically means that the directories are supported.
@@ -16,7 +16,7 @@ supports role-based access controls (RBACs), just like Blob storage does.
 Another important feature of ADL Gen2 is that it is a Hadoop-compatible filesystem. So, building any open source analytics pipeline on top of ADL Gen2 is a breeze.
 Gen2 also supports Locally Redundant Storage (LRS), Zone Redundant Storage (ZRD), and Geo Redundant Storage (GRS) for data redundancy and recovery, while Gen1 only supports LRS.
 
-You can access your blob storage at: https://<storage-account>.dfs.core.windows.net
+You can access your blob storage at: https://**storage-account**.dfs.core.windows.net
 
 To create an ADLS Gen2 account, you need to select the "Enable hierarchical namespace" checkbox on the Create a storage account screen:
 
