@@ -20,7 +20,7 @@ supports role-based access controls (RBACs), just like Blob storage does.
 Another important feature of ADL Gen2 is that it is a Hadoop-compatible filesystem. So, building any open source analytics pipeline on top of ADL Gen2 is a breeze.
 Gen2 also supports Locally Redundant Storage (LRS), Zone Redundant Storage (ZRD), and Geo Redundant Storage (GRS) for data redundancy and recovery, while Gen1 only supports LRS.
 
-You can access your blob storage at: https://**storage-account**.dfs.core.windows.net
+You can access your Gen 2 storage at: https://**storage-account**.dfs.core.windows.net
 
 To create an ADLS Gen2 account, you need to select the "Enable hierarchical namespace" checkbox on the Create a storage account screen:
 
@@ -52,3 +52,71 @@ All the following examples assume that you have already created a storage accoun
 • You can download the file that we previously uploaded using the file download option:    
 
     az storage file download --share-name IACFileShare -p testfile.txt --dest ./testfile.txt
+
+**Azure-Queues**:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Azure queues are used to store a large number of messages that can be accessed asynchronously between the source and the destination. This helps in decoupling applications so that they can scale independently. Azure queues can be used across applications that are running in the cloud, on-premises, on mobile devices, and more
+There are two types of queues: Storage queues and Service Bus.
+
+Storage queues can be used for simple asynchronous message processing. They can store up to 500 TB of data (per storage account) and each message can be up to 64 KB in size
+
+Service Bus can be used for pub-sub models, strict ordering of messages and blocking & non-blocking APIs. The message size can be ip to 1BM, but the overall size is capped at 80GB
+
+You can access your Azure Queues storage at: https://**storage-account**.queue.core.windows.net/**queue**.
+
+*Creating Azure Queues using the CLI*
+
+• You can create a new Azure queue using the storage queue create command. The following command will create a queue named IACqueue under the IACStorageAcct.
+
+    az storage queue create --name IACqueue --account-name IACStorageAcct
+
+• You can easily list the queues under a storage account using the storage queue list term:
+
+    az storage queue list --account-name IACStorageAcct
+
+• You can add a new message to the newly created queue using the storage message put option:
+
+    az storage message put --queue-name IACqueue --content "test"
+
+• Finally, use the storage message peek command to view the message. This command retrieves one or more messages from the front of the queue but does not alter the visibility of the message:
+
+    az storage message peek --queue-name IACqueue
+
+
+**Azure-Tables**:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Azure tables are key-value stores provided by Azure. They are good for storing structured non-relational data. There are two solutions available in Azure for Table stores: Azure Table Storage and Cosmos DB.
+Both these features provide the same table model and Create, Read, Update, and Delete (CRUD) features, but the difference lies in their scale, SLAs, and availability. Cosmos DB is the premium version of Table store and can provide more than 10 million operations per second, whereas Azure Table storage has a scaling limit of 20K operations per second.
+Cosmos DB also provides several additional advantages, such as five flexible levels of consistency, up to 99.999% read availability on multi-region databases, serverless mode, global presence, and more
+
+You can access your Azure tables at: https://**storage-account**.table.core.windows.net/**table**.
+
+*Creating Azure Tables using the CLI*
+
+• We can create a new Azure Table for our example company, IAC, by using the storage table create option. The following command will create a table named IACtable under the IACStorageAcct.
+
+    az storage table create --name IACtable --account-name IACStorageAcct
+
+ • We can easily list the Tables under a storage account using the storage table list option:
+
+    az storage table list --account-name IACStorageAcct
+
+• We can insert an entity into the newly created Table using the storage entity insert option
+
+    az storage entity insert --table-name IACtable --entity PartitionKey=testPartKey RowKey=testRowKey Content=testContent
+    
+• We can use the storage entity show command to view the entry:
+
+    az storage entity show --table-name IACtable --partitionkey testPartKey --row-key testRowKey
+
+**Azure Managed disks**:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Azure managed disks are the virtual hard disks that are mounted to an Azure VM. As the name suggests, these disks are completely managed by Azure. So, you don't need to worry about OS upgrades, security patches, and so on. 
+Unlike physical disks, Azure Managed Disks offer 99.999% availability. They achieve such a high availability score by storing three different replicas of the data on different servers. Managed VMs can also be allocated to availability sets and availability zones (distributed across racks and data centers) to increase their survivability in cases of server, rack (stamp), or data center outages. The managed disks also provide options for data encryption at rest and disk-level encryptions. 
+There are different types of managed disks available, such as standard HDD, standard SSD, premium SSD, and ultra disks.
+
+*Creating and attaching Managed Disks to a VM using the CLI*
+
+• This is a simple one-line command for creating a new disk and attaching it to an existing VM.
+
+    az vm disk attach --resource-group IACRG --vm-name sampleVM --name IACmgdisk --size-gb 64 –new
