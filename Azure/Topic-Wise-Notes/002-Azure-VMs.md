@@ -14,12 +14,12 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/overview?tabs=bre
 
 Following are the classifications:
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-• General-purpose
-• Compute-optimized
-• Memory-optimized
-• Storage-optimized
-• GPU
-• High performance
+    • General-purpose
+    • Compute-optimized
+    • Memory-optimized
+    • Storage-optimized
+    • GPU
+    • High performance
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 *Their are multiple ways to create a VM*
