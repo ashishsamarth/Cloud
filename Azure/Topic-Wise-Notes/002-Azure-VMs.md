@@ -13,14 +13,16 @@ Here's the link for VMs available in Azure:
 https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/overview?tabs=breakdownseries%2Cgeneralsizelist%2Ccomputesizelist%2Cmemorysizelist%2Cstoragesizelist%2Cgpusizelist%2Cfpgasizelist%2Chpcsizelist
 
 Following are the classifications:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 • General-purpose
 • Compute-optimized
 • Memory-optimized
 • Storage-optimized
 • GPU
 • High performance
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Their are multiple ways to create a VM
+*Their are multiple ways to create a VM*
 • Via Azure Web Portal
 • Via Azure CLI
 • Via Azure Resource manager
